@@ -164,7 +164,7 @@ function ProjDevCard({ name, image, url, description }: Props) {
         <div className={clsx('card__imge')}>
           <Link to={url.page}>
           <div className="card__body">
-          <h3 className={clsx('my_card_title')}>{name}</h3>
+          <h3 className={clsx('title_kItE')}>{name}</h3>
           <p className={clsx('desc')}>{description}</p>
         </div>
           </Link>
@@ -172,11 +172,11 @@ function ProjDevCard({ name, image, url, description }: Props) {
         </center>
 
        
-        <div className="card__footer">
+        {/* <div className="card__footer">
           <div className="button-group button-group--block">
           
           </div>
-        </div>
+        </div> */}
       </div>
       
     </div>

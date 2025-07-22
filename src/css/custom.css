@@ -43,7 +43,10 @@
   margin-top: 20px;
   color: orange;
 }
+.desc{
+    color: orange !important;
 
+}
 .card {
   border: 2px solid orange !important;
   border-style: solid;
@@ -68,7 +71,23 @@
   }
 }
 
-
+/* Light and dark theme-specific styles */
+[data-theme='dark'] {
+  /* background-image: url("/img/bg-dark.webp") !important; */
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  .navbar-sidebar__brand {
+    background-color: orange !important;
+  }
+  .clean-btn.navbar-sidebar__back {
+    color: black !important;
+  }
+  .navbar-sidebar {
+    background-image: url("/img/bg.webp") !important;
+  }
+}
 
 
 .menu__link{
@@ -85,4 +104,12 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-.desc{color: black;}
+.desc{  color: #4787ed !important;
+}
+
+#bappa{max-width: 30% !important;}
+
+.navbar__logo img{
+      background: white !important;
+    border-radius: 20px !important;
+}

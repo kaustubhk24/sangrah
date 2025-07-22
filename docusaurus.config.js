@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'संपूर्ण संग्रह',
   tagline: '',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/ico.png',
 
   // Set the production url of your site here
   url: 'https://sangrah.justinclicks.com',
@@ -122,16 +122,16 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      announcementBar: {
-        id: 'support_us',
-        content:
-          'Please note that site is migrated to new address <a href="https://sangrah.justinclicks.com" target="_blank">https://sangrah.justinclicks.com</a> ',
-        backgroundColor: 'aliceblue',
-        textColor: '#091E42',
-        isCloseable: true,
+      // announcementBar: {
+      //   id: 'support_us',
+      //   content:
+      //     'Please note that site is migrated to new address <a href="https://sangrah.justinclicks.com" target="_blank">https://sangrah.justinclicks.com</a> ',
+      //   backgroundColor: 'aliceblue',
+      //   textColor: '#091E42',
+      //   isCloseable: true,
 
        
-      },
+      // },
       googleAdsense: {
         dataAdClient: 'ca-pub-7541510388779651',
       },
@@ -162,7 +162,6 @@ const config = {
 
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: true,
       },
 
     }),

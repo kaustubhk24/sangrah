@@ -9,7 +9,7 @@ export default function Hello() {
         <br/>
         <center>
         <h1>संपूर्ण संग्रह</h1>
-        <img src='/img/pwa/192X192.png'/>
+        <img id='bappa' src='/img/ico.png'/>
         <div className="container">
         <ProjDevCardsRow/>
         </div>
