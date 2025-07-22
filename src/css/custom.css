@@ -113,3 +113,7 @@ body {
       background: white !important;
     border-radius: 20px !important;
 }
+
+.menu__list-item a{
+  color:#4787ed !important;
+}
