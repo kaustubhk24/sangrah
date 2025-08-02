@@ -79,3 +79,5 @@ slug: /datt
 
 मोरेश्वरसुत वासुदेव हा करितो तव सेवा ।।<br />
 स्वामि समर्था देई यांसी भक्तीचा ठेवा ॥ ४ ॥
+
+<span class='index-text'> datta aarati , aarati ovalu shri guru dattaraj swami</span>
