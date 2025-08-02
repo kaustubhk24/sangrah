@@ -3,7 +3,6 @@ slug: /swami-samarth-maharaj
 
 ---
 # श्री स्वामी समर्थ महाराज आरती
-<span class='index-text'> swami samarth maharaj aarati </span>
 
 ## काकड आरती
 
@@ -26,6 +25,7 @@ slug: /swami-samarth-maharaj
 स्वामी तुची कृपाघन ऊठुन देई दर्शन। ऊठुन देई दर्शन।
 
 स्वामीदास चरण वंदी। मागतसे भावभक्ती॥४॥
+<span class='index-text'>samarth, swami samarth maharaj aarati , kakad aarati</span>
 
 ## जय जय अवधूता, हो स्वामी अवधूता
 जय देव जय देव, जय जय अवधूता, हो स्वामी अवधूता।
@@ -78,7 +78,7 @@ slug: /swami-samarth-maharaj
 
 जय देव जय देव॥५॥
 
-
+<span class='index-text'> swami samarth maharaj aarati , jay jay avdhuta ho swami avdhuta</span>
 
 ## जय जय सद्-गुरु स्वामी समर्था
 
@@ -113,6 +113,8 @@ slug: /swami-samarth-maharaj
 इतुके देई दीनदयाळा,
 
 नच तव पद अंतरा रे॥३॥
+
+<span class='index-text'> swami samarth maharaj aarati , sadguru swami samartha</span>
 
 ## जय देव, जय श्री स्वामी समर्था,
 
@@ -174,6 +176,8 @@ slug: /swami-samarth-maharaj
 
 जय देव, जय देव०॥४॥
 
+<span class='index-text'> swami samarth maharaj aarati , jay dev jay shri swami samarth</span>
+
 ## आरती स्वामी राजा
 
 आरती स्वामी राजा।(२)
@@ -200,3 +204,4 @@ slug: /swami-samarth-maharaj
 
 
 
+<span class='index-text'> swami samarth maharaj aarati , aarati swami raja</span>
