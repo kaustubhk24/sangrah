@@ -77,39 +77,38 @@ const config = {
     [
       '@docusaurus/plugin-pwa',
       {
-        debug: true,
-        offlineModeActivationStrategies: [
-          'appInstalled',
-          'standalone',
-          'queryString',
-        ],
+        debug: false, // Changed to false for production
+        offlineModeActivationStrategies: ['always'],
+        injectManifestConfig: {
+          globPatterns: [
+            '**/*.{js,json,css,html,jpg,jpeg,png,svg,ico,txt,md,mdx,webp}',
+
+          ],
+          globIgnores: ['**/*.mp3', '**/*.ogg', '**/*.wav'],
+          maximumFileSizeToCacheInBytes: 52428800
+        },
         pwaHead: [
           {
             tagName: 'link',
-            rel: 'icon',
-            href: '/img/pwa/512X512.png',
-          },
-          {
-            tagName: 'link',
             rel: 'manifest',
-            href: '/manifest.json', // your PWA manifest
+            href: '/manifest.json',
           },
           {
             tagName: 'meta',
             name: 'theme-color',
             content: '#bf43bb',
           },
-        ],
-        injectManifestConfig: {
-          manifestTransforms: [
-            //...
-          ],
-          modifyURLPrefix: {
-            //...
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-capable',
+            content: 'yes',
           },
-          globIgnores: ['**/*.mp3', '**/*.ogg', '**/*.wav'], // Exclude audio file types
-          // ...
-        },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-status-bar-style',
+            content: '#bf43bb',
+          },
+        ],
       },
     ],
   ],

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ऑफलाइन | संपूर्ण संग्रह</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        .offline-message {
+            margin: 2rem 0;
+            color: #666;
+        }
+        .retry-button {
+            background: #bf43bb;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.2s ease;
+        }
+        .retry-button:hover {
+            background: #a93ba5;
+        }
+    </style>
+</head>
+<body>
+    <h1>आपण ऑफलाइन आहात</h1>
+    <div class="offline-message">
+        <p>इंटरनेट कनेक्शन नसल्यामुळे आपण सध्या ऑफलाइन आहात.</p>
+        <p>मागील भेटीत कॅशे केलेली माहिती पाहण्यासाठी मेनू वापरा.</p>
+    </div>
+    <button class="retry-button" onclick="window.location.reload()">
+        पुन्हा प्रयत्न करा
+    </button>
+</body>
+</html>
