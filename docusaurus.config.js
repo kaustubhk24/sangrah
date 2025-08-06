@@ -127,6 +127,13 @@ const config = {
           alt: 'संपूर्ण संग्रह',
           src: 'img/favicon.ico',
         },
+        items: [
+          {
+            to: '/bookmarks',
+            label: 'चिन्हांकित पाने',
+            position: 'right',
+          },
+        ],
       },
 
       prism: {

@@ -8,6 +8,17 @@ const ProjDevCards = [
 
   
   {
+    name: 'चिन्हांकित पाने',
+    image: '',
+    url: {
+      page: '/bookmarks',
+    },
+    description: (
+      <span>तुम्ही चिन्हांकित केलेली सर्व पाने </span>
+    )
+    
+  },
+  {
     name: 'आरती संग्रह',
     image: '',
     url: {

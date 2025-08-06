@@ -1,0 +1,29 @@
+.bookmarksList {
+  list-style: none;
+  padding: 0;
+  color: #4787ed !important;
+
+}
+
+.bookmarkItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+    color:#4787ed !important;
+
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: var(--ifm-color-danger);
+  cursor: pointer;
+  margin-left: 1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.removeButton:hover {
+  background-color: var(--ifm-color-danger-contrast-background);
+}
