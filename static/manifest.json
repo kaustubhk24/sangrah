@@ -36,10 +36,10 @@
 
     ],
     "id": "/?source=pwa",
-    "start_url": "./index.html",
-    "background_color": "#ffffff",
+    "start_url": "./",
+    "background_color": "#FFA500",
     "display": "standalone",
     "scope": "./",
-    "theme_color": "#bf43bb"
+    "theme_color": "#FFA500"
    
   }
