@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -37,13 +38,12 @@ const config = {
         direction: 'ltr',
         htmlLang: 'mr-IN',
         path: 'mr',
-      },},
+      },
+    },
   },
-  
 
   presets: [
     [
-    
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
@@ -52,21 +52,21 @@ const config = {
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          
         },
-       
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
   ],
-  
+
   plugins: [
-    [ require.resolve('docusaurus-lunr-search'), {
-      languages: ['en'] // language codes
-    }],
-    'docusaurus-plugin-google-adsense',
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        languages: ['en'] // language codes
+      }
+    ],
     [
       '@docusaurus/plugin-google-gtag',
       {
@@ -74,10 +74,7 @@ const config = {
         anonymizeIP: true,
       },
     ],
- 
-
-   [
-      
+    [
       '@docusaurus/plugin-pwa',
       {
         debug: true,
@@ -110,64 +107,37 @@ const config = {
           modifyURLPrefix: {
             //...
           },
-        
           globIgnores: ['**/*.mp3', '**/*.ogg', '**/*.wav'], // Exclude audio file types
-
           // ...
         },
       },
-      
     ],
   ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // announcementBar: {
-      //   id: 'support_us',
-      //   content:
-      //     'Please note that site is migrated to new address <a href="https://sangrah.justinclicks.com" target="_blank">https://sangrah.justinclicks.com</a> ',
-      //   backgroundColor: 'aliceblue',
-      //   textColor: '#091E42',
-      //   isCloseable: true,
-
-       
-      // },
-      googleAdsense: {
-        dataAdClient: 'ca-pub-7541510388779651',
-      },
-      
-      
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      
-      navbar: {
-        style:'primary',
 
+      navbar: {
+        style: 'primary',
         title: 'संपूर्ण संग्रह',
         logo: {
           alt: 'संपूर्ण संग्रह',
-          src: 'img/favicon.ico ',
+          src: 'img/favicon.ico',
         },
-
-             
-     
       },
-      
-      
-   
+
       prism: {
         theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
       },
-    
 
       colorMode: {
         defaultMode: 'light',
       },
-
     }),
-    
-    
 };
-
 
 module.exports = config;

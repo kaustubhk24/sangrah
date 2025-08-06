@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React, { JSX } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 
@@ -13,8 +13,9 @@ const ProjDevCards = [
     url: {
       page: '/category/आरती-संग्रह',
     },
-    description: 
-       'सर्व आरत्या'
+    description: (
+      <span>सर्व आरत्या</span>
+    )
     
   },
 
@@ -24,8 +25,9 @@ const ProjDevCards = [
     url: {
       page: '/category/स्तोत्र--श्लोक-संग्रह',
     },
-    description: 
-       'सर्व स्तोत्र / श्लोक'
+    description: (
+      <span>सर्व स्तोत्र / श्लोक</span>
+    )
     
   },
   {
@@ -34,8 +36,9 @@ const ProjDevCards = [
     url: {
       page: '/category/अष्टक-संग्रह',
     },
-    description: 
-       'सर्व अष्टके'
+    description: (
+      <span>सर्व अष्टके</span>
+    )
     
   },
   {
@@ -44,8 +47,9 @@ const ProjDevCards = [
     url: {
       page: 'category/चालीसा-संग्रह',
     },
-    description: 
-       'चालीसा'
+    description: (
+      <span>चालीसा</span>
+    )
     
   },
   {
@@ -54,8 +58,9 @@ const ProjDevCards = [
     url: {
       page: '/category/नामावली',
     },
-    description: 
-       'नामावली'
+    description: (
+      <span>नामावली</span>
+    )
     
   },
   {
@@ -64,8 +69,9 @@ const ProjDevCards = [
     url: {
       page: '/category/पूजा--व्रत',
     },
-    description: 
-       'पूजा'
+    description: (
+      <span>पूजा</span>
+    )
     
   },
   {
@@ -74,8 +80,9 @@ const ProjDevCards = [
     url: {
       page: '/category/सूक्त-संग्रह',
     },
-    description: 
-       'सूक्त'
+    description: (
+      <span>सूक्त</span>
+    )
     
   },
  
@@ -85,8 +92,9 @@ const ProjDevCards = [
     url: {
       page: '/category/पोथी',
     },
-    description: 
-       'पोथी'
+    description: (
+      <span>पोथी</span>
+    )
     
   },
   {
@@ -95,8 +103,9 @@ const ProjDevCards = [
     url: {
       page: '/category/अभंग-संग्रह',
     },
-    description: 
-       'संग्रह'
+    description: (
+      <span>संग्रह</span>
+    )
     
   },
  
@@ -106,8 +115,9 @@ const ProjDevCards = [
     url: {
       page: '/category/मंगलाष्टका',
     },
-    description: 
-       'मंगलाष्टका'
+    description: (
+      <span>मंगलाष्टका</span>
+    )
     
   },
  
@@ -117,8 +127,9 @@ const ProjDevCards = [
     url: {
       page: '/category/कथा-संग्रह',
     },
-    description: 
-       'कथा संग्रह'
+    description: (
+      <span>कथा संग्रह</span>
+    )
     
   },
   {
@@ -127,21 +138,34 @@ const ProjDevCards = [
     url: {
       page: '/category/पाळणा-संग्रह',
     },
-    description: 
-       'पाळणा संग्रह'
+    description: (
+      <span>पाळणा संग्रह</span>
+    )
     
   },
-
+{
+    name: 'प्रकल्प',
+    image: '',
+    url: {
+      page: '/project-information',
+    },
+    description: (
+      <span>प्रकल्पाविषयी माहिती</span>
+    )
+    
+  },
   {
     name: 'आजचे पंचांग',
     image: '',
     url: {
       page: 'https://dinank.datepanchang.in',
     },
-    description: 
-       'सौजन्य - दाते पंचांग '
+    description: (
+      <span>सौजन्य - दाते पंचांग </span>
+    )
     
   },
+
 
 
 ];
