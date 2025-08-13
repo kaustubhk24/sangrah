@@ -132,6 +132,11 @@ const config = {
             label: 'चिन्हांकित पाने',
             position: 'right',
           },
+          {
+            to:'/counter',
+            label:'जप',
+            position: 'right',
+          }
         ],
       },
 

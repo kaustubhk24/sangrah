@@ -154,6 +154,17 @@ const ProjDevCards = [
     )
     
   },
+    {
+    name: 'जप',
+    image: '',
+    url: {
+      page: '/counter',
+    },
+    description: (
+      <span>जप संख्या</span>
+    )
+    
+  },
 {
     name: 'प्रकल्प',
     image: '',
