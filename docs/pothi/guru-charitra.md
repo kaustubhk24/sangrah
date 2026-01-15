@@ -5,7 +5,7 @@ slug: /guru-charitra
 # गुरुचरित्र
 
 
-- [आता वाचा](https://cdn2.justinclicks.com/Public%20CDN/public_books/gurucharitra/)
+- [आता वाचा/अभी पढ़ें/Read Now](https://cdn2.justinclicks.com/Public%20CDN/public_books/gurucharitra/)
 
 
 
