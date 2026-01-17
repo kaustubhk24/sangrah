@@ -1,0 +1,14 @@
+{
+    "position": 4.1,
+    "label": "ऑडियो भजन",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "ऑडियो भजन"
+    },
+    "customProps": {
+      "description": "Audio Bhajan"
+    }
+  }

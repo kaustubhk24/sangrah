@@ -64,6 +64,17 @@ const ProjDevCards = [
     
   },
   {
+    name: 'ऑडियो भजन',
+    image: '',
+    url: {
+      page: '/category/ऑडियो-भजन',
+    },
+    description: (
+      <span>ऑडियो भजन</span>
+    )
+    
+  },
+  {
     name: 'नामावली संग्रह',
     image: '',
     url: {
