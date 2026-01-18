@@ -9,4 +9,4 @@ slug: /audio-bhajan-radha
     Your browser does not support the HTML5 Audio element.
 </audio> 
 
-<span class='index-text'> parthiv ganesh pratishthapana puja</span>
+<span class='index-text'> radhe radhe Radha Radha</span>
