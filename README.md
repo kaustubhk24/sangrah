@@ -13,7 +13,7 @@ While contributing please take care of the things below.
 In markdown file please use syntax below
 
 ```
-<audio controls="controls" src="/audio/aarati/file_name.mp3">
+<audio controls="controls" controlsList="nodownload" src="/audio/aarati/file_name.mp3">
     Your browser does not support the HTML5 Audio element.
 </audio> 
 ```

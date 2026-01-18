@@ -7,7 +7,7 @@ slug: /ram-raksha
 
 ## श्री राम रक्षा स्तोत्र
 
-<audio controls="controls" src="https://cdn2.justinclicks.com/Public%20CDN/public_audios/stotras/ram-raksha.mp3">
+<audio controls="controls" controlsList="nodownload" src="https://cdn2.justinclicks.com/Public%20CDN/public_audios/stotras/ram-raksha.mp3">
     Your browser does not support the HTML5 Audio element.
 </audio> 
 
