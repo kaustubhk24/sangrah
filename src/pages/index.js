@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { ProjDevCardsRow } from '../components/ProjDevCards';
-import FontSizeControl from '../components/FontSizeControl';
 
 export default function Hello() {
   return (
@@ -15,8 +14,6 @@ export default function Hello() {
         <ProjDevCardsRow/>
         </div>
           </center>
-
-        <FontSizeControl />
 
     </Layout>
   );
