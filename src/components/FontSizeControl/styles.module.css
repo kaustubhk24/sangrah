@@ -1,0 +1,29 @@
+.container {
+  position: fixed;
+  bottom: 10px;
+  right: 18px;
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 9999;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  user-select: none;
+}
+
+.btn {
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover { background: rgba(255,255,255,0.18); }
+
+.label { font-size: 14px; padding: 0 6px; }

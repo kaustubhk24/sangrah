@@ -9,13 +9,18 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: "mukta";
+  --ifm-font-family-base: "Mukta", sans-serif;
+  --ifm-font-size-base: 16px;
 }
 
 /* Font face */
 @font-face {
   font-family: "mukta";
   src: url('/static/fonts/baloo.woff') format('woff');
+}
+
+html {
+  font-size: var(--ifm-font-size-base);
 }
 
 
