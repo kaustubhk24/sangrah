@@ -1,0 +1,182 @@
+.container {
+  position: fixed;
+  bottom: 70px;
+  right: 18px;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  user-select: none;
+}
+
+.mainBtn {
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.mainBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.mainBtn.active {
+  background: var(--ifm-color-success);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.controlPanel {
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  min-width: 200px;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.speedControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.speedControl label {
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.slider {
+  flex: 1;
+  min-width: 80px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.speedValue {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 24px;
+  text-align: center;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.controlBtn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.controlBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.controlBtn:active {
+  transform: scale(0.95);
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+  .container {
+    bottom: 60px;
+    right: 12px;
+  }
+
+  .controlPanel {
+    min-width: 160px;
+    padding: 10px;
+  }
+
+  .speedControl {
+    margin-bottom: 10px;
+  }
+
+  .mainBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mainBtn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .controlBtn {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+}
