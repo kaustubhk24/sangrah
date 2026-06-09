@@ -76,15 +76,14 @@ const config = {
     [
       '@docusaurus/plugin-pwa',
       {
-        debug: false, // Changed to false for production
-        offlineModeActivationStrategies: ['always'],
+        debug: false,
+        offlineModeActivationStrategies: ['appInstalled'],
         injectManifestConfig: {
           globPatterns: [
-            '**/*.{js,json,css,html,jpg,jpeg,png,svg,ico,txt,md,mdx,webp}',
-
+            '**/*.{js,css,html,jpg,jpeg,png,svg,ico,txt,md,mdx,webp}',
           ],
-          globIgnores: ['**/*.mp3', '**/*.ogg', '**/*.wav'],
-          maximumFileSizeToCacheInBytes: 52428800
+          globIgnores: ['**/*.mp3', '**/*.ogg', '**/*.wav', '**/search-index.json', '**/*.json'],
+          maximumFileSizeToCacheInBytes: 52428800,
         },
         pwaHead: [
           {
