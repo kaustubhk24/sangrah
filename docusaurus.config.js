@@ -136,6 +136,12 @@ const config = {
             label:'जप',
             position: 'right',
           }
+          ,
+          {
+            to:'/project-information',
+            label:'प्रकल्प माहिती',
+            position: 'right',
+          }
         ],
       },
 
