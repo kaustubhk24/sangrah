@@ -3,33 +3,33 @@
     "name": "संपूर्ण संग्रह",
     "icons": [
       {
-        "src": "/img/pwa/512x512.png",
+        "src": "/img/pwa/512X512.png",
         "type": "image/png",
         "sizes": "512x512"
       },
       {
-        "src": "/img/pwa/192x192.png",
+        "src": "/img/pwa/192X192.png",
         "type": "image/png",
         "sizes": "192x192",
         "purpose": "maskable"
       },
       {
-        "src": "/img/pwa/96x96.png",
+        "src": "/img/pwa/96X96.png",
         "type": "image/png",
         "sizes": "96x96"
       }
       ,{
-        "src": "/img/pwa/48x48.png",
+        "src": "/img/pwa/48X48.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "/img/pwa/72x72.png",
+        "src": "/img/pwa/72X72.png",
         "type": "image/png",
         "sizes": "72x72"
       },
       {
-        "src": "/img/pwa/144x144.png",
+        "src": "/img/pwa/144X144.png",
         "type": "image/png",
         "sizes": "144x144"
       }
