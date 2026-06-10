@@ -169,6 +169,15 @@
   margin-bottom: 4px;
 }
 
+.itemPath {
+  font-size: 12px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+
 .itemTime {
   font-size: 12px;
   color: #999;

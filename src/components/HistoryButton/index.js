@@ -8,27 +8,57 @@ export default function HistoryButton() {
   const [pageHistory, setPageHistory] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
+  const normalizePath = (path) => {
+    if (typeof path !== 'string') return '/';
+    const [pathname, ...rest] = path.split(/([?#])/);
+    const suffix = rest.join('');
+    const normalizedPathname = pathname.replace(/\/+$/, '') || '/';
+    return `${normalizedPathname}${suffix}`;
+  };
+
+  const currentPath = `${location.pathname || ''}${location.search || ''}${location.hash || ''}`;
+
   useEffect(() => {
-    try {
-      const savedHistory = JSON.parse(localStorage.getItem('pageHistory') || '[]');
-      const currentPage = {
-        path: location.pathname,
-        title: document.title || 'Page',
-        timestamp: new Date().toISOString(),
-      };
+    const saveHistory = () => {
+      try {
+        const savedHistory = JSON.parse(localStorage.getItem('pageHistory') || '[]');
+        const currentPage = {
+          path: normalizePath(currentPath),
+          title: document.title || currentPath,
+          timestamp: new Date().toISOString(),
+        };
 
-      const filtered = savedHistory.filter((h) => h.path !== currentPage.path);
-      const updated = [currentPage, ...filtered].slice(0, 15);
+        const cleanedHistory = Array.isArray(savedHistory)
+          ? savedHistory.filter((item) => item && typeof item.path === 'string')
+          : [];
 
-      localStorage.setItem('pageHistory', JSON.stringify(updated));
-      setPageHistory(updated);
-    } catch (error) {
-      console.error('Error updating history:', error);
-    }
-  }, [location.pathname]);
+        const uniqueHistory = cleanedHistory.reduce((acc, item) => {
+          const normalizedPath = normalizePath(item.path);
+          if (!acc.some((historyItem) => historyItem.path === normalizedPath)) {
+            acc.push({
+              ...item,
+              path: normalizedPath,
+            });
+          }
+          return acc;
+        }, []);
+
+        const previousPages = uniqueHistory.filter((h) => h.path !== normalizePath(currentPath));
+        const updatedHistory = [currentPage, ...previousPages].slice(0, 15);
+
+        localStorage.setItem('pageHistory', JSON.stringify(updatedHistory));
+        setPageHistory(previousPages.slice(0, 15));
+      } catch (error) {
+        console.error('Error updating history:', error);
+      }
+    };
+
+    const timeoutId = window.setTimeout(saveHistory, 0);
+    return () => window.clearTimeout(timeoutId);
+  }, [currentPath]);
 
   const navigateToPage = (path) => {
-    history.push(path);
+    history.push(normalizePath(path));
     setShowDropdown(false);
   };
 
@@ -92,18 +122,19 @@ export default function HistoryButton() {
                 <div className={styles.empty}>No history yet</div>
               ) : (
                 <ul className={styles.list}>
-                  {pageHistory.map((item, idx) => (
-                    <li key={`${item.path}-${idx}`} className={styles.item}>
-                      <button
-                        onClick={() => navigateToPage(item.path)}
-                        className={styles.link}
-                        type="button"
-                      >
-                        <div className={styles.itemTitle}>{item.title}</div>
-                        <div className={styles.itemTime}>{formatTime(item.timestamp)}</div>
-                      </button>
-                    </li>
-                  ))}
+                  {pageHistory.map((item) => (
+                      <li key={item.path} className={styles.item}>
+                        <button
+                          onClick={() => navigateToPage(item.path)}
+                          className={styles.link}
+                          type="button"
+                        >
+                          <div className={styles.itemTitle}>{item.title || item.path}</div>
+                          <div className={styles.itemPath}>{item.path}</div>
+                          <div className={styles.itemTime}>{formatTime(item.timestamp)}</div>
+                        </button>
+                      </li>
+                    ))}
                 </ul>
               )}
             </div>
