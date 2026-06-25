@@ -131,6 +131,11 @@ const config = {
             position: 'right',
           },
           {
+            to: '/history',
+            label: 'इतिहास',
+            position: 'right',
+          },
+          {
             to:'/counter',
             label:'जप',
             position: 'right',
