@@ -61,12 +61,6 @@ const config = {
 
   plugins: [
     [
-      require.resolve('docusaurus-lunr-search'),
-      {
-        languages: ['en'] // language codes
-      }
-    ],
-    [
       '@docusaurus/plugin-google-gtag',
       {
         trackingID: 'G-BDZNJ51SEP',
@@ -125,6 +119,10 @@ const config = {
           src: 'img/favicon.ico',
         },
         items: [
+          {
+            type: 'search',
+            position: 'right',
+          },
           {
             to: '/bookmarks',
             label: 'चिन्हांकित पाने',

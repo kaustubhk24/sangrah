@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/pwa-install.css';
 
 export default function PwaInstallButton() {
@@ -8,9 +8,17 @@ export default function PwaInstallButton() {
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
+    const inStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
+    const iosStandalone = window.navigator.standalone;
+    const currentlyInstalled = !!inStandalone || !!iosStandalone;
+    if (currentlyInstalled) {
+      setIsInstalled(true);
+      setVisible(false);
+      return;
+    }
+
     function onBeforeInstallPrompt(e) {
       e.preventDefault();
-      // only show prompt if not already installed
       if (isInstalled) return;
       setDeferredPrompt(e);
       setVisible(true);
@@ -22,24 +30,12 @@ export default function PwaInstallButton() {
       setDeferredPrompt(null);
     }
 
-    // initial installed detection
-    const inStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
-    const iosStandalone = window.navigator.standalone;
-    const currentlyInstalled = !!inStandalone || !!iosStandalone;
-    if (currentlyInstalled) {
-      setIsInstalled(true);
-      setVisible(false);
-      return; // no need to attach listeners
-    }
-
     window.addEventListener('beforeinstallprompt', onBeforeInstallPrompt);
     window.addEventListener('appinstalled', onAppInstalled);
 
-    // Detect iOS PWA (safari) where beforeinstallprompt isn't fired
     const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
     const isInStandalone = inStandalone || iosStandalone;
     if (isIos && !isInStandalone && !currentlyInstalled) {
-      // show a subtle install hint for iOS
       setVisible(true);
     }
 
@@ -47,7 +43,7 @@ export default function PwaInstallButton() {
       window.removeEventListener('beforeinstallprompt', onBeforeInstallPrompt);
       window.removeEventListener('appinstalled', onAppInstalled);
     };
-  }, []);
+  }, [isInstalled]);
 
   const onInstallClick = async () => {
     if (deferredPrompt) {
@@ -58,34 +54,39 @@ export default function PwaInstallButton() {
         setDeferredPrompt(null);
         setIsInstalled(true);
       } else {
-        // user dismissed prompt — keep it unobtrusive (hide)
         setVisible(false);
       }
     } else {
-      // iOS fallback: show instructions modal
       setShowIosHelp(true);
     }
   };
 
-  // never show if already installed
-  if (isInstalled) return null;
-
-  if (!visible) return null;
+  if (isInstalled || !visible) return null;
 
   return (
     <>
-      <div className="pwa-install-container">
-        <button className="pwa-install-button" onClick={onInstallClick} aria-label="Install app">
-          Install App
-        </button>
+      <div className="install-banner">
+        <div className="install-banner__body">
+          <div className="install-banner__icon">📱</div>
+          <div className="install-banner__copy">
+            <strong>संपूर्ण संग्रह अॅप इन्स्टॉल करा</strong>
+            <p>होम स्क्रीनवर जोडा आणि इंटरनेटशिवाय वापरा.</p>
+          </div>
+          <button className="install-banner__cta" onClick={onInstallClick} aria-label="इन्स्टॉल करा">
+            इन्स्टॉल करा
+          </button>
+          <button className="install-banner__dismiss" onClick={() => setVisible(false)} aria-label="Dismiss install banner">
+            ✕
+          </button>
+        </div>
       </div>
 
       {showIosHelp && (
         <div className="pwa-ios-modal" role="dialog" aria-modal="true">
           <div className="pwa-ios-modal-content">
-            <h3>Install this app</h3>
-            <p>To install on iPhone or iPad: tap <strong>Share</strong> then choose <strong>Add to Home Screen</strong>.</p>
-            <button className="pwa-modal-close" onClick={() => setShowIosHelp(false)}>Close</button>
+            <h3>अॅप इन्स्टॉल कसे करावे</h3>
+            <p>iPhone किंवा iPad वर, शेअर बटण दाबा आणि "होम स्क्रीनवर जोडा" निवडा.</p>
+            <button className="pwa-modal-close" onClick={() => setShowIosHelp(false)}>बंद करा</button>
           </div>
         </div>
       )}

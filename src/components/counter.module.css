@@ -1,0 +1,355 @@
+.counterWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #f3d7c2;
+  padding: 22px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.02);
+  margin-bottom: 24px;
+}
+
+[data-theme='dark'] .card {
+  background: #1f1f1f;
+  border-color: #3a2e24;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #c75d00;
+  margin-top: 0;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #fff4e5;
+  padding-bottom: 6px;
+}
+
+[data-theme='dark'] .title {
+  color: #ffa726;
+  border-bottom-color: #3a2e24;
+}
+
+.settingLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: #542c16;
+  margin-bottom: 8px;
+}
+
+[data-theme='dark'] .settingLabel {
+  color: #ffa726;
+}
+
+/* Mantra selector */
+.mantraSelect {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ECE4D8;
+  border-radius: 14px;
+  background: #FFFDF8;
+  color: #1E1E1E;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+[data-theme='dark'] .mantraSelect {
+  background: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+/* Main counter ring layout */
+.counterLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+  position: relative;
+}
+
+.ringContainer {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circularSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.svgBgCircle {
+  fill: none;
+  stroke: #fff4e5;
+  stroke-width: 12;
+}
+
+[data-theme='dark'] .svgBgCircle {
+  stroke: #2b221a;
+}
+
+.svgProgressCircle {
+  fill: none;
+  stroke: #E67E22;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.35s;
+}
+
+[data-theme='dark'] .svgProgressCircle {
+  stroke: #ffa726;
+}
+
+.ringTextContainer {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.currentCount {
+  font-size: 48px;
+  font-weight: 800;
+  color: #C75D00;
+  line-height: 1;
+}
+
+[data-theme='dark'] .currentCount {
+  color: #ffa726;
+}
+
+.targetCount {
+  font-size: 14px;
+  color: #5A5A5A;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .targetCount {
+  color: #aaa;
+}
+
+/* Mala Bead Hanging Drawing */
+.malaIllustration {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: -12px;
+  margin-bottom: 24px;
+}
+
+.bead {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c75d00;
+  border: 1px solid #a34b00;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.4);
+}
+
+[data-theme='dark'] .bead {
+  background: #ffa726;
+  border-color: #e67e22;
+}
+
+.tassel {
+  width: 14px;
+  height: 24px;
+  background: #d32f2f;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  margin-left: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Controls buttons */
+.controlsRow {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.mainIncrementBtn {
+  background: linear-gradient(135deg, #E67E22 0%, #C75D00 100%);
+  color: white;
+  border: none;
+  font-size: 26px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.mainIncrementBtn:active {
+  transform: scale(0.92);
+  box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
+}
+
+[data-theme='dark'] .mainIncrementBtn {
+  background: linear-gradient(135deg, #ffa726 0%, #E67E22 100%);
+  color: #121212;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.supportBtn {
+  background: #FFFDF8;
+  border: 1px solid #ECE4D8;
+  color: #5A5A5A;
+  font-size: 14px;
+  font-weight: 700;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  align-self: center;
+}
+
+[data-theme='dark'] .supportBtn {
+  background: #2d2d2d;
+  border-color: #444;
+  color: #ccc;
+}
+
+.supportBtn:hover {
+  border-color: #E67E22;
+  color: #C75D00;
+}
+
+[data-theme='dark'] .supportBtn:hover {
+  border-color: #ffa726;
+  color: #ffa726;
+}
+
+/* Dashboard statistics */
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.dashboardItem {
+  background: #FFFDF8;
+  border: 1px solid #ECE4D8;
+  border-radius: 16px;
+  padding: 14px;
+  text-align: center;
+}
+
+[data-theme='dark'] .dashboardItem {
+  background: #1f1f1f;
+  border-color: #3a2e24;
+}
+
+.dashValue {
+  font-size: 22px;
+  font-weight: 800;
+  color: #C75D00;
+  margin-bottom: 4px;
+}
+
+[data-theme='dark'] .dashValue {
+  color: #ffa726;
+}
+
+.dashLabel {
+  font-size: 12px;
+  color: #5A5A5A;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .dashLabel {
+  color: #aaa;
+}
+
+/* Session History list */
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.historyTable th,
+.historyTable td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ECE4D8;
+}
+
+[data-theme='dark'] .historyTable th,
+[data-theme='dark'] .historyTable td {
+  border-bottom-color: #3a2e24;
+}
+
+.historyTable th {
+  font-weight: 700;
+  color: #542c16;
+}
+
+[data-theme='dark'] .historyTable th {
+  color: #ffa726;
+}
+
+/* Streak card styling */
+.streakCard {
+  background: linear-gradient(135deg, #FFF4E5 0%, #FFFDF8 100%);
+  border: 1px solid #ffd180;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(230, 126, 34, 0.05);
+}
+
+[data-theme='dark'] .streakCard {
+  background: linear-gradient(135deg, #2b221a 0%, #1f1f1f 100%);
+  border-color: #4a3319;
+}
+
+.streakCount {
+  font-size: 28px;
+  font-weight: 800;
+  color: #E67E22;
+  margin-bottom: 6px;
+}
+
+[data-theme='dark'] .streakCount {
+  color: #ffa726;
+}
+
+.streakQuote {
+  font-size: 15px;
+  color: #5d4037;
+  font-style: italic;
+  margin: 8px 0 0;
+  line-height: 1.4;
+}
+
+[data-theme='dark'] .streakQuote {
+  color: #bcaaa4;
+}

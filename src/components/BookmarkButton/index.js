@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from '@docusaurus/router';
+import styles from './styles.module.css';
 
-export default function BookmarkButton() {
+export default function BookmarkButton({ className }) {
   const location = useLocation();
   const [isBookmarked, setIsBookmarked] = useState(false);
   
@@ -46,22 +47,12 @@ export default function BookmarkButton() {
   return (
     <button 
       onClick={toggleBookmark}
-      style={{
-        background: 'none',
-        border: 'none',
-        cursor: 'pointer',
-        fontSize: '24px',
-        color: isBookmarked ? '#fbbf24' : '#718096',
-        padding: '8px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-        zIndex: 200  // Add higher z-index to ensure button is clickable
-      }}
+      className={className || styles.bookmarkButton}
       aria-label={isBookmarked ? 'चिन्हांकन काढून टाका' : 'चिन्हांकीत करा'}
     >
-      {isBookmarked ? '⭐' : '☆'}
+      <svg width="20" height="20" viewBox="0 0 24 24" fill={isBookmarked ? "#fbbf24" : "none"} stroke={isBookmarked ? "#fbbf24" : "currentColor"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </svg>
     </button>
   );
 }

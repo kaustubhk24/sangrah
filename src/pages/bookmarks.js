@@ -35,8 +35,9 @@ export default function Bookmarks() {
               <ul className={styles.bookmarksList}>
                 {bookmarks.map((bookmark) => (
                   <li key={bookmark.path} className={styles.bookmarkItem}>
-                    <Link to={bookmark.path}>
-                      {bookmark.title}
+                    <Link to={bookmark.path} className={styles.bookmarkLink}>
+                      <div className={styles.bookmarkTitle}>{bookmark.title || bookmark.path}</div>
+                      <div className={styles.bookmarkPath}>{bookmark.path}</div>
                     </Link>
                     <button
                       onClick={() => removeBookmark(bookmark.path)}

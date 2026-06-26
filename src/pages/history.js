@@ -62,8 +62,8 @@ export default function HistoryPage() {
         ) : (
           <>
             <ul className={styles.historyList}>
-              {historyItems.map((item) => (
-                <li key={item.path} className={styles.historyItem}>
+              {historyItems.map((item, index) => (
+                <li key={`${item.path}-${index}`} className={styles.historyItem}>
                   <Link to={item.path} className={styles.historyLink}>
                     <div className={styles.historyTitle}>{item.title || item.path}</div>
                     <div className={styles.historyPath}>{item.path}</div>

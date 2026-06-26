@@ -1,0 +1,65 @@
+.reloadPopup {
+  position: fixed;
+  bottom: 80px; /* Above the bottom navigation bar */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #C75D00;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  width: 90%;
+  max-width: 450px;
+  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='dark'] .reloadPopup {
+  background: #ffa726;
+  color: #121212;
+}
+
+.reloadContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.reloadBtn {
+  background: white;
+  color: #C75D00;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+[data-theme='dark'] .reloadBtn {
+  background: #121212;
+  color: #ffa726;
+}
+
+.reloadBtn:hover {
+  transform: scale(1.05);
+}
+
+.reloadBtn:active {
+  transform: scale(0.95);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}

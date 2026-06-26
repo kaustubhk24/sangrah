@@ -1,45 +1,216 @@
-.pwa-install-container {
-  position: fixed;
-  left: 16px;
-  /* place above site controls (font-size, etc.) */
-  bottom: 96px;
-  z-index: 20000;
+/* PWA Banner Styles */
+.install-banner {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  border: 1px solid #ffd180;
+  border-radius: 18px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  box-shadow: 0 10px 25px rgba(245, 124, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.pwa-install-button {
-  background: #bf43bb;
-  color: white;
+[data-theme='dark'] .install-banner {
+  background: linear-gradient(135deg, #1e1b18 0%, #2b221a 100%);
+  border: 1px solid #4a3319;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.install-banner__body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.install-banner__icon {
+  font-size: 28px;
+  background: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(245, 124, 0, 0.1);
+  flex-shrink: 0;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+[data-theme='dark'] .install-banner__icon {
+  background: #332517;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.install-banner__copy {
+  flex: 1;
+}
+
+.install-banner__copy strong {
+  display: block;
+  font-size: 15px;
+  color: #e65100;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .install-banner__copy strong {
+  color: #ffa726;
+}
+
+.install-banner__copy p {
+  margin: 0;
+  font-size: 13px;
+  color: #5d4037;
+  line-height: 1.4;
+}
+
+[data-theme='dark'] .install-banner__copy p {
+  color: #bcaaa4;
+}
+
+.install-banner__cta {
+  background: linear-gradient(135deg, #f57c00 0%, #e65100 100%);
+  color: #ffffff;
   border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 99px;
   font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(245, 124, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
-.pwa-ios-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
+.install-banner__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(245, 124, 0, 0.3);
+}
+
+.install-banner__dismiss {
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: #b0bec5;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1100;
+}
+
+.install-banner__dismiss:hover {
+  color: #e65100;
+}
+
+[data-theme='dark'] .install-banner__dismiss:hover {
+  color: #ffa726;
+}
+
+/* Modal dialog for iOS users */
+.pwa-ios-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
 }
 
 .pwa-ios-modal-content {
-  background: white;
-  padding: 18px;
-  border-radius: 8px;
-  max-width: 90%;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+[data-theme='dark'] .pwa-ios-modal-content {
+  background: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.pwa-ios-modal-content h3 {
+  margin-top: 0;
+  color: #e65100;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+[data-theme='dark'] .pwa-ios-modal-content h3 {
+  color: #ffa726;
+}
+
+.pwa-ios-modal-content p {
+  font-size: 14px;
+  color: #5d4037;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+[data-theme='dark'] .pwa-ios-modal-content p {
+  color: #bcaaa4;
 }
 
 .pwa-modal-close {
-  margin-top: 12px;
-  background: #eee;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 10px 24px;
+  border-radius: 99px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.2s;
+}
+
+[data-theme='dark'] .pwa-modal-close {
+  background: #333333;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+.pwa-modal-close:hover {
+  background: #eeeeee;
+}
+
+[data-theme='dark'] .pwa-modal-close:hover {
+  background: #444444;
+}
+
+@media (max-width: 576px) {
+  .install-banner__body {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .install-banner__copy {
+    width: calc(100% - 70px);
+  }
+  .install-banner__cta {
+    width: 100%;
+    text-align: center;
+    padding: 11px;
+    order: 3;
+  }
+  .install-banner__dismiss {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
 }

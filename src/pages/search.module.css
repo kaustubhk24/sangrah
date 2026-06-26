@@ -1,0 +1,108 @@
+.searchBarContainer {
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.searchPageInput {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1.15rem;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-900);
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.searchPageInput:focus {
+  border-color: #E67E22;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.15);
+}
+
+[data-theme='dark'] .searchPageInput:focus {
+  border-color: #ffa726;
+  box-shadow: 0 0 0 3px rgba(255, 167, 38, 0.15);
+}
+
+.clearBtn {
+  position: absolute;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--ifm-color-emphasis-600);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.searchResultList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.searchResultItem {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.searchResultItem:last-child {
+  border-bottom: none;
+}
+
+.searchResultLink {
+  text-decoration: none;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.searchResultLink:hover .searchResultTitle {
+  text-decoration: underline;
+}
+
+.searchResultTitle {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.searchResultPath {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  word-break: break-all;
+}
+
+.searchResultCategory {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #FFF4E5;
+  color: #C75D00;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid #ECE4D8;
+  text-transform: uppercase;
+}
+
+[data-theme='dark'] .searchResultCategory {
+  background: #2b221a;
+  color: #ffa726;
+  border-color: #3a2e24;
+}
+
+.emptyState {
+  padding: 2rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  background: var(--ifm-background-secondary);
+  text-align: center;
+  font-weight: 600;
+}
