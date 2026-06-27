@@ -65,6 +65,26 @@
   color: #fff;
 }
 
+.activeMantraDisplay {
+  background: #FFFDF8;
+  border: 1.5px dashed #E67E22;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #C75D00;
+  line-height: 1.6;
+  margin-top: 12px;
+  word-break: break-word;
+}
+
+[data-theme='dark'] .activeMantraDisplay {
+  background: #241f1b;
+  border-color: #ff9f43;
+  color: #ffa726;
+}
+
 /* Main counter ring layout */
 .counterLayout {
   display: flex;

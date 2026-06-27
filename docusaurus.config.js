@@ -9,7 +9,7 @@ const darkCodeTheme = themes.dracula;
 const config = {
   title: 'संपूर्ण संग्रह',
   tagline: '',
-  favicon: 'img/ico.png',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   //url: 'https://sangrah.justinclicks.com',
@@ -50,8 +50,54 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+            const devanagariDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+            const toDevanagari = (num) => num.toString().replace(/[0-9]/g, (digit) => devanagariDigits[parseInt(digit, 10)]);
+
+            // Helper to recursively count all doc children (documents) in a category
+            function countDocs(item) {
+              if (item.type === 'doc') {
+                return 1;
+              }
+              if (item.type === 'category' && Array.isArray(item.items)) {
+                return item.items.reduce((sum, child) => sum + countDocs(child), 0);
+              }
+              return 0;
+            }
+
+            // Helper to recursively map categories and append counts
+            function processItems(items) {
+              return items.map((item) => {
+                if (item.type === 'category') {
+                  const count = countDocs(item);
+                  const originalLabel = item.label;
+                  const updatedItem = {
+                    ...item,
+                    label: `${originalLabel} (${toDevanagari(count)})`,
+                    items: processItems(item.items),
+                  };
+                  // Keep the original slug based on original label to prevent broken links
+                  if (item.link && item.link.type === 'generated-index') {
+                    const slugMap = {
+                      "आरती संग्रह": "आरती-संग्रह",
+                      "स्तोत्र / श्लोक संग्रह": "स्तोत्र--श्लोक-संग्रह",
+                      "कथा संग्रह": "कथा-संग्रह",
+                      "पोथी": "पोथी",
+                      "सूक्त संग्रह": "सूक्त-संग्रह",
+                      "चालीसा संग्रह": "चालीसा-संग्रह"
+                    };
+                    const slugPart = slugMap[originalLabel] || originalLabel.trim().replace(/[^a-zA-Z0-9\u0900-\u097F]+/g, '-').replace(/-+/g, '-');
+                    updatedItem.link.slug = `/category/${slugPart}`;
+                  }
+                  return updatedItem;
+                }
+                return item;
+              });
+            }
+
+            return processItems(sidebarItems);
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -73,9 +119,27 @@ const config = {
       {
         debug: false,
         offlineModeActivationStrategies: ['appInstalled'],
+        swCustom: require.resolve('./src/sw.js'),
         injectManifestConfig: {
-          globPatterns: [
-            '**/*.{js,css,html,jpg,jpeg,png,svg,ico,txt,md,mdx,webp}',
+          manifestTransforms: [
+            (manifestEntries) => {
+              const keepPatterns = [
+                /^index\.html$/,
+                /^offline\.html$/,
+                /^manifest\.json$/,
+                /^assets\/css\/.*\.css$/,
+                /^assets\/js\/main\..*\.js$/,
+                /^assets\/js\/runtime~main\..*\.js$/,
+                /^img\/favicon\.ico$/,
+                /^img\/logo\.svg$/,
+                /^img\/pwa\/.*\.png$/,
+                /\.sw\.js$/,
+              ];
+              const manifest = manifestEntries.filter((entry) =>
+                keepPatterns.some((pattern) => pattern.test(entry.url))
+              );
+              return { manifest, warnings: [] };
+            },
           ],
           globIgnores: ['**/*.mp3', '**/*.ogg', '**/*.wav', '**/search-index.json', '**/*.json'],
           maximumFileSizeToCacheInBytes: 52428800,
@@ -121,10 +185,6 @@ const config = {
         },
         items: [
           {
-            type: 'search',
-            position: 'right',
-          },
-          {
             to: '/bookmarks',
             label: 'चिन्हांकित पाने',
             position: 'right',
@@ -155,6 +215,7 @@ const config = {
 
       colorMode: {
         defaultMode: 'light',
+        disableSwitch: true,
       },
     }),
 };

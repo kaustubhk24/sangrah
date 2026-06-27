@@ -11,9 +11,8 @@ import searchIndex from '@site/src/data/searchIndex.json';
 import styles from './styles.module.css';
 
 export default function DocItemLayoutWrapper(props) {
-  const { t, lang } = useTranslation();
+  const { t, lang, translateNumbers } = useTranslation();
   const location = useLocation();
-  const [speaking, setSpeaking] = useState(false);
   const [showChapterDrawer, setShowChapterDrawer] = useState(false);
   const [chapterSearch, setChapterSearch] = useState('');
   const [showResumeToast, setShowResumeToast] = useState(false);
@@ -124,40 +123,7 @@ export default function DocItemLayoutWrapper(props) {
     return () => clearTimeout(timeout);
   }, [location.pathname]);
 
-  // Speech synthesis cleanup
-  useEffect(() => {
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.speechSynthesis.cancel();
-      }
-    };
-  }, []);
 
-  const handleSpeak = () => {
-    if (typeof window === 'undefined') return;
-    if (speaking) {
-      window.speechSynthesis.cancel();
-      setSpeaking(false);
-      return;
-    }
-
-    const article = document.querySelector('article');
-    if (!article) return;
-    
-    // Speak headers and paragraphs only
-    const speakText = Array.from(article.querySelectorAll('h1, h2, h3, p'))
-      .map(el => el.innerText)
-      .join('. ');
-
-    if (!speakText.trim()) return;
-
-    const utterance = new SpeechSynthesisUtterance(speakText);
-    utterance.lang = 'mr-IN';
-    utterance.onend = () => setSpeaking(false);
-    utterance.onerror = () => setSpeaking(false);
-    window.speechSynthesis.speak(utterance);
-    setSpeaking(true);
-  };
 
   const handleResumeScroll = () => {
     if (typeof window !== 'undefined') {
@@ -209,32 +175,12 @@ export default function DocItemLayoutWrapper(props) {
     <>
       {/* Reading Controls Bar */}
       <div className={styles.readingControlsBar}>
-        {/* Font size picker */}
-        <div className={styles.fontSizeSelect}>
-          {fontSizes.map((key) => (
-            <button
-              key={key}
-              className={`${styles.controlBtn} ${fontSize === key ? styles.active : ''}`}
-              onClick={() => changeFontSize(key)}
-            >
-              {getFontSizeLabel(key)}
-            </button>
-          ))}
-        </div>
-
         {/* Audio Read & Auto scroll & Actions */}
         <div className={styles.controlsRow}>
-          <button 
-            onClick={handleSpeak} 
-            className={`${styles.audioBtn} ${speaking ? styles.speaking : ''}`}
-          >
-            {speaking ? t('stopBtn') : t('listenBtn')}
-          </button>
           <AutoScrollControl />
           <div className={styles.iconActionsGroup}>
             <ShareButton className={styles.iconBtn} />
             <BookmarkButton className={styles.iconBtn} />
-            <ThemeToggle className={styles.iconBtn} />
           </div>
         </div>
       </div>
@@ -255,7 +201,7 @@ export default function DocItemLayoutWrapper(props) {
       {isDailyPathMode && dailyPathList.length > 0 && (
         <div className={styles.dailyPathPlaylistBar}>
           <div className={styles.playlistProgress}>
-            <span>🚩 {t('dailyPath')}: {dailyPathList[dailyPathIndex]?.title} ({dailyPathIndex + 1} / {dailyPathList.length})</span>
+            <span>🚩 {t('dailyPath')}: {dailyPathList[dailyPathIndex]?.title} ({translateNumbers(dailyPathIndex + 1)} / {translateNumbers(dailyPathList.length)})</span>
             <div className={styles.playlistProgressBg}>
               <div 
                 className={styles.playlistProgressBar} 
@@ -285,7 +231,7 @@ export default function DocItemLayoutWrapper(props) {
         <div className={styles.bookPaginationContainer}>
           <div className={styles.progressBarContainer}>
             <div className={styles.progressBarLabel}>
-              {t('pageLabel')} {bookInfo.currentIndex + 1} / {bookInfo.total}
+              {t('pageLabel')} {translateNumbers(bookInfo.currentIndex + 1)} / {translateNumbers(bookInfo.total)}
             </div>
             <div className={styles.progressBarBg}>
               <div 
@@ -345,7 +291,7 @@ export default function DocItemLayoutWrapper(props) {
                         className={`${styles.drawerItem} ${isActive ? styles.activeDrawerItem : ''}`}
                         onClick={() => setShowChapterDrawer(false)}
                       >
-                        <span className={styles.drawerItemIndex}>{idx + 1}</span>
+                        <span className={styles.drawerItemIndex}>{translateNumbers(idx + 1)}</span>
                         <span className={styles.drawerItemTitle}>{item.title}</span>
                       </Link>
                     );

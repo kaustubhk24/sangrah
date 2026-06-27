@@ -3,17 +3,19 @@ import { useTranslation } from '../utils/translations';
 import styles from './counter.module.css';
 
 const defaultMantras = [
+  "राधा राधा",
   "ॐ गं गणपतये नमः",
   "ॐ नमः शिवाय",
   "ॐ नमो भगवते वासुदेवाय",
   "श्री राम जय राम जय जय राम",
   "हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे | हरे राम हरे राम राम राम हरे हरे",
   "ॐ नमो नारायणाय",
-  "ॐ भूर्भुवः स्वः"
+  "ॐ भूर्भुवः स्वः",
+  "ॐ नीलांजन समाभासं रविपुत्रं यमाग्रजम्।छाया मार्तण्ड सम्भूतं तं नमामि शनैश्चरम्॥"
 ];
 
 export default function CounterPage() {
-  const { t, lang } = useTranslation();
+  const { t, lang, translateNumbers } = useTranslation();
   const [activeMantra, setActiveMantra] = useState(defaultMantras[0]);
   const [currentCount, setCurrentCount] = useState(0);
   const [malaCount, setMalaCount] = useState(0);
@@ -230,6 +232,9 @@ export default function CounterPage() {
             </option>
           ))}
         </select>
+        <div className={styles.activeMantraDisplay}>
+          {getTranslatedMantra(activeMantra)}
+        </div>
       </div>
 
       {/* Main Counter Section */}
@@ -254,8 +259,8 @@ export default function CounterPage() {
               />
             </svg>
             <div className={styles.ringTextContainer}>
-              <span className={styles.currentCount}>{currentCount}</span>
-              <span className={styles.targetCount}>{currentCount} / 108</span>
+              <span className={styles.currentCount}>{translateNumbers(currentCount)}</span>
+              <span className={styles.targetCount}>{translateNumbers(currentCount)} / {translateNumbers(108)}</span>
             </div>
           </div>
         </div>
@@ -272,10 +277,10 @@ export default function CounterPage() {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={styles.controlsRow}>
             <button className={styles.supportBtn} onClick={handleDecrement} aria-label="Decrement -1">
-              -1
+              {translateNumbers("-1")}
             </button>
             <button className={styles.mainIncrementBtn} onClick={handleIncrement} aria-label="Increment +1">
-              +1
+              {translateNumbers("+1")}
             </button>
             <button className={styles.supportBtn} onClick={handleReset} aria-label="Reset">
               ⟲
@@ -289,19 +294,19 @@ export default function CounterPage() {
         <h2 className={styles.title}>{t('statistics')}</h2>
         <div className={styles.dashboardGrid}>
           <div className={styles.dashboardItem}>
-            <div className={styles.dashValue}>{stats.todayJaap}</div>
+            <div className={styles.dashValue}>{translateNumbers(stats.todayJaap)}</div>
             <div className={styles.dashLabel}>{t('todayJaap')}</div>
           </div>
           <div className={styles.dashboardItem}>
-            <div className={styles.dashValue}>{stats.todayMalas}</div>
+            <div className={styles.dashValue}>{translateNumbers(stats.todayMalas)}</div>
             <div className={styles.dashLabel}>{t('todayMalas')}</div>
           </div>
           <div className={styles.dashboardItem}>
-            <div className={styles.dashValue}>{dailyGoal}</div>
+            <div className={styles.dashValue}>{translateNumbers(dailyGoal)}</div>
             <div className={styles.dashLabel}>{t('dailyGoal')}</div>
           </div>
           <div className={styles.dashboardItem}>
-            <div className={styles.dashValue}>{lifetimeCount}</div>
+            <div className={styles.dashValue}>{translateNumbers(lifetimeCount)}</div>
             <div className={styles.dashLabel}>{t('statsLifetime')}</div>
           </div>
         </div>
@@ -310,7 +315,7 @@ export default function CounterPage() {
       {/* Streak Dashboard */}
       {streak > 0 && (
         <div className={styles.streakCard}>
-          <div className={styles.streakCount}>🔥 {streak} {t('streakLabel')}</div>
+          <div className={styles.streakCount}>🔥 {translateNumbers(streak)} {t('streakLabel')}</div>
           <p className={styles.streakQuote}>{getMotivationalQuote(streak)}</p>
         </div>
       )}
@@ -332,10 +337,10 @@ export default function CounterPage() {
               <tbody>
                 {history.slice(0, 10).map((item, idx) => (
                   <tr key={idx}>
-                    <td>{item.date}</td>
+                    <td>{translateNumbers(item.date)}</td>
                     <td>{getTranslatedMantra(item.mantra)}</td>
-                    <td>{item.count}</td>
-                    <td>{item.malas}</td>
+                    <td>{translateNumbers(item.count)}</td>
+                    <td>{translateNumbers(item.malas)}</td>
                   </tr>
                 ))}
               </tbody>

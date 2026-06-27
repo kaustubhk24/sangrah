@@ -69,7 +69,7 @@ export default function PwaInstallButton() {
         <div className="install-banner__body">
           <div className="install-banner__icon">📱</div>
           <div className="install-banner__copy">
-            <strong>संपूर्ण संग्रह अॅप इन्स्टॉल करा</strong>
+            <strong>संपूर्ण संग्रह ॲप इन्स्टॉल करा</strong>
             <p>होम स्क्रीनवर जोडा आणि इंटरनेटशिवाय वापरा.</p>
           </div>
           <button className="install-banner__cta" onClick={onInstallClick} aria-label="इन्स्टॉल करा">

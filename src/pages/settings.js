@@ -8,7 +8,7 @@ import styles from './settings.module.css';
 const fontOptions = ['small', 'medium', 'large', 'xlarge'];
 
 export default function Settings() {
-  const { lang, changeLanguage, t } = useTranslation();
+  const { lang, changeLanguage, t, translateNumbers } = useTranslation();
   const [fontSize, setFontSize] = useState('medium');
   const [elderMode, setElderMode] = useState(false);
   const [theme, setTheme] = useState('light');
@@ -21,7 +21,17 @@ export default function Settings() {
     const storedFont = window.localStorage.getItem('site-font-size') || 'medium';
     const storedElder = window.localStorage.getItem('elder-mode') === 'true';
     const storedTheme = window.localStorage.getItem('site-theme') || 'light';
-    const storedSpeed = window.localStorage.getItem('autoScrollSpeed') || 'medium';
+    let storedSpeed = window.localStorage.getItem('autoScrollSpeed') || 'medium';
+    if (storedSpeed !== 'slow' && storedSpeed !== 'medium' && storedSpeed !== 'fast') {
+      const num = parseInt(storedSpeed, 10);
+      if (!isNaN(num)) {
+        if (num <= 1) storedSpeed = 'slow';
+        else if (num >= 4) storedSpeed = 'fast';
+        else storedSpeed = 'medium';
+      } else {
+        storedSpeed = 'medium';
+      }
+    }
     const storedDaily = JSON.parse(window.localStorage.getItem('dailyPath') || '[]');
 
     setFontSize(storedFont);
@@ -39,6 +49,20 @@ export default function Settings() {
     setFontSize(key);
     window.localStorage.setItem('site-font-size', key);
     document.documentElement.setAttribute('data-font-size', key);
+  };
+
+  const decreaseFont = () => {
+    const currentIndex = fontOptions.indexOf(fontSize);
+    if (currentIndex > 0) {
+      handleFontChange(fontOptions[currentIndex - 1]);
+    }
+  };
+
+  const increaseFont = () => {
+    const currentIndex = fontOptions.indexOf(fontSize);
+    if (currentIndex < fontOptions.length - 1) {
+      handleFontChange(fontOptions[currentIndex + 1]);
+    }
   };
 
   const handleElderMode = () => {
@@ -145,12 +169,12 @@ export default function Settings() {
 
   const getFontSizeLabel = (key) => {
     const labels = {
-      mr: { small: 'लहान', medium: 'मध्यम', large: 'मोठा', xlarge: 'अतिमोठा' },
-      en: { small: 'Small', medium: 'Medium', large: 'Large', xlarge: 'Extra Large' },
-      hi: { small: 'छोटा', medium: 'मध्यम', large: 'बड़ा', xlarge: 'बहुत बड़ा' }
+      small: '20px',
+      medium: '22px',
+      large: '26px',
+      xlarge: '30px'
     };
-    const active = labels[lang] || labels['mr'];
-    return active[key] || key;
+    return labels[key] || key;
   };
 
   return (
@@ -162,26 +186,16 @@ export default function Settings() {
           {/* Language Preference */}
           <div className={styles.settingGroup}>
             <p className={styles.settingLabel}>{t('langLabel')}</p>
-            <div className={styles.optionList}>
-              <button
-                className={`${styles.optionButton} ${lang === 'mr' ? styles.optionSelected : ''}`}
-                onClick={() => changeLanguage('mr')}
-              >
-                देवनागरी (Marathi)
-              </button>
-              <button
-                className={`${styles.optionButton} ${lang === 'hi' ? styles.optionSelected : ''}`}
-                onClick={() => changeLanguage('hi')}
-              >
-                हिन्दी (Hindi)
-              </button>
-              <button
-                className={`${styles.optionButton} ${lang === 'en' ? styles.optionSelected : ''}`}
-                onClick={() => changeLanguage('en')}
-              >
-                English
-              </button>
-            </div>
+            <select
+              className={styles.settingSelect}
+              value={lang}
+              onChange={(e) => changeLanguage(e.target.value)}
+              aria-label="Language selection"
+            >
+              <option value="mr">देवनागरी (Marathi)</option>
+              <option value="hi">हिन्दी (Hindi)</option>
+              <option value="en">English</option>
+            </select>
           </div>
 
           {/* Theme preference */}
@@ -216,16 +230,26 @@ export default function Settings() {
           {/* Font Size preference */}
           <div className={styles.settingGroup}>
             <p className={styles.settingLabel}>{t('fontSizeLabel')}</p>
-            <div className={styles.optionList}>
-              {fontOptions.map((key) => (
-                <button
-                  key={key}
-                  className={`${styles.optionButton} ${fontSize === key ? styles.optionSelected : ''}`}
-                  onClick={() => handleFontChange(key)}
-                >
-                  {getFontSizeLabel(key)}
-                </button>
-              ))}
+            <div className={styles.fontSizeControlsContainer}>
+              <button
+                className={styles.fontStepperBtn}
+                onClick={decreaseFont}
+                disabled={fontSize === 'small'}
+                aria-label="Decrease font size"
+              >
+                −
+              </button>
+              <span className={styles.fontSizeDisplayValue}>
+                {translateNumbers(getFontSizeLabel(fontSize))}
+              </span>
+              <button
+                className={styles.fontStepperBtn}
+                onClick={increaseFont}
+                disabled={fontSize === 'xlarge'}
+                aria-label="Increase font size"
+              >
+                +
+              </button>
             </div>
           </div>
 

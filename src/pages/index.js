@@ -36,7 +36,7 @@ const categoryItems = [
 ];
 
 export default function HomePage() {
-  const { lang, t } = useTranslation();
+  const { lang, t, translateNumbers } = useTranslation();
   const [recentReads, setRecentReads] = useState([]);
   const [dailyPath, setDailyPath] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -137,7 +137,7 @@ export default function HomePage() {
                       </div>
                     )}
                     <div className={styles.recentMeta}>
-                      {item.timestamp ? new Date(item.timestamp).toLocaleTimeString(lang === 'en' ? 'en-US' : 'mr-IN', { hour: '2-digit', minute: '2-digit' }) : ''}
+                      {item.timestamp ? translateNumbers(new Date(item.timestamp).toLocaleTimeString(lang === 'en' ? 'en-US' : 'mr-IN', { hour: '2-digit', minute: '2-digit' })) : ''}
                     </div>
                   </div>
                   <span className={styles.recentArrow}>›</span>
@@ -163,7 +163,7 @@ export default function HomePage() {
                       className={styles.dailyPathItem} 
                       to={`${item.to}?dailyPath=true&index=${index}`}
                     >
-                      <span className={styles.dailyPathIndex}>{index + 1}</span>
+                      <span className={styles.dailyPathIndex}>{translateNumbers(index + 1)}</span>
                       <span>{item.title}</span>
                     </Link>
                   ))}

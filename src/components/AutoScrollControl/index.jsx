@@ -11,7 +11,18 @@ export default function AutoScrollControl() {
   useEffect(() => {
     const saved = localStorage.getItem('autoScrollSpeed');
     if (saved) {
-      setSpeed(parseInt(saved, 10));
+      if (saved === 'slow') {
+        setSpeed(1);
+      } else if (saved === 'medium') {
+        setSpeed(2);
+      } else if (saved === 'fast') {
+        setSpeed(4);
+      } else {
+        const parsed = parseInt(saved, 10);
+        if (!isNaN(parsed)) {
+          setSpeed(parsed);
+        }
+      }
     }
   }, []);
 

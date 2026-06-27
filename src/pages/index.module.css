@@ -194,9 +194,10 @@
   gap: 14px;
   padding: 12px 14px;
   border-radius: 14px;
-  background: #FFF4E5;
+  background: #ffffff;
+  border: 1px solid #ECE4D8;
   text-decoration: none;
-  color: #1E1E1E;
+  color: #2c2a29;
   font-weight: 600;
   transition: all 0.2s;
 }
@@ -364,11 +365,11 @@
 
 /* Fallback Info Card */
 .infoCard {
-  background: #FFF4E5;
+  background: #ffffff;
   border: 1px solid #ECE4D8;
   border-radius: 18px;
   padding: 18px;
-  color: #5A5A5A;
+  color: #6b6865;
   font-size: 15px;
 }
 

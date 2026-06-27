@@ -245,8 +245,16 @@ export function LanguageProvider({ children }) {
     return translations[activeLang][key] || translations['mr'][key] || key;
   };
 
+  const translateNumbers = (value) => {
+    if (value === undefined || value === null) return '';
+    const numStr = value.toString();
+    if (lang !== 'mr' && lang !== 'hi') return numStr;
+    const devanagariDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+    return numStr.replace(/[0-9]/g, (digit) => devanagariDigits[parseInt(digit, 10)]);
+  };
+
   return (
-    <LanguageContext.Provider value={{ lang, changeLanguage, t }}>
+    <LanguageContext.Provider value={{ lang, changeLanguage, t, translateNumbers }}>
       {children}
     </LanguageContext.Provider>
   );

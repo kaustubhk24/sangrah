@@ -1,11 +1,16 @@
 /* Global variables */
 :root {
-  --ifm-color-primary: #f57c00;
-  --ifm-color-primary-dark: #c05800;
+  --ifm-color-primary: #e06b00;
+  --ifm-color-primary-dark: #c75d00;
+  --ifm-color-primary-darker: #a84e00;
+  --ifm-color-primary-darkest: #803b00;
+  --ifm-color-primary-light: #ff861f;
+  --ifm-color-primary-lighter: #ff9c42;
+  --ifm-color-primary-lightest: #ffbe85;
   --ifm-color-secondary: #d35400;
-  --ifm-color-background: #ffffff;
-  --ifm-color-text: #1f1f1f;
-  --ifm-color-muted: #5f5f5f;
+  --ifm-color-background: #fdfbf7;
+  --ifm-color-text: #2c2a29;
+  --ifm-color-muted: #6b6865;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: "Mukta", "Noto Sans Devanagari", sans-serif;
   --ifm-font-size-base: 16px;
@@ -55,15 +60,21 @@ li {
 }
 
 [data-theme='dark'] {
-  --ifm-color-background: #121212;
-  --ifm-color-text: #f4f4f4;
-  --ifm-color-muted: #bdbdbd;
-  --ifm-color-primary: #ff9800;
-  background-color: #121212;
+  --ifm-color-primary: #ff9f43;
+  --ifm-color-primary-dark: #e68425;
+  --ifm-color-primary-darker: #cc7118;
+  --ifm-color-primary-darkest: #99520a;
+  --ifm-color-primary-light: #ffb266;
+  --ifm-color-primary-lighter: #ffc285;
+  --ifm-color-primary-lightest: #ffe0c2;
+  --ifm-color-background: #1a1613;
+  --ifm-color-text: #f2ede9;
+  --ifm-color-muted: #a89f97;
+  background-color: #1a1613;
 }
 
 [data-theme='dark'] body {
-  background: #121212;
+  background: var(--ifm-color-background);
 }
 
 [data-font-size='small'] {
@@ -82,25 +93,36 @@ li {
   --content-font-size: 30px;
 }
 
-.elder-mode body,
-.elder-mode .pageWrapper,
-.elder-mode .sectionHeader h2,
-.elder-mode .popularCardTitle,
-.elder-mode .categoryCard,
-.elder-mode .deityCard,
-.elder-mode .dailyPathItem {
-  font-size: 1.08rem;
+.docItemContent p,
+.docItemContent li,
+.docItemContent blockquote,
+.docItemContent td {
+  font-size: var(--content-font-size) !important;
 }
 
-.elder-mode .searchInputGroup,
-.elder-mode .recentCard,
-.elder-mode .deityCard,
-.elder-mode .categoryCard,
-.elder-mode .dailyPathItem,
-.elder-mode .primaryButton,
-.elder-mode .settingsButton {
-  min-height: 64px;
+/* Global Elder Mode scaling - scales up the entire app base size */
+html.elder-mode {
+  --ifm-font-size-base: 20px !important;
+  --content-font-size: 28px !important;
 }
+
+html.elder-mode body {
+  font-size: 20px !important;
+}
+
+/* Headings scaling in elder mode */
+html.elder-mode h1 { font-size: 2.2rem !important; }
+html.elder-mode h2 { font-size: 1.8rem !important; }
+html.elder-mode h3 { font-size: 1.5rem !important; }
+
+/* Scale up buttons, selectors, inputs, links in elder mode */
+html.elder-mode select,
+html.elder-mode button,
+html.elder-mode input,
+html.elder-mode a {
+  font-size: 1.1rem !important;
+}
+
 
 
 .searchResults {
@@ -133,17 +155,37 @@ li {
   border-radius: 20px !important;
 }
 
+/* Sidebar menu customization matching the saffron theme and standard readability */
 .menu__link {
-  color: #4787ed !important;
+  color: var(--ifm-color-text) !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  color: var(--ifm-color-primary) !important;
+  background-color: rgba(245, 124, 0, 0.08) !important;
+  text-decoration: none;
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background-color: rgba(255, 152, 0, 0.15) !important;
 }
 
 .menu__link--active,
 .menu__link--active:hover {
-  color: #4787ed !important;
+  color: var(--ifm-color-primary) !important;
+  font-weight: 700;
+  background-color: rgba(245, 124, 0, 0.12) !important;
+}
+
+[data-theme='dark'] .menu__link--active,
+[data-theme='dark'] .menu__link--active:hover {
+  background-color: rgba(255, 152, 0, 0.2) !important;
 }
 
 .menu__list-item a {
-  color: #4787ed !important;
+  text-decoration: none;
 }
 
 button,
@@ -187,10 +229,38 @@ textarea:focus {
 }
 
 [data-theme='dark'] .shloka-verse-traditional {
-  color: #ffa726 !important;
-  background: #1f1f1f;
-  border-color: #3a2e24;
+  color: #ff9f43 !important;
+  background: #241f1b;
+  border-color: #3d342d;
 }
+
+/* Navbar styling to prevent black text on saffron */
+.navbar--primary,
+.navbar--primary .navbar__title,
+.navbar--primary .navbar__link,
+.navbar--primary .navbar__item,
+.navbar--primary .navbar__toggle {
+  color: #ffffff !important;
+}
+
+.navbar--primary .navbar__link:hover,
+.navbar--primary .navbar__link--active {
+  color: #ffe8d6 !important;
+}
+
+/* Hide Table of Contents (TOC) globally for a direct full-width view of documents */
+.theme-doc-toc-desktop,
+.theme-doc-toc-mobile {
+  display: none !important;
+}
+
+/* Ensure the main doc content column takes the full width */
+.row .col--8,
+.row .col--9 {
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
 
 
 

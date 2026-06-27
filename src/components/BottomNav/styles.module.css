@@ -40,3 +40,19 @@
   font-size: 12px;
   line-height: 1.3;
 }
+
+:global([data-theme='dark']) .bottomNav {
+  background: var(--ifm-color-background);
+  border-top-color: #3d342d;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25);
+}
+
+:global([data-theme='dark']) .navItem {
+  color: var(--ifm-color-text);
+}
+
+:global([data-theme='dark']) .navItem:hover,
+:global([data-theme='dark']) .navItem:focus {
+  background: rgba(255, 159, 67, 0.12);
+  color: var(--ifm-color-primary);
+}
