@@ -105,9 +105,11 @@ a {
 .markdown h1 {
   font-size: calc(var(--content-font-size) * 1.4) !important;
 }
+
 .markdown h2 {
   font-size: calc(var(--content-font-size) * 1.25) !important;
 }
+
 .markdown h3 {
   font-size: calc(var(--content-font-size) * 1.15) !important;
 }
@@ -123,9 +125,17 @@ html.elder-mode body {
 }
 
 /* Headings scaling in elder mode */
-html.elder-mode h1 { font-size: 2.2rem !important; }
-html.elder-mode h2 { font-size: 1.8rem !important; }
-html.elder-mode h3 { font-size: 1.5rem !important; }
+html.elder-mode h1 {
+  font-size: 2.2rem !important;
+}
+
+html.elder-mode h2 {
+  font-size: 1.8rem !important;
+}
+
+html.elder-mode h3 {
+  font-size: 1.5rem !important;
+}
 
 /* Scale up buttons, selectors, inputs, links in elder mode */
 html.elder-mode select,
@@ -215,6 +225,7 @@ textarea:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -259,7 +270,3 @@ textarea:focus {
   max-width: 100% !important;
   flex: 0 0 100% !important;
 }
-
-
-
-
