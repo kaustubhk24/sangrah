@@ -1,7 +1,9 @@
 .pageWrapper {
   padding: 16px;
+  width: 100%;
   max-width: 820px;
   margin: 0 auto 90px;
+  box-sizing: border-box;
 }
 
 .sectionCard {
