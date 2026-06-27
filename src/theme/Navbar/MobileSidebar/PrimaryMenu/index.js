@@ -39,10 +39,11 @@ export default function NavbarMobilePrimaryMenu() {
       { key: 'chalisa', mrLabel: 'चालीसा संग्रह', hiLabel: 'चालीसा संग्रह', slug: 'चालीसा-संग्रह' },
       { key: 'Ashtak', mrLabel: 'अष्टक संग्रह', hiLabel: 'अष्टक संग्रह', slug: 'अष्टक-संग्रह' },
       { key: 'abhang', mrLabel: 'अभंग संग्रह', hiLabel: 'अभंग संग्रह', slug: 'अभंग-संग्रह' },
-      { key: 'managalastak', mrLabel: 'मंगलाष्टक', hiLabel: 'मंगलाष्टक', slug: 'मंगलाष्टक' },
-      { key: 'namavali', mrLabel: 'नामावली संग्रह', hiLabel: 'नामावली संग्रह', slug: 'नामावली-संग्रह' },
-      { key: 'palana', mrLabel: 'पाळणा', hiLabel: 'पाळणा', slug: 'पाळणा' },
-      { key: 'pooja', mrLabel: 'पूजा विधी', hiLabel: 'पूजा विधी', slug: 'पूजा-विधी' },
+      { key: 'managalastak', mrLabel: 'मंगलाष्टका', hiLabel: 'मंगलाष्टका', slug: 'मंगलाष्टका' },
+      { key: 'namavali', mrLabel: 'नामावली', hiLabel: 'नामावली', slug: 'नामावली' },
+      { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', slug: 'पाळणा-संग्रह' },
+      { key: 'pooja', mrLabel: 'पूजा व्रत', hiLabel: 'पूजा व्रत', slug: 'पूजा-व्रत' },
+      { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', slug: 'ऑडियो-भजन' },
     ];
     
     return folders.map(f => {

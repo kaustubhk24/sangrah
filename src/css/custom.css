@@ -48,13 +48,9 @@ a {
   color: inherit;
 }
 
-p,
-li {
-  font-size: 16px;
-}
-
 .article-content,
-.docItemContent {
+.docItemContent,
+.markdown {
   font-size: var(--content-font-size);
   line-height: var(--content-line-height);
 }
@@ -93,11 +89,27 @@ li {
   --content-font-size: 30px;
 }
 
-.docItemContent p,
-.docItemContent li,
-.docItemContent blockquote,
-.docItemContent td {
+.markdown,
+.markdown p,
+.markdown li,
+.markdown blockquote,
+.markdown td,
+.markdown code,
+.markdown pre,
+.markdown span,
+.markdown em,
+.markdown strong {
   font-size: var(--content-font-size) !important;
+}
+
+.markdown h1 {
+  font-size: calc(var(--content-font-size) * 1.4) !important;
+}
+.markdown h2 {
+  font-size: calc(var(--content-font-size) * 1.25) !important;
+}
+.markdown h3 {
+  font-size: calc(var(--content-font-size) * 1.15) !important;
 }
 
 /* Global Elder Mode scaling - scales up the entire app base size */
@@ -213,20 +225,7 @@ textarea:focus {
   }
 }
 
-/* Shloka Verse Traditional Styling */
-.shloka-verse-traditional {
-  text-align: center !important;
-  color: #C75D00 !important;
-  font-weight: 700 !important;
-  font-size: 1.18em !important;
-  line-height: 1.8 !important;
-  margin: 22px auto !important;
-  max-width: 650px;
-  background: #FFFDF8;
-  border: 1px solid #ECE4D8;
-  padding: 16px;
-  border-radius: 12px;
-}
+
 
 [data-theme='dark'] .shloka-verse-traditional {
   color: #ff9f43 !important;

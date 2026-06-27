@@ -353,6 +353,15 @@ input:checked + .slider::before {
   background: #1b5e20;
 }
 
+.importButton {
+  background: #1565C0;
+  color: white;
+}
+
+.importButton:hover {
+  background: #0D47A1;
+}
+
 .resetButton {
   background: #d32f2f;
   color: white;

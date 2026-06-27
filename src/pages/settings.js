@@ -51,14 +51,16 @@ export default function Settings() {
     document.documentElement.setAttribute('data-font-size', key);
   };
 
-  const decreaseFont = () => {
+  const decreaseFont = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
     const currentIndex = fontOptions.indexOf(fontSize);
     if (currentIndex > 0) {
       handleFontChange(fontOptions[currentIndex - 1]);
     }
   };
 
-  const increaseFont = () => {
+  const increaseFont = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
     const currentIndex = fontOptions.indexOf(fontSize);
     if (currentIndex < fontOptions.length - 1) {
       handleFontChange(fontOptions[currentIndex + 1]);
@@ -120,6 +122,46 @@ export default function Settings() {
     a.download = `sangrah-backup-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
+  };
+
+  const handleImportData = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        try {
+          const parsed = JSON.parse(ev.target.result);
+          if (typeof parsed !== 'object' || parsed === null) {
+            throw new Error('Invalid backup format');
+          }
+          
+          const confirmMsg = lang === 'en'
+            ? 'Importing backup will overwrite all current settings. Proceed?'
+            : (lang === 'hi' ? 'बैकअप आयात करने से सभी वर्तमान सेटिंग्स बदल जाएंगी। जारी रखें?' : 'बैकअप आयात केल्याने सध्याच्या सर्व सेटिंग्ज बदलल्या जातील. पुढे जावे?');
+            
+          if (window.confirm(confirmMsg)) {
+            window.localStorage.clear();
+            Object.entries(parsed).forEach(([key, val]) => {
+              window.localStorage.setItem(key, val);
+            });
+            window.location.reload();
+          }
+        } catch (err) {
+          const errMsg = lang === 'en'
+            ? 'Failed to parse backup file. Please make sure it is a valid JSON file.'
+            : (lang === 'hi' ? 'बैकअप फ़ाइल लोड करने में विफल। कृपया सुनिश्चित करें कि यह एक मान्य JSON फ़ाइल है।' : 'बैकअप फाईल लोड करण्यात अयशस्वी. कृपया ती वैध JSON फाईल असल्याची खात्री करा.');
+          window.alert(errMsg);
+        }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
   };
 
   const handleResetData = () => {
@@ -232,6 +274,7 @@ export default function Settings() {
             <p className={styles.settingLabel}>{t('fontSizeLabel')}</p>
             <div className={styles.fontSizeControlsContainer}>
               <button
+                type="button"
                 className={styles.fontStepperBtn}
                 onClick={decreaseFont}
                 disabled={fontSize === 'small'}
@@ -243,6 +286,7 @@ export default function Settings() {
                 {translateNumbers(getFontSizeLabel(fontSize))}
               </span>
               <button
+                type="button"
                 className={styles.fontStepperBtn}
                 onClick={increaseFont}
                 disabled={fontSize === 'xlarge'}
@@ -354,13 +398,16 @@ export default function Settings() {
             <p className={styles.settingHelp}>✅ {t('offlineHelp')}</p>
           </div>
 
-          {/* Export / Reset Controls */}
+          {/* Export / Import / Reset Controls */}
           <div className={styles.settingGroup}>
             <div className={styles.actionButtons}>
-              <button className={styles.exportButton} onClick={handleExportData}>
+              <button type="button" className={styles.exportButton} onClick={handleExportData}>
                 📥 {t('exportLabel')}
               </button>
-              <button className={styles.resetButton} onClick={handleResetData}>
+              <button type="button" className={styles.importButton} onClick={handleImportData}>
+                📤 {t('importLabel')}
+              </button>
+              <button type="button" className={styles.resetButton} onClick={handleResetData}>
                 🗑️ {t('resetLabel')}
               </button>
             </div>
