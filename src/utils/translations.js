@@ -5,7 +5,7 @@ const translations = {
     appTitle: "संपूर्ण संग्रह",
     appSubtitle: "आध्यात्मिक वाचनाचा संपूर्ण संग्रह",
     homeTab: "होम",
-    searchTab: "शोध",
+    searchTab: "शोधा",
     jaapTab: "जप",
     favTab: "आवडते",
     settingsTab: "सेटिंग्ज",

@@ -234,7 +234,7 @@ export default function Settings() {
               onChange={(e) => changeLanguage(e.target.value)}
               aria-label="Language selection"
             >
-              <option value="mr">देवनागरी (Marathi)</option>
+              <option value="mr">मराठी (Marathi)</option>
               <option value="hi">हिन्दी (Hindi)</option>
               <option value="en">English</option>
             </select>
