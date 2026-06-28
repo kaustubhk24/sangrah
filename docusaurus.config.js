@@ -181,13 +181,13 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
 
-      // announcementBar: {
-      //   id: 'announcement_dummy',
-      //   content: 'नवीन अपडेट: कसे वापरावे यावरील व्हिडिओ youtube.com',
-      //   backgroundColor: '#FFF4E5',
-      //   textColor: '#C75D00',
-      //   isCloseable: true,
-      // },
+      announcementBar: {
+        id: 'IMP',
+        content: 'नवीन अपडेट: कसे वापरावे यावरील  <a target ="_blank" href="https://www.youtube.com/shorts/tg4Qt11pgIk">व्हिडिओ पाहा</a>',
+        backgroundColor: '#FFF4E5',
+        textColor: '#C75D00',
+        isCloseable: true,
+      },
 
       navbar: {
         style: 'primary',
