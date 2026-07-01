@@ -16,7 +16,10 @@ export default function SearchBar() {
   return (
     <div className={styles.searchWrapper}>
       <ThemeToggle />
-      <Link to="/settings" className={styles.settingsBtn} aria-label="Settings">
+      <Link to="/panchang" className={styles.panchangBtn} aria-label="Panchang" title="Panchang">
+        📅
+      </Link>
+      <Link to="/settings" className={styles.settingsBtn} aria-label="Settings" title="Settings">
         ⚙
       </Link>
     </div>
