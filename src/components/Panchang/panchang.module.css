@@ -151,7 +151,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
   margin-bottom: 0.9rem;
 }
@@ -208,12 +208,52 @@
 
 @media (max-width: 640px) {
   .summaryGrid,
-  .grid,
   .coordRow {
     grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sectionCard {
     padding: 1rem;
   }
+}
+
+/* Dark Mode overrides */
+[data-theme='dark'] .sectionCard {
+  background: #1f1b18;
+  border-color: #3d342d;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+[data-theme='dark'] .metaCard {
+  background: #2a221d;
+  border-color: #4a382c;
+}
+
+[data-theme='dark'] .summaryCard,
+[data-theme='dark'] .infoCard {
+  background: #241f1b;
+  border-color: #3d342d;
+}
+
+[data-theme='dark'] .navButton,
+[data-theme='dark'] .locationButton,
+[data-theme='dark'] .locationSelect,
+[data-theme='dark'] .coordInput,
+[data-theme='dark'] .dateInputWrapper input {
+  background: #1c1815;
+  border-color: #3d342d;
+  color: var(--ifm-color-text);
+}
+
+[data-theme='dark'] .mantraCard {
+  background: #241f1b;
+  border-color: #3d342d;
+}
+
+[data-theme='dark'] .mantraText {
+  color: #ffb266;
 }

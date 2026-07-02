@@ -239,7 +239,7 @@ const getTranslatedValue = (lang, value, map, fallback = '') => {
 };
 
 export default function PanchangSection() {
-  const { lang } = useTranslation();
+  const { lang, translateNumbers } = useTranslation();
   const [panchang, setPanchang] = useState(null);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [locationMode, setLocationMode] = useState('preset');
@@ -335,13 +335,15 @@ export default function PanchangSection() {
   const formattedDate = useMemo(() => {
     if (typeof window === 'undefined') return '';
     const locale = getLocale(lang);
-    return new Intl.DateTimeFormat(locale, {
-      weekday: 'long',
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    }).format(selectedDate);
-  }, [lang, selectedDate]);
+    return translateNumbers(
+      new Intl.DateTimeFormat(locale, {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      }).format(selectedDate)
+    );
+  }, [lang, selectedDate, translateNumbers]);
 
   const displayData = useMemo(() => {
     if (!panchang) return null;
@@ -684,9 +686,8 @@ export default function PanchangSection() {
     const ayanaDisplay = getTranslatedValue(lang, panchang.ayana || '', ayanaMap, '');
     const moonRashiDisplay = getTranslatedValue(lang, panchang.moonRashi?.name || '', rashiMap, '');
     const sunRashiDisplay = getTranslatedValue(lang, panchang.sunRashi?.name || '', rashiMap, '');
-    const mantraText = (() => {
-      const safeValue = (value) => (value === undefined || value === null || value === '' ? '' : String(value));
-      const samvatsaraSanskrit = {
+    const samvatsaraMap = {
+      mr: {
         Parabhava: 'पराभव',
         Plava: 'प्लव',
         Shubhakritu: 'शुभकृत्',
@@ -707,7 +708,36 @@ export default function PanchangSection() {
         Vikari: 'विकारि',
         Shari: 'शरी',
         Plavaang: 'प्लवङ्ग',
-      }[panchang.samvat?.samvatsara] || safeValue(panchang.samvat?.samvatsara);
+      },
+      hi: {
+        Parabhava: 'पराभव',
+        Plava: 'प्लव',
+        Shubhakritu: 'शुभकृत्',
+        Shobhakritu: 'शोभकृत्',
+        Krodhin: 'क्रोधी',
+        Vishvavasu: 'विश्ववासु',
+        Paridhavi: 'परिधावी',
+        Pramadi: 'प्रमादी',
+        Ananda: 'आनंद',
+        Rakshasa: 'राक्षस',
+        Nandana: 'नंदन',
+        Vijaya: 'विजय',
+        Jaya: 'जय',
+        Manmatha: 'मन्मथ',
+        Durmukhi: 'दुर्मुखी',
+        Hevilambi: 'हेविलंबी',
+        Vilambi: 'विलंबी',
+        Vikari: 'विकारि',
+        Shari: 'शरी',
+        Plavaang: 'प्लवङ्ग',
+      },
+      en: {},
+    };
+    const samvatsaraDisplay = getTranslatedValue(lang, panchang.samvat?.samvatsara, samvatsaraMap, panchang.samvat?.samvatsara);
+
+    const mantraText = (() => {
+      const safeValue = (value) => (value === undefined || value === null || value === '' ? '' : String(value));
+      const samvatsaraSanskrit = safeValue(samvatsaraDisplay);
 
       const ayanaSanskrit = panchang.ayana === 'Dakshinayana' ? 'दक्षिणायन' : panchang.ayana === 'Uttarayana' ? 'उत्तरायण' : safeValue(ayanaDisplay);
       const rituSanskrit = panchang.ritu === 'Varsha' ? 'वर्षा' : safeValue(rituDisplay);
@@ -780,7 +810,7 @@ export default function PanchangSection() {
         'श्रीमद्भगवतो महापुरुषस्य विष्णोराज्ञया प्रवर्तमानस्य अद्य',
         'ब्रह्मणो द्वितीये परार्धे विष्णुपदे श्रीश्वेतवाराहकल्पे वैवस्वतमन्वंतरे',
         'कलियुगे प्रथमचरणे भरतवर्षे भरतखंडे जंबुद्वीपे दंडकारण्ये देशे',
-        'गोदावर्याः दक्षिणेतीरे शालिवाहन शके',
+        'गोदावर्याः दक्षिणेतीरे शालिवाहन शके ' + translateNumbers(safeValue(panchang.samvat?.shaka)),
         '',
         <span key="samvatsara"><strong>{safeValue(samvatsaraSanskrit)}</strong> नाम संवत्सरे</span>,
         <span key="ayana"><strong>{safeValue(ayanaSanskrit)}</strong>यने</span>,
@@ -809,23 +839,22 @@ export default function PanchangSection() {
       tithi: tithiDisplay,
       nakshatra: nakshatraDisplay,
       yoga: yogaDisplay,
-      karana: karanaDisplay,
       vara: varaDisplay,
       masa: masaDisplay,
       paksha: pakshaDisplay,
       ritu: rituDisplay,
       ayana: ayanaDisplay,
-      samvat: `${formatNumber(lang, panchang.samvat?.vikram, { maximumFractionDigits: 0 }) || ''} / ${formatNumber(lang, panchang.samvat?.shaka, { maximumFractionDigits: 0 }) || ''}`,
-      samvatsara: panchang.samvat?.samvatsara || '',
+      samvat: translateNumbers(formatNumber(lang, panchang.samvat?.vikram, { maximumFractionDigits: 0 }) || ''),
+      samvatsara: samvatsaraDisplay || '',
       moonRashi: moonRashiDisplay,
       sunRashi: sunRashiDisplay,
-      sunrise: formatTime(lang, panchang.sunrise),
-      moonrise: formatTime(lang, panchang.moonrise),
-      moonset: formatTime(lang, panchang.moonset),
-      sunset: formatTime(lang, panchang.sunset),
+      sunrise: translateNumbers(formatTime(lang, panchang.sunrise)),
+      moonrise: translateNumbers(formatTime(lang, panchang.moonrise)),
+      moonset: translateNumbers(formatTime(lang, panchang.moonset)),
+      sunset: translateNumbers(formatTime(lang, panchang.sunset)),
       mantraText,
     };
-  }, [lang, panchang]);
+  }, [lang, panchang, translateNumbers]);
 
   const label = (key) => getText(lang, key);
 
@@ -914,37 +943,53 @@ export default function PanchangSection() {
             <div className={styles.loadingState}>{label('loading')}</div>
           ) : (
             <>
-              <div className={styles.summaryGrid}>
-                <div className={styles.summaryCard}><span>{label('tithi')}</span><strong>{displayData.tithi}</strong></div>
-                <div className={styles.summaryCard}><span>{label('nakshatra')}</span><strong>{displayData.nakshatra}</strong></div>
-                <div className={styles.summaryCard}><span>{label('vara')}</span><strong>{displayData.vara}</strong></div>
-                <div className={styles.summaryCard}><span>{label('masa')}</span><strong>{displayData.masa}</strong></div>
-              </div>
+             
 
               <div className={styles.grid}>
+                <div className={styles.infoCard}>
+                  <h2>{label('vara')}</h2>
+                  <p>{displayData.vara}</p>
+                </div>
+                <div className={styles.infoCard}>
+                  <h2>{lang === 'en' ? 'Shake' : 'शके'}</h2>
+                  <p>{translateNumbers(panchang.samvat?.shaka)} {displayData.samvatsara} नाम संवत्सरे</p>
+                </div>
+                 <div className={styles.infoCard}>
+                  <h2>{label('ayana')}</h2>
+                  <p>{displayData.ayana}</p>
+                </div>
+                   <div className={styles.infoCard}>
+                  <h2>{label('ritu')}</h2>
+                  <p>{displayData.ritu}</p>
+                </div>
+                    <div className={styles.infoCard}>
+                  <h2>{label('masa')}</h2>
+                  <p>{displayData.masa}</p>
+                </div>
+                  <div className={styles.infoCard}>
+                  <h2>{label('paksha')}</h2>
+                  <p>{displayData.paksha}</p>
+                </div>
+                   <div className={styles.infoCard}>
+                  <h2>{label('tithi')}</h2>
+                  <p>{displayData.tithi}</p>
+                </div>
+                <div className={styles.infoCard}>
+                  <h2>{label('nakshatra')}</h2>
+                  <p>{displayData.nakshatra}</p>
+                </div>
+                    
                 <div className={styles.infoCard}>
                   <h2>{label('yoga')}</h2>
                   <p>{displayData.yoga || '-'}</p>
                 </div>
-                <div className={styles.infoCard}>
-                  <h2>{label('karana')}</h2>
-                  <p>{displayData.karana || '-'}</p>
-                </div>
-                <div className={styles.infoCard}>
-                  <h2>{label('paksha')}</h2>
-                  <p>{displayData.paksha}</p>
-                </div>
-                <div className={styles.infoCard}>
-                  <h2>{label('ritu')}</h2>
-                  <p>{displayData.ritu}</p>
-                </div>
-                <div className={styles.infoCard}>
-                  <h2>{label('ayana')}</h2>
-                  <p>{displayData.ayana}</p>
-                </div>
+                
+          
+             
+              
                 <div className={styles.infoCard}>
                   <h2>{label('samvat')}</h2>
-                  <p>{displayData.samvat} · {displayData.samvatsara}</p>
+                  <p>{displayData.samvat}</p>
                 </div>
               </div>
 
