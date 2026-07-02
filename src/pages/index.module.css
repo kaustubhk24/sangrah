@@ -173,6 +173,125 @@
   font-weight: bold;
 }
 
+/* Compact Panchang Widget */
+.panchangWidgetCard {
+  display: block;
+  background: #FFFDF8;
+  border: 1px solid #ECE4D8;
+  border-radius: 18px;
+  padding: 14px 14px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  text-decoration: none;
+  color: inherit;
+}
+
+[data-theme='dark'] .panchangWidgetCard {
+  background: #1f1f1f;
+  border-color: #3a2e24;
+}
+
+.panchangWidgetTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.panchangWidgetDate {
+  font-size: 15px;
+  font-weight: 700;
+  color: #C75D00;
+}
+
+[data-theme='dark'] .panchangWidgetDate {
+  color: #ffa726;
+}
+
+.panchangWidgetDay {
+  font-size: 13px;
+  color: #5A5A5A;
+  margin-top: 2px;
+}
+
+[data-theme='dark'] .panchangWidgetDay {
+  color: #aaa;
+}
+
+.panchangWidgetBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f7eadb;
+  color: #C75D00;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .panchangWidgetBadge {
+  background: #2b221a;
+  color: #ffa726;
+}
+
+.panchangWidgetMeta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.panchangWidgetItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ECE4D8;
+}
+
+[data-theme='dark'] .panchangWidgetItem {
+  background: #2b221a;
+  border-color: #3a2e24;
+}
+
+.panchangWidgetItem span {
+  font-size: 10px;
+  color: #8a6e57;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .panchangWidgetItem span {
+  color: #b59062;
+}
+
+.panchangWidgetItem strong {
+  font-size: 11px;
+  color: #1E1E1E;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-theme='dark'] .panchangWidgetItem strong {
+  color: #eee;
+}
+
+@media (max-width: 480px) {
+  .panchangWidgetMeta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panchangWidgetItem strong {
+    font-size: 10px;
+  }
+}
+
 /* Daily Path Card */
 .dailyPathCard {
   display: grid;

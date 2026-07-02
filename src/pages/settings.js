@@ -211,10 +211,10 @@ export default function Settings() {
 
   const getFontSizeLabel = (key) => {
     const labels = {
-      small: '20px',
-      medium: '22px',
-      large: '26px',
-      xlarge: '30px'
+      small: '15px',
+      medium: '16px',
+      large: '18px',
+      xlarge: '20px'
     };
     return labels[key] || key;
   };

@@ -14,7 +14,8 @@
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: "Mukta", "Noto Sans Devanagari", sans-serif;
   --ifm-font-size-base: 16px;
-  --content-font-size: 22px;
+  --app-font-size-base: 16px;
+  --content-font-size: 16px;
   --content-line-height: 1.8;
   --card-radius: 18px;
   --max-content-width: 900px;
@@ -34,14 +35,23 @@ body {
   color: var(--ifm-color-text);
   background: var(--ifm-color-background);
   font-family: var(--ifm-font-family-base);
+  font-size: var(--app-font-size-base);
   line-height: 1.7;
 }
 
 button,
 input,
 textarea,
-select {
+select,
+a,
+p,
+span,
+label,
+li,
+td,
+th {
   font-family: inherit;
+  font-size: inherit;
 }
 
 a {
@@ -74,19 +84,23 @@ a {
 }
 
 [data-font-size='small'] {
-  --content-font-size: 20px;
+  --app-font-size-base: 15px;
+  --content-font-size: 15px;
 }
 
 [data-font-size='medium'] {
-  --content-font-size: 22px;
+  --app-font-size-base: 16px;
+  --content-font-size: 16px;
 }
 
 [data-font-size='large'] {
-  --content-font-size: 26px;
+  --app-font-size-base: 18px;
+  --content-font-size: 18px;
 }
 
 [data-font-size='xlarge'] {
-  --content-font-size: 30px;
+  --app-font-size-base: 20px;
+  --content-font-size: 20px;
 }
 
 .markdown,
@@ -117,7 +131,8 @@ a {
 /* Global Elder Mode scaling - scales up the entire app base size */
 html.elder-mode {
   --ifm-font-size-base: 20px !important;
-  --content-font-size: 28px !important;
+  --app-font-size-base: 20px !important;
+  --content-font-size: 20px !important;
 }
 
 html.elder-mode body {

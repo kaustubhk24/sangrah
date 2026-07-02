@@ -12,7 +12,7 @@ const translations = {
     locationLabel: 'स्थान',
     sunrise: 'सूर्योदय',
     sunset: 'सूर्यास्त',
-    moonrise: 'चंद्र उगम',
+    moonrise: 'चंद्रोदय',
     moonset: 'चंद्र अस्त',
     tithi: 'तिथि',
     nakshatra: 'नक्षत्र',
@@ -47,7 +47,7 @@ const translations = {
     locationLabel: 'स्थान',
     sunrise: 'सूर्योदय',
     sunset: 'सूर्यास्त',
-    moonrise: 'चंद्र उदय',
+    moonrise: 'चंद्रोदय',
     moonset: 'चंद्र अस्त',
     tithi: 'तिथि',
     nakshatra: 'नक्षत्र',
@@ -735,13 +735,13 @@ export default function PanchangSection() {
       }[safeValue(tithiNames?.[panchang.tithi] || panchang.tithi)] || safeValue(tithiDisplay);
 
       const vasaraSanskrit = {
-        Sunday: 'रविवार',
-        Monday: 'सोमवार',
-        Tuesday: 'मंगलवार',
-        Wednesday: 'बुधवार',
-        Thursday: 'गुरुवार',
-        Friday: 'शुक्रवार',
-        Saturday: 'शनिवार',
+        Sunday: 'भानु',
+        Monday: 'इंदू',
+        Tuesday: 'भौम',
+        Wednesday: 'सौम्य',
+        Thursday: 'बृहस्पति',
+        Friday: 'भृगु',
+        Saturday: 'मंद',
       }[safeValue(dayNames?.[panchang.vara] || panchang.vara)] || safeValue(varaDisplay);
       const nakshatraSanskrit = {
         Ashwini: 'अश्विनी',
@@ -782,27 +782,27 @@ export default function PanchangSection() {
         'कलियुगे प्रथमचरणे भरतवर्षे भरतखंडे जंबुद्वीपे दंडकारण्ये देशे',
         'गोदावर्याः दक्षिणेतीरे शालिवाहन शके',
         '',
-        `${safeValue(samvatsaraSanskrit)} नाम संवत्सरे`,
-        `${safeValue(ayanaSanskrit)}यने`,
-        `${safeValue(rituSanskrit)}ऋतौ`,
-        `${safeValue(masaSanskrit)}मासे`,
-        `${safeValue(pakshaSanskrit)}पक्षे`,
-        `${safeValue(tithiSanskrit)}तिथौ`,
-        `${safeValue(vasaraSanskrit)}वासरे`,
-        `${safeValue(nakshatraSanskrit)}दिवसनक्षत्रे`,
+        <span key="samvatsara"><strong>{safeValue(samvatsaraSanskrit)}</strong> नाम संवत्सरे</span>,
+        <span key="ayana"><strong>{safeValue(ayanaSanskrit)}</strong>यने</span>,
+        <span key="ritu"><strong>{safeValue(rituSanskrit)}</strong>ऋतौ</span>,
+        <span key="masa"><strong>{safeValue(masaSanskrit)}</strong>मासे</span>,
+        <span key="paksha"><strong>{safeValue(pakshaSanskrit)}</strong>पक्षे</span>,
+        <span key="tithi"><strong>{safeValue(tithiSanskrit)}</strong>तिथौ</span>,
+        <span key="vasara"><strong>{safeValue(vasaraSanskrit)}</strong>वासरे</span>,
+        <span key="nakshatra"><strong>{safeValue(nakshatraSanskrit)}</strong>दिवसनक्षत्रे</span>,
         'विष्णुयोगे विष्णुकरणे',
-        `${safeValue(chandraRashiSanskrit)}स्थिते वर्तमाने चन्द्रे`,
-        `${safeValue(suryaRashiSanskrit)}स्थिते श्रीसूर्ये`,
-        `${safeValue(guruRashiSanskrit)}स्थिते देवगुरौ`,
+        <span key="chandra"><strong>{safeValue(chandraRashiSanskrit)}</strong>स्थिते वर्तमाने चन्द्रे</span>,
+        <span key="surya"><strong>{safeValue(suryaRashiSanskrit)}</strong>स्थिते श्रीसूर्ये</span>,
+        <span key="guru"><strong>{safeValue(guruRashiSanskrit)}</strong>स्थिते देवगुरौ</span>,
         '',
         'शेषेषु ग्रहेषु यथायथं राशिस्थानस्थितेषु सत्सु शुभनामयोगे शुभकरणे',
-        'एवंगुणविशेषणविशिष्टायां शुभपुण्यतिथौ (येथे पूजा करणाऱ्याने स्वतः म्हणावे) मम आत्मनः',
+        <span key="self-recite">एवंगुणविशेषणविशिष्टायां शुभपुण्यतिथौ <strong>(येथे पूजा करणाऱ्याने स्वतः म्हणावे)</strong> मम आत्मनः</span>,
         'श्रुतिस्मृतिपुराणोक्तफलप्राप्त्यर्थं अस्माकं सकुटुंबानां सपरिवाराणां क्षेमस्थैर्यआयुरायोग्यऐश्वर्य-',
         'प्राप्त्यर्थं सकलपीडापरिहारार्थं मनेप्सितसकलमनोरथसिद्ध्यर्थं',
         'श्रीमहाविष्णुप्रमुखपंचायतनदेवताप्रीत्यर्थं यथाज्ञानेन यथा-',
         'मिलितोपचारद्रव्यैः ध्यानावाहनादिषोडशोपचारपूजां पुरुषसूक्तेन',
         'पुराणोक्तमंत्रेण वा करिष्ये।',
-      ].join('\n');
+      ];
     })();
 
     return {
@@ -977,7 +977,14 @@ export default function PanchangSection() {
 
               <div className={styles.mantraCard}>
                 <h2>{label('mantra')}</h2>
-                <p className={styles.mantraText}>{displayData.mantraText}</p>
+                <p className={styles.mantraText}>
+                  {displayData.mantraText.map((line, idx) => (
+                    <React.Fragment key={idx}>
+                      {line}
+                      {idx < displayData.mantraText.length - 1 && '\n'}
+                    </React.Fragment>
+                  ))}
+                </p>
               </div>
 
               <p className={styles.note}>{label('note')}</p>

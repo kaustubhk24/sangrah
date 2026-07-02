@@ -72,6 +72,12 @@ const translations = {
     pageLabel: "अध्याय",
     searchBookPlaceholder: "या पुस्तकात शोधा...",
     resumeReadPrompt: "मागील वाचनापासून सुरू करा",
+    panchangWidgetTitle: "आजचे पंचांग",
+    panchangWidgetBadge: "पंचांग",
+    masa: "मास",
+    pakshaLabel: "पक्ष",
+    tithiLabel: "तिथि",
+    nakshatraLabel: "नक्षत्र",
   },
   en: {
     appTitle: "Sangrah",
@@ -144,6 +150,12 @@ const translations = {
     pageLabel: "Chapter",
     searchBookPlaceholder: "Search within book...",
     resumeReadPrompt: "Resume from last read",
+    panchangWidgetTitle: "Today’s Panchang",
+    panchangWidgetBadge: "Panchang",
+    masa: "Masa",
+    pakshaLabel: "Paksha",
+    tithiLabel: "Tithi",
+    nakshatraLabel: "Nakshatra",
   },
   hi: {
     appTitle: "संपूर्ण संग्रह",
@@ -216,6 +228,12 @@ const translations = {
     pageLabel: "अध्याय",
     searchBookPlaceholder: "इस पुस्तक में खोजें...",
     resumeReadPrompt: "पिछली बार पढ़े गए स्थान से शुरू करें",
+    panchangWidgetTitle: "आज का पंचांग",
+    panchangWidgetBadge: "पंचांग",
+    masa: "मास",
+    pakshaLabel: "पक्ष",
+    tithiLabel: "तिथि",
+    nakshatraLabel: "नक्षत्र",
   }
 };
 
