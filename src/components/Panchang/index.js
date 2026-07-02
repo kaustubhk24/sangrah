@@ -259,7 +259,7 @@ export default function PanchangSection() {
 
     const observer = new Observer(location.lat, location.lon, location.elevation || 0);
     const timezoneOffset = location.timezoneOffset ?? getTimeZoneOffsetMinutes(location.timezone);
-    const data = getPanchangam(selectedDate, observer, { timezoneOffset });
+    const data = getPanchangam(selectedDate, observer, { timezoneOffset, calendarType: 'amanta' });
     setPanchang(data);
   }, [selectedDate, location.lat, location.lon, location.elevation, location.timezone, location.timezoneOffset]);
 
@@ -600,8 +600,14 @@ export default function PanchangSection() {
       mr: {
         Chaitra: 'चैत्र',
         Vaishakha: 'वैशाख',
-        Jyeshtha: 'Jyeshtha',
-        Ashadha: 'आषाढा',
+        Jyeshtha: 'ज्येष्ठ',
+        Jyestha: 'ज्येष्ठ',
+        Jestha: 'ज्येष्ठ',
+        Jeshtha: 'ज्येष्ठ',
+        Ashadha: 'आषाढ',
+        Aashadha: 'आषाढ',
+        Ashad: 'आषाढ',
+        Aashad: 'आषाढ',
         Shravana: 'श्रावण',
         Bhadrapada: 'भाद्रपद',
         Ashwin: 'आश्विन',
@@ -615,7 +621,13 @@ export default function PanchangSection() {
         Chaitra: 'चैत्र',
         Vaishakha: 'वैशाख',
         Jyeshtha: 'ज्येष्ठ',
-        Ashadha: 'आषाढ़',
+        Jyestha: 'ज्येष्ठ',
+        Jestha: 'ज्येष्ठ',
+        Jeshtha: 'ज्येष्ठ',
+        Ashadha: 'आषाढ',
+        Aashadha: 'आषाढ',
+        Ashad: 'आषाढ़',
+        Aashad: 'आषाढ़',
         Shravana: 'श्रावण',
         Bhadrapada: 'भाद्रपद',
         Ashwin: 'आश्विन',
@@ -651,7 +663,22 @@ export default function PanchangSection() {
     const yogaDisplay = getTranslatedValue(lang, yogaNames?.[panchang.yoga] || panchang.yoga, yogaMap, '');
     const karanaDisplay = getTranslatedValue(lang, karanaNames?.[panchang.karana] || panchang.karana, karanaMap, '');
     const varaDisplay = getTranslatedValue(lang, dayNames?.[panchang.vara] || panchang.vara, dayMap, '');
-    const masaDisplay = getTranslatedValue(lang, panchang.masa?.name || '', masaMap, '');
+    const masaIndex = Number(panchang.masa?.index);
+    const masaNameByIndex = {
+      0: 'Chaitra',
+      1: 'Vaishakha',
+      2: 'Jyeshtha',
+      3: 'Ashadha',
+      4: 'Shravana',
+      5: 'Bhadrapada',
+      6: 'Ashwin',
+      7: 'Kartika',
+      8: 'Margashirsha',
+      9: 'Pusha',
+      10: 'Magha',
+      11: 'Phalguna',
+    };
+    const masaDisplay = getTranslatedValue(lang, masaNameByIndex[masaIndex] || panchang.masa?.name || '', masaMap, '');
     const pakshaDisplay = getTranslatedValue(lang, panchang.paksha || '', pakshaMap, '');
     const rituDisplay = getTranslatedValue(lang, panchang.ritu || '', rituMap, '');
     const ayanaDisplay = getTranslatedValue(lang, panchang.ayana || '', ayanaMap, '');
@@ -684,7 +711,9 @@ export default function PanchangSection() {
 
       const ayanaSanskrit = panchang.ayana === 'Dakshinayana' ? 'दक्षिणायन' : panchang.ayana === 'Uttarayana' ? 'उत्तरायण' : safeValue(ayanaDisplay);
       const rituSanskrit = panchang.ritu === 'Varsha' ? 'वर्षा' : safeValue(rituDisplay);
-      const masaSanskrit = panchang.masa?.name === 'Ashadha' ? 'आषाढ़' : safeValue(masaDisplay);
+      const masaName = safeValue(panchang.masa?.name || '');
+      const masaIndexForMantra = Number(panchang.masa?.index);
+      const masaSanskrit = masaIndexForMantra === 2 ? 'ज्येष्ठ' : masaIndexForMantra === 3 ? 'आषाढ' : ['Ashadha', 'Aashadha', 'Ashad', 'Aashad'].includes(masaName) ? 'आषाढ' : safeValue(masaDisplay);
       const pakshaSanskrit = panchang.paksha === 'Krishna' ? 'कृष्ण' : safeValue(pakshaDisplay);
       const tithiSanskrit = {
         Prathama: 'प्रतिपदा',
