@@ -552,3 +552,63 @@
 .drawerItemTitle {
   font-size: 14px;
 }
+
+/* Pravachan Date Selector Styles */
+.pravachanSelectorRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 480px) {
+  .pravachanSelectorRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.pravachanSelectorTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #C75D00;
+  margin: 0;
+}
+
+[data-theme='dark'] .pravachanSelectorTitle {
+  color: #ffa726;
+}
+
+.pravachanSelectsGroup {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  max-width: 320px;
+}
+
+.pravachanSelect {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ECE4D8;
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+[data-theme='dark'] .pravachanSelect {
+  background: #2b221a;
+  border-color: #3d342d;
+  color: #ccc;
+}
+
+.pravachanSelect:focus {
+  border-color: #E67E22;
+}
+
+[data-theme='dark'] .pravachanSelect:focus {
+  border-color: #ffa726;
+}

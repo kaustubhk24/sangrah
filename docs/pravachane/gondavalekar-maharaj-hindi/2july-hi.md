@@ -1,5 +1,5 @@
 ---
-slug: /gondavalekar-maharaj-hi-1-july
+slug: /gondavalekar-maharaj-hi-2-july
 ---
 # प्रवचन  : ०२ जुलाई 
 

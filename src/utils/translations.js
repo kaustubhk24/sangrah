@@ -78,6 +78,9 @@ const translations = {
     pakshaLabel: "पक्ष",
     tithiLabel: "तिथि",
     nakshatraLabel: "नक्षत्र",
+    selectDateTitle: "प्रवचन दिनांक निवडा",
+    monthLabel: "महिना",
+    dayLabel: "दिवस",
   },
   en: {
     appTitle: "Sangrah",
@@ -156,6 +159,9 @@ const translations = {
     pakshaLabel: "Paksha",
     tithiLabel: "Tithi",
     nakshatraLabel: "Nakshatra",
+    selectDateTitle: "Select Pravachan Date",
+    monthLabel: "Month",
+    dayLabel: "Day",
   },
   hi: {
     appTitle: "संपूर्ण संग्रह",
@@ -234,6 +240,9 @@ const translations = {
     pakshaLabel: "पक्ष",
     tithiLabel: "तिथि",
     nakshatraLabel: "नक्षत्र",
+    selectDateTitle: "प्रवचन दिनांक चुनें",
+    monthLabel: "माह",
+    dayLabel: "दिन",
   }
 };
 

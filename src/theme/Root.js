@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import HistoryTracker from '../components/HistoryTracker';
+import LanguagePopup from '../components/LanguagePopup';
 import { LanguageProvider } from '../utils/translations';
 
 export default function Root({children}) {
@@ -19,6 +20,7 @@ export default function Root({children}) {
     <LanguageProvider>
       {children}
       <HistoryTracker />
+      <LanguagePopup />
     </LanguageProvider>
   );
 }

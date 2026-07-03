@@ -5,7 +5,7 @@ import ShareButton from '@site/src/components/ShareButton';
 import AutoScrollControl from '@site/src/components/AutoScrollControl';
 import ThemeToggle from '@site/src/components/ThemeToggle';
 import { useTranslation } from '@site/src/utils/translations';
-import { useLocation } from '@docusaurus/router';
+import { useLocation, useHistory } from '@docusaurus/router';
 import Link from '@docusaurus/Link';
 import searchIndex from '@site/src/data/searchIndex.json';
 import styles from './styles.module.css';
@@ -13,6 +13,7 @@ import styles from './styles.module.css';
 export default function DocItemLayoutWrapper(props) {
   const { t, lang, translateNumbers } = useTranslation();
   const location = useLocation();
+  const history = useHistory();
   const [showChapterDrawer, setShowChapterDrawer] = useState(false);
   const [chapterSearch, setChapterSearch] = useState('');
   const [showResumeToast, setShowResumeToast] = useState(false);
@@ -34,6 +35,127 @@ export default function DocItemLayoutWrapper(props) {
   };
 
   const cleanPath = location.pathname.split('?')[0].split('#')[0];
+
+  // Pravachan Date Selector logic
+  const currentDoc = useMemo(() => {
+    return searchIndex.find((doc) => doc.slug === cleanPath);
+  }, [cleanPath]);
+
+  const isPravachan = useMemo(() => {
+    return currentDoc && currentDoc.category && currentDoc.category.includes('pravachane');
+  }, [currentDoc]);
+
+  const siblingPravachans = useMemo(() => {
+    if (!isPravachan) return [];
+    return searchIndex.filter(doc => doc.category === currentDoc.category);
+  }, [isPravachan, currentDoc]);
+
+  const parsedPravachans = useMemo(() => {
+    const monthsOrder = {
+      january: 1, february: 2, march: 3, april: 4, may: 5, june: 6,
+      july: 7, august: 8, september: 9, october: 10, november: 11, december: 12
+    };
+
+    return siblingPravachans.map(doc => {
+      if (!doc.filename) return null;
+      const match = doc.filename.match(/^(\d+)([a-zA-Z]+)-([a-z]{2})$/);
+      if (!match) return null;
+      const day = parseInt(match[1], 10);
+      const monthName = match[2].toLowerCase();
+      const monthNum = monthsOrder[monthName] || 0;
+      return {
+        ...doc,
+        day,
+        monthName,
+        monthNum
+      };
+    }).filter(Boolean);
+  }, [siblingPravachans]);
+
+  const currentParsedDate = useMemo(() => {
+    if (!currentDoc || !currentDoc.filename) return null;
+    const match = currentDoc.filename.match(/^(\d+)([a-zA-Z]+)-([a-z]{2})$/);
+    if (!match) return null;
+    return {
+      day: parseInt(match[1], 10),
+      monthName: match[2].toLowerCase()
+    };
+  }, [currentDoc]);
+
+  const [selectedMonth, setSelectedMonth] = useState('');
+  const [selectedDay, setSelectedDay] = useState('');
+
+  useEffect(() => {
+    if (currentParsedDate) {
+      setSelectedMonth(currentParsedDate.monthName);
+      setSelectedDay(currentParsedDate.day.toString());
+    }
+  }, [currentParsedDate]);
+
+  const monthLabels = {
+    hi: {
+      january: 'जनवरी', february: 'फरवरी', march: 'मार्च', april: 'अप्रैल',
+      may: 'मई', june: 'जून', july: 'जुलाई', august: 'अगस्त',
+      september: 'सितंबर', october: 'अक्टूबर', november: 'नवंबर', december: 'दिसंबर'
+    },
+    mr: {
+      january: 'जानेवारी', february: 'फेब्रुवारी', march: 'मार्च', april: 'एप्रिल',
+      may: 'मे', june: 'जून', july: 'जुलै', august: 'ऑगस्ट',
+      september: 'सप्टेंबर', october: 'ऑक्टोबर', november: 'नोव्हेंबर', december: 'डिसेंबर'
+    },
+    en: {
+      january: 'January', february: 'February', march: 'March', april: 'April',
+      may: 'May', june: 'June', july: 'July', august: 'August',
+      september: 'September', october: 'October', november: 'November', december: 'December'
+    }
+  };
+
+  const monthsList = [
+    'january', 'february', 'march', 'april', 'may', 'june',
+    'july', 'august', 'september', 'october', 'november', 'december'
+  ];
+
+  const availableDaysForMonth = useMemo(() => {
+    if (!selectedMonth) return [];
+    return parsedPravachans
+      .filter(p => p.monthName === selectedMonth)
+      .map(p => p.day)
+      .sort((a, b) => a - b);
+  }, [selectedMonth, parsedPravachans]);
+
+  const handleMonthChange = (e) => {
+    const newMonth = e.target.value;
+    setSelectedMonth(newMonth);
+    
+    const available = parsedPravachans
+      .filter((p) => p.monthName === newMonth)
+      .sort((a, b) => a.day - b.day);
+      
+    if (available.length > 0) {
+      const currentDayInt = parseInt(selectedDay, 10);
+      const sameDayMatch = available.find((p) => p.day === currentDayInt);
+      const targetDoc = sameDayMatch || available[0];
+      
+      setSelectedDay(targetDoc.day.toString());
+      history.push(targetDoc.slug);
+    } else {
+      setSelectedDay('');
+    }
+  };
+
+  const handleDayChange = (e) => {
+    const newDay = e.target.value;
+    setSelectedDay(newDay);
+    
+    if (newDay && selectedMonth) {
+      const match = parsedPravachans.find(
+        (p) => p.monthName === selectedMonth && p.day === parseInt(newDay, 10)
+      );
+      if (match) {
+        history.push(match.slug);
+      }
+    }
+  };
 
   // Daily Path logic
   const isDailyPathMode = location.search.includes('dailyPath=true');
@@ -183,6 +305,47 @@ export default function DocItemLayoutWrapper(props) {
             <BookmarkButton className={styles.iconBtn} />
           </div>
         </div>
+
+        {/* Pravachan Date Selector */}
+        {isPravachan && parsedPravachans.length > 0 && (
+          <div className={styles.pravachanSelectorRow} style={{ borderTop: '1px solid #ECE4D8', paddingTop: '12px' }}>
+            <span className={styles.pravachanSelectorTitle}>📅 {t('selectDateTitle')}:</span>
+            <div className={styles.pravachanSelectsGroup}>
+              <select
+                className={styles.pravachanSelect}
+                value={selectedMonth}
+                onChange={handleMonthChange}
+              >
+                {monthsList.map((monthKey) => {
+                  const hasPravachans = parsedPravachans.some((p) => p.monthName === monthKey);
+                  const label = (monthLabels[lang] || monthLabels['mr'])[monthKey] || monthKey;
+                  return (
+                    <option key={monthKey} value={monthKey} disabled={!hasPravachans}>
+                      {label} {!hasPravachans ? `(${lang === 'hi' ? 'अनुपलब्ध' : (lang === 'en' ? 'Unavailable' : 'उपलब्ध नाही')})` : ''}
+                    </option>
+                  );
+                })}
+              </select>
+
+              <select
+                className={styles.pravachanSelect}
+                value={selectedDay}
+                onChange={handleDayChange}
+                disabled={availableDaysForMonth.length === 0}
+              >
+                {availableDaysForMonth.length === 0 ? (
+                  <option value="">{lang === 'hi' ? 'कोई प्रवचन नहीं' : (lang === 'en' ? 'No items' : 'प्रवचन नाही')}</option>
+                ) : (
+                  availableDaysForMonth.map((dayNum) => (
+                    <option key={dayNum} value={dayNum.toString()}>
+                      {translateNumbers(dayNum)}
+                    </option>
+                  ))
+                )}
+              </select>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Resume toast */}
