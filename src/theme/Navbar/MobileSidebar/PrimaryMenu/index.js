@@ -17,12 +17,17 @@ export default function NavbarMobilePrimaryMenu() {
   const items = useNavbarItems();
   const { lang, translateNumbers } = useTranslation();
 
-  // Count articles per category slug dynamically
+  // Count articles per category slug dynamically (including subfolders)
   const categoryCounts = React.useMemo(() => {
     const counts = {};
     searchIndex.forEach((doc) => {
       if (doc.category) {
-        counts[doc.category] = (counts[doc.category] || 0) + 1;
+        const parts = doc.category.split('/');
+        let current = '';
+        parts.forEach((part, index) => {
+          current = index === 0 ? part : `${current}/${part}`;
+          counts[current] = (counts[current] || 0) + 1;
+        });
       }
     });
     return counts;
@@ -44,6 +49,7 @@ export default function NavbarMobilePrimaryMenu() {
       { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', slug: 'पाळणा-संग्रह' },
       { key: 'pooja', mrLabel: 'पूजा व्रत', hiLabel: 'पूजा व्रत', slug: 'पूजा-व्रत' },
       { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', slug: 'ऑडियो-भजन' },
+      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', slug: 'प्रवचने' },
     ];
     
     return folders.map(f => {

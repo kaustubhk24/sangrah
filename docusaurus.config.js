@@ -90,7 +90,8 @@ const config = {
                       "नामावली": "नामावली",
                       "पाळणा संग्रह": "पाळणा-संग्रह",
                       "मंगलाष्टका": "मंगलाष्टका",
-                      "ऑडियो भजन": "ऑडियो-भजन"
+                      "ऑडियो भजन": "ऑडियो-भजन",
+                      "प्रवचने": "प्रवचने"
                     };
                     const slugPart = slugMap[originalLabel] || originalLabel.trim().replace(/[^a-zA-Z0-9\u0900-\u097F]+/g, '-').replace(/-+/g, '-');
                     updatedItem.link.slug = `/category/${slugPart}`;
