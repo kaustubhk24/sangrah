@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkaarati_sangrah=globalThis.webpackChunkaarati_sangrah||[]).push([[8146],{29328(a){a.exports=JSON.parse('{"metadata":{"permalink":"/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
