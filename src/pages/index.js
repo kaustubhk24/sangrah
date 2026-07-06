@@ -328,7 +328,7 @@ export default function HomePage() {
         <section className={styles.sectionBlock}>
           <div className={styles.sectionHeader}>
             <h2>{t('dailyPath')}</h2>
-            <Link to="/settings" className={styles.sectionLink}>{t('edit')}</Link>
+            <Link to="/settings#nityapath" className={styles.sectionLink}>{t('edit')}</Link>
           </div>
           <div className={styles.dailyPathCard}>
             {dailyPath.length > 0 ? (

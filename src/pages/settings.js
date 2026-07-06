@@ -45,6 +45,19 @@ export default function Settings() {
     document.documentElement.setAttribute('data-theme', storedTheme);
   }, []);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 150);
+    }
+  }, []);
+
   const handleFontChange = (key) => {
     setFontSize(key);
     window.localStorage.setItem('site-font-size', key);
@@ -323,7 +336,7 @@ export default function Settings() {
           </div>
 
           {/* Daily Path Playlist Management */}
-          <div className={styles.settingGroup}>
+          <div id="nityapath" className={styles.settingGroup}>
             <p className={styles.settingLabel}>{t('nityapathHeader')}</p>
             
             {dailyPath.length === 0 ? (

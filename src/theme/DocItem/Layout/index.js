@@ -293,6 +293,38 @@ export default function DocItemLayoutWrapper(props) {
     return bookInfo.chapters.filter((c) => c.title.toLowerCase().includes(query));
   }, [bookInfo, chapterSearch]);
 
+  const playlistBar = (isBottom = false) => {
+    if (!isDailyPathMode || dailyPathList.length === 0) return null;
+    return (
+      <div 
+        className={styles.dailyPathPlaylistBar} 
+        style={isBottom ? { marginTop: '20px', marginBottom: '0px' } : undefined}
+      >
+        <div className={styles.playlistProgress}>
+          <span>🚩 {t('dailyPath')}: {dailyPathList[dailyPathIndex]?.title} ({translateNumbers(dailyPathIndex + 1)} / {translateNumbers(dailyPathList.length)})</span>
+          <div className={styles.playlistProgressBg}>
+            <div 
+              className={styles.playlistProgressBar} 
+              style={{ width: `${((dailyPathIndex + 1) / dailyPathList.length) * 100}%` }}
+            />
+          </div>
+        </div>
+        {dailyPathIndex < dailyPathList.length - 1 ? (
+          <Link 
+            className={styles.playlistNextBtn}
+            to={`${dailyPathList[dailyPathIndex + 1].to}?dailyPath=true&index=${dailyPathIndex + 1}`}
+          >
+            ➡️ {t('nextBtn')}: {dailyPathList[dailyPathIndex + 1].title}
+          </Link>
+        ) : (
+          <div className={styles.playlistDoneBadge}>
+            🎉 {t('dailyPath')} समाप्त! जय श्री कृष्ण
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <>
       {/* Reading Controls Bar */}
@@ -360,34 +392,11 @@ export default function DocItemLayoutWrapper(props) {
         </div>
       )}
 
-      {/* Playlist mode navigation bar */}
-      {isDailyPathMode && dailyPathList.length > 0 && (
-        <div className={styles.dailyPathPlaylistBar}>
-          <div className={styles.playlistProgress}>
-            <span>🚩 {t('dailyPath')}: {dailyPathList[dailyPathIndex]?.title} ({translateNumbers(dailyPathIndex + 1)} / {translateNumbers(dailyPathList.length)})</span>
-            <div className={styles.playlistProgressBg}>
-              <div 
-                className={styles.playlistProgressBar} 
-                style={{ width: `${((dailyPathIndex + 1) / dailyPathList.length) * 100}%` }}
-              />
-            </div>
-          </div>
-          {dailyPathIndex < dailyPathList.length - 1 ? (
-            <Link 
-              className={styles.playlistNextBtn}
-              to={`${dailyPathList[dailyPathIndex + 1].to}?dailyPath=true&index=${dailyPathIndex + 1}`}
-            >
-              ➡️ {t('nextBtn')}: {dailyPathList[dailyPathIndex + 1].title}
-            </Link>
-          ) : (
-            <div className={styles.playlistDoneBadge}>
-              🎉 {t('dailyPath')} समाप्त! जय श्री कृष्ण
-            </div>
-          )}
-        </div>
-      )}
+      {playlistBar(false)}
 
       <Layout {...props} />
+
+      {playlistBar(true)}
 
       {/* Book chapters pagination & drawer */}
       {bookInfo && (
