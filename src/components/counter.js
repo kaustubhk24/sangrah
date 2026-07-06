@@ -129,7 +129,7 @@ export default function CounterPage() {
       // Mala loop complete!
       setCurrentCount(0);
       setMalaCount((prev) => prev + 1);
-      updateHistoryData(activeMantra, 108, 1);
+      updateHistoryData(activeMantra, 1, 1);
       // Extra long vibration on mala complete
       if (typeof window !== 'undefined' && window.navigator && window.navigator.vibrate) {
         window.navigator.vibrate([150, 50, 150]);

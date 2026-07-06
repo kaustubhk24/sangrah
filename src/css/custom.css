@@ -273,15 +273,16 @@ textarea:focus {
   color: #ffe8d6 !important;
 }
 
-/* Hide Table of Contents (TOC) globally for a direct full-width view of documents */
+/* Restore Table of Contents (TOC) globally */
+/*
 .theme-doc-toc-desktop,
 .theme-doc-toc-mobile {
   display: none !important;
 }
 
-/* Ensure the main doc content column takes the full width */
 .row .col--8,
 .row .col--9 {
   max-width: 100% !important;
   flex: 0 0 100% !important;
 }
+*/
