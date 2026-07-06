@@ -114,4 +114,4 @@ slug: /ram-raksha
 
 ॥ श्री सीतारामचंद्रार्पणमस्तु ॥
 
-<span class='index-text'> Shri ram raksha stotram </span>
+<span class='index-text'> Shri ram raksha stotram, रामरक्षा</span>
