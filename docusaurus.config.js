@@ -174,6 +174,23 @@ const config = {
         ],
       },
     ],
+    function customWebpackFallbackPlugin() {
+      return {
+        name: 'custom-webpack-fallback-plugin',
+        configureWebpack(config, isServer) {
+          if (!isServer) {
+            return {
+              resolve: {
+                fallback: {
+                  fs: false,
+                },
+              },
+            };
+          }
+          return {};
+        },
+      };
+    },
   ],
 
   themeConfig:
