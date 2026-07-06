@@ -16,7 +16,7 @@ export default function Offline() {
               className="button button--primary"
               onClick={() => window.location.reload()}
             >
-              पुन्हा प्रयत्न करा
+              पुन्हा प्रयत्न करा !
             </button>
           </div>
         </div>
