@@ -4,7 +4,13 @@ slug: /vishnu-sahasranam
 
 # श्री विष्णु सहस्रनाम स्तोत्रम् 
 
-श्री विष्णु सहस्रनाम स्तोत्रम्
+## श्री विष्णु सहस्रनाम स्तोत्रम्
+
+
+<audio controls="controls" controlsList="nodownload" src="https://cdn2.justinclicks.com/Public%20CDN/public_audios/stotras/vishnu_sahasranam.mp3">
+    Your browser does not support the HTML5 Audio element.
+</audio> 
+
 
 ॥ पूर्वपीठिका ॥
 
