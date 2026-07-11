@@ -5,6 +5,10 @@ slug: /bhimrupi
 ---
 # श्री मारुती स्तोत्र
 
+<audio controls="controls" controlsList="nodownload" src="https://cdn2.justinclicks.com/Public%20CDN/public_audios/stotras/maruti-stotra.mp3">
+    Your browser does not support the HTML5 Audio element.
+</audio> 
+
 भीमरूपी महारुद्रा, वज्रहनुमान मारुती ।<br /> वनारी अंजनीसूता रामदूता प्रभंजना ||१||<br /> 
 
 महाबळी प्राणदाता, सकळां उठवी बळें ।<br /> सौख्यकारी दुःखहारी, दुत वैष्णव गायका ||२||
