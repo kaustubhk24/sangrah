@@ -3,7 +3,7 @@ import Layout from '@theme-original/DocItem/Layout';
 import BookmarkButton from '@site/src/components/BookmarkButton';
 import ShareButton from '@site/src/components/ShareButton';
 import AutoScrollControl from '@site/src/components/AutoScrollControl';
-import StotraAudioPlayer from '@site/src/components/StotraAudioPlayer';
+import CustomAudioPlayer from '@site/src/components/CustomAudioPlayer';
 import ThemeToggle from '@site/src/components/ThemeToggle';
 import { useTranslation } from '@site/src/utils/translations';
 import { useLocation, useHistory } from '@docusaurus/router';
@@ -395,7 +395,7 @@ export default function DocItemLayoutWrapper(props) {
 
       {playlistBar(false)}
 
-      <StotraAudioPlayer />
+      <CustomAudioPlayer />
       <Layout {...props} />
 
       {playlistBar(true)}

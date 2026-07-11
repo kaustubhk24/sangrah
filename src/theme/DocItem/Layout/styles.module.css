@@ -526,6 +526,13 @@
   font-weight: 700;
 }
 
+/* Hide native audio elements from markdown */
+article audio,
+main article audio,
+.theme-doc-markdown audio {
+  display: none !important;
+}
+
 [data-theme='dark'] .activeDrawerItem {
   background: #2b221a;
   border-color: #ffa726;
