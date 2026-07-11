@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import HistoryTracker from '../components/HistoryTracker';
 import LanguagePopup from '../components/LanguagePopup';
 import { LanguageProvider } from '../utils/translations';
+import { AudioProvider } from '../context/AudioContext';
+import FloatingAudioPlayer from '../components/FloatingAudioPlayer';
 
 export default function Root({children}) {
   useEffect(() => {
@@ -18,9 +20,13 @@ export default function Root({children}) {
 
   return (
     <LanguageProvider>
-      {children}
-      <HistoryTracker />
-      <LanguagePopup />
+      <AudioProvider>
+        {children}
+        <FloatingAudioPlayer />
+        <HistoryTracker />
+        <LanguagePopup />
+      </AudioProvider>
     </LanguageProvider>
   );
 }
+

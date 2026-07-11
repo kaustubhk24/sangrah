@@ -1,9 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useLocation } from '@docusaurus/router';
+import { useAudio } from '@site/src/context/AudioContext';
 import styles from './styles.module.css';
 
 const pageAudioMap = {
   '/maruti-stotra': 'https://cdn2.justinclicks.com/Public%20CDN/public_audios/stotras/maruti-stotra.mp3',
+  '/bhimrupi': 'https://cdn2.justinclicks.com/Public%20CDN/public_audios/stotras/maruti-stotra.mp3',
   '/ram-raksha': 'https://cdn2.justinclicks.com/Public%20CDN/public_audios/stotras/ram-raksha-audio.mp3',
 };
 
@@ -16,110 +18,91 @@ const formatTime = (seconds) => {
 
 export default function CustomAudioPlayer() {
   const location = useLocation();
-  const audioRef = useRef(null);
-  const [audioSrc, setAudioSrc] = useState('');
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const { 
+    audioSrc, 
+    currentTime, 
+    duration, 
+    isPlaying, 
+    isLoading,
+    togglePlayback, 
+    seek,
+    play,
+    setCurrentPageAudioSrc
+  } = useAudio();
 
-  const slug = location.pathname.split('?')[0].split('#')[0];
+  const slug = useMemo(() => location.pathname.split('?')[0].split('#')[0], [location.pathname]);
+  const [pageAudioSrc, setPageAudioSrc] = useState('');
+  const [pageAudioTitle, setPageAudioTitle] = useState('');
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // Check if audio URL is in pageAudioMap
-    const configuredSrc = pageAudioMap[slug] || '';
-    
-    // Fallback: look for audio element in the page
-    const fallbackAudio = document.querySelector('article audio, main article audio, .theme-doc-markdown audio');
-    const resolvedSrc = configuredSrc || fallbackAudio?.getAttribute('src') || '';
-    
-    setAudioSrc(resolvedSrc);
+    const checkAudio = () => {
+      const configuredSrc = pageAudioMap[slug] || '';
+      const fallbackAudio = document.querySelector('article audio, main article audio, .theme-doc-markdown audio');
+      const resolvedSrc = configuredSrc || fallbackAudio?.getAttribute('src') || '';
+      const pageTitle = document.querySelector('article h1, main h1, .theme-doc-markdown h1')?.textContent || slug.slice(1);
+
+      setPageAudioSrc(resolvedSrc);
+      setPageAudioTitle(pageTitle);
+      
+      return !!resolvedSrc;
+    };
+
+    // Initial check
+    if (checkAudio()) return;
+
+    // Retry checking DOM at intervals to handle mounting during Docusaurus page transitions
+    const timeouts = [100, 300, 600, 1000].map(delay => 
+      setTimeout(checkAudio, delay)
+    );
+
+    return () => {
+      timeouts.forEach(t => clearTimeout(t));
+    };
   }, [slug]);
 
   useEffect(() => {
-    if (!audioRef.current || !audioSrc) return;
-
-    const audio = audioRef.current;
-
-    const handleTimeUpdate = () => {
-      setCurrentTime(audio.currentTime);
-    };
-
-    const handleLoadedMetadata = () => {
-      setDuration(audio.duration);
-      setIsLoading(false);
-    };
-
-    const handlePlay = () => setIsPlaying(true);
-    const handlePause = () => setIsPlaying(false);
-    const handleLoadStart = () => setIsLoading(true);
-    const handleEnded = () => setIsPlaying(false);
-
-    audio.addEventListener('timeupdate', handleTimeUpdate);
-    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-    audio.addEventListener('play', handlePlay);
-    audio.addEventListener('pause', handlePause);
-    audio.addEventListener('loadstart', handleLoadStart);
-    audio.addEventListener('ended', handleEnded);
-
+    setCurrentPageAudioSrc(pageAudioSrc);
     return () => {
-      audio.removeEventListener('timeupdate', handleTimeUpdate);
-      audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
-      audio.removeEventListener('play', handlePlay);
-      audio.removeEventListener('pause', handlePause);
-      audio.removeEventListener('loadstart', handleLoadStart);
-      audio.removeEventListener('ended', handleEnded);
+      setCurrentPageAudioSrc('');
     };
-  }, [audioSrc]);
+  }, [pageAudioSrc, setCurrentPageAudioSrc]);
 
-  const togglePlayback = async () => {
-    if (!audioRef.current) return;
+  const isCurrentAudioActive = audioSrc === pageAudioSrc && pageAudioSrc !== '';
 
-    try {
-      if (audioRef.current.paused) {
-        await audioRef.current.play();
-      } else {
-        audioRef.current.pause();
-      }
-    } catch (error) {
-      console.error('Audio playback error:', error);
+  const handlePlayPause = () => {
+    if (isCurrentAudioActive) {
+      togglePlayback();
+    } else {
+      play(pageAudioSrc, pageAudioTitle);
     }
   };
 
   const handleSeek = (event) => {
-    if (!audioRef.current || !Number.isFinite(duration) || duration <= 0) return;
+    if (!isCurrentAudioActive || !Number.isFinite(duration) || duration <= 0) return;
     const ratio = parseFloat(event.target.value) / 100;
-    audioRef.current.currentTime = ratio * duration;
-    setCurrentTime(ratio * duration);
+    seek(ratio * duration);
   };
 
-  if (!audioSrc) return null;
+  if (!pageAudioSrc) return null;
 
   return (
     <div className={styles.playerContainer}>
-      <audio
-        ref={audioRef}
-        src={audioSrc}
-        controlsList="nodownload"
-        preload="metadata"
-      />
-
       <div className={styles.playerCard}>
         <div className={styles.playerHeader}>
           <span className={styles.playerTitle}>🎵 Audio</span>
-          {isLoading && <span className={styles.loadingSpinner}>⟳</span>}
+          {isLoading && isCurrentAudioActive && <span className={styles.loadingSpinner}>⟳</span>}
         </div>
 
         <div className={styles.playerControls}>
           <button
             className={styles.playButton}
-            onClick={togglePlayback}
-            aria-label={isPlaying ? 'Pause' : 'Play'}
-            disabled={isLoading}
+            onClick={handlePlayPause}
+            aria-label={isCurrentAudioActive && isPlaying ? 'Pause' : 'Play'}
+            disabled={isCurrentAudioActive && isLoading}
           >
-            {isLoading ? '⟳' : isPlaying ? '⏸' : '▶'}
+            {isCurrentAudioActive && isLoading ? '⟳' : (isCurrentAudioActive && isPlaying ? '⏸' : '▶')}
           </button>
 
           <div className={styles.progressContainer}>
@@ -127,19 +110,20 @@ export default function CustomAudioPlayer() {
               type="range"
               min="0"
               max="100"
-              value={duration > 0 ? (currentTime / duration) * 100 : 0}
+              value={isCurrentAudioActive && duration > 0 ? (currentTime / duration) * 100 : 0}
               onChange={handleSeek}
               className={styles.progressBar}
               aria-label="Seek audio"
-              disabled={!audioSrc || isLoading}
+              disabled={!isCurrentAudioActive || (isCurrentAudioActive && isLoading)}
             />
           </div>
 
           <span className={styles.timeDisplay}>
-            {formatTime(currentTime)} / {formatTime(duration)}
+            {isCurrentAudioActive ? `${formatTime(currentTime)} / ${formatTime(duration)}` : '0:00 / 0:00'}
           </span>
         </div>
       </div>
     </div>
   );
 }
+
