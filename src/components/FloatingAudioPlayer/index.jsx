@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAudio } from '@site/src/context/AudioContext';
+import { useTranslation } from '@site/src/utils/translations';
 import styles from './styles.module.css';
 
 const formatTime = (seconds) => {
@@ -10,6 +11,7 @@ const formatTime = (seconds) => {
 };
 
 export default function FloatingAudioPlayer() {
+  const { t } = useTranslation();
   const { 
     audioSrc, 
     audioTitle,
@@ -20,7 +22,9 @@ export default function FloatingAudioPlayer() {
     togglePlayback, 
     seek, 
     stop,
-    currentPageAudioSrc
+    currentPageAudioSrc,
+    playbackSpeed,
+    setPlaybackSpeed,
   } = useAudio();
 
   // Hide if no audio is playing or if the active audio matches the current page's inline player
@@ -63,6 +67,24 @@ export default function FloatingAudioPlayer() {
         <div className={styles.songInfo}>
           <span className={styles.songTitle} title={audioTitle}>{audioTitle || 'Audio'}</span>
           <span className={styles.time}>{formatTime(currentTime)} / {formatTime(duration)}</span>
+        </div>
+
+        <div className={styles.speedControlGroup}>
+          <label htmlFor="floatAudioSpeed" className={styles.speedLabel}>{t('audioSpeedControls')}</label>
+          <select
+            id="floatAudioSpeed"
+            className={styles.speedSelect}
+            value={playbackSpeed}
+            onChange={(e) => setPlaybackSpeed(parseFloat(e.target.value))}
+            aria-label="Audio speed"
+          >
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="1">1.0x</option>
+            <option value="1.25">1.25x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2.0x</option>
+          </select>
         </div>
 
         <button

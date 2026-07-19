@@ -192,6 +192,7 @@
   .playerContent {
     padding: 10px 12px;
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   .playBtn {
@@ -209,11 +210,65 @@
     height: 32px;
     font-size: 0.9rem;
   }
+
+  .speedControlGroup {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 4px;
+  }
 }
 
 /* Prevent content from being hidden by floating player */
 @media (max-width: 768px) {
   body:has(.floatingPlayer:not([style*="display: none"])) {
-    padding-bottom: 60px;
+    padding-bottom: 90px; /* Adjusted to accommodate wrapped mobile player */
   }
+}
+
+.speedControlGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.speedLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6b5a48;
+  white-space: nowrap;
+}
+
+.speedSelect {
+  padding: 4px 6px;
+  border: 1px solid #e8d4b8;
+  border-radius: 6px;
+  background-color: #fffaf0;
+  color: #8b3d00;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.speedSelect:hover {
+  border-color: #e67e22;
+  background-color: #ffe8cc;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .speedLabel {
+  color: #d4c4b4;
+}
+
+[data-theme='dark'] .speedSelect {
+  border-color: #6b5543;
+  background-color: #4a4030;
+  color: #ffa726;
+}
+
+[data-theme='dark'] .speedSelect:hover {
+  border-color: #ffa726;
+  background-color: #5c4e3c;
 }

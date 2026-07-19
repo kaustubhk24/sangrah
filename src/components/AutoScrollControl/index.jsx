@@ -3,22 +3,23 @@ import styles from './styles.module.css';
 
 export default function AutoScrollControl() {
   const [isScrolling, setIsScrolling] = useState(false);
-  const [speed, setSpeed] = useState(2);
+  const [speed, setSpeed] = useState(1.5);
   const [showControls, setShowControls] = useState(false);
   const scrollIntervalRef = useRef(null);
+  const scrollAccRef = useRef(0);
 
   // Load preferences from localStorage
   useEffect(() => {
     const saved = localStorage.getItem('autoScrollSpeed');
     if (saved) {
       if (saved === 'slow') {
-        setSpeed(1);
+        setSpeed(0.5);
       } else if (saved === 'medium') {
-        setSpeed(2);
+        setSpeed(1.5);
       } else if (saved === 'fast') {
-        setSpeed(4);
+        setSpeed(3.0);
       } else {
-        const parsed = parseInt(saved, 10);
+        const parsed = parseFloat(saved);
         if (!isNaN(parsed)) {
           setSpeed(parsed);
         }
@@ -29,8 +30,14 @@ export default function AutoScrollControl() {
   // Handle auto-scroll logic
   useEffect(() => {
     if (isScrolling) {
+      scrollAccRef.current = 0;
       scrollIntervalRef.current = setInterval(() => {
-        window.scrollBy(0, speed);
+        scrollAccRef.current += speed;
+        const toScroll = Math.floor(scrollAccRef.current);
+        if (toScroll > 0) {
+          window.scrollBy(0, toScroll);
+          scrollAccRef.current -= toScroll;
+        }
       }, 50);
     } else {
       if (scrollIntervalRef.current) {
@@ -50,9 +57,9 @@ export default function AutoScrollControl() {
   };
 
   const handleSpeedChange = (e) => {
-    const newSpeed = parseInt(e.target.value, 10);
+    const newSpeed = parseFloat(e.target.value);
     setSpeed(newSpeed);
-    localStorage.setItem('autoScrollSpeed', newSpeed);
+    localStorage.setItem('autoScrollSpeed', newSpeed.toString());
   };
 
   const handleStop = () => {
@@ -88,14 +95,15 @@ export default function AutoScrollControl() {
             <input
               id="scrollSpeed"
               type="range"
-              min="1"
-              max="10"
+              min="0.2"
+              max="5"
+              step="0.2"
               value={speed}
               onChange={handleSpeedChange}
               className={styles.slider}
               aria-label="Scroll speed"
             />
-            <span className={styles.speedValue}>{speed}</span>
+            <span className={styles.speedValue}>{speed.toFixed(1)}</span>
           </div>
           <div className={styles.buttonGroup}>
             <button

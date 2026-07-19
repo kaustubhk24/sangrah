@@ -23,10 +23,10 @@ export default function Settings() {
     const storedTheme = window.localStorage.getItem('site-theme') || 'light';
     let storedSpeed = window.localStorage.getItem('autoScrollSpeed') || 'medium';
     if (storedSpeed !== 'slow' && storedSpeed !== 'medium' && storedSpeed !== 'fast') {
-      const num = parseInt(storedSpeed, 10);
+      const num = parseFloat(storedSpeed);
       if (!isNaN(num)) {
-        if (num <= 1) storedSpeed = 'slow';
-        else if (num >= 4) storedSpeed = 'fast';
+        if (num <= 0.6) storedSpeed = 'slow';
+        else if (num >= 2.5) storedSpeed = 'fast';
         else storedSpeed = 'medium';
       } else {
         storedSpeed = 'medium';

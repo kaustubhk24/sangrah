@@ -180,6 +180,7 @@
 
   .playerControls {
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   .playButton {
@@ -191,5 +192,66 @@
   .timeDisplay {
     font-size: 0.75rem;
     min-width: 60px;
+    flex-grow: 1;
+    text-align: right;
   }
+
+  .speedControlGroup {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 4px;
+  }
+}
+
+.speedControlGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.speedLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6b5a48;
+  white-space: nowrap;
+}
+
+.speedSelect {
+  padding: 4px 8px;
+  border: 1px solid #e8d4b8;
+  border-radius: 6px;
+  background-color: #fffaf0;
+  color: #8b3d00;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.speedSelect:hover:not(:disabled) {
+  border-color: #e67e22;
+  background-color: #ffe8cc;
+}
+
+.speedSelect:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .speedLabel {
+  color: #d4c4b4;
+}
+
+[data-theme='dark'] .speedSelect {
+  border-color: #6b5543;
+  background-color: #4a4030;
+  color: #ffa726;
+}
+
+[data-theme='dark'] .speedSelect:hover:not(:disabled) {
+  border-color: #ffa726;
+  background-color: #5c4e3c;
 }

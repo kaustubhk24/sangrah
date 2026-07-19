@@ -11,12 +11,40 @@ export const AudioProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [audioTitle, setAudioTitle] = useState('');
   const [currentPageAudioSrc, setCurrentPageAudioSrc] = useState('');
+  const [playbackSpeed, setPlaybackSpeedState] = useState(1.0);
+  const playbackSpeedRef = useRef(1.0);
+
+  const setPlaybackSpeed = (speed) => {
+    setPlaybackSpeedState(speed);
+    playbackSpeedRef.current = speed;
+    if (audioRef.current) {
+      audioRef.current.playbackRate = speed;
+    }
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('audioPlaybackSpeed', speed.toString());
+    }
+  };
+
+  // Load default playback rate from localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedSpeed = localStorage.getItem('audioPlaybackSpeed');
+      if (savedSpeed) {
+        const parsed = parseFloat(savedSpeed);
+        if (!isNaN(parsed)) {
+          setPlaybackSpeedState(parsed);
+          playbackSpeedRef.current = parsed;
+        }
+      }
+    }
+  }, []);
 
   // Initialize audio element
   useEffect(() => {
     if (!audioRef.current) {
       audioRef.current = new Audio();
       audioRef.current.controlsList = 'nodownload';
+      audioRef.current.playbackRate = playbackSpeedRef.current;
     }
   }, []);
 
@@ -31,7 +59,12 @@ export const AudioProvider = ({ children }) => {
         audioRef.current.src = audioSrc;
         audioRef.current.preload = 'metadata';
         setIsLoading(true);
-        audioRef.current.play().catch((err) => {
+        audioRef.current.playbackRate = playbackSpeedRef.current;
+        audioRef.current.play().then(() => {
+          if (audioRef.current) {
+            audioRef.current.playbackRate = playbackSpeedRef.current;
+          }
+        }).catch((err) => {
           console.error('Audio play failed after source update:', err);
         });
       }
@@ -55,9 +88,13 @@ export const AudioProvider = ({ children }) => {
     const handleLoadedMetadata = () => {
       setDuration(audio.duration);
       setIsLoading(false);
+      audio.playbackRate = playbackSpeedRef.current;
     };
 
-    const handlePlay = () => setIsPlaying(true);
+    const handlePlay = () => {
+      setIsPlaying(true);
+      audio.playbackRate = playbackSpeedRef.current;
+    };
     const handlePause = () => setIsPlaying(false);
     const handleLoadStart = () => setIsLoading(true);
     const handleEnded = () => {
@@ -85,6 +122,7 @@ export const AudioProvider = ({ children }) => {
   const play = (src, title) => {
     if (!audioRef.current) return;
     if (audioSrc === src) {
+      audioRef.current.playbackRate = playbackSpeedRef.current;
       audioRef.current.play().catch((err) => {
         console.error('Audio play failed:', err);
       });
@@ -99,6 +137,8 @@ export const AudioProvider = ({ children }) => {
 
     try {
       if (audioRef.current.paused) {
+        // Force the rate on resume/play just in case
+        audioRef.current.playbackRate = playbackSpeedRef.current;
         await audioRef.current.play();
       } else {
         audioRef.current.pause();
@@ -140,6 +180,8 @@ export const AudioProvider = ({ children }) => {
     seek,
     stop,
     play,
+    playbackSpeed,
+    setPlaybackSpeed,
   };
 
   return (

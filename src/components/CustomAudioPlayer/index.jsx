@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useLocation } from '@docusaurus/router';
 import { useAudio } from '@site/src/context/AudioContext';
+import { useTranslation } from '@site/src/utils/translations';
 import styles from './styles.module.css';
 
 const pageAudioMap = {
@@ -17,6 +18,7 @@ const formatTime = (seconds) => {
 };
 
 export default function CustomAudioPlayer() {
+  const { t } = useTranslation();
   const location = useLocation();
   const { 
     audioSrc, 
@@ -27,7 +29,9 @@ export default function CustomAudioPlayer() {
     togglePlayback, 
     seek,
     play,
-    setCurrentPageAudioSrc
+    setCurrentPageAudioSrc,
+    playbackSpeed,
+    setPlaybackSpeed,
   } = useAudio();
 
   const slug = useMemo(() => location.pathname.split('?')[0].split('#')[0], [location.pathname]);
@@ -121,6 +125,25 @@ export default function CustomAudioPlayer() {
           <span className={styles.timeDisplay}>
             {isCurrentAudioActive ? `${formatTime(currentTime)} / ${formatTime(duration)}` : '0:00 / 0:00'}
           </span>
+
+          <div className={styles.speedControlGroup}>
+            <label htmlFor="audioSpeed" className={styles.speedLabel}>{t('audioSpeedControls')}</label>
+            <select
+              id="audioSpeed"
+              className={styles.speedSelect}
+              value={playbackSpeed}
+              onChange={(e) => setPlaybackSpeed(parseFloat(e.target.value))}
+              aria-label="Audio speed"
+              disabled={!isCurrentAudioActive}
+            >
+              <option value="0.5">0.5x</option>
+              <option value="0.75">0.75x</option>
+              <option value="1">1.0x</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2.0x</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
