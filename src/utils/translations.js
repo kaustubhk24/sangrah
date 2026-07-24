@@ -83,6 +83,13 @@ const translations = {
     selectDateTitle: "प्रवचन दिनांक निवडा",
     monthLabel: "महिना",
     dayLabel: "दिवस",
+    verified: "सत्यापित",
+    unverified: "पडताळणी प्रलंबित",
+    verifiedDetailTitle: "अधिकृत स्रोत सत्यापित",
+    verifiedDetailDesc: "हे पान एका अधिकृत आणि विश्वासार्ह स्रोताकडून पडताळले गेले आहे.",
+    unverifiedDetailTitle: "पडताळणी प्रलंबित",
+    unverifiedDetailDesc: "या पानाची पडताळणी अजून पूर्ण झालेली नाही.",
+    close: "बंद करा",
   },
   en: {
     appTitle: "Sangrah",
@@ -166,6 +173,13 @@ const translations = {
     selectDateTitle: "Select Pravachan Date",
     monthLabel: "Month",
     dayLabel: "Day",
+    verified: "Verified",
+    unverified: "Pending Verification",
+    verifiedDetailTitle: "Verified with Authoritative Source",
+    verifiedDetailDesc: "This page content has been verified with an authoritative source.",
+    unverifiedDetailTitle: "Pending Verification",
+    unverifiedDetailDesc: "This page content is pending verification.",
+    close: "Close",
   },
   hi: {
     appTitle: "संपूर्ण संग्रह",
@@ -249,6 +263,13 @@ const translations = {
     selectDateTitle: "प्रवचन दिनांक चुनें",
     monthLabel: "माह",
     dayLabel: "दिन",
+    verified: "सत्यापित",
+    unverified: "सत्यापन लंबित",
+    verifiedDetailTitle: "प्रामाणिक स्रोत सत्यापित",
+    verifiedDetailDesc: "यह पृष्ठ एक प्रामाणिक और विश्वसनीय स्रोत से सत्यापित किया गया है।",
+    unverifiedDetailTitle: "सत्यापन लंबित",
+    unverifiedDetailDesc: "इस पृष्ठ का सत्यापन अभी पूर्ण नहीं हुआ है।",
+    close: "बंद करें",
   }
 };
 

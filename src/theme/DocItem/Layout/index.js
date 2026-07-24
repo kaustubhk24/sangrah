@@ -8,6 +8,7 @@ import ThemeToggle from '@site/src/components/ThemeToggle';
 import { useTranslation } from '@site/src/utils/translations';
 import { useLocation, useHistory } from '@docusaurus/router';
 import Link from '@docusaurus/Link';
+import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import searchIndex from '@site/src/data/searchIndex.json';
 import styles from './styles.module.css';
 
@@ -15,6 +16,32 @@ export default function DocItemLayoutWrapper(props) {
   const { t, lang, translateNumbers } = useTranslation();
   const location = useLocation();
   const history = useHistory();
+  const { frontMatter, metadata } = useDoc();
+
+  // Verification state logic
+  const isVerified = useMemo(() => {
+    if (!frontMatter) return false;
+    if (frontMatter.verified === true) return true;
+    if (Array.isArray(frontMatter.tags)) {
+      return frontMatter.tags.some(tag => {
+        if (typeof tag === 'string') {
+          return tag.toLowerCase() === 'verified';
+        } else if (tag && typeof tag === 'object' && typeof tag.label === 'string') {
+          return tag.label.toLowerCase() === 'verified';
+        } else if (tag && typeof tag === 'object' && typeof tag.permalink === 'string') {
+          return tag.permalink.toLowerCase().endsWith('verified');
+        }
+        return false;
+      });
+    }
+    if (metadata && Array.isArray(metadata.tags)) {
+      return metadata.tags.some(tag => tag.label && tag.label.toLowerCase() === 'verified');
+    }
+    return false;
+  }, [frontMatter, metadata]);
+
+  // Modal dialog state
+  const [showVerificationModal, setShowVerificationModal] = useState(false);
   const [showChapterDrawer, setShowChapterDrawer] = useState(false);
   const [chapterSearch, setChapterSearch] = useState('');
   const [showResumeToast, setShowResumeToast] = useState(false);
@@ -332,7 +359,36 @@ export default function DocItemLayoutWrapper(props) {
       <div className={styles.readingControlsBar}>
         {/* Audio Read & Auto scroll & Actions */}
         <div className={styles.controlsRow}>
-          <AutoScrollControl />
+          <div className={styles.leftControls}>
+            <AutoScrollControl />
+            <div 
+              className={`${styles.verificationBadge} ${isVerified ? styles.verifiedBadge : styles.unverifiedBadge}`}
+              onClick={() => setShowVerificationModal(true)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  setShowVerificationModal(true);
+                }
+              }}
+              title={isVerified ? t('verifiedDetailTitle') : t('unverifiedDetailTitle')}
+            >
+              <span className={styles.badgeIcon}>
+                {isVerified ? (
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                ) : (
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                )}
+              </span>
+              <span>{isVerified ? t('verified') : t('unverified')}</span>
+            </div>
+          </div>
           <div className={styles.iconActionsGroup}>
             <ShareButton className={styles.iconBtn} />
             <BookmarkButton className={styles.iconBtn} />
@@ -474,6 +530,46 @@ export default function DocItemLayoutWrapper(props) {
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Verification detail modal */}
+      {showVerificationModal && (
+        <div 
+          className={styles.modalBackdrop} 
+          onClick={() => setShowVerificationModal(false)}
+        >
+          <div 
+            className={styles.modalContent} 
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className={`${styles.modalIconWrapper} ${isVerified ? styles.modalIconVerified : styles.modalIconUnverified}`}>
+              {isVerified ? (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              ) : (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              )}
+            </div>
+            <h3 className={styles.modalTitle}>
+              {isVerified ? t('verifiedDetailTitle') : t('unverifiedDetailTitle')}
+            </h3>
+            <p className={styles.modalDesc}>
+              {isVerified ? t('verifiedDetailDesc') : t('unverifiedDetailDesc')}
+            </p>
+            <button 
+              className={styles.modalCloseBtn}
+              onClick={() => setShowVerificationModal(false)}
+            >
+              {t('close')}
+            </button>
+          </div>
         </div>
       )}
     </>

@@ -1,5 +1,6 @@
 ---
 slug: /shri-bala-tripursundari-namavali
+verified: false
 ---
 #  श्री बाला त्रिपुरसुन्दरी सहस्रनामावली
 
