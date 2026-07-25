@@ -1,5 +1,6 @@
 ---
 slug: /shri-siddhnath-aarati
+verified: true
 ---
 # श्री सिध्दनाथांची आरती  
 

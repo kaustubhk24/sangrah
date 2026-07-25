@@ -411,7 +411,7 @@
     "filename": "vishnu",
     "keywords": "vishnu aarati , om jai jagadish hare",
     "fmKeywords": "",
-    "headings": ""
+    "headings": "आवडी गंगाजळे देवा न्हाणीलें आरती भुवनसुंदराची ॐ जय जगदीश हरे"
   },
   {
     "title": "श्री विठ्ठलाची आरती",
@@ -981,6 +981,42 @@
     "headings": ""
   },
   {
+    "title": "आदित्यराणूबाईची (पौष रवीवारची) कहाणी",
+    "slug": "/aditya-ranubai-devanchi-kahani",
+    "category": "katha",
+    "filename": "adityaranubai",
+    "keywords": "aditya ranubai paush ravivar devanchi kahani katha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "धरित्रीची कहाणी",
+    "slug": "/dharitri-devanchi-kahani",
+    "category": "katha",
+    "filename": "dharai",
+    "keywords": "dharitri devanchi kahani katha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "दिव्याच्या अवसेची कहाणी",
+    "slug": "/divyachya-avsechi-kahani",
+    "category": "katha",
+    "filename": "divaychya-avsechi",
+    "keywords": "divyachya avasechi kahani katha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "गोपद्मांची कहाणी",
+    "slug": "/gopdama-kahani",
+    "category": "katha",
+    "filename": "gopadma",
+    "keywords": "gopadmanchi kahani katha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री हरतालिकेची कहाणी",
     "slug": "/haritalika-katha",
     "category": "katha",
@@ -1026,6 +1062,15 @@
     "headings": ""
   },
   {
+    "title": "पाचा देवांची कहाणी",
+    "slug": "/pacha-devanchi-kahani",
+    "category": "katha",
+    "filename": "pacha-devachi",
+    "keywords": "pacha devanchi kahani katha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री रक्षाबंधन कहाणी",
     "slug": "/rakhi-pournima-katha",
     "category": "katha",
@@ -1057,7 +1102,16 @@
     "slug": "/sola-somvar",
     "category": "katha",
     "filename": "sola-somvar",
-    "keywords": "sola somvar kahani katha",
+    "keywords": "somvar kahani katha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "सोमवारची  कहाणी",
+    "slug": "/somvar-kahani",
+    "category": "katha",
+    "filename": "somvar",
+    "keywords": "somvar devanchi kahani katha",
     "fmKeywords": "",
     "headings": ""
   },

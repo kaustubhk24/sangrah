@@ -1,5 +1,6 @@
 ---
 slug: /gayatri-mantra
+verified: true
 ---
 
 # गायत्री मंत्र
