@@ -128,7 +128,8 @@
 }
 
 .panchangBtn,
-.settingsBtn {
+.settingsBtn,
+.updatesBtn {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -147,7 +148,8 @@
 }
 
 .panchangBtn:hover,
-.settingsBtn:hover {
+.settingsBtn:hover,
+.updatesBtn:hover {
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
