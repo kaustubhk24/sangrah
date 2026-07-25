@@ -5,6 +5,7 @@ import PwaInstallButton from '../components/PwaInstallButton';
 import DeityIcon from '../components/DeityIcon';
 import { getPanchangam, Observer, tithiNames, nakshatraNames, dayNames } from '@ishubhamx/panchangam-js';
 import { useTranslation } from '../utils/translations';
+import searchIndex from '../data/searchIndex.json';
 import styles from './index.module.css';
 
 const panchangValueMappings = {
@@ -219,21 +220,57 @@ const getTranslatedValue = (lang, value, map, fallback = '') => {
   return typeof value === 'number' ? value : value;
 };
 
-const categoryItems = [
-  { name: 'आरत्या', to: '/category/आरती-संग्रह', icon: '🪔' },
-  { name: 'स्तोत्रे', to: '/category/स्तोत्र--श्लोक-संग्रह', icon: '📿' },
-  { name: 'पूजा व्रत', to: '/category/पूजा-व्रत', icon: '🏺' },
-  { name: 'पोथी', to: '/category/पोथी', icon: '🙏' },
-  { name: 'सूक्त', to: '/category/सूक्त-संग्रह', icon: '📜' },
-  { name: 'चालीसा', to: '/category/चालीसा-संग्रह', icon: '📚' },
-];
-
 export default function HomePage() {
   const { lang, t, translateNumbers } = useTranslation();
   const [recentReads, setRecentReads] = useState([]);
   const [dailyPath, setDailyPath] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [panchangWidget, setPanchangWidget] = useState(null);
+
+  const categoryCounts = React.useMemo(() => {
+    const counts = {};
+    searchIndex.forEach((doc) => {
+      if (doc.category) {
+        const parts = doc.category.split('/');
+        let current = '';
+        parts.forEach((part, index) => {
+          current = index === 0 ? part : `${current}/${part}`;
+          counts[current] = (counts[current] || 0) + 1;
+        });
+      }
+    });
+    return counts;
+  }, []);
+
+  const categories = React.useMemo(() => {
+    const folders = [
+      { key: 'aarati', mrLabel: 'आरती संग्रह', hiLabel: 'आरती संग्रह', enLabel: 'Aarati', slug: 'आरती-संग्रह', icon: '🪔' },
+      { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', hiLabel: 'स्तोत्र / श्लोक संग्रह', enLabel: 'Stotra / Shlok', slug: 'स्तोत्र--श्लोक-संग्रह', icon: '📿' },
+      { key: 'katha', mrLabel: 'कथा संग्रह', hiLabel: 'कथा संग्रह', enLabel: 'Katha', slug: 'कथा-संग्रह', icon: '📖' },
+      { key: 'pothi', mrLabel: 'पोथी', hiLabel: 'पोथी', enLabel: 'Pothi', slug: 'पोथी', icon: '🙏' },
+      { key: 'Sukt', mrLabel: 'सूक्त संग्रह', hiLabel: 'सूक्त संग्रह', enLabel: 'Sukta', slug: 'सूक्त-संग्रह', icon: '📜' },
+      { key: 'chalisa', mrLabel: 'चालीसा संग्रह', hiLabel: 'चालीसा संग्रह', enLabel: 'Chalisa', slug: 'चालीसा-संग्रह', icon: '📚' },
+      { key: 'Ashtak', mrLabel: 'अष्टक संग्रह', hiLabel: 'अष्टक संग्रह', enLabel: 'Ashtak', slug: 'अष्टक-संग्रह', icon: '🕉️' },
+      { key: 'abhang', mrLabel: 'अभंग संग्रह', hiLabel: 'अभंग संग्रह', enLabel: 'Abhang', slug: 'अभंग-संग्रह', icon: '🎼' },
+      { key: 'managalastak', mrLabel: 'मंगलाष्टका', hiLabel: 'मंगलाष्टका', enLabel: 'Mangalashtaka', slug: 'मंगलाष्टका', icon: '🌸' },
+      { key: 'namavali', mrLabel: 'नामावली', hiLabel: 'नामावली', enLabel: 'Namavali', slug: 'नामावली', icon: '📝' },
+      { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', enLabel: 'Palana', slug: 'पाळणा-संग्रह', icon: '👶' },
+      { key: 'pooja', mrLabel: 'पूजा-व्रत', hiLabel: 'पूजा-व्रत', enLabel: 'Pooja-Vrat', slug: 'पूजा-व्रत', icon: '🏺' },
+      { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', enLabel: 'Audio Bhajan', slug: 'ऑडियो-भजन', icon: '🎵' },
+      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', enLabel: 'Pravachane', slug: 'प्रवचने', icon: '🧘' },
+    ];
+    
+    return folders.map(f => {
+      const count = categoryCounts[f.key] || 0;
+      const label = lang === 'hi' ? f.hiLabel : lang === 'en' ? f.enLabel : f.mrLabel;
+      return {
+        label,
+        count,
+        to: `/category/${f.slug}`,
+        icon: f.icon
+      };
+    }).filter(f => f.count > 0);
+  }, [categoryCounts, lang]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -254,18 +291,6 @@ export default function HomePage() {
     const data = getPanchangam(new Date(), observer, { timezoneOffset: 330, calendarType: 'amanta' });
     setPanchangWidget(data);
   }, []);
-
-  const getTranslatedTitle = (title) => {
-    const mapping = {
-      'आरत्या': { en: 'Aarati', hi: 'आरती' },
-      'स्तोत्रे': { en: 'Stotras', hi: 'स्तोत्र' },
-      'पूजा-व्रत': { en: 'Pooja Vrat', hi: 'पूजा-व्रत' },
-      'पोथी': { en: 'Pothi', hi: 'पोथी' },
-      'सूक्त': { en: 'Sukta', hi: 'सूक्त' },
-      'चालीसा': { en: 'Chalisa', hi: 'चालीसा' },
-    };
-    return (mapping[title] && mapping[title][lang]) || title;
-  };
 
   const handleRecentClick = (item) => {
     if (typeof window !== 'undefined' && item.scrollPosition) {
@@ -360,77 +385,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Favorites */}
-        <section className={styles.sectionBlock}>
-          <div className={styles.sectionHeader}>
-            <h2>{t('favSection')}</h2>
-            <Link to="/bookmarks" className={styles.sectionLink}>{t('moreLink')}</Link>
-          </div>
-          {favorites.length === 0 ? (
-            <div className={styles.infoCard}>
-              <p>{t('favEmpty')}</p>
-            </div>
-          ) : (
-            <div className={styles.verticalCardList}>
-              {favorites.slice(0, 5).map((item) => (
-                <Link key={item.path} className={styles.recentCard} to={item.path}>
-                  <div>
-                    <div className={styles.recentTitle}>{item.title}</div>
-                  </div>
-                  <span className={styles.recentArrow}>›</span>
-                </Link>
-              ))}
-            </div>
-          )}
-        </section>
-
-        {/* Recently Read */}
-        <section className={styles.sectionBlock}>
-          <div className={styles.sectionHeader}>
-            <h2>{t('recentReads')}</h2>
-          </div>
-          {recentReads.length === 0 ? (
-            <div className={styles.infoCard}>
-              <p>{t('recentEmpty')}</p>
-            </div>
-          ) : (
-            <div className={styles.verticalCardList}>
-              {recentReads.map((item) => (
-                <Link 
-                  key={item.path} 
-                  className={styles.recentCard} 
-                  to={item.path}
-                  onClick={() => handleRecentClick(item)}
-                >
-                  <div>
-                    <div className={styles.recentTitle}>{item.title || item.path}</div>
-                    {item.scrollPosition > 0 && (
-                      <div className={styles.recentResumeLabel}>
-                        ⚡ {t('resumeReadPrompt')}
-                      </div>
-                    )}
-                    <div className={styles.recentMeta}>
-                      {item.timestamp ? translateNumbers(new Date(item.timestamp).toLocaleTimeString(lang === 'en' ? 'en-US' : 'mr-IN', { hour: '2-digit', minute: '2-digit' })) : ''}
-                    </div>
-                  </div>
-                  <span className={styles.recentArrow}>›</span>
-                </Link>
-              ))}
-            </div>
-          )}
-        </section>
 
         {/* Browse By Category */}
         <section className={styles.sectionBlock}>
           <div className={styles.sectionHeader}>
             <h2>{t('categorySection')}</h2>
-            <Link to="/categories" className={styles.sectionLink}>{t('moreLink')}</Link>
           </div>
           <div className={styles.categoryGrid}>
-            {categoryItems.map((item) => (
-              <Link key={item.name} className={styles.categoryCard} to={item.to}>
+            {categories.map((item) => (
+              <Link key={item.label} className={styles.categoryCard} to={item.to}>
                 <span className={styles.categoryIcon}>{item.icon}</span>
-                <span className={styles.categoryName}>{getTranslatedTitle(item.name)}</span>
+                <span className={styles.categoryName}>{item.label}</span>
               </Link>
             ))}
           </div>

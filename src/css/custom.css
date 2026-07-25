@@ -286,3 +286,117 @@ textarea:focus {
   flex: 0 0 100% !important;
 }
 */
+
+/* Category Page Cards styling to match Home Page cards */
+.theme-doc-card-container {
+  background-color: #FFFDF8 !important;
+  border: 1px solid #ECE4D8 !important;
+  border-radius: var(--card-radius) !important;
+  padding: 14px !important;
+  min-height: 80px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease-in-out !important;
+  text-decoration: none !important;
+}
+
+.theme-doc-card-container,
+.theme-doc-card-container * {
+  color: #1E1E1E !important;
+}
+
+[data-theme='dark'] .theme-doc-card-container {
+  background-color: #1f1f1f !important;
+  border-color: #3a2e24 !important;
+}
+
+[data-theme='dark'] .theme-doc-card-container,
+[data-theme='dark'] .theme-doc-card-container * {
+  color: #eee !important;
+}
+
+.theme-doc-card-container:hover {
+  transform: translateY(-2px) !important;
+  border-color: #E67E22 !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.02) !important;
+  text-decoration: none !important;
+}
+
+.theme-doc-card-container:hover,
+.theme-doc-card-container:hover * {
+  color: #1E1E1E !important;
+}
+
+[data-theme='dark'] .theme-doc-card-container:hover {
+  border-color: #ffa726 !important;
+}
+
+[data-theme='dark'] .theme-doc-card-container:hover,
+[data-theme='dark'] .theme-doc-card-container:hover * {
+  color: #eee !important;
+}
+
+/* Hide description/preview text in category page cards */
+.theme-doc-card-container .theme-doc-card-description {
+  display: none !important;
+}
+
+/* Hide folder/page icons inside category page cards */
+.theme-doc-card-container .theme-doc-card-icon {
+  display: none !important;
+}
+
+/* Adjust heading/title inside category page cards */
+.theme-doc-card-container .theme-doc-card-heading {
+  margin: 0 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Allow text to wrap naturally and remain centered */
+.theme-doc-card-container .theme-doc-card-title {
+  white-space: normal !important;
+  text-overflow: clip !important;
+  word-wrap: break-word !important;
+  text-align: center !important;
+}
+
+/* Make category page card list layout match home page grid */
+.row:has(.theme-doc-card-container) {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 600px) {
+  .row:has(.theme-doc-card-container) {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Remove default row flex margins/afters for the grid */
+.row:has(.theme-doc-card-container)::before,
+.row:has(.theme-doc-card-container)::after {
+  display: none !important;
+}
+
+.row > [class*='col']:has(.theme-doc-card-container) {
+  max-width: 100% !important;
+  width: 100% !important;
+  flex: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+
+
