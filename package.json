@@ -1,6 +1,6 @@
 {
   "name": "aarati-sangrah",
-  "version": "14.1.1",
+  "version": "14.2.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",

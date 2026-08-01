@@ -84,7 +84,7 @@ export default function PwaInstallButton() {
       {showIosHelp && (
         <div className="pwa-ios-modal" role="dialog" aria-modal="true">
           <div className="pwa-ios-modal-content">
-            <h3>अॅप इन्स्टॉल कसे करावे</h3>
+            <h3>ॲप इन्स्टॉल कसे करावे</h3>
             <p>iPhone किंवा iPad वर, शेअर बटण दाबा आणि "होम स्क्रीनवर जोडा" निवडा.</p>
             <button className="pwa-modal-close" onClick={() => setShowIosHelp(false)}>बंद करा</button>
           </div>

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import { useTranslation } from '@site/src/utils/translations';
-import packageJson from '../../package.json';
 import styles from './updates.module.css';
 
 export default function UpdatesPage() {
-  const { t, translateNumbers } = useTranslation();
+  const { t } = useTranslation();
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -95,56 +94,10 @@ export default function UpdatesPage() {
     return processedLines.join('\n');
   };
 
-  // Compare versions
-  const currentVersion = packageJson.version;
-  // Match version number pattern (e.g. 13.1.1) in the updates content
-  const versionMatch = content.match(/\b\d+\.\d+\.\d+\b/);
-  const latestVersion = versionMatch ? versionMatch[0] : null;
-  const isUpToDate = latestVersion ? (currentVersion === latestVersion) : true;
-
   return (
     <Layout title={t('updatesHeader')}>
       <div className="container margin-vert--lg">
         <div className={styles.updatesContainer}>
-          {/* Version Info Header */}
-          {!loading && !error && latestVersion && (
-            <div className={`${styles.versionStatusCard} ${isUpToDate ? styles.upToDate : styles.outOfDate}`}>
-              <div className={styles.versionRow}>
-                <div className={styles.versionCol}>
-                  <span className={styles.versionLabel}>{t('currentVersionLabel')}</span>
-                  <span className={styles.versionValue}>{translateNumbers(currentVersion)}</span>
-                </div>
-                <div className={styles.versionCol}>
-                  <span className={styles.versionLabel}>{t('latestVersionLabel')}</span>
-                  <span className={styles.versionValue}>{translateNumbers(latestVersion)}</span>
-                </div>
-              </div>
-              <div className={styles.statusBanner}>
-                {isUpToDate ? (
-                  <span className={styles.statusTextGreen}>
-                    ✅ {t('appUpToDate')}
-                  </span>
-                ) : (
-                  <div className={styles.updateAlert}>
-                    <span className={styles.statusTextOrange}>
-                      ⚠️ {t('updateAvailable')}
-                    </span>
-                    <button 
-                      onClick={() => {
-                        if (typeof window !== 'undefined') {
-                          window.location.reload(true);
-                        }
-                      }} 
-                      className={styles.refreshButton}
-                    >
-                      🔄 Refresh
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
           {loading ? (
             <div className={styles.loadingContainer}>
               <div className={styles.spinner}></div>
