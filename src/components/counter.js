@@ -4,6 +4,7 @@ import styles from './counter.module.css';
 
 const defaultMantras = [
   "राधा राधा",
+  "श्री स्वामी समर्थ",
   "श्री राम जय राम जय जय राम",
   "ॐ गं गणपतये नमः",
   "ॐ नमः शिवाय",

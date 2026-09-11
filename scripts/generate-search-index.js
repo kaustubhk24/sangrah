@@ -74,12 +74,11 @@ function parseMarkdownFile(filePath) {
     slug = '/' + cleanRelPath;
   }
   
-  // 3. If no title, find first H1
+  // 3. If no title, find the first Markdown heading
   if (!title) {
-    const h1Regex = /^#\s+(.+)$/m;
-    const h1Match = mainContent.match(h1Regex);
-    if (h1Match) {
-      title = h1Match[1].trim();
+    const headingMatch = mainContent.match(/^#{1,6}\s+(.+)$/m);
+    if (headingMatch) {
+      title = headingMatch[1].trim();
     } else {
       title = path.basename(filePath, path.extname(filePath));
     }

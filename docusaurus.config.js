@@ -241,6 +241,11 @@ const config = {
             to:'/project-information',
             label:'प्रकल्प माहिती',
             position: 'right',
+          },
+          {
+            to:'/updates',
+            label:'अपडेट्स',
+            position: 'right',
           }
         ],
       },

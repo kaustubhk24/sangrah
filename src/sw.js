@@ -15,7 +15,7 @@ export default function swCustom(params) {
   registerRoute(
     ({ request }) => request.mode === 'navigate',
     new StaleWhileRevalidate({
-      cacheName: 'pages-cache',
+      cacheName: 'pages-cache-v2',
       plugins: [
         new CacheableResponsePlugin({
           statuses: [0, 200],
@@ -33,7 +33,7 @@ export default function swCustom(params) {
     ({ request }) =>
       request.destination === 'script' || request.destination === 'style',
     new StaleWhileRevalidate({
-      cacheName: 'static-assets-cache',
+      cacheName: 'static-assets-cache-v2',
       plugins: [
         new CacheableResponsePlugin({
           statuses: [0, 200],
@@ -87,7 +87,7 @@ export default function swCustom(params) {
       url.pathname.endsWith('.json') ||
       url.pathname.includes('search-doc-'),
     new StaleWhileRevalidate({
-      cacheName: 'json-cache',
+      cacheName: 'json-cache-v2',
       plugins: [
         new CacheableResponsePlugin({
           statuses: [0, 200],
