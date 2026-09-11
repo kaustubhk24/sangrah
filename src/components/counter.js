@@ -19,6 +19,8 @@ const defaultMantras = [
 export default function CounterPage() {
   const { t, lang, translateNumbers } = useTranslation();
   const [activeMantra, setActiveMantra] = useState(defaultMantras[0]);
+  const [customMantras, setCustomMantras] = useState([]);
+  const [newMantra, setNewMantra] = useState('');
   const [currentCount, setCurrentCount] = useState(0);
   const [malaCount, setMalaCount] = useState(0);
   const [lifetimeCount, setLifetimeCount] = useState(0);
@@ -32,6 +34,7 @@ export default function CounterPage() {
     if (typeof window === 'undefined') return;
 
     const storedMantra = window.localStorage.getItem('activeMantra') || defaultMantras[0];
+    const storedCustomMantras = JSON.parse(window.localStorage.getItem('customMantras') || '[]');
     const storedCount = parseInt(window.localStorage.getItem('currentCount') || '0', 10);
     const storedMala = parseInt(window.localStorage.getItem('malaCount') || '0', 10);
     const storedLifetime = parseInt(window.localStorage.getItem('lifetimeCount') || '0', 10);
@@ -40,6 +43,7 @@ export default function CounterPage() {
     const lastDate = window.localStorage.getItem('lastJaapDate') || '';
 
     setActiveMantra(storedMantra);
+    setCustomMantras(Array.isArray(storedCustomMantras) ? storedCustomMantras : []);
     setCurrentCount(storedCount);
     setMalaCount(storedMala);
     setLifetimeCount(storedLifetime);
@@ -61,6 +65,33 @@ export default function CounterPage() {
       setStreak(0);
     }
   }, []);
+
+  const allMantras = useMemo(() => [...defaultMantras, ...customMantras], [customMantras]);
+
+  const handleAddMantra = (event) => {
+    event.preventDefault();
+    const mantra = newMantra.trim();
+
+    if (!mantra) return;
+    if (allMantras.some((item) => item.toLocaleLowerCase() === mantra.toLocaleLowerCase())) {
+      setActiveMantra(allMantras.find((item) => item.toLocaleLowerCase() === mantra.toLocaleLowerCase()));
+      setNewMantra('');
+      return;
+    }
+
+    const updatedMantras = [...customMantras, mantra];
+    setCustomMantras(updatedMantras);
+    setActiveMantra(mantra);
+    setNewMantra('');
+    window.localStorage.setItem('customMantras', JSON.stringify(updatedMantras));
+  };
+
+  const handleRemoveMantra = (mantra) => {
+    const updatedMantras = customMantras.filter((item) => item !== mantra);
+    setCustomMantras(updatedMantras);
+    window.localStorage.setItem('customMantras', JSON.stringify(updatedMantras));
+    if (activeMantra === mantra) setActiveMantra(defaultMantras[0]);
+  };
 
   // Save base counts to local storage
   useEffect(() => {
@@ -228,12 +259,44 @@ export default function CounterPage() {
           onChange={(e) => setActiveMantra(e.target.value)} 
           className={styles.mantraSelect}
         >
-          {defaultMantras.map((m) => (
+          {allMantras.map((m) => (
             <option key={m} value={m}>
               {getTranslatedMantra(m)}
             </option>
           ))}
         </select>
+        <form className={styles.addMantraForm} onSubmit={handleAddMantra}>
+          <input
+            type="text"
+            value={newMantra}
+            onChange={(e) => setNewMantra(e.target.value)}
+            placeholder={t('addMantraPlaceholder')}
+            aria-label={t('addMantraLabel')}
+            className={styles.addMantraInput}
+            maxLength={200}
+          />
+          <button type="submit" className={styles.addMantraButton}>
+            {t('addMantraButton')}
+          </button>
+        </form>
+        {customMantras.length > 0 && (
+          <div className={styles.customMantraList}>
+            <span className={styles.customMantraLabel}>{t('myMantras')}</span>
+            {customMantras.map((mantra) => (
+              <div key={mantra} className={styles.customMantraItem}>
+                <span>{mantra}</span>
+                <button
+                  type="button"
+                  className={styles.removeMantraButton}
+                  onClick={() => handleRemoveMantra(mantra)}
+                  aria-label={`${t('removeMantra')}: ${mantra}`}
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
         <div className={styles.activeMantraDisplay}>
           {getTranslatedMantra(activeMantra)}
         </div>

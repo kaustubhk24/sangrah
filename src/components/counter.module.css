@@ -65,6 +65,82 @@
   color: #fff;
 }
 
+.addMantraForm {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.addMantraInput {
+  min-width: 0;
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ECE4D8;
+  border-radius: 10px;
+  background: #fff;
+  color: #1E1E1E;
+  font-size: 15px;
+}
+
+[data-theme='dark'] .addMantraInput {
+  background: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+.addMantraButton {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #E67E22;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.customMantraList {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.customMantraLabel {
+  color: #5A5A5A;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.customMantraItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #FFF4E5;
+  color: #542c16;
+  word-break: break-word;
+}
+
+[data-theme='dark'] .customMantraLabel {
+  color: #aaa;
+}
+
+[data-theme='dark'] .customMantraItem {
+  background: #2b221a;
+  color: #fff;
+}
+
+.removeMantraButton {
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+  color: #C75D00;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .activeMantraDisplay {
   background: #FFFDF8;
   border: 1.5px dashed #E67E22;
