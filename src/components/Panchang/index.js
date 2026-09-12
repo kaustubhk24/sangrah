@@ -207,6 +207,18 @@ const formatTime = (lang, value, timeZone) => {
   return new Intl.DateTimeFormat(getLocale(lang), { hour: 'numeric', minute: '2-digit', timeZone }).format(new Date(value));
 };
 
+const formatDateTime = (lang, value, timeZone) => {
+  if (!value) return '';
+  return new Intl.DateTimeFormat(getLocale(lang), {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZone,
+  }).format(new Date(value));
+};
+
 const toDateInputValue = (date) => {
   const localDate = new Date(date);
   const offset = localDate.getTimezoneOffset();
@@ -571,6 +583,7 @@ export default function PanchangSection() {
       mr: {
         Kimstughna: 'किंस्तुघ्न',
         Bava: 'बव',
+        Balava: 'बालव',
         Baalava: 'बालव',
         Kaulava: 'कौलव',
         Taitila: 'तैतिल',
@@ -581,6 +594,7 @@ export default function PanchangSection() {
       hi: {
         Kimstughna: 'किंस्तुघ्न',
         Bava: 'बव',
+        Balava: 'बालव',
         Baalava: 'बालव',
         Kaulava: 'कौलव',
         Taitila: 'तैतिल',
@@ -706,8 +720,8 @@ export default function PanchangSection() {
     );
     const tithiSchedule = (panchang.tithis || []).map((entry, index, entries) => ({
       name: getTranslatedValue(lang, tithiNames?.[entry.index] || entry.name, tithiMap, ''),
-      start: formatTime(lang, getIntervalStart(entries, index, panchang.tithiStartTime), location.timezone),
-      end: formatTime(lang, entry.endTime, location.timezone),
+      start: formatDateTime(lang, getIntervalStart(entries, index, panchang.tithiStartTime), location.timezone),
+      end: formatDateTime(lang, entry.endTime, location.timezone),
       isCurrent: entry === currentTithi,
     }));
     const currentNakshatra = panchang.nakshatras?.find((entry, index, entries) => {
@@ -723,8 +737,8 @@ export default function PanchangSection() {
     );
     const nakshatraSchedule = (panchang.nakshatras || []).map((entry, index, entries) => ({
       name: getTranslatedValue(lang, nakshatraNames?.[entry.index] || entry.name, nakshatraMap, ''),
-      start: formatTime(lang, getIntervalStart(entries, index, panchang.nakshatraStartTime), location.timezone),
-      end: formatTime(lang, entry.endTime, location.timezone),
+      start: formatDateTime(lang, getIntervalStart(entries, index, panchang.nakshatraStartTime), location.timezone),
+      end: formatDateTime(lang, entry.endTime, location.timezone),
       isCurrent: entry === currentNakshatra,
     }));
     const currentYoga = panchang.yogas?.find((entry, index, entries) => {
