@@ -38,6 +38,7 @@ const muhurtTypes = [
     label: 'खरेदी',
     title: 'खरेदीसाठी',
     rule: 'अश्विनी, चित्रा, स्वाती, श्रवण, शततारका, रेवती',
+    logic: 'या नक्षत्रांपैकी कोणतेही नक्षत्र सुरू असलेला वेळ खरेदीसाठी दाखवला जातो.',
     nakshatras: ['Ashwini', 'Chitra', 'Swati', 'Shravana', 'Shatabhisha', 'Revati'],
   },
   {
@@ -45,6 +46,7 @@ const muhurtTypes = [
     label: 'विक्री',
     title: 'विक्रीसाठी',
     rule: 'भरणी, कृत्तिका, आश्लेषा, पूर्वा, विशाखा, पूर्वाषाढा, पूर्वा भाद्रपदा',
+    logic: 'या नक्षत्रांपैकी कोणतेही नक्षत्र सुरू असलेला वेळ विक्रीसाठी दाखवला जातो.',
     nakshatras: ['Bharani', 'Krittika', 'Ashlesha', 'PurvaPhalguni', 'Vishakha', 'PurvaAshadha', 'PurvaBhadrapada'],
   },
   {
@@ -52,6 +54,7 @@ const muhurtTypes = [
     label: 'कूपारंभ',
     title: 'कूपारंभ मुहूर्त',
     rule: 'रोहिणी, मृगशीर्ष, आर्द्रा, पुनर्वसु, पुष्य, मघा, उत्तरा त्रयी, हस्त, चित्रा, स्वाती, अनुराधा, श्रवण, धनिष्ठा, शततारका, रेवती',
+    logic: 'दिलेल्या नक्षत्रांपैकी एखादे नक्षत्र सुरू असेल, तो कालावधी कूपारंभासाठी दाखवला जातो.',
     nakshatras: [
       'Rohini', 'Mrigashira', 'Ardra', 'Punarvasu', 'Pushya', 'Magha',
       'UttaraPhalguni', 'UttaraAshadha', 'UttaraBhadrapada', 'Hasta',
@@ -62,7 +65,9 @@ const muhurtTypes = [
     key: 'vastushanti',
     label: 'वास्तुशांती',
     title: 'वास्तुशांती मुहूर्त',
+    monthsLabel: 'वैशाख, ज्येष्ठ, श्रावण, कार्तिक, मार्गशीर्ष, पौष, माघ, फाल्गुन',
     rule: 'अश्विनी, रोहिणी, मृगशीर्ष, पुनर्वसु, पुष्य, उत्तरा त्रयी, हस्त, चित्रा, स्वाती, अनुराधा, मूळ, श्रवण, धनिष्ठा, शततारका, रेवती',
+    logic: 'दिलेल्या महिन्यांपैकी महिना आणि दिलेल्या तिथींपैकी तिथी असणे आवश्यक आहे. रविवार व मंगळवार वगळून इतर वारांमध्ये, दिलेल्या नक्षत्रांपैकी एक नक्षत्र सुरू असेल तेव्हाच वेळ दाखवला जातो.',
     nakshatras: [
       'Ashwini', 'Rohini', 'Mrigashira', 'Punarvasu', 'Pushya',
       'UttaraPhalguni', 'UttaraAshadha', 'UttaraBhadrapada', 'Hasta',
@@ -203,7 +208,7 @@ export default function MuhurtPage() {
             <div>
               <p className={styles.eyebrow}>मुहूर्त</p>
               <h1>मुहूर्त</h1>
-              <p className={styles.subtitle}>खरेदी आणि विक्रीसाठी अनुकूल नक्षत्रांचे संपूर्ण वेळापत्रक</p>
+              <p className={styles.subtitle}>अनुकूल नक्षत्रांचे संपूर्ण वेळापत्रक</p>
             </div>
             <div className={styles.controls}>
               <label>वर्ष<select value={year} onChange={(event) => setYear(Number(event.target.value))}>{yearOptions.map((option) => <option key={option} value={option}>{option}</option>)}</select></label>
@@ -226,6 +231,8 @@ export default function MuhurtPage() {
               <section className={styles.listSection}>
                 <h2>{selectedDefinition.title}</h2>
                 <p className={styles.rule}>{selectedDefinition.rule}</p>
+                {selectedDefinition.monthsLabel && <p className={styles.rule}><strong>महिने:</strong> {selectedDefinition.monthsLabel}</p>}
+                <p className={styles.logic}><strong>कसा ठरवला जातो:</strong> {selectedDefinition.logic}</p>
                 {selectedDefinition.requirement && <p className={styles.requirement}>{selectedDefinition.requirement}</p>}
                 {renderList(visibleItems, `या वर्षासाठी ${selectedDefinition.label}चा मुहूर्त सापडला नाही.`)}
                 {selectedItems.length > 5 && <div className={styles.pagination}>

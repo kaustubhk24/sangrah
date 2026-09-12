@@ -269,7 +269,8 @@ export default function HomePage() {
         label,
         count,
         to: f.specialTo || `/category/${f.slug}`,
-        icon: f.icon
+        icon: f.icon,
+        specialTo: f.specialTo
       };
     }).filter(f => f.specialTo || f.count > 0);
   }, [categoryCounts, lang]);

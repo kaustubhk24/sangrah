@@ -15,6 +15,7 @@
 .listSection { background: #fff; border: 1px solid #f0e2ca; border-radius: 16px; padding: 1rem; min-width: 0; }
 .listSection h2 { font-size: 1.15rem; margin-bottom: .25rem; }
 .rule { font-size: .85rem; line-height: 1.5; margin-bottom: .8rem; }
+.logic { color: var(--ifm-color-muted); font-size: .85rem; line-height: 1.5; margin: -.25rem 0 .8rem; }
 .requirement { color: var(--ifm-color-primary); font-size: .85rem; font-weight: 700; margin: -.35rem 0 .8rem; }
 .resultRow { display: flex; justify-content: space-between; align-items: center; gap: .75rem; border-top: 1px solid #f0e2ca; padding: .65rem 0; }
 .resultRow div:first-child { display: flex; flex-direction: column; gap: .12rem; }
