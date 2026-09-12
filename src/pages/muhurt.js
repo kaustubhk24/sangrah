@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Layout from '@theme/Layout';
-import { getPanchangam, Observer, nakshatraNames } from '@ishubhamx/panchangam-js';
+import { getPanchangam, Observer, nakshatraNames, getPlanetaryPosition } from '@ishubhamx/panchangam-js';
 import styles from './muhurt.module.css';
 
 const nakshatraLabels = {
@@ -125,6 +125,18 @@ const getNakshatraKey = (entry) => {
   return Object.keys(nakshatraLabels).find((key) => key.toLowerCase() === String(name).replace(/\s/g, '').toLowerCase()) || name;
 };
 
+const getAngularDistance = (firstLongitude, secondLongitude) => {
+  const distance = Math.abs(firstLongitude - secondLongitude) % 360;
+  return Math.min(distance, 360 - distance);
+};
+
+const isGuruShukraAsta = (date, ayanamsa) => {
+  const sun = getPlanetaryPosition('Sun', date, ayanamsa).longitude;
+  const guru = getPlanetaryPosition('Jupiter', date, ayanamsa).longitude;
+  const shukra = getPlanetaryPosition('Venus', date, ayanamsa).longitude;
+  return getAngularDistance(sun, guru) <= 11 || getAngularDistance(sun, shukra) <= 8;
+};
+
 const getStartingPage = (items, year) => {
   if (year !== new Date().getFullYear()) return 0;
   const tomorrowKey = getDateKey(addDays(new Date(), 1), 'Asia/Kolkata');
@@ -139,6 +151,7 @@ export default function MuhurtPage() {
   const [loading, setLoading] = useState(true);
   const [selectedType, setSelectedType] = useState('purchase');
   const [pageStart, setPageStart] = useState(0);
+  const [excludeGuruShukraAsta, setExcludeGuruShukraAsta] = useState(false);
   const location = locations[locationId];
 
   useEffect(() => {
@@ -165,7 +178,8 @@ export default function MuhurtPage() {
             const matchesMonth = !type.months || type.months.includes(panchang.masa?.name);
             const matchesTithi = !type.tithis || (panchang.tithis || []).some((tithi) => type.tithis.includes(tithi.index));
             const matchesWeekday = !type.allowedWeekdays || type.allowedWeekdays.includes(panchang.vara);
-            if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday) {
+            const matchesAsta = !excludeGuruShukraAsta || type.key !== 'vastushanti' || !isGuruShukraAsta(new Date((start.getTime() + end.getTime()) / 2), panchang.ayanamsa);
+            if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday && matchesAsta) {
               nextResults[type.key].push({ ...item, requirement: type.requirement });
             }
           });
@@ -183,7 +197,7 @@ export default function MuhurtPage() {
       setLoading(false);
     }
     return () => { cancelled = true; };
-  }, [location, year]);
+  }, [excludeGuruShukraAsta, location, year]);
 
   const yearOptions = useMemo(() => [year - 1, year, year + 1], [year]);
   const selectedDefinition = muhurtTypes.find((type) => type.key === selectedType) || muhurtTypes[0];
@@ -226,6 +240,10 @@ export default function MuhurtPage() {
                 </label>
                 <span>{selectedItems.length ? `${pageStart + 1}-${Math.min(pageStart + 5, selectedItems.length)} / ${selectedItems.length}` : '० मुहूर्त'}</span>
               </div>
+              {selectedType === 'vastushanti' && <label className={styles.astaCheckbox}>
+                <input type="checkbox" checked={excludeGuruShukraAsta} onChange={(event) => setExcludeGuruShukraAsta(event.target.checked)} />
+                <span>गुरु आणि शुक्र अस्त असलेले वेळ टाळा</span>
+              </label>}
 
             <div className={styles.columns}>
               <section className={styles.listSection}>

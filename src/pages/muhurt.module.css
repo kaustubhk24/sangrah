@@ -11,6 +11,8 @@
 .selectionBar { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: var(--ifm-color-muted); font-size: .9rem; }
 .selectionBar label { display: flex; flex-direction: column; gap: .25rem; }
 .selectionBar select { border: 1px solid #e4c08e; border-radius: 8px; padding: .45rem .55rem; background: #fff; color: inherit; min-width: 12rem; }
+.astaCheckbox { display: flex; align-items: center; gap: .5rem; margin: 0 0 1rem; color: var(--ifm-color-muted); font-size: .9rem; }
+.astaCheckbox input { width: 1rem; height: 1rem; accent-color: var(--ifm-color-primary); }
 .columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .listSection { background: #fff; border: 1px solid #f0e2ca; border-radius: 16px; padding: 1rem; min-width: 0; }
 .listSection h2 { font-size: 1.15rem; margin-bottom: .25rem; }
