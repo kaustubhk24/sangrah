@@ -190,6 +190,24 @@
 
 .currentTithi {
   color: var(--ifm-color-primary);
+  background: #fff7e8;
+  border: 1px solid #e4b866;
+  border-radius: 10px;
+  margin: 0.35rem -0.4rem;
+  padding: 0.55rem 0.4rem;
+}
+
+.currentBadge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  vertical-align: middle;
 }
 
 .loadingState {
@@ -273,6 +291,11 @@
 
 [data-theme='dark'] .tithiRow {
   border-color: #3d342d;
+}
+
+[data-theme='dark'] .currentTithi {
+  background: #382b1d;
+  border-color: #b98132;
 }
 
 [data-theme='dark'] .navButton,

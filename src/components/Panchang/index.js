@@ -16,6 +16,7 @@ const translations = {
     moonset: 'चंद्र अस्त',
     tithi: 'तिथि',
     currentTithi: 'सध्याची तिथि',
+    currentLabel: 'सध्या सुरू',
     tithiStarts: 'सुरू',
     tithiEnds: 'समाप्त',
     nakshatra: 'नक्षत्र',
@@ -55,6 +56,7 @@ const translations = {
     moonset: 'चंद्र अस्त',
     tithi: 'तिथि',
     currentTithi: 'वर्तमान तिथि',
+    currentLabel: 'अभी चल रही है',
     tithiStarts: 'आरंभ',
     tithiEnds: 'समाप्त',
     nakshatra: 'नक्षत्र',
@@ -94,6 +96,7 @@ const translations = {
     moonset: 'Moonset',
     tithi: 'Tithi',
     currentTithi: 'Current tithi',
+    currentLabel: 'Current now',
     tithiStarts: 'Starts',
     tithiEnds: 'Ends',
     nakshatra: 'Nakshatra',
@@ -1160,7 +1163,7 @@ export default function PanchangSection() {
                 <h2>{label('currentTithi')}</h2>
                 {displayData.tithiSchedule.map((entry) => (
                   <div key={`${entry.name}-${entry.start}`} className={`${styles.tithiRow} ${entry.isCurrent ? styles.currentTithi : ''}`}>
-                    <strong>{entry.name}</strong>
+                    <strong>{entry.name} {entry.isCurrent && <span className={styles.currentBadge}>{label('currentLabel')}</span>}</strong>
                     <span>{label('tithiStarts')}: {entry.start}</span>
                     <span>{label('tithiEnds')}: {entry.end}</span>
                   </div>
@@ -1171,7 +1174,7 @@ export default function PanchangSection() {
                 <h2>{label('currentNakshatra')}</h2>
                 {displayData.nakshatraSchedule.map((entry) => (
                   <div key={`${entry.name}-${entry.start}`} className={`${styles.tithiRow} ${entry.isCurrent ? styles.currentTithi : ''}`}>
-                    <strong>{entry.name}</strong>
+                    <strong>{entry.name} {entry.isCurrent && <span className={styles.currentBadge}>{label('currentLabel')}</span>}</strong>
                     <span>{label('tithiStarts')}: {entry.start}</span>
                     <span>{label('tithiEnds')}: {entry.end}</span>
                   </div>
