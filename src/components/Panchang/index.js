@@ -15,7 +15,11 @@ const translations = {
     moonrise: 'चंद्रोदय',
     moonset: 'चंद्र अस्त',
     tithi: 'तिथि',
+    currentTithi: 'सध्याची तिथि',
+    tithiStarts: 'सुरू',
+    tithiEnds: 'समाप्त',
     nakshatra: 'नक्षत्र',
+    currentNakshatra: 'सध्याचे नक्षत्र',
     yoga: 'योग',
     karana: 'करण',
     vara: 'वार',
@@ -50,7 +54,11 @@ const translations = {
     moonrise: 'चंद्रोदय',
     moonset: 'चंद्र अस्त',
     tithi: 'तिथि',
+    currentTithi: 'वर्तमान तिथि',
+    tithiStarts: 'आरंभ',
+    tithiEnds: 'समाप्त',
     nakshatra: 'नक्षत्र',
+    currentNakshatra: 'वर्तमान नक्षत्र',
     yoga: 'योग',
     karana: 'करण',
     vara: 'वार',
@@ -85,7 +93,11 @@ const translations = {
     moonrise: 'Moonrise',
     moonset: 'Moonset',
     tithi: 'Tithi',
+    currentTithi: 'Current tithi',
+    tithiStarts: 'Starts',
+    tithiEnds: 'Ends',
     nakshatra: 'Nakshatra',
+    currentNakshatra: 'Current nakshatra',
     yoga: 'Yoga',
     karana: 'Karana',
     vara: 'Vara',
@@ -187,9 +199,9 @@ const formatNumber = (lang, value, options = {}) => {
   return new Intl.NumberFormat(getLocale(lang), options).format(number);
 };
 
-const formatTime = (lang, value) => {
+const formatTime = (lang, value, timeZone) => {
   if (!value) return '';
-  return new Intl.DateTimeFormat(getLocale(lang), { hour: 'numeric', minute: '2-digit' }).format(new Date(value));
+  return new Intl.DateTimeFormat(getLocale(lang), { hour: 'numeric', minute: '2-digit', timeZone }).format(new Date(value));
 };
 
 const toDateInputValue = (date) => {
@@ -245,6 +257,7 @@ export default function PanchangSection() {
   const [locationMode, setLocationMode] = useState('preset');
   const [selectedCity, setSelectedCity] = useState('pune');
   const [customCoords, setCustomCoords] = useState({ lat: '', lon: '' });
+  const [currentTime, setCurrentTime] = useState(() => new Date());
   const [location, setLocation] = useState({
     label: 'Pune, Maharashtra',
     lat: 18.5204,
@@ -262,6 +275,11 @@ export default function PanchangSection() {
     const data = getPanchangam(selectedDate, observer, { timezoneOffset, calendarType: 'amanta' });
     setPanchang(data);
   }, [selectedDate, location.lat, location.lon, location.elevation, location.timezone, location.timezoneOffset]);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setCurrentTime(new Date()), 30000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     if (locationMode !== 'custom') return;
@@ -666,10 +684,63 @@ export default function PanchangSection() {
       en: {},
     };
 
-    const tithiDisplay = getTranslatedValue(lang, tithiNames?.[panchang.tithi] || panchang.tithi, tithiMap, '');
-    const nakshatraDisplay = getTranslatedValue(lang, nakshatraNames?.[panchang.nakshatra] || panchang.nakshatra, nakshatraMap, '');
-    const yogaDisplay = getTranslatedValue(lang, yogaNames?.[panchang.yoga] || panchang.yoga, yogaMap, '');
-    const karanaDisplay = getTranslatedValue(lang, karanaNames?.[panchang.karana] || panchang.karana, karanaMap, '');
+    const selectedDateKey = toDateInputValue(selectedDate);
+    const currentDateKey = toDateInputValue(currentTime);
+    const referenceTime = selectedDateKey === currentDateKey ? currentTime : selectedDate;
+    const getIntervalStart = (entries, index, firstStartTime) => (
+      index === 0 ? firstStartTime || entries[index].startTime : entries[index - 1].endTime
+    );
+    const currentTithi = panchang.tithis?.find((entry, index, entries) => {
+      const time = referenceTime.getTime();
+      const startTime = getIntervalStart(entries, index, panchang.tithiStartTime);
+      return startTime.getTime() <= time && time < entry.endTime.getTime();
+    }) || panchang.tithis?.[0];
+    const tithiDisplay = getTranslatedValue(
+      lang,
+      tithiNames?.[currentTithi?.index] || currentTithi?.name || panchang.tithi,
+      tithiMap,
+      ''
+    );
+    const tithiSchedule = (panchang.tithis || []).map((entry, index, entries) => ({
+      name: getTranslatedValue(lang, tithiNames?.[entry.index] || entry.name, tithiMap, ''),
+      start: formatTime(lang, getIntervalStart(entries, index, panchang.tithiStartTime), location.timezone),
+      end: formatTime(lang, entry.endTime, location.timezone),
+      isCurrent: entry === currentTithi,
+    }));
+    const currentNakshatra = panchang.nakshatras?.find((entry, index, entries) => {
+      const time = referenceTime.getTime();
+      const startTime = getIntervalStart(entries, index, panchang.nakshatraStartTime);
+      return startTime.getTime() <= time && time < entry.endTime.getTime();
+    }) || panchang.nakshatras?.[0];
+    const nakshatraDisplay = getTranslatedValue(
+      lang,
+      nakshatraNames?.[currentNakshatra?.index] || currentNakshatra?.name || panchang.nakshatra,
+      nakshatraMap,
+      ''
+    );
+    const nakshatraSchedule = (panchang.nakshatras || []).map((entry, index, entries) => ({
+      name: getTranslatedValue(lang, nakshatraNames?.[entry.index] || entry.name, nakshatraMap, ''),
+      start: formatTime(lang, getIntervalStart(entries, index, panchang.nakshatraStartTime), location.timezone),
+      end: formatTime(lang, entry.endTime, location.timezone),
+      isCurrent: entry === currentNakshatra,
+    }));
+    const currentYoga = panchang.yogas?.find((entry, index, entries) => {
+      const time = referenceTime.getTime();
+      const startTime = getIntervalStart(entries, index, panchang.yogaStartTime);
+      return startTime.getTime() <= time && time < entry.endTime.getTime();
+    }) || panchang.yogas?.[0];
+    const currentKarana = panchang.karanas?.find((entry, index, entries) => {
+      const time = referenceTime.getTime();
+      const startTime = getIntervalStart(entries, index, panchang.karanaStartTime);
+      return startTime.getTime() <= time && time < entry.endTime.getTime();
+    }) || panchang.karanas?.[0];
+    const currentMoonRashi = panchang.rashis?.find((entry, index, entries) => {
+      const time = referenceTime.getTime();
+      const startTime = getIntervalStart(entries, index, panchang.rashiStartTime);
+      return startTime.getTime() <= time && time < entry.endTime.getTime();
+    }) || panchang.rashis?.[0];
+    const yogaDisplay = getTranslatedValue(lang, yogaNames?.[currentYoga?.index] || currentYoga?.name || panchang.yoga, yogaMap, '');
+    const karanaDisplay = getTranslatedValue(lang, currentKarana?.name || panchang.karana, karanaMap, '');
     const varaDisplay = getTranslatedValue(lang, dayNames?.[panchang.vara] || panchang.vara, dayMap, '');
     const masaIndex = Number(panchang.masa?.index);
     const masaNameByIndex = {
@@ -690,7 +761,7 @@ export default function PanchangSection() {
     const pakshaDisplay = getTranslatedValue(lang, panchang.paksha || '', pakshaMap, '');
     const rituDisplay = getTranslatedValue(lang, panchang.ritu || '', rituMap, '');
     const ayanaDisplay = getTranslatedValue(lang, panchang.ayana || '', ayanaMap, '');
-    const moonRashiDisplay = getTranslatedValue(lang, panchang.moonRashi?.name || '', rashiMap, '');
+    const moonRashiDisplay = getTranslatedValue(lang, currentMoonRashi?.name || panchang.moonRashi?.name || '', rashiMap, '');
     const sunRashiDisplay = getTranslatedValue(lang, panchang.sunRashi?.name || '', rashiMap, '');
     const samvatsaraMap = {
       mr: {
@@ -830,7 +901,9 @@ export default function PanchangSection() {
       const masaName = safeValue(panchang.masa?.name || '');
       const masaIndexForMantra = Number(panchang.masa?.index);
       const masaSanskrit = masaIndexForMantra === 2 ? 'ज्येष्ठ' : masaIndexForMantra === 3 ? 'आषाढ' : ['Ashadha', 'Aashadha', 'Ashad', 'Aashad'].includes(masaName) ? 'आषाढ' : safeValue(masaDisplay);
-      const pakshaSanskrit = panchang.paksha === 'Krishna' ? 'कृष्ण' : safeValue(pakshaDisplay);
+      const pakshaSanskrit = currentTithi?.index >= 15 ? 'कृष्ण' : 'शुक्ल';
+      const yogaSanskrit = safeValue(yogaDisplay);
+      const karanaSanskrit = safeValue(karanaDisplay);
       const tithiSanskrit = {
         Prathama: 'प्रतिपदा',
         Dwitiya: 'द्वितीया',
@@ -848,7 +921,7 @@ export default function PanchangSection() {
         Chaturdashi: 'चतुर्दशी',
         Purnima: 'पूर्णिमा',
         Amavasya: 'अमावस्या',
-      }[safeValue(tithiNames?.[panchang.tithi] || panchang.tithi)] || safeValue(tithiDisplay);
+      }[safeValue(tithiNames?.[currentTithi?.index] || currentTithi?.name || panchang.tithi)] || safeValue(tithiDisplay);
 
       const vasaraSanskrit = {
         Sunday: 'भानु',
@@ -887,7 +960,7 @@ export default function PanchangSection() {
         PurvaBhadrapada: 'पूर्वभाद्रपदा',
         UttaraBhadrapada: 'उत्तरभाद्रपदा',
         Revati: 'रेवती',
-      }[safeValue(nakshatraNames?.[panchang.nakshatra] || panchang.nakshatra)] || safeValue(nakshatraDisplay);
+      }[safeValue(nakshatraNames?.[currentNakshatra?.index] || currentNakshatra?.name || panchang.nakshatra)] || safeValue(nakshatraDisplay);
       const chandraRashiSanskrit = panchang.moonRashi?.name === 'Sagittarius' ? 'धनु' : safeValue(moonRashiDisplay);
       const suryaRashiSanskrit = panchang.sunRashi?.name === 'Gemini' ? 'मिथुन' : safeValue(sunRashiDisplay);
       const guruRashiSanskrit = panchang.guruRashi?.name === 'Gemini' ? 'मिथुन' : safeValue(sunRashiDisplay);
@@ -906,7 +979,7 @@ export default function PanchangSection() {
         <span key="tithi"><strong>{safeValue(tithiSanskrit)}</strong>तिथौ</span>,
         <span key="vasara"><strong>{safeValue(vasaraSanskrit)}</strong>वासरे</span>,
         <span key="nakshatra"><strong>{safeValue(nakshatraSanskrit)}</strong>दिवसनक्षत्रे</span>,
-        'विष्णुयोगे विष्णुकरणे',
+        <span key="yoga-karana"><strong>{yogaSanskrit}</strong>योगे <strong>{karanaSanskrit}</strong>करणे</span>,
         <span key="chandra"><strong>{safeValue(chandraRashiSanskrit)}</strong>स्थिते वर्तमाने चन्द्रे</span>,
         <span key="surya"><strong>{safeValue(suryaRashiSanskrit)}</strong>स्थिते श्रीसूर्ये</span>,
         <span key="guru"><strong>{safeValue(guruRashiSanskrit)}</strong>स्थिते देवगुरौ</span>,
@@ -936,13 +1009,15 @@ export default function PanchangSection() {
       samvatsara: samvatsaraDisplay || '',
       moonRashi: moonRashiDisplay,
       sunRashi: sunRashiDisplay,
-      sunrise: translateNumbers(formatTime(lang, panchang.sunrise)),
-      moonrise: translateNumbers(formatTime(lang, panchang.moonrise)),
-      moonset: translateNumbers(formatTime(lang, panchang.moonset)),
-      sunset: translateNumbers(formatTime(lang, panchang.sunset)),
+      sunrise: translateNumbers(formatTime(lang, panchang.sunrise, location.timezone)),
+      moonrise: translateNumbers(formatTime(lang, panchang.moonrise, location.timezone)),
+      moonset: translateNumbers(formatTime(lang, panchang.moonset, location.timezone)),
+      sunset: translateNumbers(formatTime(lang, panchang.sunset, location.timezone)),
+      tithiSchedule,
+      nakshatraSchedule,
       mantraText,
     };
-  }, [lang, panchang, translateNumbers]);
+  }, [currentTime, lang, location.timezone, panchang, selectedDate, translateNumbers]);
 
   const label = (key) => getText(lang, key);
 
@@ -1079,6 +1154,28 @@ export default function PanchangSection() {
                   <h2>{label('samvat')}</h2>
                   <p>{displayData.samvat}</p>
                 </div>
+              </div>
+
+              <div className={styles.tithiSchedule}>
+                <h2>{label('currentTithi')}</h2>
+                {displayData.tithiSchedule.map((entry) => (
+                  <div key={`${entry.name}-${entry.start}`} className={`${styles.tithiRow} ${entry.isCurrent ? styles.currentTithi : ''}`}>
+                    <strong>{entry.name}</strong>
+                    <span>{label('tithiStarts')}: {entry.start}</span>
+                    <span>{label('tithiEnds')}: {entry.end}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className={styles.tithiSchedule}>
+                <h2>{label('currentNakshatra')}</h2>
+                {displayData.nakshatraSchedule.map((entry) => (
+                  <div key={`${entry.name}-${entry.start}`} className={`${styles.tithiRow} ${entry.isCurrent ? styles.currentTithi : ''}`}>
+                    <strong>{entry.name}</strong>
+                    <span>{label('tithiStarts')}: {entry.start}</span>
+                    <span>{label('tithiEnds')}: {entry.end}</span>
+                  </div>
+                ))}
               </div>
 
               <div className={styles.grid}>

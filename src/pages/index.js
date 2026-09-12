@@ -226,6 +226,7 @@ export default function HomePage() {
   const [dailyPath, setDailyPath] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [panchangWidget, setPanchangWidget] = useState(null);
+  const [currentTime, setCurrentTime] = useState(() => new Date());
 
   const categoryCounts = React.useMemo(() => {
     const counts = {};
@@ -292,6 +293,11 @@ export default function HomePage() {
     setPanchangWidget(data);
   }, []);
 
+  useEffect(() => {
+    const timer = window.setInterval(() => setCurrentTime(new Date()), 30000);
+    return () => window.clearInterval(timer);
+  }, []);
+
   const handleRecentClick = (item) => {
     if (typeof window !== 'undefined' && item.scrollPosition) {
       window.localStorage.setItem('resumeScroll', item.scrollPosition.toString());
@@ -307,7 +313,13 @@ export default function HomePage() {
   const dayDisplay = panchangWidget ? getTranslatedValue(lang, dayNames?.[panchangWidget.vara] || panchangWidget.vara, panchangValueMappings.day, '—') : '—';
   const monthDisplay = panchangWidget ? getTranslatedValue(lang, panchangWidget.masa?.name || '', panchangValueMappings.month, '—') : '—';
   const pakshaDisplay = panchangWidget ? getTranslatedValue(lang, panchangWidget.paksha, panchangValueMappings.paksha, '—') : '—';
-  const tithiDisplay = panchangWidget ? getTranslatedValue(lang, tithiNames?.[panchangWidget.tithi] || panchangWidget.tithi, panchangValueMappings.tithi, '—') : '—';
+  const currentTithi = panchangWidget?.tithis?.find((entry) => {
+    const time = currentTime.getTime();
+    return entry.startTime.getTime() <= time && time < entry.endTime.getTime();
+  });
+  const tithiDisplay = panchangWidget
+    ? getTranslatedValue(lang, tithiNames?.[currentTithi?.index] || currentTithi?.name || panchangWidget.tithi, panchangValueMappings.tithi, '—')
+    : '—';
   const nakshatraDisplay = panchangWidget ? getTranslatedValue(lang, nakshatraNames?.[panchangWidget.nakshatra] || panchangWidget.nakshatra, panchangValueMappings.nakshatra, '—') : '—';
 
   return (

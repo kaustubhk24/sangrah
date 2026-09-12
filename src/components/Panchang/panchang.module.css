@@ -166,6 +166,32 @@
   font-weight: 600;
 }
 
+.tithiSchedule {
+  background: #fff;
+  border: 1px solid #f0e2ca;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.tithiSchedule h2 {
+  font-size: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.tithiRow {
+  display: grid;
+  grid-template-columns: minmax(7rem, 1fr) repeat(2, minmax(8rem, 1fr));
+  gap: 0.6rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid #f0e2ca;
+  color: var(--ifm-color-muted);
+}
+
+.currentTithi {
+  color: var(--ifm-color-primary);
+}
+
 .loadingState {
   padding: 2rem 0;
   color: var(--ifm-color-muted);
@@ -216,6 +242,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .tithiRow {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
   .sectionCard {
     padding: 1rem;
   }
@@ -234,8 +265,13 @@
 }
 
 [data-theme='dark'] .summaryCard,
-[data-theme='dark'] .infoCard {
+[data-theme='dark'] .infoCard,
+[data-theme='dark'] .tithiSchedule {
   background: #241f1b;
+  border-color: #3d342d;
+}
+
+[data-theme='dark'] .tithiRow {
   border-color: #3d342d;
 }
 
