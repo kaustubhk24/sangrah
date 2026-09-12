@@ -143,8 +143,8 @@ const isGuruShukraAsta = (date, ayanamsa) => {
 
 const getStartingPage = (items, year) => {
   if (year !== new Date().getFullYear()) return 0;
-  const tomorrowKey = getDateKey(addDays(new Date(), 1), 'Asia/Kolkata');
-  const firstUpcomingIndex = items.findIndex((item) => item.dateKey >= tomorrowKey);
+  const todayKey = getDateKey(new Date(), 'Asia/Kolkata');
+  const firstUpcomingIndex = items.findIndex((item) => item.dateKey >= todayKey);
   return firstUpcomingIndex < 0 ? 0 : firstUpcomingIndex;
 };
 
@@ -215,6 +215,19 @@ export default function MuhurtPage() {
   const selectedItems = (results[selectedType] || []).filter((item) => (
     selectedType !== 'vastushanti' || !excludeGuruShukraAsta || !item.isAsta
   ));
+  const astaItems = results.vastushanti || [];
+  const astaCount = astaItems.filter((item) => item.isAsta).length;
+  const todayKey = getDateKey(new Date(), 'Asia/Kolkata');
+  const upcomingAstaCount = astaItems.filter((item) => item.isAsta && item.dateKey >= todayKey).length;
+
+  useEffect(() => {
+    const nextItems = (results[selectedType] || []).filter((item) => (
+      selectedType !== 'vastushanti' || !excludeGuruShukraAsta || !item.isAsta
+    ));
+    const nextPageStart = getStartingPage(nextItems, year);
+    setPageStart((current) => current === nextPageStart ? current : nextPageStart);
+  }, [results, selectedType, excludeGuruShukraAsta, year]);
+
   const visibleItems = selectedItems.slice(pageStart, pageStart + 5);
   const renderList = (items, emptyText) => (items.length ? items.map((item) => (
     <div className={styles.resultRow} key={item.key}>
@@ -228,7 +241,7 @@ export default function MuhurtPage() {
   };
 
   return (
-    <Layout title="मुहूर्त - क्रयविक्रय">
+    <Layout title="मुहूर्त">
       <main className={styles.pageWrapper}>
         <section className={styles.sectionCard}>
           <header className={styles.heroBlock}>
@@ -236,6 +249,8 @@ export default function MuhurtPage() {
               <p className={styles.eyebrow}>मुहूर्त</p>
               <h1>मुहूर्त</h1>
               <p className={styles.subtitle}>अनुकूल नक्षत्रांचे संपूर्ण वेळापत्रक</p>
+                        <p className={styles.note}>हे सध्या तपासणीच्या टप्प्यावर आहे आणि त्यात चुकीची माहिती दिसू शकते.</p>
+
             </div>
             <div className={styles.controls}>
               <label>वर्ष<select value={year} onChange={(event) => setYear(Number(event.target.value))}>{yearOptions.map((option) => <option key={option} value={option}>{option}</option>)}</select></label>
@@ -256,10 +271,12 @@ export default function MuhurtPage() {
               {selectedType === 'vastushanti' && <label className={styles.astaCheckbox}>
                 <input type="checkbox" checked={excludeGuruShukraAsta} onChange={(event) => {
                   setExcludeGuruShukraAsta(event.target.checked);
-                  setPageStart(0);
                 }} />
-                <span>गुरु आणि शुक्र अस्त असलेले वेळ टाळा</span>
+                <span>गुरु आणि शुक्र अस्त असलेले वेळ टाळा ({astaCount} वेळा)</span>
               </label>}
+              {selectedType === 'vastushanti' && excludeGuruShukraAsta && upcomingAstaCount === 0 && (
+                <p className={styles.note}>आजपासून पुढे गुरु किंवा शुक्र अस्त असलेला मुहूर्त नाही.</p>
+              )}
 
             <div className={styles.columns}>
               <section className={styles.listSection}>
@@ -279,7 +296,6 @@ export default function MuhurtPage() {
             </>
           )}
           <p className={styles.note}>वेळा {location.label} येथील स्थानिक वेळेनुसार आहेत.</p>
-          <p className={styles.note}>हे सध्या तपासणीच्या टप्प्यावर आहे आणि त्यात चुकीची माहिती दिसू शकते.</p>
         </section>
       </main>
     </Layout>

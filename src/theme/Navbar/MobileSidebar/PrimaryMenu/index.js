@@ -49,7 +49,7 @@ export default function NavbarMobilePrimaryMenu() {
       { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', slug: 'पाळणा-संग्रह' },
       { key: 'pooja', mrLabel: 'पूजा व्रत', hiLabel: 'पूजा व्रत', slug: 'पूजा-व्रत' },
       { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', slug: 'ऑडियो-भजन' },
-      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', slug: 'प्रवचने' },
+      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', slug: 'प्रवचने', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
     ];
     
     return folders.map(f => {
@@ -58,9 +58,10 @@ export default function NavbarMobilePrimaryMenu() {
       return {
         label,
         count,
-        to: `/category/${f.slug}`,
+        to: f.specialTo || `/category/${f.slug}`,
+        specialTo: f.specialTo,
       };
-    }).filter(f => f.count > 0);
+    }).filter(f => f.specialTo || f.count > 0);
   }, [categoryCounts, lang]);
 
   return (
@@ -89,7 +90,7 @@ export default function NavbarMobilePrimaryMenu() {
                 to={cat.to}
                 onClick={() => mobileSidebar.toggle()}
               >
-                {cat.label} ({translateNumbers(cat.count)})
+                {cat.label} {cat.specialTo ? '' : `(${translateNumbers(cat.count)})`}
               </Link>
             </li>
           ))}

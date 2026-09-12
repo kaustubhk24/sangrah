@@ -258,8 +258,9 @@ export default function HomePage() {
       { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', enLabel: 'Palana', slug: 'पाळणा-संग्रह', icon: '👶' },
       { key: 'pooja', mrLabel: 'पूजा-व्रत', hiLabel: 'पूजा-व्रत', enLabel: 'Pooja-Vrat', slug: 'पूजा-व्रत', icon: '🏺' },
       { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', enLabel: 'Audio Bhajan', slug: 'ऑडियो-भजन', icon: '🎵' },
-      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', enLabel: 'Pravachane', slug: 'प्रवचने', icon: '🧘' },
+      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', enLabel: 'Pravachane', slug: 'प्रवचने', icon: '🧘', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
       { key: 'muhurt', mrLabel: 'मुहूर्त', hiLabel: 'मुहूर्त', enLabel: 'Muhurt', slug: null, icon: '⏳', specialTo: '/muhurt' },
+      { key: 'project-information', mrLabel: 'प्रकल्प माहिती', hiLabel: 'प्रकल्प माहिती', enLabel: 'Project Information', slug: null, icon: 'ℹ️', specialTo: '/project-information' },
     ];
     
     return folders.map(f => {
