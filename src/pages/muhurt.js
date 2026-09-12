@@ -102,6 +102,7 @@ const formatDate = (date, timeZone) => new Intl.DateTimeFormat('mr-IN', {
   weekday: 'long',
   day: 'numeric',
   month: 'long',
+  year: 'numeric',
 }).format(date);
 
 const formatTime = (date, timeZone) => new Intl.DateTimeFormat('mr-IN', {
@@ -117,7 +118,7 @@ const addDays = (date, days) => {
 };
 
 const getEntryStart = (entries, index, firstStart) => (
-  index === 0 ? firstStart || entries[index].startTime : entries[index - 1].endTime
+  entries[index].startTime || (index === 0 ? firstStart : entries[index - 1].endTime)
 );
 
 const getNakshatraKey = (entry) => {
@@ -130,11 +131,14 @@ const getAngularDistance = (firstLongitude, secondLongitude) => {
   return Math.min(distance, 360 - distance);
 };
 
+const GURU_ASTA_DEGREES = 11;
+const SHUKRA_ASTA_DEGREES = 10;
+
 const isGuruShukraAsta = (date, ayanamsa) => {
   const sun = getPlanetaryPosition('Sun', date, ayanamsa).longitude;
   const guru = getPlanetaryPosition('Jupiter', date, ayanamsa).longitude;
   const shukra = getPlanetaryPosition('Venus', date, ayanamsa).longitude;
-  return getAngularDistance(sun, guru) <= 11 || getAngularDistance(sun, shukra) <= 8;
+  return getAngularDistance(sun, guru) <= GURU_ASTA_DEGREES || getAngularDistance(sun, shukra) <= SHUKRA_ASTA_DEGREES;
 };
 
 const getStartingPage = (items, year) => {
@@ -159,49 +163,58 @@ export default function MuhurtPage() {
     setLoading(true);
     setPageStart(0);
 
-    const observer = new Observer(location.lat, location.lon, 0);
-    const timezone = 'Asia/Kolkata';
-    const nextResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
-    let date = new Date(`${year}-01-01T12:00:00`);
+    const calculationTimer = setTimeout(() => {
+      const observer = new Observer(location.lat, location.lon, 0);
+      const timezone = 'Asia/Kolkata';
+      const nextResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
+      let date = new Date(`${year}-01-01T12:00:00`);
 
-    for (let day = 0; day < 366 && date.getFullYear() === year; day += 1) {
-      const panchang = getPanchangam(date, observer, { timezoneOffset: 330, calendarType: 'amanta' });
-      (panchang.nakshatras || []).forEach((entry, index, entries) => {
-        const start = getEntryStart(entries, index, panchang.nakshatraStartTime);
-        const end = entry.endTime;
-        const key = getNakshatraKey(entry);
-        const dateKey = getDateKey(start, timezone);
-        if (dateKey.startsWith(String(year))) {
-          const item = { key: `${key}-${start.toISOString()}`, dateKey, date: formatDate(start, timezone), start: formatTime(start, timezone), end: formatTime(end, timezone), nakshatra: nakshatraLabels[key] || key };
-          muhurtTypes.forEach((type) => {
-            const matchesNakshatra = type.nakshatras.includes(key);
-            const matchesMonth = !type.months || type.months.includes(panchang.masa?.name);
-            const matchesTithi = !type.tithis || (panchang.tithis || []).some((tithi) => type.tithis.includes(tithi.index));
-            const matchesWeekday = !type.allowedWeekdays || type.allowedWeekdays.includes(panchang.vara);
-            const matchesAsta = !excludeGuruShukraAsta || type.key !== 'vastushanti' || !isGuruShukraAsta(new Date((start.getTime() + end.getTime()) / 2), panchang.ayanamsa);
-            if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday && matchesAsta) {
-              nextResults[type.key].push({ ...item, requirement: type.requirement });
-            }
-          });
-        }
-      });
-      date = addDays(date, 1);
-    }
+      for (let day = 0; day < 366 && date.getFullYear() === year; day += 1) {
+        const panchang = getPanchangam(date, observer, { timezoneOffset: 330, calendarType: 'amanta' });
+        (panchang.nakshatras || []).forEach((entry, index, entries) => {
+          const start = getEntryStart(entries, index, panchang.nakshatraStartTime);
+          const end = entry.endTime;
+          const key = getNakshatraKey(entry);
+          const dateKey = getDateKey(start, timezone);
+          if (dateKey.startsWith(String(year))) {
+            const item = { key: `${key}-${start.toISOString()}`, dateKey, date: formatDate(start, timezone), start: formatTime(start, timezone), end: formatTime(end, timezone), nakshatra: nakshatraLabels[key] || key };
+            muhurtTypes.forEach((type) => {
+              const matchesNakshatra = type.nakshatras.includes(key);
+              const matchesMonth = !type.months || type.months.includes(panchang.masa?.name);
+              const matchesTithi = !type.tithis || (panchang.tithis || []).some((tithi) => type.tithis.includes(tithi.index));
+              const matchesWeekday = !type.allowedWeekdays || type.allowedWeekdays.includes(panchang.vara);
+                if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday) {
+                  const isAsta = type.key === 'vastushanti'
+                    && isGuruShukraAsta(new Date((start.getTime() + end.getTime()) / 2), panchang.ayanamsa);
+                  nextResults[type.key].push({ ...item, requirement: type.requirement, isAsta });
+              }
+            });
+          }
+        });
+        date = addDays(date, 1);
+      }
 
-    if (!cancelled) {
-      const sortedResults = Object.fromEntries(
-        muhurtTypes.map(({ key }) => [key, nextResults[key].sort((first, second) => first.dateKey.localeCompare(second.dateKey))])
-      );
-      setResults(sortedResults);
-      setPageStart(getStartingPage(sortedResults[selectedType], year));
-      setLoading(false);
-    }
-    return () => { cancelled = true; };
-  }, [excludeGuruShukraAsta, location, year]);
+      if (!cancelled) {
+        const sortedResults = Object.fromEntries(
+          muhurtTypes.map(({ key }) => [key, nextResults[key].sort((first, second) => first.dateKey.localeCompare(second.dateKey))])
+        );
+        setResults(sortedResults);
+        setPageStart(getStartingPage(sortedResults[selectedType], year));
+        setLoading(false);
+      }
+    }, 0);
+
+    return () => {
+      cancelled = true;
+      clearTimeout(calculationTimer);
+    };
+  }, [location, year]);
 
   const yearOptions = useMemo(() => [year - 1, year, year + 1], [year]);
   const selectedDefinition = muhurtTypes.find((type) => type.key === selectedType) || muhurtTypes[0];
-  const selectedItems = results[selectedType] || [];
+  const selectedItems = (results[selectedType] || []).filter((item) => (
+    selectedType !== 'vastushanti' || !excludeGuruShukraAsta || !item.isAsta
+  ));
   const visibleItems = selectedItems.slice(pageStart, pageStart + 5);
   const renderList = (items, emptyText) => (items.length ? items.map((item) => (
     <div className={styles.resultRow} key={item.key}>
@@ -230,7 +243,7 @@ export default function MuhurtPage() {
             </div>
           </header>
 
-          {loading ? <div className={styles.loading}>मुहूर्ताची माहिती लोड होत आहे...</div> : (
+          {loading ? <div className={styles.loading} role="status" aria-live="polite"><span className={styles.loadingSpinner} aria-hidden="true" />मुहूर्ताची माहिती लोड होत आहे...</div> : (
             <>
               <div className={styles.selectionBar}>
                 <label>मुहूर्त प्रकार
@@ -241,7 +254,10 @@ export default function MuhurtPage() {
                 <span>{selectedItems.length ? `${pageStart + 1}-${Math.min(pageStart + 5, selectedItems.length)} / ${selectedItems.length}` : '० मुहूर्त'}</span>
               </div>
               {selectedType === 'vastushanti' && <label className={styles.astaCheckbox}>
-                <input type="checkbox" checked={excludeGuruShukraAsta} onChange={(event) => setExcludeGuruShukraAsta(event.target.checked)} />
+                <input type="checkbox" checked={excludeGuruShukraAsta} onChange={(event) => {
+                  setExcludeGuruShukraAsta(event.target.checked);
+                  setPageStart(0);
+                }} />
                 <span>गुरु आणि शुक्र अस्त असलेले वेळ टाळा</span>
               </label>}
 
