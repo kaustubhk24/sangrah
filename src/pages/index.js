@@ -259,6 +259,7 @@ export default function HomePage() {
       { key: 'pooja', mrLabel: 'पूजा-व्रत', hiLabel: 'पूजा-व्रत', enLabel: 'Pooja-Vrat', slug: 'पूजा-व्रत', icon: '🏺' },
       { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', enLabel: 'Audio Bhajan', slug: 'ऑडियो-भजन', icon: '🎵' },
       { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', enLabel: 'Pravachane', slug: 'प्रवचने', icon: '🧘' },
+      { key: 'muhurt', mrLabel: 'मुहूर्त', hiLabel: 'मुहूर्त', enLabel: 'Muhurt', slug: null, icon: '⏳', specialTo: '/muhurt' },
     ];
     
     return folders.map(f => {
@@ -267,10 +268,10 @@ export default function HomePage() {
       return {
         label,
         count,
-        to: `/category/${f.slug}`,
+        to: f.specialTo || `/category/${f.slug}`,
         icon: f.icon
       };
-    }).filter(f => f.count > 0);
+    }).filter(f => f.specialTo || f.count > 0);
   }, [categoryCounts, lang]);
 
   useEffect(() => {
@@ -330,7 +331,10 @@ export default function HomePage() {
         <section className={styles.sectionBlock}>
           <div className={styles.sectionHeader}>
             <h2>{t('panchangWidgetTitle')}</h2>
-            <Link to="/panchang" className={styles.sectionLink}>{t('moreLink')}</Link>
+            <div className={styles.sectionLinks}>
+              <Link to="/panchang" className={styles.sectionLink}>{t('moreLink')}</Link>
+              <Link to="/muhurt" className={styles.sectionLink}>{t('muhurtLabel')}</Link>
+            </div>
           </div>
           <Link to="/panchang" className={styles.panchangWidgetCard}>
             <div className={styles.panchangWidgetTop}>

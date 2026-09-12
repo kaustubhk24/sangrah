@@ -25,6 +25,12 @@
   color: #c75d00;
 }
 
+.sectionLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 [data-theme='dark'] .sectionHeader h2 {
   color: #ffa726;
 }

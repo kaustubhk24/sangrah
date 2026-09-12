@@ -1,0 +1,32 @@
+.pageWrapper { padding: 1.5rem 1rem 3rem; }
+.sectionCard { max-width: 1100px; margin: 0 auto; background: #fffdf8; border: 1px solid #f1dcb5; border-radius: 24px; padding: 1.5rem; box-shadow: 0 10px 35px rgba(0,0,0,.04); }
+.heroBlock { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1.3rem; }
+.eyebrow { color: var(--ifm-color-primary); font-weight: 700; margin: 0 0 .35rem; }
+.heroBlock h1 { margin-bottom: .35rem; }
+.subtitle, .rule, .note, .empty { color: var(--ifm-color-muted); }
+.subtitle { margin: 0; }
+.controls { display: flex; gap: .6rem; flex-wrap: wrap; }
+.controls label { display: flex; flex-direction: column; gap: .25rem; color: var(--ifm-color-muted); font-size: .85rem; }
+.controls select { border: 1px solid #e4c08e; border-radius: 8px; padding: .45rem .55rem; background: #fff; color: inherit; min-width: 8rem; }
+.selectionBar { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: var(--ifm-color-muted); font-size: .9rem; }
+.selectionBar label { display: flex; flex-direction: column; gap: .25rem; }
+.selectionBar select { border: 1px solid #e4c08e; border-radius: 8px; padding: .45rem .55rem; background: #fff; color: inherit; min-width: 12rem; }
+.columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.listSection { background: #fff; border: 1px solid #f0e2ca; border-radius: 16px; padding: 1rem; min-width: 0; }
+.listSection h2 { font-size: 1.15rem; margin-bottom: .25rem; }
+.rule { font-size: .85rem; line-height: 1.5; margin-bottom: .8rem; }
+.requirement { color: var(--ifm-color-primary); font-size: .85rem; font-weight: 700; margin: -.35rem 0 .8rem; }
+.resultRow { display: flex; justify-content: space-between; align-items: center; gap: .75rem; border-top: 1px solid #f0e2ca; padding: .65rem 0; }
+.resultRow div:first-child { display: flex; flex-direction: column; gap: .12rem; }
+.resultRow span { color: var(--ifm-color-muted); font-size: .9rem; }
+.timeRange { white-space: nowrap; }
+.timeRange b { color: var(--ifm-color-muted); font-weight: 400; }
+.empty { padding: 1rem 0; margin: 0; }
+.pagination { display: flex; align-items: center; justify-content: space-between; gap: .75rem; border-top: 1px solid #f0e2ca; margin-top: .5rem; padding-top: .8rem; color: var(--ifm-color-muted); font-size: .85rem; }
+.pagination button { width: 2.25rem; height: 2.25rem; border: 1px solid #e4c08e; border-radius: 8px; background: #fff; color: var(--ifm-color-primary); font-size: 1.25rem; cursor: pointer; }
+.pagination button:disabled { opacity: .4; cursor: not-allowed; }
+.loading { padding: 2rem 0; color: var(--ifm-color-muted); text-align: center; }
+.note { margin: 1rem 0 0; font-size: .85rem; }
+@media (max-width: 700px) { .columns { grid-template-columns: 1fr; } .sectionCard { padding: 1rem; } .resultRow { align-items: flex-start; flex-direction: column; gap: .25rem; } .selectionBar { align-items: flex-start; flex-direction: column; } }
+[data-theme='dark'] .sectionCard, [data-theme='dark'] .listSection { background: #1f1b18; border-color: #3d342d; }
+[data-theme='dark'] .controls select, [data-theme='dark'] .selectionBar select, [data-theme='dark'] .pagination button { background: #29231f; border-color: #5a4939; }
