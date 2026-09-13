@@ -196,6 +196,11 @@ export default function MuhurtPage() {
   useEffect(() => {
     if (!workerReady || !workerRef.current) return undefined;
 
+    if (selectedType === 'chandraDisha') {
+      setLoading(false);
+      return undefined;
+    }
+
     const worker = workerRef.current;
     const requestId = requestIdRef.current + 1;
     requestIdRef.current = requestId;
