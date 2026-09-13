@@ -32,6 +32,28 @@ const nakshatraLabels = {
   Revati: 'रेवती',
 };
 
+const rashiLabels = {
+  Aries: 'मेष',
+  Taurus: 'वृषभ',
+  Gemini: 'मिथुन',
+  Cancer: 'कर्क',
+  Leo: 'सिंह',
+  Virgo: 'कन्या',
+  Libra: 'तुला',
+  Scorpio: 'वृश्चिक',
+  Sagittarius: 'धनु',
+  Capricorn: 'मकर',
+  Aquarius: 'कुंभ',
+  Pisces: 'मीन',
+};
+
+const chandraDishaGroups = [
+  { rashis: ['Aries', 'Leo', 'Sagittarius'], label: 'मेष, सिंह, धनु', direction: 'पूर्व' },
+  { rashis: ['Taurus', 'Capricorn', 'Virgo'], label: 'वृषभ, मकर, कन्या', direction: 'दक्षिण' },
+  { rashis: ['Gemini', 'Libra', 'Aquarius'], label: 'मिथुन, तुला, कुंभ', direction: 'पश्चिम' },
+  { rashis: ['Cancer', 'Scorpio', 'Pisces'], label: 'कर्क, वृश्चिक, मीन', direction: 'उत्तर' },
+];
+
 const muhurtTypes = [
   {
     key: 'purchase',
@@ -78,6 +100,29 @@ const muhurtTypes = [
     tithis: [0, 3, 8, 13, 29],
     allowedWeekdays: [1, 3, 4, 5, 6],
     requirement: 'कलश किंवा वृषभ चक्र आवश्यक',
+    chandraDisha: [
+      ['मेष, सिंह, धनु', 'पूर्व'],
+      ['वृषभ, मकर, कन्या', 'दक्षिण'],
+      ['मिथुन, तुला, कुंभ', 'पश्चिम'],
+      ['कर्क, वृश्चिक, मीन', 'उत्तर'],
+    ],
+    chandraDishaNote: 'चंद्र समोर किंवा उजव्या बाजूला असावा. पाठीमागे किंवा डाव्या बाजूला असल्यास प्राणसंकट व धनक्षय होतो.',
+  },
+  {
+    key: 'chandraDisha',
+    label: 'चंद्र दिशा',
+    title: 'चंद्र दिशा',
+    rule: 'राशीप्रमाणे चंद्राची दिशा तपासा.',
+    logic: 'चंद्र समोर किंवा उजव्या बाजूला असावा. पाठीमागे किंवा डाव्या बाजूला असल्यास प्राणसंकट व धनक्षय होतो.',
+    informational: true,
+    chandraDisha: [
+      ['मेष, सिंह, धनु', 'पूर्व'],
+      ['वृषभ, मकर, कन्या', 'दक्षिण'],
+      ['मिथुन, तुला, कुंभ', 'पश्चिम'],
+      ['कर्क, वृश्चिक, मीन', 'उत्तर'],
+    ],
+    chandraDishaNote: 'चंद्र समोर किंवा उजव्या बाजूला असावा. पाठीमागे किंवा डाव्या बाजूला असल्यास प्राणसंकट व धनक्षय होतो.',
+    nakshatras: [],
   },
 ];
 const emptyResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
@@ -117,6 +162,19 @@ const addDays = (date, days) => {
   return next;
 };
 
+const getCurrentChandraDisha = (location) => {
+  const observer = new Observer(location.lat, location.lon, 0);
+  const panchang = getPanchangam(new Date(), observer, { timezoneOffset: 330, calendarType: 'amanta' });
+  const now = new Date();
+  const currentRashi = (panchang.rashis || []).find((entry, index, entries) => {
+    const start = getEntryStart(entries, index, panchang.rashiStartTime);
+    return start.getTime() <= now.getTime() && now.getTime() < entry.endTime.getTime();
+  }) || panchang.rashis?.[0];
+  const rashi = currentRashi?.name || panchang.moonRashi?.name || '';
+  const group = chandraDishaGroups.find(({ rashis }) => rashis.includes(rashi));
+  return { rashi: rashiLabels[rashi] || rashi, direction: group?.direction || '' };
+};
+
 const getEntryStart = (entries, index, firstStart) => (
   entries[index].startTime || (index === 0 ? firstStart : entries[index - 1].endTime)
 );
@@ -148,6 +206,42 @@ const getStartingPage = (items, year) => {
   return firstUpcomingIndex < 0 ? 0 : firstUpcomingIndex;
 };
 
+const calculateResults = (year, location) => {
+  const observer = new Observer(location.lat, location.lon, 0);
+  const timezone = 'Asia/Kolkata';
+  const nextResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
+  let date = new Date(`${year}-01-01T12:00:00`);
+
+  for (let day = 0; day < 366 && date.getFullYear() === year; day += 1) {
+    const panchang = getPanchangam(date, observer, { timezoneOffset: 330, calendarType: 'amanta' });
+    (panchang.nakshatras || []).forEach((entry, index, entries) => {
+      const start = getEntryStart(entries, index, panchang.nakshatraStartTime);
+      const end = entry.endTime;
+      const key = getNakshatraKey(entry);
+      const dateKey = getDateKey(start, timezone);
+      if (dateKey.startsWith(String(year))) {
+        const item = { key: `${key}-${start.toISOString()}`, dateKey, date: formatDate(start, timezone), start: formatTime(start, timezone), end: formatTime(end, timezone), nakshatra: nakshatraLabels[key] || key };
+        muhurtTypes.forEach((type) => {
+          const matchesNakshatra = type.nakshatras.includes(key);
+          const matchesMonth = !type.months || type.months.includes(panchang.masa?.name);
+          const matchesTithi = !type.tithis || (panchang.tithis || []).some((tithi) => type.tithis.includes(tithi.index));
+          const matchesWeekday = !type.allowedWeekdays || type.allowedWeekdays.includes(panchang.vara);
+          if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday) {
+            const isAsta = type.key === 'vastushanti'
+              && isGuruShukraAsta(new Date((start.getTime() + end.getTime()) / 2), panchang.ayanamsa);
+            nextResults[type.key].push({ ...item, requirement: type.requirement, isAsta });
+          }
+        });
+      }
+    });
+    date = addDays(date, 1);
+  }
+
+  return Object.fromEntries(
+    muhurtTypes.map(({ key }) => [key, nextResults[key].sort((first, second) => first.dateKey.localeCompare(second.dateKey))])
+  );
+};
+
 export default function MuhurtPage() {
   const [year, setYear] = useState(new Date().getFullYear());
   const [locationId, setLocationId] = useState('pune');
@@ -156,7 +250,9 @@ export default function MuhurtPage() {
   const [selectedType, setSelectedType] = useState('purchase');
   const [pageStart, setPageStart] = useState(0);
   const [excludeGuruShukraAsta, setExcludeGuruShukraAsta] = useState(false);
+  const [showNextYearVastu, setShowNextYearVastu] = useState(false);
   const location = locations[locationId];
+  const currentChandraDisha = useMemo(() => getCurrentChandraDisha(location), [location]);
 
   useEffect(() => {
     let cancelled = false;
@@ -164,41 +260,16 @@ export default function MuhurtPage() {
     setPageStart(0);
 
     const calculationTimer = setTimeout(() => {
-      const observer = new Observer(location.lat, location.lon, 0);
-      const timezone = 'Asia/Kolkata';
-      const nextResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
-      let date = new Date(`${year}-01-01T12:00:00`);
-
-      for (let day = 0; day < 366 && date.getFullYear() === year; day += 1) {
-        const panchang = getPanchangam(date, observer, { timezoneOffset: 330, calendarType: 'amanta' });
-        (panchang.nakshatras || []).forEach((entry, index, entries) => {
-          const start = getEntryStart(entries, index, panchang.nakshatraStartTime);
-          const end = entry.endTime;
-          const key = getNakshatraKey(entry);
-          const dateKey = getDateKey(start, timezone);
-          if (dateKey.startsWith(String(year))) {
-            const item = { key: `${key}-${start.toISOString()}`, dateKey, date: formatDate(start, timezone), start: formatTime(start, timezone), end: formatTime(end, timezone), nakshatra: nakshatraLabels[key] || key };
-            muhurtTypes.forEach((type) => {
-              const matchesNakshatra = type.nakshatras.includes(key);
-              const matchesMonth = !type.months || type.months.includes(panchang.masa?.name);
-              const matchesTithi = !type.tithis || (panchang.tithis || []).some((tithi) => type.tithis.includes(tithi.index));
-              const matchesWeekday = !type.allowedWeekdays || type.allowedWeekdays.includes(panchang.vara);
-                if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday) {
-                  const isAsta = type.key === 'vastushanti'
-                    && isGuruShukraAsta(new Date((start.getTime() + end.getTime()) / 2), panchang.ayanamsa);
-                  nextResults[type.key].push({ ...item, requirement: type.requirement, isAsta });
-              }
-            });
-          }
-        });
-        date = addDays(date, 1);
-      }
+      const currentResults = calculateResults(year, location);
+      const nextYearResults = currentResults.vastushanti.length ? null : calculateResults(year + 1, location);
+      const sortedResults = {
+        ...currentResults,
+        vastushanti: nextYearResults?.vastushanti || currentResults.vastushanti,
+      };
 
       if (!cancelled) {
-        const sortedResults = Object.fromEntries(
-          muhurtTypes.map(({ key }) => [key, nextResults[key].sort((first, second) => first.dateKey.localeCompare(second.dateKey))])
-        );
         setResults(sortedResults);
+        setShowNextYearVastu(Boolean(nextYearResults?.vastushanti.length));
         setPageStart(getStartingPage(sortedResults[selectedType], year));
         setLoading(false);
       }
@@ -277,6 +348,9 @@ export default function MuhurtPage() {
               {selectedType === 'vastushanti' && excludeGuruShukraAsta && upcomingAstaCount === 0 && (
                 <p className={styles.note}>आजपासून पुढे गुरु किंवा शुक्र अस्त असलेला मुहूर्त नाही.</p>
               )}
+              {selectedType === 'vastushanti' && showNextYearVastu && (
+                <p className={styles.note}>या वर्षी वास्तुशांतीचा मुहूर्त नसल्यामुळे पुढील वर्षाचे मुहूर्त दाखवत आहोत.</p>
+              )}
 
             <div className={styles.columns}>
               <section className={styles.listSection}>
@@ -285,8 +359,20 @@ export default function MuhurtPage() {
                 {selectedDefinition.monthsLabel && <p className={styles.rule}><strong>महिने:</strong> {selectedDefinition.monthsLabel}</p>}
                 <p className={styles.logic}><strong>कसा ठरवला जातो:</strong> {selectedDefinition.logic}</p>
                 {selectedDefinition.requirement && <p className={styles.requirement}>{selectedDefinition.requirement}</p>}
-                {renderList(visibleItems, `या वर्षासाठी ${selectedDefinition.label}चा मुहूर्त सापडला नाही.`)}
-                {selectedItems.length > 5 && <div className={styles.pagination}>
+                {selectedDefinition.chandraDisha && <div className={styles.chandraDisha}>
+                  <strong>चंद्र दिशा:</strong>
+                  {selectedDefinition.informational && <p className={styles.currentChandraDisha}>
+                    सध्याची चंद्र रास: <b>{currentChandraDisha.rashi || 'उपलब्ध नाही'}</b>
+                    {currentChandraDisha.direction && <> | दिशा: <b>{currentChandraDisha.direction}</b></>}
+                  </p>}
+                  <div className={styles.chandraDishaGrid}>
+                    {selectedDefinition.chandraDisha.map(([rashis, direction]) => <span key={direction}><b>{rashis}</b> - {direction}</span>)}
+                  </div>
+                  <p>{selectedDefinition.chandraDishaNote}</p>
+                </div>}
+                {!selectedDefinition.informational && renderList(visibleItems, showNextYearVastu ? `या वर्षासाठी किंवा पुढील वर्षासाठी ${selectedDefinition.label}चा मुहूर्त सापडला नाही.` : `या वर्षासाठी ${selectedDefinition.label}चा मुहूर्त सापडला नाही.`)}
+                {selectedDefinition.informational && <p className={styles.note}>चंद्र दिशा पाहण्यासाठी खालील राशीचा संदर्भ घ्या.</p>}
+                {!selectedDefinition.informational && selectedItems.length > 5 && <div className={styles.pagination}>
                   <button type="button" onClick={() => setPageStart((current) => Math.max(0, current - 5))} disabled={pageStart === 0} aria-label="मागील पाच मुहूर्त">←</button>
                   <span>पुढील / मागील मुहूर्त</span>
                   <button type="button" onClick={() => setPageStart((current) => Math.min(selectedItems.length - 5, current + 5))} disabled={pageStart + 5 >= selectedItems.length} aria-label="पुढील पाच मुहूर्त">→</button>

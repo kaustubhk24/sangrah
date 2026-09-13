@@ -19,6 +19,11 @@
 .rule { font-size: .85rem; line-height: 1.5; margin-bottom: .8rem; }
 .logic { color: var(--ifm-color-muted); font-size: .85rem; line-height: 1.5; margin: -.25rem 0 .8rem; }
 .requirement { color: var(--ifm-color-primary); font-size: .85rem; font-weight: 700; margin: -.35rem 0 .8rem; }
+.chandraDisha { color: var(--ifm-color-muted); font-size: .85rem; line-height: 1.5; margin: -.35rem 0 .8rem; }
+.currentChandraDisha { color: var(--ifm-color-primary); margin: .45rem 0; }
+.chandraDishaGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .25rem .8rem; margin-top: .3rem; }
+.chandraDishaGrid b { color: inherit; }
+.chandraDisha p { margin: .45rem 0 0; }
 .resultRow { display: flex; justify-content: space-between; align-items: center; gap: .75rem; border-top: 1px solid #f0e2ca; padding: .65rem 0; }
 .resultRow div:first-child { display: flex; flex-direction: column; gap: .12rem; }
 .resultRow span { color: var(--ifm-color-muted); font-size: .9rem; }
@@ -32,6 +37,6 @@
 .loadingSpinner { width: 1.25rem; height: 1.25rem; border: 2px solid #e4c08e; border-top-color: var(--ifm-color-primary); border-radius: 50%; animation: muhurtSpin .8s linear infinite; }
 @keyframes muhurtSpin { to { transform: rotate(360deg); } }
 .note { margin: 1rem 0 0; font-size: .85rem; }
-@media (max-width: 700px) { .columns { grid-template-columns: 1fr; } .sectionCard { padding: 1rem; } .resultRow { align-items: flex-start; flex-direction: column; gap: .25rem; } .selectionBar { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 700px) { .columns { grid-template-columns: 1fr; } .sectionCard { padding: 1rem; } .resultRow { align-items: flex-start; flex-direction: column; gap: .25rem; } .selectionBar { align-items: flex-start; flex-direction: column; } .chandraDishaGrid { grid-template-columns: 1fr; } }
 [data-theme='dark'] .sectionCard, [data-theme='dark'] .listSection { background: #1f1b18; border-color: #3d342d; }
 [data-theme='dark'] .controls select, [data-theme='dark'] .selectionBar select, [data-theme='dark'] .pagination button { background: #29231f; border-color: #5a4939; }
