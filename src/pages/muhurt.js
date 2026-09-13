@@ -126,6 +126,7 @@ const muhurtTypes = [
   },
 ];
 const emptyResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
+const resultsCache = new Map();
 const locations = {
   pune: { label: 'पुणे, भारत', lat: 18.5204, lon: 73.8567 },
   mumbai: { label: 'मुंबई, भारत', lat: 19.076, lon: 72.8777 },
@@ -207,6 +208,9 @@ const getStartingPage = (items, year) => {
 };
 
 const calculateResults = (year, location) => {
+  const cacheKey = `${year}:${location.lat}:${location.lon}`;
+  if (resultsCache.has(cacheKey)) return resultsCache.get(cacheKey);
+
   const observer = new Observer(location.lat, location.lon, 0);
   const timezone = 'Asia/Kolkata';
   const nextResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
@@ -237,9 +241,11 @@ const calculateResults = (year, location) => {
     date = addDays(date, 1);
   }
 
-  return Object.fromEntries(
+  const results = Object.fromEntries(
     muhurtTypes.map(({ key }) => [key, nextResults[key].sort((first, second) => first.dateKey.localeCompare(second.dateKey))])
   );
+  resultsCache.set(cacheKey, results);
+  return results;
 };
 
 export default function MuhurtPage() {
@@ -261,7 +267,9 @@ export default function MuhurtPage() {
 
     const calculationTimer = setTimeout(() => {
       const currentResults = calculateResults(year, location);
-      const nextYearResults = currentResults.vastushanti.length ? null : calculateResults(year + 1, location);
+      const nextYearResults = selectedType === 'vastushanti' && !currentResults.vastushanti.length
+        ? calculateResults(year + 1, location)
+        : null;
       const sortedResults = {
         ...currentResults,
         vastushanti: nextYearResults?.vastushanti || currentResults.vastushanti,
@@ -279,7 +287,7 @@ export default function MuhurtPage() {
       cancelled = true;
       clearTimeout(calculationTimer);
     };
-  }, [location, year]);
+  }, [location, selectedType, year]);
 
   const yearOptions = useMemo(() => [year - 1, year, year + 1], [year]);
   const selectedDefinition = muhurtTypes.find((type) => type.key === selectedType) || muhurtTypes[0];
