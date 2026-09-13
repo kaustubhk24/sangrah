@@ -23,6 +23,7 @@ export default function swCustom(params) {
         new ExpirationPlugin({
           maxEntries: 100,
           maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+          purgeOnQuotaError: true,
         }),
       ],
     })
@@ -41,6 +42,7 @@ export default function swCustom(params) {
         new ExpirationPlugin({
           maxEntries: 150,
           maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+          purgeOnQuotaError: true,
         }),
       ],
     })
@@ -58,6 +60,7 @@ export default function swCustom(params) {
         new ExpirationPlugin({
           maxEntries: 100,
           maxAgeSeconds: 60 * 24 * 60 * 60, // 60 days
+          purgeOnQuotaError: true,
         }),
       ],
     })
@@ -75,6 +78,7 @@ export default function swCustom(params) {
         new ExpirationPlugin({
           maxEntries: 20,
           maxAgeSeconds: 180 * 24 * 60 * 60, // 180 days
+          purgeOnQuotaError: true,
         }),
       ],
     })
@@ -95,6 +99,7 @@ export default function swCustom(params) {
         new ExpirationPlugin({
           maxEntries: 20,
           maxAgeSeconds: 7 * 24 * 60 * 60, // 7 days
+          purgeOnQuotaError: true,
         }),
       ],
     })

@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { useLocation, useHistory } from '@docusaurus/router';
-import searchIndex from '@site/src/data/searchIndex.json';
 import { useTranslation } from '@site/src/utils/translations';
 import styles from './search.module.css';
 
@@ -19,6 +18,23 @@ export default function SearchPage() {
 
   const [searchTerm, setSearchTerm] = useState(getQueryParam());
   const [searchResults, setSearchResults] = useState([]);
+  const [searchIndex, setSearchIndex] = useState([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/search-index.json')
+      .then((response) => {
+        if (!response.ok) throw new Error(`Search index request failed: ${response.status}`);
+        return response.json();
+      })
+      .catch(() => import('@site/src/data/searchIndex.json').then((module) => module.default))
+      .then((index) => {
+        if (!cancelled) setSearchIndex(index);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Sync search input if URL query changes
   useEffect(() => {

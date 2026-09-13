@@ -4,6 +4,7 @@ const path = require('path');
 const docsDir = path.join(__dirname, '..', 'docs');
 const outputDir = path.join(__dirname, '..', 'src', 'data');
 const outputFile = path.join(outputDir, 'searchIndex.json');
+const staticOutputFile = path.join(__dirname, '..', 'static', 'search-index.json');
 
 function ensureDirectoryExistence(filePath) {
   const dirname = path.dirname(filePath);
@@ -140,6 +141,7 @@ function generateIndex() {
   
   ensureDirectoryExistence(outputFile);
   fs.writeFileSync(outputFile, JSON.stringify(indexData, null, 2), 'utf8');
+  fs.writeFileSync(staticOutputFile, JSON.stringify(indexData), 'utf8');
   console.log(`Successfully generated search index at ${outputFile} with ${indexData.length} items.`);
 }
 

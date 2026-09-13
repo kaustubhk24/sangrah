@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Layout from '@theme/Layout';
-import { getPanchangam, Observer, nakshatraNames, getPlanetaryPosition } from '@ishubhamx/panchangam-js';
+import { getPanchangam, Observer } from '@ishubhamx/panchangam-js';
 import styles from './muhurt.module.css';
 
 const nakshatraLabels = {
@@ -126,7 +126,6 @@ const muhurtTypes = [
   },
 ];
 const emptyResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
-const resultsCache = new Map();
 const locations = {
   pune: { label: 'पुणे, भारत', lat: 18.5204, lon: 73.8567 },
   mumbai: { label: 'मुंबई, भारत', lat: 19.076, lon: 72.8777 },
@@ -141,26 +140,6 @@ const getDateKey = (date, timeZone) => {
     day: '2-digit',
   }).formatToParts(date).reduce((values, part) => ({ ...values, [part.type]: part.value }), {});
   return `${parts.year}-${parts.month}-${parts.day}`;
-};
-
-const formatDate = (date, timeZone) => new Intl.DateTimeFormat('mr-IN', {
-  timeZone,
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-}).format(date);
-
-const formatTime = (date, timeZone) => new Intl.DateTimeFormat('mr-IN', {
-  timeZone,
-  hour: 'numeric',
-  minute: '2-digit',
-}).format(date);
-
-const addDays = (date, days) => {
-  const next = new Date(date);
-  next.setDate(next.getDate() + days);
-  return next;
 };
 
 const getCurrentChandraDisha = (location) => {
@@ -180,72 +159,11 @@ const getEntryStart = (entries, index, firstStart) => (
   entries[index].startTime || (index === 0 ? firstStart : entries[index - 1].endTime)
 );
 
-const getNakshatraKey = (entry) => {
-  const name = nakshatraNames?.[entry.index] || entry.name || '';
-  return Object.keys(nakshatraLabels).find((key) => key.toLowerCase() === String(name).replace(/\s/g, '').toLowerCase()) || name;
-};
-
-const getAngularDistance = (firstLongitude, secondLongitude) => {
-  const distance = Math.abs(firstLongitude - secondLongitude) % 360;
-  return Math.min(distance, 360 - distance);
-};
-
-const GURU_ASTA_DEGREES = 11;
-const SHUKRA_ASTA_DEGREES = 10;
-
-const isGuruShukraAsta = (date, ayanamsa) => {
-  const sun = getPlanetaryPosition('Sun', date, ayanamsa).longitude;
-  const guru = getPlanetaryPosition('Jupiter', date, ayanamsa).longitude;
-  const shukra = getPlanetaryPosition('Venus', date, ayanamsa).longitude;
-  return getAngularDistance(sun, guru) <= GURU_ASTA_DEGREES || getAngularDistance(sun, shukra) <= SHUKRA_ASTA_DEGREES;
-};
-
 const getStartingPage = (items, year) => {
   if (year !== new Date().getFullYear()) return 0;
   const todayKey = getDateKey(new Date(), 'Asia/Kolkata');
   const firstUpcomingIndex = items.findIndex((item) => item.dateKey >= todayKey);
   return firstUpcomingIndex < 0 ? 0 : firstUpcomingIndex;
-};
-
-const calculateResults = (year, location) => {
-  const cacheKey = `${year}:${location.lat}:${location.lon}`;
-  if (resultsCache.has(cacheKey)) return resultsCache.get(cacheKey);
-
-  const observer = new Observer(location.lat, location.lon, 0);
-  const timezone = 'Asia/Kolkata';
-  const nextResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
-  let date = new Date(`${year}-01-01T12:00:00`);
-
-  for (let day = 0; day < 366 && date.getFullYear() === year; day += 1) {
-    const panchang = getPanchangam(date, observer, { timezoneOffset: 330, calendarType: 'amanta' });
-    (panchang.nakshatras || []).forEach((entry, index, entries) => {
-      const start = getEntryStart(entries, index, panchang.nakshatraStartTime);
-      const end = entry.endTime;
-      const key = getNakshatraKey(entry);
-      const dateKey = getDateKey(start, timezone);
-      if (dateKey.startsWith(String(year))) {
-        const item = { key: `${key}-${start.toISOString()}`, dateKey, date: formatDate(start, timezone), start: formatTime(start, timezone), end: formatTime(end, timezone), nakshatra: nakshatraLabels[key] || key };
-        muhurtTypes.forEach((type) => {
-          const matchesNakshatra = type.nakshatras.includes(key);
-          const matchesMonth = !type.months || type.months.includes(panchang.masa?.name);
-          const matchesTithi = !type.tithis || (panchang.tithis || []).some((tithi) => type.tithis.includes(tithi.index));
-          const matchesWeekday = !type.allowedWeekdays || type.allowedWeekdays.includes(panchang.vara);
-          if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday) {
-            const isAsta = type.key === 'vastushanti'
-              && isGuruShukraAsta(new Date((start.getTime() + end.getTime()) / 2), panchang.ayanamsa);
-            nextResults[type.key].push({ ...item, requirement: type.requirement, isAsta });
-          }
-        });
-      }
-    });
-    date = addDays(date, 1);
-  }
-
-  const results = Object.fromEntries(
-    muhurtTypes.map(({ key }) => [key, nextResults[key].sort((first, second) => first.dateKey.localeCompare(second.dateKey))])
-  );
-  resultsCache.set(cacheKey, results);
-  return results;
 };
 
 export default function MuhurtPage() {
@@ -259,35 +177,60 @@ export default function MuhurtPage() {
   const [showNextYearVastu, setShowNextYearVastu] = useState(false);
   const location = locations[locationId];
   const currentChandraDisha = useMemo(() => getCurrentChandraDisha(location), [location]);
+  const workerRef = useRef(null);
+  const requestIdRef = useRef(0);
+  const [workerReady, setWorkerReady] = useState(false);
 
   useEffect(() => {
-    let cancelled = false;
+    const worker = new Worker(new URL('../workers/muhurt.worker.js', import.meta.url));
+    workerRef.current = worker;
+    setWorkerReady(true);
+
+    return () => {
+      worker.terminate();
+      workerRef.current = null;
+      setWorkerReady(false);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!workerReady || !workerRef.current) return undefined;
+
+    const worker = workerRef.current;
+    const requestId = requestIdRef.current + 1;
+    requestIdRef.current = requestId;
     setLoading(true);
     setPageStart(0);
-
-    const calculationTimer = setTimeout(() => {
-      const currentResults = calculateResults(year, location);
-      const nextYearResults = selectedType === 'vastushanti' && !currentResults.vastushanti.length
-        ? calculateResults(year + 1, location)
-        : null;
+    worker.onmessage = (event) => {
+      if (event.data.requestId !== requestId) return;
+      if (event.data.error) {
+        setLoading(false);
+        return;
+      }
+      const { currentResults, nextYearResults } = event.data;
       const sortedResults = {
         ...currentResults,
         vastushanti: nextYearResults?.vastushanti || currentResults.vastushanti,
       };
 
-      if (!cancelled) {
-        setResults(sortedResults);
-        setShowNextYearVastu(Boolean(nextYearResults?.vastushanti.length));
-        setPageStart(getStartingPage(sortedResults[selectedType], year));
-        setLoading(false);
-      }
-    }, 0);
+      setResults(sortedResults);
+      setShowNextYearVastu(Boolean(nextYearResults?.vastushanti.length));
+      setPageStart(getStartingPage(sortedResults[selectedType], year));
+      setLoading(false);
+    };
+    worker.onerror = () => setLoading(false);
+    worker.postMessage({
+      requestId,
+      year,
+      location: { lat: location.lat, lon: location.lon },
+      includeNextYear: selectedType === 'vastushanti',
+    });
 
     return () => {
-      cancelled = true;
-      clearTimeout(calculationTimer);
+      worker.onmessage = null;
+      worker.onerror = null;
     };
-  }, [location, selectedType, year]);
+  }, [location, selectedType, year, workerReady]);
 
   const yearOptions = useMemo(() => [year - 1, year, year + 1], [year]);
   const selectedDefinition = muhurtTypes.find((type) => type.key === selectedType) || muhurtTypes[0];

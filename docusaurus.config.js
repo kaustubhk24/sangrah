@@ -139,7 +139,7 @@ const config = {
                 /^assets\/js\/runtime~main\..*\.js$/,
                 /^img\/favicon\.ico$/,
                 /^img\/logo\.svg$/,
-                /^img\/pwa\/.*\.png$/,
+                /^img\/pwa\/(512X512|192X192|96X96|48X48|72X72|144X144)\.png$/,
                 /\.sw\.js$/,
               ];
               const manifest = manifestEntries.filter((entry) =>
