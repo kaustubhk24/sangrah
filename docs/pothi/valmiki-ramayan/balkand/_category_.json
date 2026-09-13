@@ -1,0 +1,12 @@
+{
+    "label": "बालकाण्ड",
+    "position": 1,
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "बालकाण्ड"
+    }
+   
+  }

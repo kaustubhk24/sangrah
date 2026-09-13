@@ -1,0 +1,12 @@
+{
+    "label": "सुन्दरकाण्ड",
+    "position": 5,
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "सुन्दरकाण्ड"
+    }
+   
+  }

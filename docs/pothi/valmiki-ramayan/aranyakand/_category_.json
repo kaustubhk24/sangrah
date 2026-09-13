@@ -1,0 +1,12 @@
+{
+    "label": "अरण्यकाण्ड",
+    "position": 3,
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "अरण्यकाण्ड"
+    }
+   
+  }
