@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: "Mukta";
-  src: url('/fonts/baloo.woff') format('woff');
+  src: url('/fonts/Mukta-Regular.woff') format('woff');
 }
 
 html {
@@ -247,16 +247,8 @@ textarea:focus {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+      scroll-behavior: auto !important;
   }
-}
-
-
-
-[data-theme='dark'] .shloka-verse-traditional {
-  color: #ff9f43 !important;
-  background: #241f1b;
-  border-color: #3d342d;
 }
 
 /* Navbar styling to prevent black text on saffron */

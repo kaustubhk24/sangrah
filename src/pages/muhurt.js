@@ -54,6 +54,8 @@ const chandraDishaGroups = [
   { rashis: ['Cancer', 'Scorpio', 'Pisces'], label: 'कर्क, वृश्चिक, मीन', direction: 'उत्तर' },
 ];
 
+const rahuDirectionByWeekday = ['पूर्वेस', 'दक्षिणेस', 'पश्चिमेस', 'उत्तरेस', 'पूर्वेस', 'दक्षिणेस', 'उत्तरेस'];
+
 const muhurtTypes = [
   {
     key: 'purchase',
@@ -124,6 +126,23 @@ const muhurtTypes = [
     chandraDishaNote: 'चंद्र समोर किंवा उजव्या बाजूला असावा. पाठीमागे किंवा डाव्या बाजूला असल्यास प्राणसंकट व धनक्षय होतो.',
     nakshatras: [],
   },
+  {
+    key: 'rahuKaal',
+    label: 'काळ राहू',
+    title: 'काळ राहू',
+    rule: 'राहू समोर किंवा उजव्या बाजूला असल्यास कार्यहानी होते; डाव्या बाजूला किंवा पृष्ठभागी असल्यास कार्यसिद्धी होते.',
+    logic: 'राहूच्या दिशेनुसार कार्याची दिशा तपासा.',
+    informational: true,
+    directionLabel: 'राहूची दिशा',
+    chandraDisha: [
+      ['रविवार, गुरुवार', 'पूर्वेस'],
+      ['सोमवार, शुक्रवार', 'दक्षिणेस'],
+      ['मंगळवार', 'पश्चिमेस'],
+      ['बुधवार, शनिवार', 'उत्तरेस'],
+    ],
+    chandraDishaNote: 'राहू समोर व उजवीकडे असल्यास कार्यहानी; डावीकडे व पृष्ठभागी असल्यास कार्यसिद्धी.',
+    nakshatras: [],
+  },
 ];
 const emptyResults = Object.fromEntries(muhurtTypes.map(({ key }) => [key, []]));
 const locations = {
@@ -155,6 +174,8 @@ const getCurrentChandraDisha = (location) => {
   return { rashi: rashiLabels[rashi] || rashi, direction: group?.direction || '' };
 };
 
+const getCurrentRahuDirection = () => rahuDirectionByWeekday[new Date().getDay()];
+
 const getEntryStart = (entries, index, firstStart) => (
   entries[index].startTime || (index === 0 ? firstStart : entries[index - 1].endTime)
 );
@@ -170,38 +191,28 @@ export default function MuhurtPage() {
   const [year, setYear] = useState(new Date().getFullYear());
   const [locationId, setLocationId] = useState('pune');
   const [results, setResults] = useState(emptyResults);
-  const [loading, setLoading] = useState(true);
-  const [selectedType, setSelectedType] = useState('purchase');
+  const [loading, setLoading] = useState(false);
+  const [selectedType, setSelectedType] = useState('');
   const [pageStart, setPageStart] = useState(0);
   const [excludeGuruShukraAsta, setExcludeGuruShukraAsta] = useState(false);
   const [showNextYearVastu, setShowNextYearVastu] = useState(false);
   const location = locations[locationId];
-  const currentChandraDisha = useMemo(() => getCurrentChandraDisha(location), [location]);
-  const workerRef = useRef(null);
+  const isInformationalType = selectedType === 'chandraDisha' || selectedType === 'rahuKaal';
+  const currentChandraDisha = useMemo(() => (
+    selectedType === 'chandraDisha' ? getCurrentChandraDisha(location) : null
+  ), [location, selectedType]);
+  const currentRahuDirection = useMemo(() => (
+    selectedType === 'rahuKaal' ? getCurrentRahuDirection() : ''
+  ), [selectedType]);
   const requestIdRef = useRef(0);
-  const [workerReady, setWorkerReady] = useState(false);
 
   useEffect(() => {
-    const worker = new Worker(new URL('../workers/muhurt.worker.js', import.meta.url));
-    workerRef.current = worker;
-    setWorkerReady(true);
-
-    return () => {
-      worker.terminate();
-      workerRef.current = null;
-      setWorkerReady(false);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!workerReady || !workerRef.current) return undefined;
-
-    if (selectedType === 'chandraDisha') {
+    if (!selectedType || isInformationalType) {
       setLoading(false);
       return undefined;
     }
 
-    const worker = workerRef.current;
+    const worker = new Worker(new URL('../workers/muhurt.worker.js', import.meta.url));
     const requestId = requestIdRef.current + 1;
     requestIdRef.current = requestId;
     setLoading(true);
@@ -228,14 +239,15 @@ export default function MuhurtPage() {
       requestId,
       year,
       location: { lat: location.lat, lon: location.lon },
-      includeNextYear: selectedType === 'vastushanti',
+      selectedType,
     });
 
     return () => {
       worker.onmessage = null;
       worker.onerror = null;
+      worker.terminate();
     };
-  }, [location, selectedType, year, workerReady]);
+  }, [isInformationalType, location, selectedType, year]);
 
   const yearOptions = useMemo(() => [year - 1, year, year + 1], [year]);
   const selectedDefinition = muhurtTypes.find((type) => type.key === selectedType) || muhurtTypes[0];
@@ -285,16 +297,19 @@ export default function MuhurtPage() {
             </div>
           </header>
 
-          {loading ? <div className={styles.loading} role="status" aria-live="polite"><span className={styles.loadingSpinner} aria-hidden="true" />मुहूर्ताची माहिती लोड होत आहे...</div> : (
+          <div className={styles.selectionBar}>
+            <label>मुहूर्त प्रकार
+              <select value={selectedType} onChange={(event) => handleTypeChange(event.target.value)}>
+                <option value="">मुहूर्त निवडा</option>
+                {muhurtTypes.map((type) => <option key={type.key} value={type.key}>{type.label}</option>)}
+              </select>
+            </label>
+            {selectedType && <span>{selectedItems.length ? `${pageStart + 1}-${Math.min(pageStart + 5, selectedItems.length)} / ${selectedItems.length}` : '० मुहूर्त'}</span>}
+          </div>
+          {loading ? <div className={styles.loading} role="status" aria-live="polite"><span className={styles.loadingSpinner} aria-hidden="true" />मुहूर्ताची माहिती लोड होत आहे...</div> : !selectedType ? (
+            <p className={styles.empty}>वरील यादीतून मुहूर्ताचा प्रकार निवडा.</p>
+          ) : (
             <>
-              <div className={styles.selectionBar}>
-                <label>मुहूर्त प्रकार
-                  <select value={selectedType} onChange={(event) => handleTypeChange(event.target.value)}>
-                    {muhurtTypes.map((type) => <option key={type.key} value={type.key}>{type.label}</option>)}
-                  </select>
-                </label>
-                <span>{selectedItems.length ? `${pageStart + 1}-${Math.min(pageStart + 5, selectedItems.length)} / ${selectedItems.length}` : '० मुहूर्त'}</span>
-              </div>
               {selectedType === 'vastushanti' && <label className={styles.astaCheckbox}>
                 <input type="checkbox" checked={excludeGuruShukraAsta} onChange={(event) => {
                   setExcludeGuruShukraAsta(event.target.checked);
@@ -316,10 +331,13 @@ export default function MuhurtPage() {
                 <p className={styles.logic}><strong>कसा ठरवला जातो:</strong> {selectedDefinition.logic}</p>
                 {selectedDefinition.requirement && <p className={styles.requirement}>{selectedDefinition.requirement}</p>}
                 {selectedDefinition.chandraDisha && <div className={styles.chandraDisha}>
-                  <strong>चंद्र दिशा:</strong>
-                  {selectedDefinition.informational && <p className={styles.currentChandraDisha}>
-                    सध्याची चंद्र रास: <b>{currentChandraDisha.rashi || 'उपलब्ध नाही'}</b>
-                    {currentChandraDisha.direction && <> | दिशा: <b>{currentChandraDisha.direction}</b></>}
+                  <strong>{selectedDefinition.directionLabel || 'चंद्र दिशा'}:</strong>
+                  {selectedType === 'chandraDisha' && <p className={styles.currentChandraDisha}>
+                    सध्याची चंद्र रास: <b>{currentChandraDisha?.rashi || 'उपलब्ध नाही'}</b>
+                    {currentChandraDisha?.direction && <> | दिशा: <b>{currentChandraDisha.direction}</b></>}
+                  </p>}
+                  {selectedType === 'rahuKaal' && <p className={styles.currentChandraDisha}>
+                    आजची राहूची दिशा: <b>{currentRahuDirection}</b>
                   </p>}
                   <div className={styles.chandraDishaGrid}>
                     {selectedDefinition.chandraDisha.map(([rashis, direction]) => <span key={direction}><b>{rashis}</b> - {direction}</span>)}

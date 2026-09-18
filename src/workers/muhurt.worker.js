@@ -54,8 +54,8 @@ const isGuruShukraAsta = (date, ayanamsa) => {
   return getAngularDistance(sun, guru) <= 11 || getAngularDistance(sun, shukra) <= 10;
 };
 
-const calculateResults = (year, location) => {
-  const cacheKey = `${year}:${location.lat}:${location.lon}`;
+const calculateResults = (year, location, selectedType) => {
+  const cacheKey = `${year}:${location.lat}:${location.lon}:${selectedType}`;
   if (resultsCache.has(cacheKey)) {
     const cachedResults = resultsCache.get(cacheKey);
     resultsCache.delete(cacheKey);
@@ -64,7 +64,9 @@ const calculateResults = (year, location) => {
   }
   const observer = new Observer(location.lat, location.lon, 0);
   const timezone = 'Asia/Kolkata';
-  const nextResults = Object.fromEntries(calculationTypes.map(({ key }) => [key, []]));
+  const calculationType = calculationTypes.find(({ key }) => key === selectedType);
+  if (!calculationType) return {};
+  const nextResults = { [selectedType]: [] };
   let date = new Date(`${year}-01-01T12:00:00`);
 
   for (let day = 0; day < 366 && date.getFullYear() === year; day += 1) {
@@ -76,20 +78,18 @@ const calculateResults = (year, location) => {
       const dateKey = getDateKey(start, timezone);
       if (!dateKey.startsWith(String(year))) return;
       const item = { key: `${key}-${start.toISOString()}`, dateKey, date: formatDate(start, timezone), start: formatTime(start, timezone), end: formatTime(end, timezone), nakshatra: nakshatraLabels[key] || key };
-      calculationTypes.forEach((type) => {
-        const matchesNakshatra = type.nakshatras.includes(key);
-        const matchesMonth = !type.months || type.months.includes(panchang.masa?.name);
-        const matchesTithi = !type.tithis || (panchang.tithis || []).some((tithi) => type.tithis.includes(tithi.index));
-        const matchesWeekday = !type.allowedWeekdays || type.allowedWeekdays.includes(panchang.vara);
-        if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday) {
-          const isAsta = type.key === 'vastushanti' && isGuruShukraAsta(new Date((start.getTime() + end.getTime()) / 2), panchang.ayanamsa);
-          nextResults[type.key].push({ ...item, requirement: type.requirement, isAsta });
-        }
-      });
+      const matchesNakshatra = calculationType.nakshatras.includes(key);
+      const matchesMonth = !calculationType.months || calculationType.months.includes(panchang.masa?.name);
+      const matchesTithi = !calculationType.tithis || (panchang.tithis || []).some((tithi) => calculationType.tithis.includes(tithi.index));
+      const matchesWeekday = !calculationType.allowedWeekdays || calculationType.allowedWeekdays.includes(panchang.vara);
+      if (matchesNakshatra && matchesMonth && matchesTithi && matchesWeekday) {
+        const isAsta = calculationType.key === 'vastushanti' && isGuruShukraAsta(new Date((start.getTime() + end.getTime()) / 2), panchang.ayanamsa);
+        nextResults[selectedType].push({ ...item, requirement: calculationType.requirement, isAsta });
+      }
     });
     date = addDays(date, 1);
   }
-  const results = Object.fromEntries(calculationTypes.map(({ key }) => [key, nextResults[key].sort((first, second) => first.dateKey.localeCompare(second.dateKey))]));
+  const results = { [selectedType]: nextResults[selectedType].sort((first, second) => first.dateKey.localeCompare(second.dateKey)) };
   if (resultsCache.size >= MAX_RESULTS_CACHE_ENTRIES) {
     resultsCache.delete(resultsCache.keys().next().value);
   }
@@ -98,11 +98,11 @@ const calculateResults = (year, location) => {
 };
 
 self.onmessage = (event) => {
-  const { requestId, year, location, includeNextYear } = event.data;
+  const { requestId, year, location, selectedType } = event.data;
   try {
-    const currentResults = calculateResults(year, location);
-    const nextYearResults = includeNextYear && !currentResults.vastushanti.length
-      ? calculateResults(year + 1, location)
+    const currentResults = calculateResults(year, location, selectedType);
+    const nextYearResults = selectedType === 'vastushanti' && !currentResults.vastushanti.length
+      ? calculateResults(year + 1, location, selectedType)
       : null;
     self.postMessage({ requestId, currentResults, nextYearResults });
   } catch (error) {
