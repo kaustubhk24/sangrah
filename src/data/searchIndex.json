@@ -1116,6 +1116,645 @@
     "headings": ""
   },
   {
+    "title": "\"श्री बाला कवचम् – ३ (दुःस्वप्ननाशकम्)\"",
+    "slug": "/bala-duswapna-nashaka-bala-kavacham",
+    "category": "kavacham",
+    "filename": "bala_duswapna-nashaka-bala-kavacham",
+    "keywords": "duswapna nashaka bala kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला त्रैलोक्यविजय कवचम्\"",
+    "slug": "/bala-sri-bala-trailokya-vijaya-kavacham",
+    "category": "kavacham",
+    "filename": "bala_sri-bala-trailokya-vijaya-kavacham",
+    "keywords": "sri bala trailokya vijaya kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बटुकभैरव कवचम् (ऐश्वर्यदायकम्)\"",
+    "slug": "/bhairava-aishwaryadayaka-batuka-bhairava-kavacham",
+    "category": "kavacham",
+    "filename": "bhairava_aishwaryadayaka-batuka-bhairava-kavacham",
+    "keywords": "aishwaryadayaka batuka bhairava kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बटुकभैरव ब्रह्म कवचम्\"",
+    "slug": "/bhairava-sri-batuka-bhairava-brahma-kavacham",
+    "category": "kavacham",
+    "filename": "bhairava_sri-batuka-bhairava-brahma-kavacham",
+    "keywords": "sri batuka bhairava brahma kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बटुकभैरव कवचम्\"",
+    "slug": "/bhairava-sri-batuka-bhairava-kavacham",
+    "category": "kavacham",
+    "filename": "bhairava_sri-batuka-bhairava-kavacham",
+    "keywords": "sri batuka bhairava kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महाकालभैरव कवचम्\"",
+    "slug": "/bhairava-sri-maha-kala-bhairava-kavacham-rudrayamale",
+    "category": "kavacham",
+    "filename": "bhairava_sri-maha-kala-bhairava-kavacham-rudrayamale",
+    "keywords": "sri maha kala bhairava kavacham rudrayamale",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म कवचम् (जगन्मङ्गलम्)\"",
+    "slug": "/brahma-sri-brahma-kavacham-jaganmangalam",
+    "category": "kavacham",
+    "filename": "brahma_sri-brahma-kavacham-jaganmangalam",
+    "keywords": "sri brahma kavacham jaganmangalam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म कवचम् (रुद्र कृतम्)\"",
+    "slug": "/brahma-sri-brahma-kavacham-rudra-krutam",
+    "category": "kavacham",
+    "filename": "brahma_sri-brahma-kavacham-rudra-krutam",
+    "keywords": "sri brahma kavacham rudra krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति कवचम् (रुद्रयामले)\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-kavacham-rudrayamala",
+    "category": "kavacham",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-kavacham-rudrayamala",
+    "keywords": "sri dakshinamurthy kavacham rudrayamala",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति कवचम् (त्रैलोक्यसम्मोहनम्)\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-kavacham-trailokya-sammohanam",
+    "category": "kavacham",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-kavacham-trailokya-sammohanam",
+    "keywords": "sri dakshinamurthy kavacham trailokya sammohanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति पञ्जरम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-panjaram",
+    "category": "kavacham",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-panjaram",
+    "keywords": "sri dakshinamurthy panjaram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली कवचम् (जगन्मङ्गलम्)\"",
+    "slug": "/dasa-mahavidya-jaganmangala-kali-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_jaganmangala-kali-kavacham",
+    "keywords": "jaganmangala kali kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी कवचम् – १ (रुद्रयामले)\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-kavacham-1-rudrayamale",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-kavacham-1-rudrayamale",
+    "keywords": "sri bagalamukhi kavacham 1 rudrayamale",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी कवचम् – २ (वैरिनाशकरम्)\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-kavacham-2-vairinashakaram",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-kavacham-2-vairinashakaram",
+    "keywords": "sri bagalamukhi kavacham 2 vairinashakaram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी कवचम् – ३ (विश्वविजयम्)\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-kavacham-3",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-kavacham-3",
+    "keywords": "sri bagalamukhi kavacham 3",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी कवचम् – ४ (त्रैलोक्यविजयम्)\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-kavacham-4-trailokya-vijayam",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-kavacham-4-trailokya-vijayam",
+    "keywords": "sri bagalamukhi kavacham 4 trailokya vijayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी कवचम् – ५ (शत्रुविनाशकरम्)\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-kavacham-5-shatru-vinashakaram",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-kavacham-5-shatru-vinashakaram",
+    "keywords": "sri bagalamukhi kavacham 5 shatru vinashakaram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी वर्ण कवचम्\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-varna-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-varna-kavacham",
+    "keywords": "sri bagalamukhi varna kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भद्रकाली कवचम् १\"",
+    "slug": "/dasa-mahavidya-sri-bhadrakali-kavacham-1",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bhadrakali-kavacham-1",
+    "keywords": "sri bhadrakali kavacham 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भद्रकाली कवचम् – २ (जगन्मङ्गलम्)\"",
+    "slug": "/dasa-mahavidya-sri-bhadrakali-kavacham-2-jaganmangalam",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bhadrakali-kavacham-2-jaganmangalam",
+    "keywords": "sri bhadrakali kavacham 2 jaganmangalam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भैरवी कवचम् (त्रैलोक्यविजयम्)\"",
+    "slug": "/dasa-mahavidya-sri-bhairavi-kavacham-trailokyavijayam",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bhairavi-kavacham-trailokyavijayam",
+    "keywords": "sri bhairavi kavacham trailokyavijayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भुवनेश्वरी कवचम् (त्रैलोक्यमङ्गलम्)\"",
+    "slug": "/dasa-mahavidya-sri-bhuvaneshwari-kavacham-trailokya-mangalam",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-bhuvaneshwari-kavacham-trailokya-mangalam",
+    "keywords": "sri bhuvaneshwari kavacham trailokya mangalam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री छिन्नमस्ता कवचम्\"",
+    "slug": "/dasa-mahavidya-sri-chinnamasta-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-chinnamasta-kavacham",
+    "keywords": "sri chinnamasta kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणकाली कवचम् १\"",
+    "slug": "/dasa-mahavidya-sri-dakshina-kali-kavacham-1",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-dakshina-kali-kavacham-1",
+    "keywords": "sri dakshina kali kavacham 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणकाली कवचम् २\"",
+    "slug": "/dasa-mahavidya-sri-dakshina-kali-kavacham-2",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-dakshina-kali-kavacham-2",
+    "keywords": "sri dakshina kali kavacham 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री धूमावती कवचम्\"",
+    "slug": "/dasa-mahavidya-sri-dhumavati-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-dhumavati-kavacham",
+    "keywords": "sri dhumavati kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गुह्यकाली वज्र कवचम् (विश्वमङ्गलम्)\"",
+    "slug": "/dasa-mahavidya-sri-guhya-kali-vajra-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-guhya-kali-vajra-kavacham",
+    "keywords": "sri guhya kali vajra kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली कवचम् (त्रैलोक्यविजयम्)\"",
+    "slug": "/dasa-mahavidya-sri-kali-kavacham-trailokya-vijayam",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-kali-kavacham-trailokya-vijayam",
+    "keywords": "sri kali kavacham trailokya vijayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली सहस्राक्षरी\"",
+    "slug": "/dasa-mahavidya-sri-kali-sahasrakshari",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-kali-sahasrakshari",
+    "keywords": "sri kali sahasrakshari",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिका कवचम् (वैरिनाशकरम्)\"",
+    "slug": "/dasa-mahavidya-sri-kalika-kavacham-vairinashakam",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-kalika-kavacham-vairinashakam",
+    "keywords": "sri kalika kavacham vairinashakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामकलाकाली कवचम् (त्रैलोक्यमोहनम्)\"",
+    "slug": "/dasa-mahavidya-sri-kamakala-kali-kavacham-trailokyamohanam",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-kamakala-kali-kavacham-trailokyamohanam",
+    "keywords": "sri kamakala kali kavacham trailokyamohanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कमला कवचम्\"",
+    "slug": "/dasa-mahavidya-sri-kamala-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-kamala-kavacham",
+    "keywords": "sri kamala kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मातङ्गी कवचम् (सुमुखी कवचम्)\"",
+    "slug": "/dasa-mahavidya-sri-matangi-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-matangi-kavacham",
+    "keywords": "sri matangi kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मातङ्गिनी कवचम् (त्रैलोक्यमङ्गल कवचम्)\"",
+    "slug": "/dasa-mahavidya-sri-matangini-kavacham-trailokya-mangala-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-matangini-kavacham-trailokya-mangala-kavacham",
+    "keywords": "sri matangini kavacham trailokya mangala kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री तारा कवचम्\"",
+    "slug": "/dasa-mahavidya-sri-tara-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-tara-kavacham",
+    "keywords": "sri tara kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरभैरवी कवचम्\"",
+    "slug": "/dasa-mahavidya-sri-tripura-bhairavi-kavacham",
+    "category": "kavacham",
+    "filename": "dasa-mahavidya_sri-tripura-bhairavi-kavacham",
+    "keywords": "sri tripura bhairavi kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला कवचम् – २ (रुद्रयामले)\"",
+    "slug": "/devi-sri-bala-kavacham-2-rudrayamale",
+    "category": "kavacham",
+    "filename": "devi_sri-bala-kavacham-2-rudrayamale",
+    "keywords": "sri bala kavacham 2 rudrayamale",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला कवचम्\"",
+    "slug": "/devi-sri-bala-kavacham",
+    "category": "kavacham",
+    "filename": "devi_sri-bala-kavacham",
+    "keywords": "sri bala kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रेणुका कवचम्\"",
+    "slug": "/devi-sri-renuka-kavacham",
+    "category": "kavacham",
+    "filename": "devi_sri-renuka-kavacham",
+    "keywords": "sri renuka kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामला कवचम्\"",
+    "slug": "/devi-sri-shyamala-kavacham",
+    "category": "kavacham",
+    "filename": "devi_sri-shyamala-kavacham",
+    "keywords": "sri shyamala kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही कवचम्\"",
+    "slug": "/devi-sri-varahi-kavacham",
+    "category": "kavacham",
+    "filename": "devi_sri-varahi-kavacham",
+    "keywords": "sri varahi kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा कवचम् (ब्रह्माण्डमोहनम्)\"",
+    "slug": "/durga-brahmanda-mohana-durga-kavacham",
+    "category": "kavacham",
+    "filename": "durga_brahmanda-mohana-durga-kavacham",
+    "keywords": "brahmanda mohana durga kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दीप दुर्गा कवचम्\"",
+    "slug": "/durga-sri-deepa-durga-kavacham",
+    "category": "kavacham",
+    "filename": "durga_sri-deepa-durga-kavacham",
+    "keywords": "sri deepa durga kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा देवि कवचम्\"",
+    "slug": "/durga-sri-durga-kavacham",
+    "category": "kavacham",
+    "filename": "durga_sri-durga-kavacham",
+    "keywords": "sri durga kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"वंशवृद्धिकरं (वंशाख्यं) दुर्गा कवचम्\"",
+    "slug": "/durga-vamsa-vruddhikaram-vamsakhya-durga-kavacham",
+    "category": "kavacham",
+    "filename": "durga_vamsa-vruddhikaram-vamsakhya-durga-kavacham",
+    "keywords": "vamsa vruddhikaram vamsakhya durga kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"एकाक्षर गणपति कवचम्\"",
+    "slug": "/ganesha-ekakshara-ganapati-kavacham",
+    "category": "kavacham",
+    "filename": "ganesha_ekakshara-ganapati-kavacham",
+    "keywords": "ekakshara ganapati kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"संसारमोहन गणेश कवचम्\"",
+    "slug": "/ganesha-samsara-mohana-ganesha-kavacham",
+    "category": "kavacham",
+    "filename": "ganesha_samsara-mohana-ganesha-kavacham",
+    "keywords": "samsara mohana ganesha kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश हृदय कवचम्\"",
+    "slug": "/ganesha-sri-ganesha-hrudaya-kavacham",
+    "category": "kavacham",
+    "filename": "ganesha_sri-ganesha-hrudaya-kavacham",
+    "keywords": "sri ganesha hrudaya kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश कवचम्\"",
+    "slug": "/ganesha-sri-ganesha-kavacham",
+    "category": "kavacham",
+    "filename": "ganesha_sri-ganesha-kavacham",
+    "keywords": "sri ganesha kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"त्रैलोक्यमोहन गणपति कवचम्\"",
+    "slug": "/ganesha-trailokya-mohana-ganapati-kavacham",
+    "category": "kavacham",
+    "filename": "ganesha_trailokya-mohana-ganapati-kavacham",
+    "keywords": "trailokya mohana ganapati kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"वक्रतुण्ड गणेश कवचम्\"",
+    "slug": "/ganesha-vakratunda-ganesha-kavacham",
+    "category": "kavacham",
+    "filename": "ganesha_vakratunda-ganesha-kavacham",
+    "keywords": "vakratunda ganesha kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री कवचम् २\"",
+    "slug": "/gayatri-sri-gayatri-kavacham-2",
+    "category": "kavacham",
+    "filename": "gayatri_sri-gayatri-kavacham-2",
+    "keywords": "sri gayatri kavacham 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री कवचम् १\"",
+    "slug": "/gayatri-sri-gayatri-kavacham",
+    "category": "kavacham",
+    "filename": "gayatri_sri-gayatri-kavacham",
+    "keywords": "sri gayatri kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी कवचम्\"",
+    "slug": "/lakshmi-sri-lakshmi-kavacham",
+    "category": "kavacham",
+    "filename": "lakshmi_sri-lakshmi-kavacham",
+    "keywords": "sri lakshmi kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी कवचम् १\"",
+    "slug": "/lakshmi-sri-mahalakshmi-kavacham-1",
+    "category": "kavacham",
+    "filename": "lakshmi_sri-mahalakshmi-kavacham-1",
+    "keywords": "sri mahalakshmi kavacham 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी कवचम् २\"",
+    "slug": "/lakshmi-sri-mahalakshmi-kavacham-2",
+    "category": "kavacham",
+    "filename": "lakshmi_sri-mahalakshmi-kavacham-2",
+    "keywords": "sri mahalakshmi kavacham 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री पद्मा कवचम्\"",
+    "slug": "/lakshmi-sri-padma-kavacham",
+    "category": "kavacham",
+    "filename": "lakshmi_sri-padma-kavacham",
+    "keywords": "sri padma kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललितार्या कवच स्तोत्रम्\"",
+    "slug": "/lalitha-sri-lalitha-arya-kavacham",
+    "category": "kavacham",
+    "filename": "lalitha_sri-lalitha-arya-kavacham",
+    "keywords": "sri lalitha arya kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता कवचम्\"",
+    "slug": "/lalitha-sri-lalitha-kavacham",
+    "category": "kavacham",
+    "filename": "lalitha_sri-lalitha-kavacham",
+    "keywords": "sri lalitha kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगला प्रत्यङ्गिरा कवचम्\"",
+    "slug": "/pratyangira-sri-bagala-pratyangira-kavacham",
+    "category": "kavacham",
+    "filename": "pratyangira_sri-bagala-pratyangira-kavacham",
+    "keywords": "sri bagala pratyangira kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा कवचम् – १ (सर्वार्थसाधनम्)\"",
+    "slug": "/pratyangira-sri-pratyangira-kavacham-1-sarvartha-sadhanam",
+    "category": "kavacham",
+    "filename": "pratyangira_sri-pratyangira-kavacham-1-sarvartha-sadhanam",
+    "keywords": "sri pratyangira kavacham 1 sarvartha sadhanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा कवचम् (जगन्मङ्गलकम्)\"",
+    "slug": "/pratyangira-sri-pratyangira-kavacham-2-jaganmangalam",
+    "category": "kavacham",
+    "filename": "pratyangira_sri-pratyangira-kavacham-2-jaganmangalam",
+    "keywords": "sri pratyangira kavacham 2 jaganmangalam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री तारा प्रत्यङ्गिरा कवचम्\"",
+    "slug": "/pratyangira-sri-tara-pratyangira-kavacham",
+    "category": "kavacham",
+    "filename": "pratyangira_sri-tara-pratyangira-kavacham",
+    "keywords": "sri tara pratyangira kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा कवचम् – ३ (त्रैलोक्यविजयम्)\"",
+    "slug": "/pratyangira-trailokya-vijaya-sri-pratyangira-kavacham",
+    "category": "kavacham",
+    "filename": "pratyangira_trailokya-vijaya-sri-pratyangira-kavacham",
+    "keywords": "trailokya vijaya sri pratyangira kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती कवचम् (पाठान्तरम्)\"",
+    "slug": "/saraswati-sri-saraswati-kavacham-variation",
+    "category": "kavacham",
+    "filename": "saraswati_sri-saraswati-kavacham-variation",
+    "keywords": "sri saraswati kavacham variation",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती कवचम् (ब्रह्मवैवर्तपुराणे)\"",
+    "slug": "/saraswati-sri-saraswati-kavacham",
+    "category": "kavacham",
+    "filename": "saraswati_sri-saraswati-kavacham",
+    "keywords": "sri saraswati kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रुद्र कवचम्\"",
+    "slug": "/shiva-sri-rudra-kavacham-in-hindi",
+    "category": "kavacham",
+    "filename": "shiva_sri-rudra-kavacham-in-hindi",
+    "keywords": "sri rudra kavacham in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव कवचम्\"",
+    "slug": "/shiva-sri-siva-kavacham-in-hindi",
+    "category": "kavacham",
+    "filename": "shiva_sri-siva-kavacham-in-hindi",
+    "keywords": "sri siva kavacham in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"कंदर् षष्ठि कवचं (तमिळं)\"",
+    "slug": "/subrahmanya-skanda-sashti-kavacham",
+    "category": "kavacham",
+    "filename": "subrahmanya_skanda-sashti-kavacham",
+    "keywords": "skanda sashti kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कुमार कवचम्\"",
+    "slug": "/subrahmanya-sri-kumara-kavacham",
+    "category": "kavacham",
+    "filename": "subrahmanya_sri-kumara-kavacham",
+    "keywords": "sri kumara kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य वज्रपञ्जर कवचम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-vajra-panjara-kavacham",
+    "category": "kavacham",
+    "filename": "subrahmanya_sri-subrahmanya-vajra-panjara-kavacham",
+    "keywords": "sri subrahmanya vajra panjara kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "मुंज मंगलाष्टके",
     "slug": "/munj-mangal-asthsk",
     "category": "managalastak/munj",
@@ -1139,6 +1778,357 @@
     "category": "managalastak/vivah",
     "filename": "swasti-shri",
     "keywords": "swati shri gananayankam managalasthak",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य मन्त्रसम्मेलन त्रिशती\"",
+    "slug": "/300-sri-subrahmanya-mantra-sammelana-trisati",
+    "category": "mantras",
+    "filename": "300_sri-subrahmanya-mantra-sammelana-trisati",
+    "keywords": "sri subrahmanya mantra sammelana trisati",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला मन्त्राक्षर स्तोत्रम्\"",
+    "slug": "/bala-sri-bala-mantrakshara-stotram",
+    "category": "mantras",
+    "filename": "bala_sri-bala-mantrakshara-stotram",
+    "keywords": "sri bala mantrakshara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्वर्णाकर्षणभैरव मन्त्रमय स्तोत्रम्\"",
+    "slug": "/bhairava-sri-swarnakarshana-bhairava-mantramaya-stotram",
+    "category": "mantras",
+    "filename": "bhairava_sri-swarnakarshana-bhairava-mantramaya-stotram",
+    "keywords": "sri swarnakarshana bhairava mantramaya stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति मन्त्र कवचम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-mantra-kavacham",
+    "category": "mantras",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-mantra-kavacham",
+    "keywords": "sri dakshinamurthy mantra kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति मन्त्रार्णाष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-mantrarna-ashtottara-shatanama-stotram",
+    "category": "mantras",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-mantrarna-ashtottara-shatanama-stotram",
+    "keywords": "sri dakshinamurthy mantrarna ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी खड्गमालामन्त्रः\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-khadga-mala-mantra",
+    "category": "mantras",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-khadga-mala-mantra",
+    "keywords": "sri bagalamukhi khadga mala mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी मालामन्त्रः\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-mala-mantra",
+    "category": "mantras",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-mala-mantra",
+    "keywords": "sri bagalamukhi mala mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली एकाक्षरी (चिन्तामणि)\"",
+    "slug": "/dasa-mahavidya-sri-kali-ekakshari-beeja-mantra-chintamani",
+    "category": "mantras",
+    "filename": "dasa-mahavidya_sri-kali-ekakshari-beeja-mantra-chintamani",
+    "keywords": "sri kali ekakshari beeja mantra chintamani",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री अन्नपूर्णा मन्त्र स्तवः\"",
+    "slug": "/devi-sri-annapurna-mantra-stava",
+    "category": "mantras",
+    "filename": "devi_sri-annapurna-mantra-stava",
+    "keywords": "sri annapurna mantra stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला मन्त्रसिद्धि स्तवः\"",
+    "slug": "/devi-sri-bala-mantra-siddhi-stava",
+    "category": "mantras",
+    "filename": "devi_sri-bala-mantra-siddhi-stava",
+    "keywords": "sri bala mantra siddhi stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला मन्त्रगर्भाष्टकम्\"",
+    "slug": "/devi-sri-bala-mantragarbha-ashtakam",
+    "category": "mantras",
+    "filename": "devi_sri-bala-mantragarbha-ashtakam",
+    "keywords": "sri bala mantragarbha ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालात्रिपुरसुन्दरी त्र्यक्षरी मन्त्रः\"",
+    "slug": "/devi-sri-bala-tripurasundari-triyakshari-mantra",
+    "category": "mantras",
+    "filename": "devi_sri-bala-tripurasundari-triyakshari-mantra",
+    "keywords": "sri bala tripurasundari triyakshari mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मनसा देवी मूलमन्त्रम्\"",
+    "slug": "/devi-sri-manasa-devi-mula-mantram",
+    "category": "mantras",
+    "filename": "devi_sri-manasa-devi-mula-mantram",
+    "keywords": "sri manasa devi mula mantram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही (वार्ताली) मन्त्रः\"",
+    "slug": "/devi-sri-varahi-vartali-moola-mantram",
+    "category": "mantras",
+    "filename": "devi_sri-varahi-vartali-moola-mantram",
+    "keywords": "sri varahi vartali moola mantram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"त्रैलोक्यविजयविद्या\"",
+    "slug": "/devi-trailokya-vijaya-vidya-mantra",
+    "category": "mantras",
+    "filename": "devi_trailokya-vijaya-vidya-mantra",
+    "keywords": "trailokya vijaya vidya mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणपति मन्त्राक्षरावलि स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganapati-mantraksharavali-stotram",
+    "category": "mantras",
+    "filename": "ganesha_sri-ganapati-mantraksharavali-stotram",
+    "keywords": "sri ganapati mantraksharavali stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश मूलमन्त्रपदमाला स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganesha-moola-mantra-pada-mala-stotram",
+    "category": "mantras",
+    "filename": "ganesha_sri-ganesha-moola-mantra-pada-mala-stotram",
+    "keywords": "sri ganesha moola mantra pada mala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति मूलमन्त्रः\"",
+    "slug": "/ganesha-sri-maha-ganapathi-moola-mantra",
+    "category": "mantras",
+    "filename": "ganesha_sri-maha-ganapathi-moola-mantra",
+    "keywords": "sri maha ganapathi moola mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति मन्त्रविग्रह कवचम्\"",
+    "slug": "/ganesha-sri-maha-ganapati-mantra-vigraha-kavacham",
+    "category": "mantras",
+    "filename": "ganesha_sri-maha-ganapati-mantra-vigraha-kavacham",
+    "keywords": "sri maha ganapati mantra vigraha kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री मन्त्रम्\"",
+    "slug": "/gayatri-gayatri-mantra-in-hindi",
+    "category": "mantras",
+    "filename": "gayatri_gayatri-mantra-in-hindi",
+    "keywords": "gayatri mantra in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री मन्त्र कवचम् (देवीभागवते)\"",
+    "slug": "/gayatri-sri-gayatri-mantra-kavacham",
+    "category": "mantras",
+    "filename": "gayatri_sri-gayatri-mantra-kavacham",
+    "keywords": "sri gayatri mantra kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री तत्त्वमालामन्त्रम्\"",
+    "slug": "/gayatri-sri-gayatri-tattva-mala-mantram",
+    "category": "mantras",
+    "filename": "gayatri_sri-gayatri-tattva-mala-mantram",
+    "keywords": "sri gayatri tattva mala mantram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"विविध गायत्री मन्त्राः\"",
+    "slug": "/gayatri-vividha-gayatri-mantrani-in-hindi",
+    "category": "mantras",
+    "filename": "gayatri_vividha-gayatri-mantrani-in-hindi",
+    "keywords": "vividha gayatri mantrani in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी गायत्री मन्त्रस्तुतिः\"",
+    "slug": "/lakshmi-sri-lakshmi-gayatri-mantra-stuti-in-hindi",
+    "category": "mantras",
+    "filename": "lakshmi_sri-lakshmi-gayatri-mantra-stuti-in-hindi",
+    "keywords": "sri lakshmi gayatri mantra stuti in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मन्त्रमातृका पुष्पमाला स्तवः\"",
+    "slug": "/lalitha-mantra-matrika-pushpa-mala-stava",
+    "category": "mantras",
+    "filename": "lalitha_mantra-matrika-pushpa-mala-stava",
+    "keywords": "mantra matrika pushpa mala stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता मूलमन्त्र कवचम्\"",
+    "slug": "/lalitha-sri-lalitha-moola-mantra-kavacham",
+    "category": "mantras",
+    "filename": "lalitha_sri-lalitha-moola-mantra-kavacham",
+    "keywords": "sri lalitha moola mantra kavacham",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री राजराजेश्वरी मन्त्रमातृका स्तवः\"",
+    "slug": "/lalitha-sri-rajarajeswari-mantra-matruka-stava",
+    "category": "mantras",
+    "filename": "lalitha_sri-rajarajeswari-mantra-matruka-stava",
+    "keywords": "sri rajarajeswari mantra matruka stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विपरीत प्रत्यङ्गिरा मन्त्रः\"",
+    "slug": "/mantras-sri-vipareeta-pratyangira-mantra",
+    "category": "mantras",
+    "filename": "mantras_sri-vipareeta-pratyangira-mantra",
+    "keywords": "sri vipareeta pratyangira mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली प्रत्यङ्गिरा मालामन्त्रः\"",
+    "slug": "/pratyangira-sri-kali-pratyangira-mala-mantram-stotram",
+    "category": "mantras",
+    "filename": "pratyangira_sri-kali-pratyangira-mala-mantram-stotram",
+    "keywords": "sri kali pratyangira mala mantram stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा मालामन्त्रः\"",
+    "slug": "/pratyangira-sri-pratyangira-devi-mala-mantram-1",
+    "category": "mantras",
+    "filename": "pratyangira_sri-pratyangira-devi-mala-mantram-1",
+    "keywords": "sri pratyangira devi mala mantram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा सहस्राक्षरी मन्त्रः\"",
+    "slug": "/pratyangira-sri-pratyangira-sahasrakshari-mantra",
+    "category": "mantras",
+    "filename": "pratyangira_sri-pratyangira-sahasrakshari-mantra",
+    "keywords": "sri pratyangira sahasrakshari mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विपरीत प्रत्यङ्गिरा मालामन्त्रः\"",
+    "slug": "/pratyangira-sri-vipareeta-pratyangira-mala-mantram",
+    "category": "mantras",
+    "filename": "pratyangira_sri-vipareeta-pratyangira-mala-mantram",
+    "keywords": "sri vipareeta pratyangira mala mantram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"महामृत्युञ्जय मन्त्रम्\"",
+    "slug": "/shiva-maha-mrityunjaya-mantram",
+    "category": "mantras",
+    "filename": "shiva_maha-mrityunjaya-mantram",
+    "keywords": "maha mrityunjaya mantram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मेधा दक्षिणामूर्ति मन्त्रः\"",
+    "slug": "/shiva-sri-medha-dakshinamurthy-mantra",
+    "category": "mantras",
+    "filename": "shiva_sri-medha-dakshinamurthy-mantra",
+    "keywords": "sri medha dakshinamurthy mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव ध्यानम्\"",
+    "slug": "/shiva-sri-shiva-dhyana-mantra",
+    "category": "mantras",
+    "filename": "shiva_sri-shiva-dhyana-mantra",
+    "keywords": "sri shiva dhyana mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव पञ्चाक्षरी मन्त्रः (न्यास सहितं)\"",
+    "slug": "/shiva-sri-shiva-panchakshari-mantra-nyasa-sahitam",
+    "category": "mantras",
+    "filename": "shiva_sri-shiva-panchakshari-mantra-nyasa-sahitam",
+    "keywords": "sri shiva panchakshari mantra nyasa sahitam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"शरवणभव मन्त्राक्षर षट्कम्\"",
+    "slug": "/subrahmanya-saravanabhava-mantrakshara-shatkam",
+    "category": "mantras",
+    "filename": "subrahmanya_saravanabhava-mantrakshara-shatkam",
+    "keywords": "saravanabhava mantrakshara shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य मालामन्त्रः\"",
+    "slug": "/subrahmanya-sri-subrahmanya-mala-mantra",
+    "category": "mantras",
+    "filename": "subrahmanya_sri-subrahmanya-mala-mantra",
+    "keywords": "sri subrahmanya mala mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य मूलमन्त्र स्तवः\"",
+    "slug": "/subrahmanya-sri-subramanya-moola-mantra-stava",
+    "category": "mantras",
+    "filename": "subrahmanya_sri-subramanya-moola-mantra-stava",
+    "keywords": "sri subramanya moola mantra stava",
     "fmKeywords": "",
     "headings": ""
   },
@@ -2241,6 +3231,33 @@
     "headings": ""
   },
   {
+    "title": "\"श्री दक्षिणामूर्ति षोडशोपचार पूजा\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-shodasopachara-pooja",
+    "category": "pooja",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-shodasopachara-pooja",
+    "keywords": "sri dakshinamurthy shodasopachara pooja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी षोडशोपचार पूजा\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-shodasopachara-puja",
+    "category": "pooja",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-shodasopachara-puja",
+    "keywords": "sri bagalamukhi shodasopachara puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा षोडशोपचार पूजा\"",
+    "slug": "/durga-sri-durga-devi-shodashopachara-puja",
+    "category": "pooja",
+    "filename": "durga_sri-durga-devi-shodashopachara-puja",
+    "keywords": "sri durga devi shodashopachara puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री पार्थिव गणेश प्रतिष्ठापणा",
     "slug": "/parthiv-ganesh-pratishthapana",
     "category": "pooja",
@@ -2248,6 +3265,69 @@
     "keywords": "parthiv ganesh pratishthapana puja",
     "fmKeywords": "",
     "headings": "पूजेची पूर्वतयारी : - प्राणप्रतिष्ठेचा मंत्र आवाहन मंत्र अर्घ्य मंत्र आचमन मंत्र पंचामृत स्नान मंत्र वस्त्र मंत्र यज्ञोपवीत मंत्र चंदन मंत्र अक्षता मंत्र पुष्प मंत्र धूप मंत्र दीप मंत्र नैवेद्य मंत्र विडा मंत्र दुर्वा मंत्र नमस्कार मंत्र प्रदक्षिणा मंत्र मंत्रपुष्प पार्थना मंत्र [श्री गणपती आरतीसाठी येथे क्लिक करा ](/ganpati)"
+  },
+  {
+    "title": "\"सङ्कटहर चतुर्थी पूजा विधानम्\"",
+    "slug": "/ganesha-sankata-hara-chaturthi-puja-vidhanam",
+    "category": "pooja",
+    "filename": "ganesha_sankata-hara-chaturthi-puja-vidhanam",
+    "keywords": "sankata hara chaturthi puja vidhanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश बाह्य पूजा\"",
+    "slug": "/ganesha-sri-ganesha-bahya-puja",
+    "category": "pooja",
+    "filename": "ganesha_sri-ganesha-bahya-puja",
+    "keywords": "sri ganesha bahya puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश मानस पूजा\"",
+    "slug": "/ganesha-sri-ganesha-manasa-puja",
+    "category": "pooja",
+    "filename": "ganesha_sri-ganesha-manasa-puja",
+    "keywords": "sri ganesha manasa puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति पूजा (हरिद्रा गणपति पूजा)\"",
+    "slug": "/ganesha-sri-haridra-ganapati-puja",
+    "category": "pooja",
+    "filename": "ganesha_sri-haridra-ganapati-puja",
+    "keywords": "sri haridra ganapati puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति चतुरावृत्ति तर्पणम्\"",
+    "slug": "/ganesha-sri-maha-ganapathi-chaturavrutti-tarpanam",
+    "category": "pooja",
+    "filename": "ganesha_sri-maha-ganapathi-chaturavrutti-tarpanam",
+    "keywords": "sri maha ganapathi chaturavrutti tarpanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति षोडशोपचार पूजा\"",
+    "slug": "/ganesha-sri-maha-ganapathi-shodashopachara-puja",
+    "category": "pooja",
+    "filename": "ganesha_sri-maha-ganapathi-shodashopachara-puja",
+    "keywords": "sri maha ganapathi shodashopachara puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री पञ्चोपचार पूजा\"",
+    "slug": "/gayatri-sri-gayathri-pancha-upachara-puja",
+    "category": "pooja",
+    "filename": "gayatri_sri-gayathri-pancha-upachara-puja",
+    "keywords": "sri gayathri pancha upachara puja",
+    "fmKeywords": "",
+    "headings": ""
   },
   {
     "title": "श्री नवरात्र घटस्थापना शास्त्रोक्त पूजा",
@@ -2264,6 +3344,114 @@
     "category": "pooja",
     "filename": "laghunyas",
     "keywords": "laghunyas",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मि विशेष षोडशोपचार पूजा\"",
+    "slug": "/lakshmi-sri-maha-lakshmi-visesha-shodasopachara-puja",
+    "category": "pooja",
+    "filename": "lakshmi_sri-maha-lakshmi-visesha-shodasopachara-puja",
+    "keywords": "sri maha lakshmi visesha shodasopachara puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता षोडशोपचार पूजा\"",
+    "slug": "/lalitha-sri-lalitha-shodasopachara-puja-vidhanam",
+    "category": "pooja",
+    "filename": "lalitha_sri-lalitha-shodasopachara-puja-vidhanam",
+    "keywords": "sri lalitha shodasopachara puja vidhanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालात्रिपुरसुन्दरि षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-bala-tripura-sundari-shodasopachara-puja",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-bala-tripura-sundari-shodasopachara-puja",
+    "keywords": "sri bala tripura sundari shodasopachara puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-gayatri-shodasopachara-puja-vidhanam",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-gayatri-shodasopachara-puja-vidhanam",
+    "keywords": "sri gayatri shodasopachara puja vidhanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गौरी षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-gowri-pooja-vidhanam",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-gowri-pooja-vidhanam",
+    "keywords": "sri gowri pooja vidhanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिका षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-maha-kali-shodasopachara-puja",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-maha-kali-shodasopachara-puja",
+    "keywords": "sri maha kali shodasopachara puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री परमेश्वर शीघ्र पूजा विधानम्\"",
+    "slug": "/puja-vidhi-sri-parameshwara-seeghra-pooja-vidhanam",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-parameshwara-seeghra-pooja-vidhanam",
+    "keywords": "sri parameshwara seeghra pooja vidhanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-saraswathi-shodasopachara-puja",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-saraswathi-shodasopachara-puja",
+    "keywords": "sri saraswathi shodasopachara puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-shiva-shodasopachara-puja",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-shiva-shodasopachara-puja",
+    "keywords": "sri shiva shodasopachara puja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामला देवि षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-shyamala-devi-pooja-vidhanam",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-shyamala-devi-pooja-vidhanam",
+    "keywords": "sri shyamala devi pooja vidhanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-subrahmanya-pooja-vidhanam",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-subrahmanya-pooja-vidhanam",
+    "keywords": "sri subrahmanya pooja vidhanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही षोडशोपचार पूजा\"",
+    "slug": "/puja-vidhi-sri-varahi-devi-shodasopachara-puja",
+    "category": "pooja",
+    "filename": "puja-vidhi_sri-varahi-devi-shodasopachara-puja",
+    "keywords": "sri varahi devi shodasopachara puja",
     "fmKeywords": "",
     "headings": ""
   },
@@ -8128,15 +9316,6 @@
   },
   {
     "title": "\"कालभैरवाष्टकम्\"",
-    "slug": "/bhairava-kalabhairavashtakam-in-hindi",
-    "category": "stotras-shlok",
-    "filename": "bhairava_kalabhairavashtakam-in-hindi",
-    "keywords": "kalabhairavashtakam in hindi",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
-    "title": "\"कालभैरवाष्टकम्\"",
     "slug": "/bhairava-kalabhairavashtakam",
     "category": "stotras-shlok",
     "filename": "bhairava_kalabhairavashtakam",
@@ -8222,24 +9401,6 @@
     "category": "stotras-shlok",
     "filename": "bhairava_sri-swarna-akarshana-bhairava-stotram-in-hindi",
     "keywords": "sri swarna akarshana bhairava stotram in hindi",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
-    "title": "\"श्री स्वर्णाकर्षण भैरव स्तोत्रम्\"",
-    "slug": "/bhairava-sri-swarna-akarshana-bhairava-stotram",
-    "category": "stotras-shlok",
-    "filename": "bhairava_sri-swarna-akarshana-bhairava-stotram",
-    "keywords": "sri swarna akarshana bhairava stotram",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
-    "title": "\"तीक्ष्णदंष्ट्र कालभैरवाष्टकम्\"",
-    "slug": "/bhairava-teekshna-danshtra-kalabhairava-ashtakam-in-hindi",
-    "category": "stotras-shlok",
-    "filename": "bhairava_teekshna-danshtra-kalabhairava-ashtakam-in-hindi",
-    "keywords": "teekshna danshtra kalabhairava ashtakam in hindi",
     "fmKeywords": "",
     "headings": ""
   },
@@ -9991,15 +11152,6 @@
   },
   {
     "title": "\"श्री षष्ठी देवि स्तोत्रम्\"",
-    "slug": "/devi-sri-shashti-devi-stotram-in-hindi",
-    "category": "stotras-shlok",
-    "filename": "devi_sri-shashti-devi-stotram-in-hindi",
-    "keywords": "sri shashti devi stotram in hindi",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
-    "title": "\"श्री षष्ठी देवि स्तोत्रम्\"",
     "slug": "/devi-sri-shashti-devi-stotram",
     "category": "stotras-shlok",
     "filename": "devi_sri-shashti-devi-stotram",
@@ -11345,15 +12497,6 @@
     "category": "stotras-shlok",
     "filename": "lakshmi_sri-lakshmi-stotram-indra-rachitam-in-hindi",
     "keywords": "sri lakshmi stotram indra rachitam in hindi",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
-    "title": "\"श्री महालक्ष्मी स्तोत्रम् (महेन्द्र कृतम्)\"",
-    "slug": "/lakshmi-sri-lakshmi-stotram-indra-rachitam",
-    "category": "stotras-shlok",
-    "filename": "lakshmi_sri-lakshmi-stotram-indra-rachitam",
-    "keywords": "sri lakshmi stotram indra rachitam",
     "fmKeywords": "",
     "headings": ""
   },
@@ -12767,15 +13910,6 @@
     "category": "stotras-shlok",
     "filename": "shiva_shiva-shadakshara-stotram-in-hindi",
     "keywords": "shiva shadakshara stotram in hindi",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
-    "title": "\"श्री शिव तांडव स्तोत्रम्\"",
-    "slug": "/shiva-shiva-tandav-stotram-in-hindi",
-    "category": "stotras-shlok",
-    "filename": "shiva_shiva-tandav-stotram-in-hindi",
-    "keywords": "shiva tandav stotram in hindi",
     "fmKeywords": "",
     "headings": ""
   },

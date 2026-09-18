@@ -1,0 +1,11 @@
+{
+    "position": 4,
+    "label": "कवचम्",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "कवचम्"
+    }
+  }

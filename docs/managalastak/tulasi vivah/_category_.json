@@ -7,8 +7,6 @@
     "link": {
       "type": "generated-index",
       "title": "तुलसी विवाह"
-    },
-    "customProps": {
-      "description": "This description can be used in the swizzled DocCard"
     }
+   
   }

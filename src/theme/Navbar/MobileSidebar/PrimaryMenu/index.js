@@ -48,6 +48,8 @@ export default function NavbarMobilePrimaryMenu() {
       { key: 'namavali', mrLabel: 'नामावली', hiLabel: 'नामावली', slug: 'नामावली' },
       { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', slug: 'पाळणा-संग्रह' },
       { key: 'pooja', mrLabel: 'पूजा व्रत', hiLabel: 'पूजा व्रत', slug: 'पूजा-व्रत' },
+      { key: 'kavacham', mrLabel: 'कवच संग्रह', hiLabel: 'कवच संग्रह', slug: 'कवचम्' },
+      { key: 'mantras', mrLabel: 'मंत्र संग्रह', hiLabel: 'मंत्र संग्रह', slug: 'मंत्र' },
       { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', slug: 'ऑडियो-भजन' },
       { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', slug: 'प्रवचने', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
     ];
