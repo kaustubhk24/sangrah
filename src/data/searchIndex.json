@@ -1143,11 +1143,866 @@
     "headings": ""
   },
   {
+    "title": "\"ककारादि श्री काली सहस्रनामावली\"",
+    "slug": "/1008-kakaradi-sri-kali-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_kakaradi-sri-kali-sahasranamavali",
+    "keywords": "kakaradi sri kali sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी सहस्रनामावली\"",
+    "slug": "/1008-sri-bagalamukhi-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_sri-bagalamukhi-sahasranamavali",
+    "keywords": "sri bagalamukhi sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला त्रिपुरसुन्दरी सहस्रनामावली – १\"",
+    "slug": "/1008-sri-bala-sahasranamavali-1",
+    "category": "namavali",
+    "filename": "1008_sri-bala-sahasranamavali-1",
+    "keywords": "sri bala sahasranamavali 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालात्रिपुरसुन्दरी सहस्रनामावली २\"",
+    "slug": "/1008-sri-bala-tripura-sundari-sahasranamavali-2",
+    "category": "namavali",
+    "filename": "1008_sri-bala-tripura-sundari-sahasranamavali-2",
+    "keywords": "sri bala tripura sundari sahasranamavali 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति सहस्रनामावली\"",
+    "slug": "/1008-sri-dakshinamurthy-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_sri-dakshinamurthy-sahasranamavali",
+    "keywords": "sri dakshinamurthy sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा सहस्रनामावली\"",
+    "slug": "/1008-sri-durga-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_sri-durga-sahasranamavali",
+    "keywords": "sri durga sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी सहस्रनामावलिः\"",
+    "slug": "/1008-sri-lakshmi-sahasranamavali-in-hindi",
+    "category": "namavali",
+    "filename": "1008_sri-lakshmi-sahasranamavali-in-hindi",
+    "keywords": "sri lakshmi sahasranamavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता सहस्रनामावलि\"",
+    "slug": "/1008-sri-lalitha-sahasranamavali-in-hindi",
+    "category": "namavali",
+    "filename": "1008_sri-lalitha-sahasranamavali-in-hindi",
+    "keywords": "sri lalitha sahasranamavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति सहस्रनामावली\"",
+    "slug": "/1008-sri-maha-ganapati-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_sri-maha-ganapati-sahasranamavali",
+    "keywords": "sri maha ganapati sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा सहस्रनामावली\"",
+    "slug": "/1008-sri-pratyangira-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_sri-pratyangira-sahasranamavali",
+    "keywords": "sri pratyangira sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती सहस्रनामावली\"",
+    "slug": "/1008-sri-saraswati-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_sri-saraswati-sahasranamavali",
+    "keywords": "sri saraswati sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य सहस्रनामावली\"",
+    "slug": "/1008-sri-subrahmanya-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_sri-subrahmanya-sahasranamavali",
+    "keywords": "sri subrahmanya sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही सहस्रनामावली\"",
+    "slug": "/1008-sri-varahi-sahasranamavali",
+    "category": "namavali",
+    "filename": "1008_sri-varahi-sahasranamavali",
+    "keywords": "sri varahi sahasranamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री आदिलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-1-sri-adilakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_1-sri-adilakshmi-ashtottara-shatanamavali",
+    "keywords": "1 sri adilakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री धान्यलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-2-sri-dhanyalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_2-sri-dhanyalakshmi-ashtottara-shatanamavali",
+    "keywords": "2 sri dhanyalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री धैर्यलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-3-sri-dhairyalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_3-sri-dhairyalakshmi-ashtottara-shatanamavali",
+    "keywords": "3 sri dhairyalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गजलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-4-sri-gajalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_4-sri-gajalakshmi-ashtottara-shatanamavali",
+    "keywords": "4 sri gajalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सन्तानलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-5-sri-santanalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_5-sri-santanalakshmi-ashtottara-shatanamavali",
+    "keywords": "5 sri santanalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विजयलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-6-sri-vijayalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_6-sri-vijayalakshmi-ashtottara-shatanamavali",
+    "keywords": "6 sri vijayalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विद्यालक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-7-sri-vidyalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_7-sri-vidyalakshmi-ashtottara-shatanamavali",
+    "keywords": "7 sri vidyalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ऐश्वर्यलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-8-sri-aishwaryalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_8-sri-aishwaryalakshmi-ashtottara-shatanamavali",
+    "keywords": "8 sri aishwaryalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अर्धनारीश्वराष्टोत्तरशतनामावली\"",
+    "slug": "/108-ardhanarishvara-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_ardhanarishvara-ashtottara-shatanamavali",
+    "keywords": "ardhanarishvara ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अष्टलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-ashtalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_ashtalakshmi-ashtottara-shatanamavali",
+    "keywords": "ashtalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"देवीवैभवाश्चर्याष्टोत्तरशतनामावली\"",
+    "slug": "/108-devi-vaibhava-ashcharya-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_devi-vaibhava-ashcharya-ashtottara-shatanamavali",
+    "keywords": "devi vaibhava ashcharya ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सौभाग्याष्टोत्तरशतनामावली\"",
+    "slug": "/108-saubhagya-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_saubhagya-ashtottara-shatanamavali",
+    "keywords": "saubhagya ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री अन्नपूर्णा अष्टोत्तरशतनामावलिः\"",
+    "slug": "/108-sri-annapurna-ashtottara-satanamavali",
+    "category": "namavali",
+    "filename": "108_sri-annapurna-ashtottara-satanamavali",
+    "keywords": "sri annapurna ashtottara satanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी अष्टोत्तरशतनामावली – १ (रुद्रयामले)\"",
+    "slug": "/108-sri-bagalamukhi-ashtottara-shatanamavali-1-rudrayamale",
+    "category": "namavali",
+    "filename": "108_sri-bagalamukhi-ashtottara-shatanamavali-1-rudrayamale",
+    "keywords": "sri bagalamukhi ashtottara shatanamavali 1 rudrayamale",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी अष्टोत्तरशतनामावली – २ (विष्णुयामले)\"",
+    "slug": "/108-sri-bagalamukhi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-bagalamukhi-ashtottara-shatanamavali",
+    "keywords": "sri bagalamukhi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालाष्टोत्तरशतनामावली २\"",
+    "slug": "/108-sri-bala-ashtottara-shatanamavali-2",
+    "category": "namavali",
+    "filename": "108_sri-bala-ashtottara-shatanamavali-2",
+    "keywords": "sri bala ashtottara shatanamavali 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालात्रिपुरसुन्दरी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-bala-tripura-sundari-ashtottara-satanamavali",
+    "category": "namavali",
+    "filename": "108_sri-bala-tripura-sundari-ashtottara-satanamavali",
+    "keywords": "sri bala tripura sundari ashtottara satanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भद्रकाली अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-bhadrakali-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-bhadrakali-ashtottara-shatanamavali",
+    "keywords": "sri bhadrakali ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भुवनेश्वरी अष्टोत्तरशतनामवली\"",
+    "slug": "/108-sri-bhuvaneshwari-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-bhuvaneshwari-ashtottara-shatanamavali",
+    "keywords": "sri bhuvaneshwari ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्माष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-brahma-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-brahma-ashtottara-shatanamavali",
+    "keywords": "sri brahma ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बुद्धिदेवी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-buddhi-devi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-buddhi-devi-ashtottara-shatanamavali",
+    "keywords": "sri buddhi devi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चामुण्डेश्वरी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-chamundeshwari-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-chamundeshwari-ashtottara-shatanamavali",
+    "keywords": "sri chamundeshwari ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री छिन्नमस्तादेवि अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-chinnamasta-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-chinnamasta-ashtottara-shatanamavali",
+    "keywords": "sri chinnamasta ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्त्यष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-dakshinamurthy-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-dakshinamurthy-ashtottara-shatanamavali",
+    "keywords": "sri dakshinamurthy ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति मन्त्रार्णाष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-dakshinamurthy-mantrarna-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-dakshinamurthy-mantrarna-ashtottara-shatanamavali",
+    "keywords": "sri dakshinamurthy mantrarna ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री देवसेनाष्टोत्तरशतनामावली (पाठान्तरम्)\"",
+    "slug": "/108-sri-devasena-ashtottara-shatanamavali-variation",
+    "category": "namavali",
+    "filename": "108_sri-devasena-ashtottara-shatanamavali-variation",
+    "keywords": "sri devasena ashtottara shatanamavali variation",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री देवसेना अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-devasena-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-devasena-ashtottara-shatanamavali",
+    "keywords": "sri devasena ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री धूमावत्यष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-dhumavati-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-dhumavati-ashtottara-shatanamavali",
+    "keywords": "sri dhumavati ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गाष्टोत्तरशतनामावली १\"",
+    "slug": "/108-sri-durga-ashtottara-satanamavali-1",
+    "category": "namavali",
+    "filename": "108_sri-durga-ashtottara-satanamavali-1",
+    "keywords": "sri durga ashtottara satanamavali 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गाष्टोत्तरशतनामावली २\"",
+    "slug": "/108-sri-durga-ashttotara-satanamavali-2",
+    "category": "namavali",
+    "filename": "108_sri-durga-ashttotara-satanamavali-2",
+    "keywords": "sri durga ashttotara satanamavali 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणपति गकाराष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-ganapati-gakara-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-ganapati-gakara-ashtottara-shatanamavali",
+    "keywords": "sri ganapati gakara ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेशाष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-ganesha-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-ganesha-ashtottara-shatanamavali",
+    "keywords": "sri ganesha ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश गकाराष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-ganesha-gakara-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-ganesha-gakara-ashtottara-shatanamavali",
+    "keywords": "sri ganesha gakara ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्र्यष्टोत्तरशतनामावली २\"",
+    "slug": "/108-sri-gayathri-ashtottara-satanamavali-in-hindi",
+    "category": "namavali",
+    "filename": "108_sri-gayathri-ashtottara-satanamavali-in-hindi",
+    "keywords": "sri gayathri ashtottara satanamavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्र्यष्टोत्तरशतनामावली १\"",
+    "slug": "/108-sri-gayatri-ashtottara-shatanamavali-1",
+    "category": "namavali",
+    "filename": "108_sri-gayatri-ashtottara-shatanamavali-1",
+    "keywords": "sri gayatri ashtottara shatanamavali 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गोदादेवि अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-godadevi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-godadevi-ashtottara-shatanamavali",
+    "keywords": "sri godadevi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री हरिहर अष्टोत्तर शतनामावली\"",
+    "slug": "/108-sri-harihara-ashtottara-shatanamavali-in-hindi",
+    "category": "namavali",
+    "filename": "108_sri-harihara-ashtottara-shatanamavali-in-hindi",
+    "keywords": "sri harihara ashtottara shatanamavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री इन्दिराष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-indira-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-indira-ashtottara-shatanamavali",
+    "keywords": "sri indira ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालभैरव ककार अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-kalabhairava-kakara-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-kalabhairava-kakara-ashtottara-shatanamavali",
+    "keywords": "sri kalabhairava kakara ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"ककारादि श्री काली अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-kali-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-kali-ashtottara-shatanamavali",
+    "keywords": "sri kali ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामाक्ष्यष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-kamakshi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-kamakshi-ashtottara-shatanamavali",
+    "keywords": "sri kamakshi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कमलाष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-kamala-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-kamala-ashtottara-shatanamavali",
+    "keywords": "sri kamala ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्म्यष्टोत्तरशतनामावली ३\"",
+    "slug": "/108-sri-lakshmi-ashtottara-shatanamavali-3",
+    "category": "namavali",
+    "filename": "108_sri-lakshmi-ashtottara-shatanamavali-3",
+    "keywords": "sri lakshmi ashtottara shatanamavali 3",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिताष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-lalitha-ashtottara-satanamavali-in-hindi",
+    "category": "namavali",
+    "filename": "108_sri-lalitha-ashtottara-satanamavali-in-hindi",
+    "keywords": "sri lalitha ashtottara satanamavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिताष्टोत्तरशतनामावली २\"",
+    "slug": "/108-sri-lalitha-ashtottara-shatanamavali-2",
+    "category": "namavali",
+    "filename": "108_sri-lalitha-ashtottara-shatanamavali-2",
+    "keywords": "sri lalitha ashtottara shatanamavali 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महावाराह्यष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-maha-varahi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-maha-varahi-ashtottara-shatanamavali",
+    "keywords": "sri maha varahi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी अष्टोत्तरशतनामावली २\"",
+    "slug": "/108-sri-mahalakshmi-ashtottara-shatanamavali-2",
+    "category": "namavali",
+    "filename": "108_sri-mahalakshmi-ashtottara-shatanamavali-2",
+    "keywords": "sri mahalakshmi ashtottara shatanamavali 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी अष्टोत्तरशतनामावली १\"",
+    "slug": "/108-sri-mahalakshmi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-mahalakshmi-ashtottara-shatanamavali",
+    "keywords": "sri mahalakshmi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महिषासुरमर्दिनी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-mahishasura-mardini-ashtottara-satanamavali",
+    "category": "namavali",
+    "filename": "108_sri-mahishasura-mardini-ashtottara-satanamavali",
+    "keywords": "sri mahishasura mardini ashtottara satanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मङ्गलगौरी अष्टोत्तरशतनामावलिः\"",
+    "slug": "/108-sri-mangala-gauri-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-mangala-gauri-ashtottara-shatanamavali",
+    "keywords": "sri mangala gauri ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मातङ्गी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-matangi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-matangi-ashtottara-shatanamavali",
+    "keywords": "sri matangi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री पद्मावती अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-padmavathi-ashtottara-satanamavali",
+    "category": "namavali",
+    "filename": "108_sri-padmavathi-ashtottara-satanamavali",
+    "keywords": "sri padmavathi ashtottara satanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-pratyangira-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-pratyangira-ashtottara-shatanamavali",
+    "keywords": "sri pratyangira ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री राजराजेश्वर्यष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-rajarajeshwari-ashtottara-satanamavali",
+    "category": "namavali",
+    "filename": "108_sri-rajarajeshwari-ashtottara-satanamavali",
+    "keywords": "sri rajarajeshwari ashtottara satanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-saraswathi-ashtottara-satanamavali",
+    "category": "namavali",
+    "filename": "108_sri-saraswathi-ashtottara-satanamavali",
+    "keywords": "sri saraswathi ashtottara satanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सौभाग्यलक्ष्मी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-saubhagya-lakshmi-ashtottara-shatanamavali-in-hindi",
+    "category": "namavali",
+    "filename": "108_sri-saubhagya-lakshmi-ashtottara-shatanamavali-in-hindi",
+    "keywords": "sri saubhagya lakshmi ashtottara shatanamavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-shiva-ashtottara-satanamavali-in-hindi",
+    "category": "namavali",
+    "filename": "108_sri-shiva-ashtottara-satanamavali-in-hindi",
+    "keywords": "sri shiva ashtottara satanamavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षोडशी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-shodashi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-shodashi-ashtottara-shatanamavali",
+    "keywords": "sri shodashi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामलाष्टोत्तरशतनामावली २\"",
+    "slug": "/108-sri-shyamala-ashtottara-shatanamavali-2",
+    "category": "namavali",
+    "filename": "108_sri-shyamala-ashtottara-shatanamavali-2",
+    "keywords": "sri shyamala ashtottara shatanamavali 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामलाष्टोत्तरशतनामावली १\"",
+    "slug": "/108-sri-shyamala-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-shyamala-ashtottara-shatanamavali",
+    "keywords": "sri shyamala ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सिद्धिदेवी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-siddhi-devi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-siddhi-devi-ashtottara-shatanamavali",
+    "keywords": "sri siddhi devi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-subrahmanya-ashtottara-satanamavali",
+    "category": "namavali",
+    "filename": "108_sri-subrahmanya-ashtottara-satanamavali",
+    "keywords": "sri subrahmanya ashtottara satanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्रीसूक्त अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-suktha-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-suktha-ashtottara-shatanamavali",
+    "keywords": "sri suktha ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ताराम्बा अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-tara-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-tara-ashtottara-shatanamavali",
+    "keywords": "sri tara ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरभैरवी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-tripura-bhairavi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-tripura-bhairavi-ashtottara-shatanamavali",
+    "keywords": "sri tripura bhairavi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री उमा अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-uma-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-uma-ashtottara-shatanamavali",
+    "keywords": "sri uma ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वल्ली अष्टोत्तरशतनामावली (पाठान्तरम्)\"",
+    "slug": "/108-sri-valli-ashtottara-shatanamavali-variation",
+    "category": "namavali",
+    "filename": "108_sri-valli-ashtottara-shatanamavali-variation",
+    "keywords": "sri valli ashtottara shatanamavali variation",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वल्ली अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-valli-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-valli-ashtottara-shatanamavali",
+    "keywords": "sri valli ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वरद गणेश अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-varada-ganesha-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-varada-ganesha-ashtottara-shatanamavali",
+    "keywords": "sri varada ganesha ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही अष्टोत्तरशतनामावली २\"",
+    "slug": "/108-sri-varahi-ashtottara-shatanamavali-2",
+    "category": "namavali",
+    "filename": "108_sri-varahi-ashtottara-shatanamavali-2",
+    "keywords": "sri varahi ashtottara shatanamavali 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महावाराह्यष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-varahi-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-varahi-ashtottara-shatanamavali",
+    "keywords": "sri varahi ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वासवीकन्यकापरमेश्वरी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-vasavi-ashttotara-shatanamavali-in-hindi",
+    "category": "namavali",
+    "filename": "108_sri-vasavi-ashttotara-shatanamavali-in-hindi",
+    "keywords": "sri vasavi ashttotara shatanamavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वासवीकन्यकापरमेश्वरी अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-vasavi-ashttotara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-vasavi-ashttotara-shatanamavali",
+    "keywords": "sri vasavi ashttotara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विद्यागणेशाष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-vidya-ganesha-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-vidya-ganesha-ashtottara-shatanamavali",
+    "keywords": "sri vidya ganesha ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विनायक अष्टोत्तरशतनामावली\"",
+    "slug": "/108-sri-vighneshwara-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_sri-vighneshwara-ashtottara-shatanamavali",
+    "keywords": "sri vighneshwara ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य षडक्षराष्टोत्तरशतनामावली\"",
+    "slug": "/108-subrahmanya-shadakshara-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "108_subrahmanya-shadakshara-ashtottara-shatanamavali",
+    "keywords": "subrahmanya shadakshara ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला त्रिशती नामावली\"",
+    "slug": "/300-sri-bala-trishati-namavali",
+    "category": "namavali",
+    "filename": "300_sri-bala-trishati-namavali",
+    "keywords": "sri bala trishati namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणकालिका त्रिशती नामावली\"",
+    "slug": "/300-sri-dakshina-kali-trishati-namavali",
+    "category": "namavali",
+    "filename": "300_sri-dakshina-kali-trishati-namavali",
+    "keywords": "sri dakshina kali trishati namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति मूलमन्त्र त्रिशती नामावली\"",
+    "slug": "/300-sri-maha-ganapati-trishati-namavali",
+    "category": "namavali",
+    "filename": "300_sri-maha-ganapati-trishati-namavali",
+    "keywords": "sri maha ganapati trishati namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मेधादक्षिणामूर्ति त्रिशती नामावली\"",
+    "slug": "/300-sri-medha-dakshinamurthy-trishati-namavali",
+    "category": "namavali",
+    "filename": "300_sri-medha-dakshinamurthy-trishati-namavali",
+    "keywords": "sri medha dakshinamurthy trishati namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य त्रिशती नामावली\"",
+    "slug": "/300-sri-subrahmanya-trishati-namavali",
+    "category": "namavali",
+    "filename": "300_sri-subrahmanya-trishati-namavali",
+    "keywords": "sri subrahmanya trishati namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री बाला त्रिपुरसुन्दरी सहस्रनामावली",
     "slug": "/shri-bala-tripursundari-namavali",
     "category": "namavali",
     "filename": "bala",
     "keywords": "shri bala tripursundari namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"चतुःषष्टि भैरव नामावलि स्तोत्रम्\"",
+    "slug": "/bhairava-chatushashti-64-bhairava-namavali-stotram",
+    "category": "namavali",
+    "filename": "bhairava_chatushashti-64-bhairava-namavali-stotram",
+    "keywords": "chatushashti 64 bhairava namavali stotram",
     "fmKeywords": "",
     "headings": ""
   },
@@ -1161,11 +2016,56 @@
     "headings": ""
   },
   {
+    "title": "\"देवी खड्गमाला नामावली\"",
+    "slug": "/devi-sri-devi-khadgamala-namavali",
+    "category": "namavali",
+    "filename": "devi_sri-devi-khadgamala-namavali",
+    "keywords": "sri devi khadgamala namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रेणुका अष्टोत्तरशतनामावली\"",
+    "slug": "/devi-sri-renuka-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "devi_sri-renuka-ashtottara-shatanamavali",
+    "keywords": "sri renuka ashtottara shatanamavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामला षोडशनामावली\"",
+    "slug": "/devi-sri-shyamala-shodasa-namavali",
+    "category": "namavali",
+    "filename": "devi_sri-shyamala-shodasa-namavali",
+    "keywords": "sri shyamala shodasa namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही द्वादशनामावली\"",
+    "slug": "/devi-sri-varahi-dwadasa-namavali",
+    "category": "namavali",
+    "filename": "devi_sri-varahi-dwadasa-namavali",
+    "keywords": "sri varahi dwadasa namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री दुर्गा  सहस्रनामावली",
     "slug": "/shri-durga-namavali",
     "category": "namavali",
     "filename": "durga",
     "keywords": "shri durga namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा द्वात्रिंशन्नाम स्तोत्रम्\"",
+    "slug": "/durga-durga-dvatimshannamavali",
+    "category": "namavali",
+    "filename": "durga_durga-dvatimshannamavali",
+    "keywords": "durga dvatimshannamavali",
     "fmKeywords": "",
     "headings": ""
   },
@@ -1179,11 +2079,38 @@
     "headings": ""
   },
   {
+    "title": "\"श्री महालक्ष्मी अक्षरमालिका नामावली\"",
+    "slug": "/lakshmi-sri-mahalakshmi-aksharamalika-namavali",
+    "category": "namavali",
+    "filename": "lakshmi_sri-mahalakshmi-aksharamalika-namavali",
+    "keywords": "sri mahalakshmi aksharamalika namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री ललिता सहस्रनामावली",
     "slug": "/shri-lalita-sasranamavali",
     "category": "namavali",
     "filename": "lalita-sahsranamavali",
     "keywords": "shri lalita sahasranamvali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता त्रिशतिनामावलिः\"",
+    "slug": "/lalitha-sri-lalitha-trisathi-namavali-in-hindi",
+    "category": "namavali",
+    "filename": "lalitha_sri-lalitha-trisathi-namavali-in-hindi",
+    "keywords": "sri lalitha trisathi namavali in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महावाराही श्रीपादुकार्चना नामावली\"",
+    "slug": "/lalitha-sri-maha-varahi-sri-padukarchana-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "lalitha_sri-maha-varahi-sri-padukarchana-ashtottara-shatanamavali",
+    "keywords": "sri maha varahi sri padukarchana ashtottara shatanamavali",
     "fmKeywords": "",
     "headings": ""
   },
@@ -1202,6 +2129,15 @@
     "category": "namavali",
     "filename": "shiv",
     "keywords": "shiv sahastra namavali",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बटुक भैरव अष्टोत्तरशतनामावली\"",
+    "slug": "/shiva-sri-batuka-bhairava-ashtottara-shatanamavali",
+    "category": "namavali",
+    "filename": "shiva_sri-batuka-bhairava-ashtottara-shatanamavali",
+    "keywords": "sri batuka bhairava ashtottara shatanamavali",
     "fmKeywords": "",
     "headings": ""
   },
@@ -7470,15 +8406,6 @@
     "headings": ""
   },
   {
-    "title": "ब्रह्मणस्पतिसूक्तम्",
-    "slug": "/brahma-vanaspati-suktam",
-    "category": "Sukt",
-    "filename": "brahma-vanaspati",
-    "keywords": "brahma suktam stotram",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
     "title": "\"श्री बगलामुखी सूक्तम् (कृत्यापरिहरणसूक्तम्)\"",
     "slug": "/dasa-mahavidya-sri-bagalamukhi-suktam",
     "category": "Sukt",
@@ -7516,7 +8443,7 @@
   },
   {
     "title": "\"श्री सूक्तम्\"",
-    "slug": "/lakshmi-sri-suktam-in-hindi",
+    "slug": "/shri-sukta",
     "category": "Sukt",
     "filename": "lakshmi_sri-suktam-in-hindi",
     "keywords": "sri suktam in hindi",
@@ -7623,15 +8550,6 @@
     "headings": ""
   },
   {
-    "title": "श्री सूक्तम्",
-    "slug": "/shri-sukta",
-    "category": "Sukt",
-    "filename": "shri-sukt",
-    "keywords": "shri suktam stotram",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
     "title": "तन्त्रोक्तं देवी सूक्तम्",
     "slug": "/tantroktam-devi-suktm",
     "category": "Sukt",
@@ -7642,7 +8560,7 @@
   },
   {
     "title": "\"ब्रह्मणस्पति सूक्तम्\"",
-    "slug": "/veda-suktam-brahmanaspati-suktam",
+    "slug": "/brahma-vanaspati-suktam",
     "category": "Sukt",
     "filename": "veda-suktam_brahmanaspati-suktam",
     "keywords": "brahmanaspati suktam",
