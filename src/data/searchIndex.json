@@ -7479,11 +7479,47 @@
     "headings": ""
   },
   {
+    "title": "\"श्री बगलामुखी सूक्तम् (कृत्यापरिहरणसूक्तम्)\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-suktam",
+    "category": "Sukt",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-suktam",
+    "keywords": "sri bagalamukhi suktam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "देवीसूक्तम्",
     "slug": "/devi-sukta",
     "category": "Sukt",
     "filename": "devi-suktam",
     "keywords": "shri devi suktam stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"तन्त्रोक्त रात्रि सूक्तम्\"",
+    "slug": "/durga-saptasati-tantrokta-ratri-suktam",
+    "category": "Sukt",
+    "filename": "durga-saptasati_tantrokta-ratri-suktam",
+    "keywords": "tantrokta ratri suktam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"दुर्गा सूक्तम्\"",
+    "slug": "/durga-durga-suktam",
+    "category": "Sukt",
+    "filename": "durga_durga-suktam",
+    "keywords": "durga suktam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सूक्तम्\"",
+    "slug": "/lakshmi-sri-suktam-in-hindi",
+    "category": "Sukt",
+    "filename": "lakshmi_sri-suktam-in-hindi",
+    "keywords": "sri suktam in hindi",
     "fmKeywords": "",
     "headings": ""
   },
@@ -7533,6 +7569,33 @@
     "headings": ""
   },
   {
+    "title": "\"श्री प्रत्यंगिरा सूक्तम् (अथर्ववेदोक्तम्)\"",
+    "slug": "/pratyangira-sri-pratyangira-suktam-atharva-vedoktam",
+    "category": "Sukt",
+    "filename": "pratyangira_sri-pratyangira-suktam-atharva-vedoktam",
+    "keywords": "sri pratyangira suktam atharva vedoktam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा सूक्तम् (ऋग्वेदीय पाठान्तरम् – १)\"",
+    "slug": "/pratyangira-sri-pratyangira-suktam-rigveda-variation-1",
+    "category": "Sukt",
+    "filename": "pratyangira_sri-pratyangira-suktam-rigveda-variation-1",
+    "keywords": "sri pratyangira suktam rigveda variation 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा सूक्तम् (ऋग्वेदीय पाठान्तरम् – २)\"",
+    "slug": "/pratyangira-sri-pratyangira-suktam-rigveda-variation-2",
+    "category": "Sukt",
+    "filename": "pratyangira_sri-pratyangira-suktam-rigveda-variation-2",
+    "keywords": "sri pratyangira suktam rigveda variation 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "पुरुष सूक्तम्",
     "slug": "/purush-sukt",
     "category": "Sukt",
@@ -7574,6 +7637,33 @@
     "category": "Sukt",
     "filename": "tantroktam-devi",
     "keywords": "devi tantroktm suktm stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"ब्रह्मणस्पति सूक्तम्\"",
+    "slug": "/veda-suktam-brahmanaspati-suktam",
+    "category": "Sukt",
+    "filename": "veda-suktam_brahmanaspati-suktam",
+    "keywords": "brahmanaspati suktam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती सूक्तम्\"",
+    "slug": "/veda-suktam-saraswathi-suktam-rigveda-samhita",
+    "category": "Sukt",
+    "filename": "veda-suktam_saraswathi-suktam-rigveda-samhita",
+    "keywords": "saraswathi suktam rigveda samhita",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश सूक्तम् (ऋग्वेदीय)\"",
+    "slug": "/veda-suktam-sri-ganesha-suktam-in-hindi",
+    "category": "Sukt",
+    "filename": "veda-suktam_sri-ganesha-suktam-in-hindi",
+    "keywords": "sri ganesha suktam in hindi",
     "fmKeywords": "",
     "headings": ""
   },
