@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Internal search data and service files are not public content.
+Disallow: /search-index.json
+Disallow: /offline.html
+Disallow: /sw.js
+
+Sitemap: https://sangrah.justinclicks.com/sitemap.xml

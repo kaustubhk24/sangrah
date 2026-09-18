@@ -106,6 +106,10 @@ const config = {
             return processItems(sidebarItems);
           },
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.7,
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
