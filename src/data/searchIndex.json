@@ -1161,15 +1161,6 @@
     "headings": ""
   },
   {
-    "title": "\"श्री बाला त्रिपुरसुन्दरी सहस्रनामावली – १\"",
-    "slug": "/1008-sri-bala-sahasranamavali-1",
-    "category": "namavali",
-    "filename": "1008_sri-bala-sahasranamavali-1",
-    "keywords": "sri bala sahasranamavali 1",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
     "title": "\"श्री बालात्रिपुरसुन्दरी सहस्रनामावली २\"",
     "slug": "/1008-sri-bala-tripura-sundari-sahasranamavali-2",
     "category": "namavali",
@@ -1184,15 +1175,6 @@
     "category": "namavali",
     "filename": "1008_sri-dakshinamurthy-sahasranamavali",
     "keywords": "sri dakshinamurthy sahasranamavali",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
-    "title": "\"श्री दुर्गा सहस्रनामावली\"",
-    "slug": "/1008-sri-durga-sahasranamavali",
-    "category": "namavali",
-    "filename": "1008_sri-durga-sahasranamavali",
-    "keywords": "sri durga sahasranamavali",
     "fmKeywords": "",
     "headings": ""
   },
@@ -1665,15 +1647,6 @@
     "headings": ""
   },
   {
-    "title": "\"श्री महावाराह्यष्टोत्तरशतनामावली\"",
-    "slug": "/108-sri-maha-varahi-ashtottara-shatanamavali",
-    "category": "namavali",
-    "filename": "108_sri-maha-varahi-ashtottara-shatanamavali",
-    "keywords": "sri maha varahi ashtottara shatanamavali",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
     "title": "\"श्री महालक्ष्मी अष्टोत्तरशतनामावली २\"",
     "slug": "/108-sri-mahalakshmi-ashtottara-shatanamavali-2",
     "category": "namavali",
@@ -1904,15 +1877,6 @@
     "category": "namavali",
     "filename": "108_sri-vasavi-ashttotara-shatanamavali-in-hindi",
     "keywords": "sri vasavi ashttotara shatanamavali in hindi",
-    "fmKeywords": "",
-    "headings": ""
-  },
-  {
-    "title": "\"श्री वासवीकन्यकापरमेश्वरी अष्टोत्तरशतनामावली\"",
-    "slug": "/108-sri-vasavi-ashttotara-shatanamavali",
-    "category": "namavali",
-    "filename": "108_sri-vasavi-ashttotara-shatanamavali",
-    "keywords": "sri vasavi ashttotara shatanamavali",
     "fmKeywords": "",
     "headings": ""
   },
@@ -8019,6 +7983,33 @@
     "headings": "।। भावपूर्ण समर्पण ।। संपूर्ण संग्रह प्रकल्पाबद्दल प्रकल्पास मदत कशी कराल ? PWA अनुप्रयोग इन्स्टॉल कसा करावा अ‍ॅप रिफ्रेश मार्गदर्शन धन्यवाद!"
   },
   {
+    "title": "\"श्री गायत्री सहस्रनाम स्तोत्रम् २\"",
+    "slug": "/1008-sri-gayatri-sahasranama-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "1008_sri-gayatri-sahasranama-stotram-2",
+    "keywords": "sri gayatri sahasranama stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री सहस्रनाम स्तोत्रम्\"",
+    "slug": "/1008-sri-gayatri-sahasranama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "1008_sri-gayatri-sahasranama-stotram-in-hindi",
+    "keywords": "sri gayatri sahasranama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य त्रिशती स्तोत्रम्\"",
+    "slug": "/300-sri-subrahmanya-trishati-stotram",
+    "category": "stotras-shlok",
+    "filename": "300_sri-subrahmanya-trishati-stotram",
+    "keywords": "sri subrahmanya trishati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री महिषासुरमर्दिनि स्तोत्रम्",
     "slug": "/aaigiri-nandini",
     "category": "stotras-shlok",
@@ -8042,6 +8033,1239 @@
     "category": "stotras-shlok",
     "filename": "balashish-stotra",
     "keywords": "balashish stotra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"दशविद्यामयी श्री बाला स्तोत्रम्\"",
+    "slug": "/bala-dasavidyamayi-bala-stotram",
+    "category": "stotras-shlok",
+    "filename": "bala_dasavidyamayi-bala-stotram",
+    "keywords": "dasavidyamayi bala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालाष्टोत्तरशतनाम स्तोत्रम् २\"",
+    "slug": "/bala-sri-bala-ashtottara-shatanama-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "bala_sri-bala-ashtottara-shatanama-stotram-2",
+    "keywords": "sri bala ashtottara shatanama stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला भुजङ्ग स्तोत्रम्\"",
+    "slug": "/bala-sri-bala-bhujanga-stotram",
+    "category": "stotras-shlok",
+    "filename": "bala_sri-bala-bhujanga-stotram",
+    "keywords": "sri bala bhujanga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला कर्पूर स्तोत्रम्\"",
+    "slug": "/bala-sri-bala-karpura-stotram",
+    "category": "stotras-shlok",
+    "filename": "bala_sri-bala-karpura-stotram",
+    "keywords": "sri bala karpura stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला मुक्तावली स्तोत्रम्\"",
+    "slug": "/bala-sri-bala-muktavali-stotram",
+    "category": "stotras-shlok",
+    "filename": "bala_sri-bala-muktavali-stotram",
+    "keywords": "sri bala muktavali stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला पञ्चचामर स्तवः\"",
+    "slug": "/bala-sri-bala-panchachamara-stava",
+    "category": "stotras-shlok",
+    "filename": "bala_sri-bala-panchachamara-stava",
+    "keywords": "sri bala panchachamara stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला त्रिपुरसुन्दरी सहस्रनाम स्तोत्रम्\"",
+    "slug": "/bala-sri-bala-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "bala_sri-bala-sahasranama-stotram",
+    "keywords": "sri bala sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला शान्ति स्तोत्रम्\"",
+    "slug": "/bala-sri-bala-shanti-stotram",
+    "category": "stotras-shlok",
+    "filename": "bala_sri-bala-shanti-stotram",
+    "keywords": "sri bala shanti stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालात्रिपुरसुन्दरी सहस्रनाम स्तोत्रम् २\"",
+    "slug": "/bala-sri-bala-tripurasundari-sahasranama-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "bala_sri-bala-tripurasundari-sahasranama-stotram-2",
+    "keywords": "sri bala tripurasundari sahasranama stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अष्टभैरव ध्यान स्तोत्रम्\"",
+    "slug": "/bhairava-ashta-bhairava-dhyana-stotram",
+    "category": "stotras-shlok",
+    "filename": "bhairava_ashta-bhairava-dhyana-stotram",
+    "keywords": "ashta bhairava dhyana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"कालभैरवाष्टकम्\"",
+    "slug": "/bhairava-kalabhairavashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "bhairava_kalabhairavashtakam-in-hindi",
+    "keywords": "kalabhairavashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"कालभैरवाष्टकम्\"",
+    "slug": "/bhairava-kalabhairavashtakam",
+    "category": "stotras-shlok",
+    "filename": "bhairava_kalabhairavashtakam",
+    "keywords": "kalabhairavashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बटुकभैरव सहस्रनाम स्तोत्रम् (भैरवतन्त्रे)\"",
+    "slug": "/bhairava-sri-batuka-bhairava-sahasranama-stotram-bhairava-tantram",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-batuka-bhairava-sahasranama-stotram-bhairava-tantram",
+    "keywords": "sri batuka bhairava sahasranama stotram bhairava tantram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बटुकभैरव स्तवराजः (अष्टोत्तरशतनाम स्तोत्रम् च)\"",
+    "slug": "/bhairava-sri-batuka-bhairava-stavaraja-ashtottara-shatanama-stotram-cha",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-batuka-bhairava-stavaraja-ashtottara-shatanama-stotram-cha",
+    "keywords": "sri batuka bhairava stavaraja ashtottara shatanama stotram cha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भैरव ताण्डव स्तोत्रम्\"",
+    "slug": "/bhairava-sri-bhairava-tandava-stotram",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-bhairava-tandava-stotram",
+    "keywords": "sri bhairava tandava stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालभैरवाष्टकम् – २\"",
+    "slug": "/bhairava-sri-kala-bhairava-ashtakam-2",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-kala-bhairava-ashtakam-2",
+    "keywords": "sri kala bhairava ashtakam 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालभैरव पञ्चरत्न स्तुतिः\"",
+    "slug": "/bhairava-sri-kala-bhairava-pancharatna-stuti",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-kala-bhairava-pancharatna-stuti",
+    "keywords": "sri kala bhairava pancharatna stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालभैरव ककार अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/bhairava-sri-kalabhairava-kakara-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-kalabhairava-kakara-ashtottara-shatanama-stotram",
+    "keywords": "sri kalabhairava kakara ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री नग्नभैरव स्तुतिः (मुद्गलपुराणे)\"",
+    "slug": "/bhairava-sri-nagna-bhairava-stuti-mudgala-purane",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-nagna-bhairava-stuti-mudgala-purane",
+    "keywords": "sri nagna bhairava stuti mudgala purane",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्वर्णाकर्षण भैरव स्तोत्रम् – २\"",
+    "slug": "/bhairava-sri-swarna-akarshana-bhairava-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-swarna-akarshana-bhairava-stotram-2",
+    "keywords": "sri swarna akarshana bhairava stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्वर्णाकर्षण भैरव स्तोत्रम्\"",
+    "slug": "/bhairava-sri-swarna-akarshana-bhairava-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-swarna-akarshana-bhairava-stotram-in-hindi",
+    "keywords": "sri swarna akarshana bhairava stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्वर्णाकर्षण भैरव स्तोत्रम्\"",
+    "slug": "/bhairava-sri-swarna-akarshana-bhairava-stotram",
+    "category": "stotras-shlok",
+    "filename": "bhairava_sri-swarna-akarshana-bhairava-stotram",
+    "keywords": "sri swarna akarshana bhairava stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"तीक्ष्णदंष्ट्र कालभैरवाष्टकम्\"",
+    "slug": "/bhairava-teekshna-danshtra-kalabhairava-ashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "bhairava_teekshna-danshtra-kalabhairava-ashtakam-in-hindi",
+    "keywords": "teekshna danshtra kalabhairava ashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"तीक्ष्णदंष्ट्र कालभैरवाष्टकम्\"",
+    "slug": "/bhairava-teekshna-danshtra-kalabhairava-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "bhairava_teekshna-danshtra-kalabhairava-ashtakam",
+    "keywords": "teekshna danshtra kalabhairava ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तवम् (अभीष्टद)\"",
+    "slug": "/brahma-abhistada-sri-brahma-stotram",
+    "category": "stotras-shlok",
+    "filename": "brahma_abhistada-sri-brahma-stotram",
+    "keywords": "abhistada sri brahma stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म पञ्चरत्न स्तोत्रम् (महानिर्वाणतन्त्रे)\"",
+    "slug": "/brahma-sri-brahma-pancharatna-stotram-mahanirvana-tantre",
+    "category": "stotras-shlok",
+    "filename": "brahma_sri-brahma-pancharatna-stotram-mahanirvana-tantre",
+    "keywords": "sri brahma pancharatna stotram mahanirvana tantre",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तवम् (पद्मपुराणे विष्णु कृतम्)\"",
+    "slug": "/brahma-sri-brahma-stavam-padmapurane-vishnu-krutam",
+    "category": "stotras-shlok",
+    "filename": "brahma_sri-brahma-stavam-padmapurane-vishnu-krutam",
+    "keywords": "sri brahma stavam padmapurane vishnu krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तुतिः (मत्स्यपुराणे देव कृतम्)\"",
+    "slug": "/brahma-sri-brahma-stotram-2-deva-krutam",
+    "category": "stotras-shlok",
+    "filename": "brahma_sri-brahma-stotram-2-deva-krutam",
+    "keywords": "sri brahma stotram 2 deva krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तोत्रम् (हिरण्यकशिपु कृतम्)\"",
+    "slug": "/brahma-sri-brahma-stotram-hiranyakashipu-krutam",
+    "category": "stotras-shlok",
+    "filename": "brahma_sri-brahma-stotram-hiranyakashipu-krutam",
+    "keywords": "sri brahma stotram hiranyakashipu krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तुतिः (माहेश्वरतन्त्रे)\"",
+    "slug": "/brahma-sri-brahma-stuti-maheshwara-tantre",
+    "category": "stotras-shlok",
+    "filename": "brahma_sri-brahma-stuti-maheshwara-tantre",
+    "keywords": "sri brahma stuti maheshwara tantre",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तुति पञ्चकम्\"",
+    "slug": "/brahma-sri-brahma-stuti-panchakam",
+    "category": "stotras-shlok",
+    "filename": "brahma_sri-brahma-stuti-panchakam",
+    "keywords": "sri brahma stuti panchakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तुतिः (वायुपुराणे व्यास कृतम्)\"",
+    "slug": "/brahma-sri-brahma-stuti-vayu-purane-vyasa-krutam",
+    "category": "stotras-shlok",
+    "filename": "brahma_sri-brahma-stuti-vayu-purane-vyasa-krutam",
+    "keywords": "sri brahma stuti vayu purane vyasa krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तुतिः\"",
+    "slug": "/brahma-sri-brahma-stuti",
+    "category": "stotras-shlok",
+    "filename": "brahma_sri-brahma-stuti",
+    "keywords": "sri brahma stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति वर्णमाला स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-dakshinamurthy-varnamala-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_dakshinamurthy-varnamala-stotram-in-hindi",
+    "keywords": "dakshinamurthy varnamala stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्त्यष्टकम् – ३ (नृसिंहभारती कृतम्)\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-ashtakam-3-narasimha-bharati-krutam",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-ashtakam-3-narasimha-bharati-krutam",
+    "keywords": "sri dakshinamurthy ashtakam 3 narasimha bharati krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्त्यष्टकम् – ४ (वृषभदेव कृतम्)\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-ashtakam-4-vrushabha-deva-krutam",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-ashtakam-4-vrushabha-deva-krutam",
+    "keywords": "sri dakshinamurthy ashtakam 4 vrushabha deva krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्त्यष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-ashtottara-shatanama-stotram",
+    "keywords": "sri dakshinamurthy ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणास्य भुजङ्गप्रयात स्तुतिः\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-bhujanga-prayata-stuti",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-bhujanga-prayata-stuti",
+    "keywords": "sri dakshinamurthy bhujanga prayata stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति दण्डकम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-dandakam",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-dandakam",
+    "keywords": "sri dakshinamurthy dandakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति दशकम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-dashakam",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-dashakam",
+    "keywords": "sri dakshinamurthy dashakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति हृदयम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-hrudayam",
+    "keywords": "sri dakshinamurthy hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति मानसिक पूजा स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-manasika-puja-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-manasika-puja-stotram",
+    "keywords": "sri dakshinamurthy manasika puja stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति मनुसुवर्णमाला स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-manu-suvarnamala-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-manu-suvarnamala-stotram",
+    "keywords": "sri dakshinamurthy manu suvarnamala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणास्य नक्षत्रमाला स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-nakshatramala-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-nakshatramala-stotram",
+    "keywords": "sri dakshinamurthy nakshatramala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति नवमणिमाला स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-navamani-mala-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-navamani-mala-stotram",
+    "keywords": "sri dakshinamurthy navamani mala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति नवरत्नमाला स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-navaratna-mala-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-navaratna-mala-stotram",
+    "keywords": "sri dakshinamurthy navaratna mala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति सहस्रनाम स्तोत्रम् – २\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-sahasranama-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-sahasranama-stotram-2",
+    "keywords": "sri dakshinamurthy sahasranama stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति सहस्रनाम स्तोत्रम् – १\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-sahasranama-stotram",
+    "keywords": "sri dakshinamurthy sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति षट्कम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-shatkam",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-shatkam",
+    "keywords": "sri dakshinamurthy shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति स्तोत्रम् – १\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-stotram-1",
+    "keywords": "sri dakshinamurthy stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति स्तोत्रम् – २\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-stotram-2",
+    "keywords": "sri dakshinamurthy stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति स्तोत्रम् – ३ (जय घोष)\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-stotram-3-jaya-ghosha",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-stotram-3-jaya-ghosha",
+    "keywords": "sri dakshinamurthy stotram 3 jaya ghosha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति स्तोत्रम् – ५ (सूतसंहितायाम्)\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-stotram-5",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-stotram-5",
+    "keywords": "sri dakshinamurthy stotram 5",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति स्तुतिः\"",
+    "slug": "/dakshinamurthy-sri-dakshinamurthy-stuti",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinamurthy-stuti",
+    "keywords": "sri dakshinamurthy stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणास्य पञ्चरत्न स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-dakshinasya-pancharatna-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-dakshinasya-pancharatna-stotram",
+    "keywords": "sri dakshinasya pancharatna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गुरुमूर्ति स्तोत्रम्\"",
+    "slug": "/dakshinamurthy-sri-gurumurthy-stotram",
+    "category": "stotras-shlok",
+    "filename": "dakshinamurthy_sri-gurumurthy-stotram",
+    "keywords": "sri gurumurthy stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"ककारादि श्री काली सहस्रनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-kakaradi-kali-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_kakaradi-kali-sahasranama-stotram",
+    "keywords": "kakaradi kali sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महात्रिपुरसुन्दरी हृदयम्\"",
+    "slug": "/dasa-mahavidya-maha-tripura-sundari-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_maha-tripura-sundari-hrudayam",
+    "keywords": "maha tripura sundari hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महात्रिपुरसुन्दरी षट्कम्\"",
+    "slug": "/dasa-mahavidya-maha-tripura-sundari-shatkam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_maha-tripura-sundari-shatkam",
+    "keywords": "maha tripura sundari shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"प्रचण्ड चण्डिका स्तवराजः (श्री छिन्नमस्ता स्तोत्रम्)\"",
+    "slug": "/dasa-mahavidya-prachanda-chandika-stavaraja",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_prachanda-chandika-stavaraja",
+    "keywords": "prachanda chandika stavaraja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री आद्या स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-adya-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-adya-stotram",
+    "keywords": "sri adya stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी अष्टोत्तरशतनाम स्तोत्रम् – १ (रुद्रयामले)\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-ashtottara-shatanama-stotram-1-rudrayamale",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-ashtottara-shatanama-stotram-1-rudrayamale",
+    "keywords": "sri bagalamukhi ashtottara shatanama stotram 1 rudrayamale",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी अष्टोत्तरशतनाम स्तोत्रम् – २ (विष्णुयामले)\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-ashtottara-shatanama-stotram",
+    "keywords": "sri bagalamukhi ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी दशनामात्मक स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-dasanamatmaka-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-dasanamatmaka-stotram",
+    "keywords": "sri bagalamukhi dasanamatmaka stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी दिग्बन्धन रक्षा स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-digbandhana-raksha-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-digbandhana-raksha-stotram",
+    "keywords": "sri bagalamukhi digbandhana raksha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी हृदय स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-hrudayam",
+    "keywords": "sri bagalamukhi hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी कीलक स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-keelaka-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-keelaka-stotram",
+    "keywords": "sri bagalamukhi keelaka stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी पञ्जर न्यास स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-panjara-nyasa-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-panjara-nyasa-stotram",
+    "keywords": "sri bagalamukhi panjara nyasa stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी पञ्जर स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-panjara-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-panjara-stotram",
+    "keywords": "sri bagalamukhi panjara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी सहस्रनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-sahasranama-stotram",
+    "keywords": "sri bagalamukhi sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी स्तवराजः\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-stavaraja",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-stavaraja",
+    "keywords": "sri bagalamukhi stavaraja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी स्तोत्रम् – १\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-stotram-1",
+    "keywords": "sri bagalamukhi stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बगलामुखी स्तोत्रम् – २\"",
+    "slug": "/dasa-mahavidya-sri-bagalamukhi-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bagalamukhi-stotram-2",
+    "keywords": "sri bagalamukhi stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भद्रकाल्यष्टकम् १\"",
+    "slug": "/dasa-mahavidya-sri-bhadrakali-ashtakam-1",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bhadrakali-ashtakam-1",
+    "keywords": "sri bhadrakali ashtakam 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भद्रकाल्यष्टकम् २\"",
+    "slug": "/dasa-mahavidya-sri-bhadrakali-ashtakam-2",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bhadrakali-ashtakam-2",
+    "keywords": "sri bhadrakali ashtakam 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भद्रकाली अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bhadrakali-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bhadrakali-ashtottara-shatanama-stotram",
+    "keywords": "sri bhadrakali ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भद्रकाली स्तुतिः\"",
+    "slug": "/dasa-mahavidya-sri-bhadrakali-stuti",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bhadrakali-stuti",
+    "keywords": "sri bhadrakali stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भुवनेश्वरी अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bhuvaneshwari-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bhuvaneshwari-ashtottara-shatanama-stotram",
+    "keywords": "sri bhuvaneshwari ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भुवनेश्वरी हृदयम्\"",
+    "slug": "/dasa-mahavidya-sri-bhuvaneshwari-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bhuvaneshwari-hrudayam",
+    "keywords": "sri bhuvaneshwari hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भुवनेश्वरी पञ्जर स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bhuvaneshwari-panjara-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bhuvaneshwari-panjara-stotram",
+    "keywords": "sri bhuvaneshwari panjara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भुवनेश्वरी स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-bhuvaneshwari-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-bhuvaneshwari-stotram",
+    "keywords": "sri bhuvaneshwari stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री छिन्नमस्तादेवि अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-chinnamasta-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-chinnamasta-ashtottara-shatanama-stotram",
+    "keywords": "sri chinnamasta ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री छिन्नमस्ता देवि हृदयम्\"",
+    "slug": "/dasa-mahavidya-sri-chinnamastha-devi-hridayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-chinnamastha-devi-hridayam",
+    "keywords": "sri chinnamastha devi hridayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री छिन्नमस्ता देवि स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-chinnamastha-devi-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-chinnamastha-devi-stotram",
+    "keywords": "sri chinnamastha devi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणकालिका हृदय स्तोत्रम् २\"",
+    "slug": "/dasa-mahavidya-sri-dakshina-kali-hrudayam-2",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-dakshina-kali-hrudayam-2",
+    "keywords": "sri dakshina kali hrudayam 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणकालिका खड्गमाला स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-dakshina-kali-khadgamala-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-dakshina-kali-khadgamala-stotram",
+    "keywords": "sri dakshina kali khadgamala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणकालिका त्रिशती स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-dakshina-kali-trishati-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-dakshina-kali-trishati-stotram",
+    "keywords": "sri dakshina kali trishati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री धूमावती हृदयम्\"",
+    "slug": "/dasa-mahavidya-sri-dhumavathi-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-dhumavathi-hrudayam",
+    "keywords": "sri dhumavathi hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री धूमावती स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-dhumavathi-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-dhumavathi-stotram",
+    "keywords": "sri dhumavathi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री धूमावती अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-dhumavati-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-dhumavati-ashtottara-shatanama-stotram",
+    "keywords": "sri dhumavati ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गुह्यकाली सुधाधारा स्तवः\"",
+    "slug": "/dasa-mahavidya-sri-guhya-kali-sudha-dhara-stava",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-guhya-kali-sudha-dhara-stava",
+    "keywords": "sri guhya kali sudha dhara stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली अपराधक्षमापण स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kali-aparadha-kshamapana-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-aparadha-kshamapana-stotram",
+    "keywords": "sri kali aparadha kshamapana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"ककारादि श्री काली अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kali-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-ashtottara-shatanama-stotram",
+    "keywords": "sri kali ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणकाली हृदय स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kali-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-hrudayam",
+    "keywords": "sri kali hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली कर्पूर स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kali-karpura-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-karpura-stotram",
+    "keywords": "sri kali karpura stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली क्रम स्तवः\"",
+    "slug": "/dasa-mahavidya-sri-kali-krama-stava",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-krama-stava",
+    "keywords": "sri kali krama stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली प्रातः स्मरण स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kali-pratah-smarana-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-pratah-smarana-stotram",
+    "keywords": "sri kali pratah smarana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली शान्ति स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kali-shanti-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-shanti-stotram",
+    "keywords": "sri kali shanti stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली स्तवनम् (शाकिनी स्तोत्रम्)\"",
+    "slug": "/dasa-mahavidya-sri-kali-stavanam-shakini-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-stavanam-shakini-stotram",
+    "keywords": "sri kali stavanam shakini stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली स्तुतिः (ब्रह्म कृतम्)\"",
+    "slug": "/dasa-mahavidya-sri-kali-stuti-brahma-krutam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-stuti-brahma-krutam",
+    "keywords": "sri kali stuti brahma krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काली ताण्डव स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kali-tandava-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kali-tandava-stotram",
+    "keywords": "sri kali tandava stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिका अर्गल स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kalika-argala-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kalika-argala-stotram",
+    "keywords": "sri kalika argala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिकाष्टकम्\"",
+    "slug": "/dasa-mahavidya-sri-kalika-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kalika-ashtakam",
+    "keywords": "sri kalika ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिका कीलक स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kalika-keelaka-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kalika-keelaka-stotram",
+    "keywords": "sri kalika keelaka stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिका सहस्रनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kalika-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kalika-sahasranama-stotram",
+    "keywords": "sri kalika sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री आद्या कालिका शतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kalika-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kalika-shatanama-stotram",
+    "keywords": "sri kalika shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिका स्तोत्रम् १\"",
+    "slug": "/dasa-mahavidya-sri-kalika-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kalika-stotram-1",
+    "keywords": "sri kalika stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिका स्तोत्रम् २\"",
+    "slug": "/dasa-mahavidya-sri-kalika-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kalika-stotram-2",
+    "keywords": "sri kalika stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कालिका स्वरूप स्तुतिः\"",
+    "slug": "/dasa-mahavidya-sri-kalika-swaroopa-stuti",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kalika-swaroopa-stuti",
+    "keywords": "sri kalika swaroopa stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामकलाकाली भुजङ्ग प्रयात स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kamakala-kali-bhujanga-prayata-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kamakala-kali-bhujanga-prayata-stotram",
+    "keywords": "sri kamakala kali bhujanga prayata stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामकलाकाली सहस्रनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kamakala-kali-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kamakala-kali-sahasranama-stotram",
+    "keywords": "sri kamakala kali sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामकलाकाली सञ्जीवन गद्य स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kamakala-kali-sanjeevana-gadya-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kamakala-kali-sanjeevana-gadya-stotram",
+    "keywords": "sri kamakala kali sanjeevana gadya stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कमला अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kamala-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kamala-ashtottara-shatanama-stotram",
+    "keywords": "sri kamala ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कमला सहस्रनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kamala-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kamala-sahasranama-stotram",
+    "keywords": "sri kamala sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कमला स्तोत्रम् २\"",
+    "slug": "/dasa-mahavidya-sri-kamala-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kamala-stotram-2",
+    "keywords": "sri kamala stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कमला स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kamala-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kamala-stotram",
+    "keywords": "sri kamala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कमलाम्बिका स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-kamalambika-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-kamalambika-stotram",
+    "keywords": "sri kamalambika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महाकाली शतनाम स्तोत्रम् (बृहन्नीलतन्त्रे)\"",
+    "slug": "/dasa-mahavidya-sri-maha-kali-shatanama-stotram-brihan-nila-tantram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-maha-kali-shatanama-stotram-brihan-nila-tantram",
+    "keywords": "sri maha kali shatanama stotram brihan nila tantram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महाकाली स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-maha-kali-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-maha-kali-stotram",
+    "keywords": "sri maha kali stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मातङ्गी अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-matangi-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-matangi-ashtottara-shatanama-stotram",
+    "keywords": "sri matangi ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मातङ्गी सहस्रनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-matangi-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-matangi-sahasranama-stotram",
+    "keywords": "sri matangi sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मातङ्गी स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-matangi-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-matangi-stotram-2",
+    "keywords": "sri matangi stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मातङ्गी हृदयम्\"",
+    "slug": "/dasa-mahavidya-sri-mathangi-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-mathangi-hrudayam",
+    "keywords": "sri mathangi hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मातङ्गी स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-mathangi-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-mathangi-stotram",
+    "keywords": "sri mathangi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री नीलसरस्वती स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-neela-saraswati-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-neela-saraswati-stotram",
+    "keywords": "sri neela saraswati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षोडशी अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-shodashi-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-shodashi-ashtottara-shatanama-stotram",
+    "keywords": "sri shodashi ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ताराम्बा अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-tara-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-tara-ashtottara-shatanama-stotram",
+    "keywords": "sri tara ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री तारा स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-tara-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-tara-stotram",
+    "keywords": "sri tara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ताराम्बा हृदयम्\"",
+    "slug": "/dasa-mahavidya-sri-taramba-tara-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-taramba-tara-hrudayam",
+    "keywords": "sri taramba tara hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरभैरवी अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-tripura-bhairavi-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-tripura-bhairavi-ashtottara-shatanama-stotram",
+    "keywords": "sri tripura bhairavi ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरभैरवी हृदयं\"",
+    "slug": "/dasa-mahavidya-sri-tripura-bhairavi-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-tripura-bhairavi-hrudayam",
+    "keywords": "sri tripura bhairavi hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरभैरवी स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-tripura-bhairavi-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-tripura-bhairavi-stotram",
+    "keywords": "sri tripura bhairavi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरसुन्दरी स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-sri-tripura-sundari-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_sri-tripura-sundari-stotram",
+    "keywords": "sri tripura sundari stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरसुन्दरी पञ्चरत्न स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-tripura-sundari-pancharatna-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_tripura-sundari-pancharatna-stotram",
+    "keywords": "tripura sundari pancharatna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"त्रिपुरसुन्दर्यष्टकम्\"",
+    "slug": "/dasa-mahavidya-tripurasundari-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_tripurasundari-ashtakam",
+    "keywords": "tripurasundari ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरसुन्दरी मानसपूजा स्तोत्रम्\"",
+    "slug": "/dasa-mahavidya-tripurasundari-manasa-puja-stotram",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_tripurasundari-manasa-puja-stotram",
+    "keywords": "tripurasundari manasa puja stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरसुन्दरी वेदपाद स्तवः\"",
+    "slug": "/dasa-mahavidya-tripurasundari-veda-pada-stava",
+    "category": "stotras-shlok",
+    "filename": "dasa-mahavidya_tripurasundari-veda-pada-stava",
+    "keywords": "tripurasundari veda pada stava",
     "fmKeywords": "",
     "headings": ""
   },
@@ -8082,6 +9306,1176 @@
     "headings": "फलश्रुतिः"
   },
   {
+    "title": "\"अभिरामि स्तोत्रम्\"",
+    "slug": "/devi-abhirami-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_abhirami-stotram",
+    "keywords": "abhirami stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अखिलाण्डेश्वरी स्तोत्रम्\"",
+    "slug": "/devi-akhilandeshwari-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_akhilandeshwari-stotram",
+    "keywords": "akhilandeshwari stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"आनन्दलहरी\"",
+    "slug": "/devi-anandalahari",
+    "category": "stotras-shlok",
+    "filename": "devi_anandalahari",
+    "keywords": "anandalahari",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री अन्नपूर्णा स्तोत्रम्\"",
+    "slug": "/devi-annapurna-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_annapurna-stotram",
+    "keywords": "annapurna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अष्टादशशक्तिपीठ स्तोत्रम्\"",
+    "slug": "/devi-ashtadasa-sakthi-peeta-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_ashtadasa-sakthi-peeta-stotram",
+    "keywords": "ashtadasa sakthi peeta stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भवान्यष्टकम्\"",
+    "slug": "/devi-bhavani-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_bhavani-ashtakam",
+    "keywords": "bhavani ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भवानी भुजङ्ग स्तुतिः\"",
+    "slug": "/devi-bhavani-bhujangaprayata-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_bhavani-bhujangaprayata-stotram",
+    "keywords": "bhavani bhujangaprayata stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भ्रमराम्बाष्टकम्\"",
+    "slug": "/devi-bhramaramba-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_bhramaramba-ashtakam",
+    "keywords": "bhramaramba ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"चतुःषष्टि योगिनी नाम स्तोत्रम् – २\"",
+    "slug": "/devi-chatushashti-64-yogini-nama-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "devi_chatushashti-64-yogini-nama-stotram-2",
+    "keywords": "chatushashti 64 yogini nama stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"चतुःषष्टि योगिनी नाम स्तोत्रम्\"",
+    "slug": "/devi-chatushashti-64-yogini-nama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_chatushashti-64-yogini-nama-stotram",
+    "keywords": "chatushashti 64 yogini nama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"देव्यपराध क्षमापण स्तोत्रम्\"",
+    "slug": "/devi-devi-aparadha-kshamapana-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_devi-aparadha-kshamapana-stotram",
+    "keywords": "devi aparadha kshamapana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"देवी भुजङ्ग स्तोत्रम्\"",
+    "slug": "/devi-devi-bhujanga-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_devi-bhujanga-stotram",
+    "keywords": "devi bhujanga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"देवी चतुःषष्ट्युपचारपूजा स्तोत्रम्\"",
+    "slug": "/devi-devi-chatushasti-upachara-puja-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_devi-chatushasti-upachara-puja-stotram",
+    "keywords": "devi chatushasti upachara puja stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"देवी अश्वधाटि स्तोत्रम्\"",
+    "slug": "/devi-devi-pranava-sloki-stuti",
+    "category": "stotras-shlok",
+    "filename": "devi_devi-pranava-sloki-stuti",
+    "keywords": "devi pranava sloki stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"देवी षट्कम्\"",
+    "slug": "/devi-devi-shatkam",
+    "category": "stotras-shlok",
+    "filename": "devi_devi-shatkam",
+    "keywords": "devi shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गर्भरक्षाम्बिका स्तोत्रम्\"",
+    "slug": "/devi-garbha-rakshambika-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_garbha-rakshambika-stotram",
+    "keywords": "garbha rakshambika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गौरी दशकम्\"",
+    "slug": "/devi-gauri-dashakam",
+    "category": "stotras-shlok",
+    "filename": "devi_gauri-dashakam",
+    "keywords": "gauri dashakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"गोदा स्तुतिः\"",
+    "slug": "/devi-goda-stuti",
+    "category": "stotras-shlok",
+    "filename": "devi_goda-stuti",
+    "keywords": "goda stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"कल्याणवृष्टि स्तवः\"",
+    "slug": "/devi-kalyana-vrishti-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_kalyana-vrishti-stava",
+    "keywords": "kalyana vrishti stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"किरात वाराही स्तोत्रम्\"",
+    "slug": "/devi-kiraata-varahi-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_kiraata-varahi-stotram",
+    "keywords": "kiraata varahi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मातृकावर्ण स्तोत्रम्\"",
+    "slug": "/devi-matrika-varna-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_matrika-varna-stotram",
+    "keywords": "matrika varna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मीनाक्षी पञ्चरत्नम्\"",
+    "slug": "/devi-meenakshi-pancharatnam",
+    "category": "stotras-shlok",
+    "filename": "devi_meenakshi-pancharatnam",
+    "keywords": "meenakshi pancharatnam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मीनाक्षी स्तोत्रम्\"",
+    "slug": "/devi-meenakshi-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_meenakshi-stotram",
+    "keywords": "meenakshi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"पञ्चस्तवि – १\"",
+    "slug": "/devi-panchastavi-1-laghu-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_panchastavi-1-laghu-stava",
+    "keywords": "panchastavi 1 laghu stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"पञ्चस्तवि – २\"",
+    "slug": "/devi-panchastavi-2-charcha-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_panchastavi-2-charcha-stava",
+    "keywords": "panchastavi 2 charcha stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"पञ्चस्तवि – ३\"",
+    "slug": "/devi-panchastavi-3-ghata-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_panchastavi-3-ghata-stava",
+    "keywords": "panchastavi 3 ghata stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"पञ्चस्तवि – ४\"",
+    "slug": "/devi-panchastavi-4-amba-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_panchastavi-4-amba-stava",
+    "keywords": "panchastavi 4 amba stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"पञ्चस्तवि – ५\"",
+    "slug": "/devi-panchastavi-5-sakalajanani-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_panchastavi-5-sakalajanani-stava",
+    "keywords": "panchastavi 5 sakalajanani stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महाकाली स्तोत्रम् (परशुराम कृतम्)\"",
+    "slug": "/devi-parashurama-kruta-kali-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_parashurama-kruta-kali-stotram",
+    "keywords": "parashurama kruta kali stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री राजराजेश्वर्यष्टकम् (अम्बाष्टकम्)\"",
+    "slug": "/devi-rajarajeshwari-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_rajarajeshwari-ashtakam",
+    "keywords": "rajarajeshwari ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सङ्कटनामाष्टकम्\"",
+    "slug": "/devi-sankata-nama-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_sankata-nama-ashtakam",
+    "keywords": "sankata nama ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सप्तमातृका स्तोत्रम्\"",
+    "slug": "/devi-saptha-matrika-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_saptha-matrika-stotram",
+    "keywords": "saptha matrika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सौभाग्याष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-saubhagya-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_saubhagya-ashtottara-shatanama-stotram",
+    "keywords": "saubhagya ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्रेयस्करी स्तोत्रम्\"",
+    "slug": "/devi-shreyaskari-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_shreyaskari-stotram",
+    "keywords": "shreyaskari stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामला दण्डकम्\"",
+    "slug": "/devi-shyamala-dandakam",
+    "category": "stotras-shlok",
+    "filename": "devi_shyamala-dandakam",
+    "keywords": "shyamala dandakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामला स्तोत्रम्\"",
+    "slug": "/devi-shyamala-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_shyamala-stotram",
+    "keywords": "shyamala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री आदिवाराही स्तोत्रम्\"",
+    "slug": "/devi-sri-adi-varahi-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-adi-varahi-stotram",
+    "keywords": "sri adi varahi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री अम्बाभुजङ्गपञ्चरत्न स्तोत्रम्\"",
+    "slug": "/devi-sri-amba-bhujanga-pancharatna-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-amba-bhujanga-pancharatna-stotram",
+    "keywords": "sri amba bhujanga pancharatna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री अम्बा पञ्चरत्न स्तोत्रम्\"",
+    "slug": "/devi-sri-amba-pancharatnam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-amba-pancharatnam",
+    "keywords": "sri amba pancharatnam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री अन्नपूर्णा अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-annapurna-ashtottara-satanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-annapurna-ashtottara-satanama-stotram",
+    "keywords": "sri annapurna ashtottara satanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालात्रिपुरसुन्दर्यष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-bala-ashtottara-satanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-ashtottara-satanama-stotram",
+    "keywords": "sri bala ashtottara satanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला हृदयम्\"",
+    "slug": "/devi-sri-bala-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-hrudayam",
+    "keywords": "sri bala hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला खड्गमाला स्तोत्रम्\"",
+    "slug": "/devi-sri-bala-khadgamala-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-khadgamala-stotram",
+    "keywords": "sri bala khadgamala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला मकरन्द स्तवः\"",
+    "slug": "/devi-sri-bala-makaranda-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-makaranda-stava",
+    "keywords": "sri bala makaranda stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला मानसपूजा स्तोत्रम्\"",
+    "slug": "/devi-sri-bala-manasa-puja-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-manasa-puja-stotram",
+    "keywords": "sri bala manasa puja stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला पञ्चरत्न स्तोत्रम्\"",
+    "slug": "/devi-sri-bala-pancharatna-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-pancharatna-stotram",
+    "keywords": "sri bala pancharatna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला स्तवराजः\"",
+    "slug": "/devi-sri-bala-stavaraja",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-stavaraja",
+    "keywords": "sri bala stavaraja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला स्तोत्रम् २\"",
+    "slug": "/devi-sri-bala-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-stotram-2",
+    "keywords": "sri bala stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला स्तोत्रम् १\"",
+    "slug": "/devi-sri-bala-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-stotram",
+    "keywords": "sri bala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला त्रिपुरसुन्दरी रक्षा स्तोत्रम्\"",
+    "slug": "/devi-sri-bala-tripurasundari-raksha-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-tripurasundari-raksha-stotram",
+    "keywords": "sri bala tripurasundari raksha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला त्रिशती स्तोत्रम्\"",
+    "slug": "/devi-sri-bala-trishati-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-trishati-stotram",
+    "keywords": "sri bala trishati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला वाञ्छादात्री स्तोत्रम्\"",
+    "slug": "/devi-sri-bala-vanchadatri-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-vanchadatri-stotram",
+    "keywords": "sri bala vanchadatri stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बाला विंशति स्तवः\"",
+    "slug": "/devi-sri-bala-vimsathi-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bala-vimsathi-stava",
+    "keywords": "sri bala vimsathi stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बालाम्बिका स्तोत्रम्\"",
+    "slug": "/devi-sri-balambika-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-balambika-ashtakam",
+    "keywords": "sri balambika ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भ्रमराम्बिकाष्टकम् (श्रीकण्ठार्पित)\"",
+    "slug": "/devi-sri-bhramarambika-ashtakam-sri-kantarpita",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-bhramarambika-ashtakam-sri-kantarpita",
+    "keywords": "sri bhramarambika ashtakam sri kantarpita",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री बुद्धिदेवी अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-buddhi-devi-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-buddhi-devi-ashtottara-shatanama-stotram",
+    "keywords": "sri buddhi devi ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दाक्षायणी स्तोत्रम्\"",
+    "slug": "/devi-sri-dakshayani-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-dakshayani-stotram",
+    "keywords": "sri dakshayani stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गौरी नवरत्नमालिका स्तवः\"",
+    "slug": "/devi-sri-gauri-navaratnamalika-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-gauri-navaratnamalika-stava",
+    "keywords": "sri gauri navaratnamalika stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गौरी सप्तश्लोकी स्तुतिः\"",
+    "slug": "/devi-sri-gauri-saptashloki-stuti",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-gauri-saptashloki-stuti",
+    "keywords": "sri gauri saptashloki stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ज्ञानप्रसूनाम्बिका स्तोत्रम्\"",
+    "slug": "/devi-sri-gnana-prasunambika-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-gnana-prasunambika-stotram",
+    "keywords": "sri gnana prasunambika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गोदाष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-goda-devi-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-goda-devi-ashtottara-shatanama-stotram",
+    "keywords": "sri goda devi ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री जगद्धात्री स्तोत्रम्\"",
+    "slug": "/devi-sri-jagaddhatri-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-jagaddhatri-stotram",
+    "keywords": "sri jagaddhatri stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री जोगुलाम्बाष्टकम्\"",
+    "slug": "/devi-sri-jogulamba-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-jogulamba-ashtakam",
+    "keywords": "sri jogulamba ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ज्वालामुखि अष्टकम्\"",
+    "slug": "/devi-sri-jwalamukhi-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-jwalamukhi-ashtakam",
+    "keywords": "sri jwalamukhi ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ज्वालामुखी स्तोत्रम्\"",
+    "slug": "/devi-sri-jwalamukhi-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-jwalamukhi-stotram-1",
+    "keywords": "sri jwalamukhi stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ज्वालामुखी स्तोत्रम् – २\"",
+    "slug": "/devi-sri-jwalamukhi-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-jwalamukhi-stotram-2",
+    "keywords": "sri jwalamukhi stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामाख्या स्तोत्रम्\"",
+    "slug": "/devi-sri-kamakhya-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-kamakhya-stotram",
+    "keywords": "sri kamakhya stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामाक्षी स्तोत्रम् १\"",
+    "slug": "/devi-sri-kamakshi-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-kamakshi-stotram",
+    "keywords": "sri kamakshi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कुब्जिका वर्णन स्तोत्रम्\"",
+    "slug": "/devi-sri-kubjika-varnana-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-kubjika-varnana-stotram",
+    "keywords": "sri kubjika varnana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मङ्गलगौरी स्तोत्रम्\"",
+    "slug": "/devi-sri-mangala-gauri-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-mangala-gauri-stotram",
+    "keywords": "sri mangala gauri stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मूकाम्बिका स्तोत्रम्\"",
+    "slug": "/devi-sri-mukambika-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-mukambika-stotram",
+    "keywords": "sri mukambika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रेणुका अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-renuka-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-renuka-ashtottara-shatanama-stotram",
+    "keywords": "sri renuka ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रेणुका हृदयम्\"",
+    "slug": "/devi-sri-renuka-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-renuka-hrudayam",
+    "keywords": "sri renuka hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रेणुका स्तोत्रम्\"",
+    "slug": "/devi-sri-renuka-stotram-parashurama-kritam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-renuka-stotram-parashurama-kritam",
+    "keywords": "sri renuka stotram parashurama kritam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सर्वमङ्गला स्तोत्रम्\"",
+    "slug": "/devi-sri-sarvamangala-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-sarvamangala-stotram",
+    "keywords": "sri sarvamangala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शीतलाष्टकम्\"",
+    "slug": "/devi-sri-seethalashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-seethalashtakam",
+    "keywords": "sri seethalashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षष्ठी देवि स्तोत्रम्\"",
+    "slug": "/devi-sri-shashti-devi-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-shashti-devi-stotram-in-hindi",
+    "keywords": "sri shashti devi stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षष्ठी देवि स्तोत्रम्\"",
+    "slug": "/devi-sri-shashti-devi-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-shashti-devi-stotram",
+    "keywords": "sri shashti devi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामला अष्टोत्तरशतनाम स्तोत्रम् – २\"",
+    "slug": "/devi-sri-shyamala-ashtottara-shatanama-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-shyamala-ashtottara-shatanama-stotram-2",
+    "keywords": "sri shyamala ashtottara shatanama stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामलाष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-shyamala-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-shyamala-ashtottara-shatanama-stotram",
+    "keywords": "sri shyamala ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामला पञ्चाशत्स्वर वर्णमालिका स्तोत्रम्\"",
+    "slug": "/devi-sri-shyamala-panchasathsvara-varna-maalikaa-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-shyamala-panchasathsvara-varna-maalikaa-stotram",
+    "keywords": "sri shyamala panchasathsvara varna maalikaa stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री श्यामला षोडशनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-shyamala-shodashanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-shyamala-shodashanama-stotram",
+    "keywords": "sri shyamala shodashanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सिद्धिदेवी अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-siddhi-devi-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-siddhi-devi-ashtottara-shatanama-stotram",
+    "keywords": "sri siddhi devi ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री तुलजा भवानी स्तोत्रम्\"",
+    "slug": "/devi-sri-tulja-bhavani-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-tulja-bhavani-stotram",
+    "keywords": "sri tulja bhavani stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री उमा अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-uma-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-uma-ashtottara-shatanama-stotram",
+    "keywords": "sri uma ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वराहमुखी स्तवः\"",
+    "slug": "/devi-sri-varahamukhi-stava",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-varahamukhi-stava",
+    "keywords": "sri varahamukhi stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराह्यनुग्रहाष्टकम्\"",
+    "slug": "/devi-sri-varahi-anugraha-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-varahi-anugraha-ashtakam",
+    "keywords": "sri varahi anugraha ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-varahi-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-varahi-ashtottara-shatanama-stotram",
+    "keywords": "sri varahi ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही देवि स्तवम्\"",
+    "slug": "/devi-sri-varahi-devi-stavam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-varahi-devi-stavam",
+    "keywords": "sri varahi devi stavam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही द्वादशनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-varahi-dwadasa-nama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-varahi-dwadasa-nama-stotram",
+    "keywords": "sri varahi dwadasa nama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही निग्रहाष्टकम्\"",
+    "slug": "/devi-sri-varahi-nigraha-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-varahi-nigraha-ashtakam",
+    "keywords": "sri varahi nigraha ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाराही सहस्रनाम स्तोत्रम्\"",
+    "slug": "/devi-sri-varahi-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-varahi-sahasranama-stotram",
+    "keywords": "sri varahi sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वासवीकन्यकाष्टकम्\"",
+    "slug": "/devi-sri-vasavi-kanyaka-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-vasavi-kanyaka-ashtakam",
+    "keywords": "sri vasavi kanyaka ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वश्यवाराही स्तोत्रम्\"",
+    "slug": "/devi-sri-vasya-varahi-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-vasya-varahi-stotram",
+    "keywords": "sri vasya varahi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विन्ध्यवासिनी स्तोत्रम्\"",
+    "slug": "/devi-sri-vindhyavasini-vindhyeshwari-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-vindhyavasini-vindhyeshwari-stotram",
+    "keywords": "sri vindhyavasini vindhyeshwari stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विशालाक्षी स्तोत्रम् (व्यास कृतम्)\"",
+    "slug": "/devi-sri-visalakshi-stotram-vyasa-krutam",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-visalakshi-stotram-vyasa-krutam",
+    "keywords": "sri visalakshi stotram vyasa krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री योगमीनाक्षी स्तोत्रम्\"",
+    "slug": "/devi-sri-yoga-meenakshi-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_sri-yoga-meenakshi-stotram",
+    "keywords": "sri yoga meenakshi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सुभगोदय स्तुतिः\"",
+    "slug": "/devi-subhagodaya-stuti-gaudapadacharya-virachitam",
+    "category": "stotras-shlok",
+    "filename": "devi_subhagodaya-stuti-gaudapadacharya-virachitam",
+    "keywords": "subhagodaya stuti gaudapadacharya virachitam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वासवी स्तोत्रम्\"",
+    "slug": "/devi-vasavi-stotram",
+    "category": "stotras-shlok",
+    "filename": "devi_vasavi-stotram",
+    "keywords": "vasavi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"आपदुन्मूलन श्री दुर्गा स्तोत्रम्\"",
+    "slug": "/durga-aapadunmoolana-sri-durga-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_aapadunmoolana-sri-durga-stotram",
+    "keywords": "aapadunmoolana sri durga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अपराजिता स्तोत्रम्\"",
+    "slug": "/durga-aparajitha-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_aparajitha-stotram",
+    "keywords": "aparajitha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अर्गला स्तोत्रम्\"",
+    "slug": "/durga-argala-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_argala-stotram",
+    "keywords": "argala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"दकारादि श्री दुर्गा सहस्रनाम स्तोत्रम्\"",
+    "slug": "/durga-dakaradi-sri-durga-sahasranama-stotram-in-devanagari",
+    "category": "stotras-shlok",
+    "filename": "durga_dakaradi-sri-durga-sahasranama-stotram-in-devanagari",
+    "keywords": "dakaradi sri durga sahasranama stotram in devanagari",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा स्तोत्रम् (श्रीकृष्ण कृतम्)\"",
+    "slug": "/durga-krishna-kruta-durga-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_krishna-kruta-durga-stotram",
+    "keywords": "krishna kruta durga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कुमारी स्तोत्रम्\"",
+    "slug": "/durga-kumari-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "durga_kumari-stotram-1",
+    "keywords": "kumari stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा स्तोत्रम् (महादेव कृतम्)\"",
+    "slug": "/durga-mahadeva-kruta-durga-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_mahadeva-kruta-durga-stotram",
+    "keywords": "mahadeva kruta durga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महिषासुरमर्दिनि स्तोत्रम्\"",
+    "slug": "/durga-mahishasuramardini-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_mahishasuramardini-stotram",
+    "keywords": "mahishasuramardini stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री नारायणी स्तुति\"",
+    "slug": "/durga-narayani-stuti",
+    "category": "stotras-shlok",
+    "filename": "durga_narayani-stuti",
+    "keywords": "narayani stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"नवदुर्गा स्तोत्रम्\"",
+    "slug": "/durga-navadurga-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_navadurga-stotram",
+    "keywords": "navadurga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा स्तोत्रम् (परशुराम कृतम्)\"",
+    "slug": "/durga-parashurama-kruta-durga-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_parashurama-kruta-durga-stotram",
+    "keywords": "parashurama kruta durga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सिद्धकुञ्जिका स्तोत्रम्\"",
+    "slug": "/durga-siddha-kunjika-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_siddha-kunjika-stotram",
+    "keywords": "siddha kunjika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गाष्टोत्तरशतनाम स्तोत्रम् २\"",
+    "slug": "/durga-sree-durga-ashtottara-satanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sree-durga-ashtottara-satanama-stotram",
+    "keywords": "sree durga ashtottara satanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चामुण्डेश्वरी अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/durga-sri-chamundeshwari-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-chamundeshwari-ashtottara-shatanama-stotram",
+    "keywords": "sri chamundeshwari ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चण्डिका स्तोत्रम्\"",
+    "slug": "/durga-sri-chandika-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-chandika-stotram",
+    "keywords": "sri chandika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा आपदुद्धारक स्तोत्रम्\"",
+    "slug": "/durga-sri-durga-apaduddharaka-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-apaduddharaka-stotram",
+    "keywords": "sri durga apaduddharaka stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा आर्या स्तवम्\"",
+    "slug": "/durga-sri-durga-arya-stavam",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-arya-stavam",
+    "keywords": "sri durga arya stavam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गाष्टकम्\"",
+    "slug": "/durga-sri-durga-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-ashtakam",
+    "keywords": "sri durga ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गाष्टोत्तरशतनाम स्तोत्रम् १\"",
+    "slug": "/durga-sri-durga-ashtottara-satanama-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-ashtottara-satanama-stotram-1",
+    "keywords": "sri durga ashtottara satanama stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा चन्द्रकला स्तुतिः\"",
+    "slug": "/durga-sri-durga-chandrakala-stuti-in-devanagari",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-chandrakala-stuti-in-devanagari",
+    "keywords": "sri durga chandrakala stuti in devanagari",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा मानस पूजा\"",
+    "slug": "/durga-sri-durga-manasa-puja-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-manasa-puja-stotram",
+    "keywords": "sri durga manasa puja stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा पञ्चरत्नम्\"",
+    "slug": "/durga-sri-durga-pancharatnam",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-pancharatnam",
+    "keywords": "sri durga pancharatnam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा परमेश्वरी स्तोत्रम्\"",
+    "slug": "/durga-sri-durga-parameshwari-stotram-by-sringeri-jagadguru",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-parameshwari-stotram-by-sringeri-jagadguru",
+    "keywords": "sri durga parameshwari stotram by sringeri jagadguru",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा सहस्रनाम स्तोत्रम्\"",
+    "slug": "/durga-sri-durga-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-sahasranama-stotram",
+    "keywords": "sri durga sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा षोडशनाम स्तोत्रम्\"",
+    "slug": "/durga-sri-durga-shodasa-nama-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-shodasa-nama-stotram",
+    "keywords": "sri durga shodasa nama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा स्तोत्रम् (शिवरहस्ये)\"",
+    "slug": "/durga-sri-durga-stotram-2-shiva-rahasye",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-stotram-2-shiva-rahasye",
+    "keywords": "sri durga stotram 2 shiva rahasye",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा स्तोत्रम् (अर्जुन कृतम्)\"",
+    "slug": "/durga-sri-durga-stotram-arjuna-krutam",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-stotram-arjuna-krutam",
+    "keywords": "sri durga stotram arjuna krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दुर्गा स्तोत्रम् (युधिष्ठिर कृतम्)\"",
+    "slug": "/durga-sri-durga-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-durga-stotram",
+    "keywords": "sri durga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री इन्द्राक्षी स्तोत्रम्\"",
+    "slug": "/durga-sri-indrakshi-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-indrakshi-stotram",
+    "keywords": "sri indrakshi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मङ्गलचण्डिका स्तोत्रम्\"",
+    "slug": "/durga-sri-mangala-chandika-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-mangala-chandika-stotram",
+    "keywords": "sri mangala chandika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रुद्रचण्डी स्तोत्रम्\"",
+    "slug": "/durga-sri-rudra-chandi-stotram",
+    "category": "stotras-shlok",
+    "filename": "durga_sri-rudra-chandi-stotram",
+    "keywords": "sri rudra chandi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री गजानन बावन्नी",
     "slug": "/gajanan-bavanni",
     "category": "stotras-shlok",
@@ -8100,11 +10494,659 @@
     "headings": "प्रारंभी विनंती करू श्री संकटनाशनं गणपती स्तोत्र श्री गणपती अथर्वशीर्ष"
   },
   {
+    "title": "\"श्री गजानन स्तोत्रम् (देवर्षि कृतम्)\"",
+    "slug": "/ganesha-devarshi-kruta-gajanana-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_devarshi-kruta-gajanana-stotram",
+    "keywords": "devarshi kruta gajanana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ढुण्ढिराज भुजङ्ग प्रयात स्तोत्रम्\"",
+    "slug": "/ganesha-dhundiraja-bhujanga-prayata-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_dhundiraja-bhujanga-prayata-stotram",
+    "keywords": "dhundiraja bhujanga prayata stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"गकारादि श्री गणपति सहस्रनाम स्तोत्रम्\"",
+    "slug": "/ganesha-gakara-sri-ganapathi-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_gakara-sri-ganapathi-sahasranama-stotram",
+    "keywords": "gakara sri ganapathi sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणनायकाष्टकम्\"",
+    "slug": "/ganesha-gananayaka-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_gananayaka-ashtakam",
+    "keywords": "gananayaka ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणपति स्तवः\"",
+    "slug": "/ganesha-ganapathi-stava",
+    "category": "stotras-shlok",
+    "filename": "ganesha_ganapathi-stava",
+    "keywords": "ganapathi stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश दिव्यदुर्ग स्तोत्रम्\"",
+    "slug": "/ganesha-ganesha-divya-durga-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_ganesha-divya-durga-stotram",
+    "keywords": "ganesha divya durga stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश पञ्चरत्नम्\"",
+    "slug": "/ganesha-ganesha-pancharatnam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_ganesha-pancharatnam",
+    "keywords": "ganesha pancharatnam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश प्रातः स्मरणम्\"",
+    "slug": "/ganesha-ganesha-pratah-smarana-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_ganesha-pratah-smarana-stotram",
+    "keywords": "ganesha pratah smarana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"हेरम्ब स्तोत्रम्\"",
+    "slug": "/ganesha-heramba-ganapati-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_heramba-ganapati-stotram",
+    "keywords": "heramba ganapati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मनोरथसिद्धिप्रद गणेश स्तोत्रम्\"",
+    "slug": "/ganesha-manoratha-siddhiprada-ganesha-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_manoratha-siddhiprada-ganesha-stotram",
+    "keywords": "manoratha siddhiprada ganesha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मरकत श्री लक्ष्मीगणपति स्तोत्रम्\"",
+    "slug": "/ganesha-marakatha-sri-lakshmi-ganapathi-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_marakatha-sri-lakshmi-ganapathi-stotram",
+    "keywords": "marakatha sri lakshmi ganapathi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मयूरेश स्तोत्रम्\"",
+    "slug": "/ganesha-mayuresha-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_mayuresha-stotram",
+    "keywords": "mayuresha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणपति स्तोत्रम् (नारद कृतम्)\"",
+    "slug": "/ganesha-narada-kruta-ganapati-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_narada-kruta-ganapati-stotram",
+    "keywords": "narada kruta ganapati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"पुष्टिपति स्तोत्रम् (देवर्षि कृतम्)\"",
+    "slug": "/ganesha-pushtipati-stotram-devarshi-krutam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_pushtipati-stotram-devarshi-krutam",
+    "keywords": "pushtipati stotram devarshi krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ऋणहर्तृ गणेश स्तोत्रम्\"",
+    "slug": "/ganesha-runa-hartru-ganesha-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_runa-hartru-ganesha-stotram",
+    "keywords": "runa hartru ganesha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ऋणविमोचन महागणपति स्तोत्रम्\"",
+    "slug": "/ganesha-runa-vimochana-ganesha-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_runa-vimochana-ganesha-stotram",
+    "keywords": "runa vimochana ganesha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश संकटनाशन स्तोत्रम्\"",
+    "slug": "/ganesha-sankata-nasana-ganesha-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sankata-nasana-ganesha-stotram",
+    "keywords": "sankata nasana ganesha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सङ्कटनाशन गणेश स्तोत्रम् (देव कृतम्)\"",
+    "slug": "/ganesha-sankata-nashana-ganesha-stotram-deva-krutam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sankata-nashana-ganesha-stotram-deva-krutam",
+    "keywords": "sankata nashana ganesha stotram deva krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सन्तान गणपति स्तोत्रम्\"",
+    "slug": "/ganesha-santhana-ganapathi-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_santhana-ganapathi-stotram",
+    "keywords": "santhana ganapathi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"शत्रुसंहारक एकदन्त स्तोत्रम्\"",
+    "slug": "/ganesha-shatru-samharaka-ekadanta-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_shatru-samharaka-ekadanta-stotram",
+    "keywords": "shatru samharaka ekadanta stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणाधीश स्तोत्रम् (शिवशक्ति कृतम्)\"",
+    "slug": "/ganesha-shiva-shakti-kruta-ganadhisha-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_shiva-shakti-kruta-ganadhisha-stotram",
+    "keywords": "shiva shakti kruta ganadhisha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"षोडश गणपति स्तवम्\"",
+    "slug": "/ganesha-shodasa-ganapathi-stavam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_shodasa-ganapathi-stavam",
+    "keywords": "shodasa ganapathi stavam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भानुविनायक स्तोत्रम्\"",
+    "slug": "/ganesha-sri-bhanu-vinayaka-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-bhanu-vinayaka-stotram",
+    "keywords": "sri bhanu vinayaka stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री एकदन्त स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ekadanta-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ekadanta-stotram",
+    "keywords": "sri ekadanta stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणाधिप पञ्चरत्नम्\"",
+    "slug": "/ganesha-sri-ganadhipa-pancharatnam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganadhipa-pancharatnam",
+    "keywords": "sri ganadhipa pancharatnam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणनाथ स्तोत्रम्\"",
+    "slug": "/ganesha-sri-gananatha-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-gananatha-stotram",
+    "keywords": "sri gananatha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणपति मङ्गलाष्टकम्\"",
+    "slug": "/ganesha-sri-ganapathi-mangalashtakam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganapathi-mangalashtakam",
+    "keywords": "sri ganapathi mangalashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणपति स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganapathi-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganapathi-stotram",
+    "keywords": "sri ganapathi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणपति गकार अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganapati-gakara-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganapati-gakara-ashtottara-shatanama-stotram",
+    "keywords": "sri ganapati gakara ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विनायक अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganesa-ashtottara-satanama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesa-ashtottara-satanama-stotram-in-hindi",
+    "keywords": "sri ganesa ashtottara satanama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेशाक्षरमालिका स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganesha-aksharamalika-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-aksharamalika-stotram",
+    "keywords": "sri ganesha aksharamalika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेशाष्टकम् (व्यास कृतम्)\"",
+    "slug": "/ganesha-sri-ganesha-ashtakam-vyasa-krutam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-ashtakam-vyasa-krutam",
+    "keywords": "sri ganesha ashtakam vyasa krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेशाष्टकम्\"",
+    "slug": "/ganesha-sri-ganesha-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-ashtakam",
+    "keywords": "sri ganesha ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेशावतार स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganesha-avatara-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-avatara-stotram",
+    "keywords": "sri ganesha avatara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश भुजङ्ग स्तुतिः\"",
+    "slug": "/ganesha-sri-ganesha-bhujanga-stuti",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-bhujanga-stuti",
+    "keywords": "sri ganesha bhujanga stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश हृदयम्\"",
+    "slug": "/ganesha-sri-ganesha-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-hrudayam",
+    "keywords": "sri ganesha hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश कीलक स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganesha-kilaka-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-kilaka-stotram",
+    "keywords": "sri ganesha kilaka stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश महिम्नः स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganesha-mahimna-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-mahimna-stotram",
+    "keywords": "sri ganesha mahimna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश नामाष्टकम्\"",
+    "slug": "/ganesha-sri-ganesha-namashtakam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-namashtakam",
+    "keywords": "sri ganesha namashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेशपञ्चचामर स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganesha-pancha-chamara-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-pancha-chamara-stotram",
+    "keywords": "sri ganesha pancha chamara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश मन्त्रप्रभाव स्तुतिः\"",
+    "slug": "/ganesha-sri-ganesha-prabhava-stuti",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-prabhava-stuti",
+    "keywords": "sri ganesha prabhava stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणपति स्तोत्रम् – ३ (दारिद्र्यदहनम्)\"",
+    "slug": "/ganesha-sri-ganesha-stotram-3-daridrya-dahanam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-stotram-3-daridrya-dahanam",
+    "keywords": "sri ganesha stotram 3 daridrya dahanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश स्तोत्रम् (अग्नि कृतम्)\"",
+    "slug": "/ganesha-sri-ganesha-stotram-agni-krutam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-stotram-agni-krutam",
+    "keywords": "sri ganesha stotram agni krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गणेश वज्रपञ्जर स्तोत्रम्\"",
+    "slug": "/ganesha-sri-ganesha-vajra-panjara-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ganesha-vajra-panjara-stotram",
+    "keywords": "sri ganesha vajra panjara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लम्बोदर स्तोत्रम् (क्रोधासुर कृतम्)\"",
+    "slug": "/ganesha-sri-lambodara-stotram-krodhasura-krutam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-lambodara-stotram-krodhasura-krutam",
+    "keywords": "sri lambodara stotram krodhasura krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति मङ्गलमालिका स्तोत्रम्\"",
+    "slug": "/ganesha-sri-maha-ganapathi-mangala-malika-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-maha-ganapathi-mangala-malika-stotram",
+    "keywords": "sri maha ganapathi mangala malika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति सहस्रनाम स्तोत्रम्\"",
+    "slug": "/ganesha-sri-maha-ganapathi-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-maha-ganapathi-sahasranama-stotram",
+    "keywords": "sri maha ganapathi sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति स्तोत्रम्\"",
+    "slug": "/ganesha-sri-maha-ganapathi-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-maha-ganapathi-stotram",
+    "keywords": "sri maha ganapathi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महागणपति नवार्ण वेदपादस्तवः\"",
+    "slug": "/ganesha-sri-mahaganapathi-navarna-vedapada-stava",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-mahaganapathi-navarna-vedapada-stava",
+    "keywords": "sri mahaganapathi navarna vedapada stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रत्नगर्भ गणेश विलास स्तुतिः\"",
+    "slug": "/ganesha-sri-ratnagarbha-ganesha-vilasa-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-ratnagarbha-ganesha-vilasa-stotram",
+    "keywords": "sri ratnagarbha ganesha vilasa stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सिद्धिविनायक स्तोत्रम्\"",
+    "slug": "/ganesha-sri-siddhi-vinayaka-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-siddhi-vinayaka-stotram",
+    "keywords": "sri siddhi vinayaka stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वल्लभेश हृदयम्\"",
+    "slug": "/ganesha-sri-vallabhesha-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-vallabhesha-hrudayam",
+    "keywords": "sri vallabhesha hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वल्लभेश करावलम्ब स्तोत्रम्\"",
+    "slug": "/ganesha-sri-vallabhesha-karavalamba-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-vallabhesha-karavalamba-stotram",
+    "keywords": "sri vallabhesha karavalamba stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वरदगणेश अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/ganesha-sri-varada-ganesha-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-varada-ganesha-ashtottara-shatanama-stotram",
+    "keywords": "sri varada ganesha ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विघ्नेश्वर षोडशनाम स्तोत्रम्\"",
+    "slug": "/ganesha-sri-vighneshwara-shodasha-nama-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-vighneshwara-shodasha-nama-stotram",
+    "keywords": "sri vighneshwara shodasha nama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विनायक स्तवराजः\"",
+    "slug": "/ganesha-sri-vinayaka-stavaraja",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-vinayaka-stavaraja",
+    "keywords": "sri vinayaka stavaraja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विनायक स्तुतिः\"",
+    "slug": "/ganesha-sri-vinayaka-stuti",
+    "category": "stotras-shlok",
+    "filename": "ganesha_sri-vinayaka-stuti",
+    "keywords": "sri vinayaka stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"उच्छिष्ट गणपति स्तोत्रम्\"",
+    "slug": "/ganesha-ucchista-ganapati-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_ucchista-ganapati-stotram",
+    "keywords": "ucchista ganapati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"वक्रतुण्ड गणेश स्तवराजः\"",
+    "slug": "/ganesha-vakratunda-ganesha-stavaraja",
+    "category": "stotras-shlok",
+    "filename": "ganesha_vakratunda-ganesha-stavaraja",
+    "keywords": "vakratunda ganesha stavaraja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"वक्रतुण्ड स्तोत्रम्\"",
+    "slug": "/ganesha-vakratunda-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_vakratunda-stotram",
+    "keywords": "vakratunda stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"योगप्रद गणेश स्तोत्रम् (मुद्गल पुराणे)\"",
+    "slug": "/ganesha-yogaprada-ganesha-stotram",
+    "category": "stotras-shlok",
+    "filename": "ganesha_yogaprada-ganesha-stotram",
+    "keywords": "yogaprada ganesha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "गायत्री मंत्र",
     "slug": "/gayatri-mantra",
     "category": "stotras-shlok",
     "filename": "gayatri-mantra",
     "keywords": "gayatri mantra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री अष्टकम् १\"",
+    "slug": "/gayatri-gayatri-ashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "gayatri_gayatri-ashtakam-in-hindi",
+    "keywords": "gayatri ashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री स्तोत्रम् १\"",
+    "slug": "/gayatri-gayatri-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "gayatri_gayatri-stotram-in-hindi",
+    "keywords": "gayatri stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री अष्टोत्तरशतनाम स्तोत्रम् २\"",
+    "slug": "/gayatri-sri-gayathri-ashtottara-sata-nama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayathri-ashtottara-sata-nama-stotram-in-hindi",
+    "keywords": "sri gayathri ashtottara sata nama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्र्यक्षरवल्ली स्तोत्रम्\"",
+    "slug": "/gayatri-sri-gayatri-aksharavalli-stotram",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayatri-aksharavalli-stotram",
+    "keywords": "sri gayatri aksharavalli stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री अष्टकम् – २\"",
+    "slug": "/gayatri-sri-gayatri-ashtakam-2",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayatri-ashtakam-2",
+    "keywords": "sri gayatri ashtakam 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्र्यष्टोत्तरशतनाम स्तोत्रम् १\"",
+    "slug": "/gayatri-sri-gayatri-ashtottara-shatanama-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayatri-ashtottara-shatanama-stotram-1",
+    "keywords": "sri gayatri ashtottara shatanama stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री भुजङ्ग स्तोत्रम्\"",
+    "slug": "/gayatri-sri-gayatri-bhujanga-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayatri-bhujanga-stotram-in-hindi",
+    "keywords": "sri gayatri bhujanga stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री हृदयम् (देवीभागवते)\"",
+    "slug": "/gayatri-sri-gayatri-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayatri-hrudayam",
+    "keywords": "sri gayatri hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री पञ्जर स्तोत्रम् (सावित्री पञ्जरम्)\"",
+    "slug": "/gayatri-sri-gayatri-panjara-stotram",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayatri-panjara-stotram",
+    "keywords": "sri gayatri panjara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री स्तवराजः\"",
+    "slug": "/gayatri-sri-gayatri-stavaraja",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayatri-stavaraja",
+    "keywords": "sri gayatri stavaraja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गायत्री स्तोत्रम् – २ (देवीभागवते)\"",
+    "slug": "/gayatri-sri-gayatri-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "gayatri_sri-gayatri-stotram-2",
+    "keywords": "sri gayatri stotram 2",
     "fmKeywords": "",
     "headings": ""
   },
@@ -8136,6 +11178,285 @@
     "headings": ""
   },
   {
+    "title": "\"श्री अष्टलक्ष्मी स्तोत्रम्\"",
+    "slug": "/lakshmi-ashtalakshmi-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_ashtalakshmi-stotram-in-hindi",
+    "keywords": "ashtalakshmi stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दीपलक्ष्मी स्तवम्\"",
+    "slug": "/lakshmi-deepa-lakshmi-stavam",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_deepa-lakshmi-stavam",
+    "keywords": "deepa lakshmi stavam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दीपलक्ष्मी स्तोत्रम्\"",
+    "slug": "/lakshmi-deepa-lakshmi-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_deepa-lakshmi-stotram",
+    "keywords": "deepa lakshmi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"कनकधारा स्तोत्रम्\"",
+    "slug": "/lakshmi-kanakadhara-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_kanakadhara-stotram-in-hindi",
+    "keywords": "kanakadhara stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"कनकधारा स्तोत्रम् (पाठान्तरम्)\"",
+    "slug": "/lakshmi-kanakadhara-stotram-variation",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_kanakadhara-stotram-variation",
+    "keywords": "kanakadhara stotram variation",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी स्तोत्रम् (लोपामुद्रा कृतम्)\"",
+    "slug": "/lakshmi-lopamudra-kruta-sri-lakshmi-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_lopamudra-kruta-sri-lakshmi-stotram",
+    "keywords": "lopamudra kruta sri lakshmi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्म्यष्टकम्\"",
+    "slug": "/lakshmi-mahalakshmi-ashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_mahalakshmi-ashtakam-in-hindi",
+    "keywords": "mahalakshmi ashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भद्रलक्ष्मी स्तवम्\"",
+    "slug": "/lakshmi-sri-bhadra-lakshmi-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-bhadra-lakshmi-stotram",
+    "keywords": "sri bhadra lakshmi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री धनलक्ष्मी स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-dhana-lakshmi-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-dhana-lakshmi-stotram",
+    "keywords": "sri dhana lakshmi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री इन्दिराष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-indira-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-indira-ashtottara-shatanama-stotram",
+    "keywords": "sri indira ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्म्यष्टक स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-lakshmi-ashtaka-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-ashtaka-stotram-in-hindi",
+    "keywords": "sri lakshmi ashtaka stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी अष्टोत्तरशतनाम स्तोत्रम् १\"",
+    "slug": "/lakshmi-sri-lakshmi-ashtottara-satanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-ashtottara-satanama-stotram",
+    "keywords": "sri lakshmi ashtottara satanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी अष्टोत्तरशतनाम स्तोत्रम् २\"",
+    "slug": "/lakshmi-sri-lakshmi-ashtottara-shatanama-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-ashtottara-shatanama-stotram-2",
+    "keywords": "sri lakshmi ashtottara shatanama stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्म्यष्टोत्तरशतनाम स्तोत्रम् ३\"",
+    "slug": "/lakshmi-sri-lakshmi-ashtottara-shatanama-stotram-3",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-ashtottara-shatanama-stotram-3",
+    "keywords": "sri lakshmi ashtottara shatanama stotram 3",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी गद्यम्\"",
+    "slug": "/lakshmi-sri-lakshmi-gadyam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-gadyam-in-hindi",
+    "keywords": "sri lakshmi gadyam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी हृदय स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-lakshmi-hrudaya-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-hrudaya-stotram-in-hindi",
+    "keywords": "sri lakshmi hrudaya stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी सहस्रनाम स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-lakshmi-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-sahasranama-stotram",
+    "keywords": "sri lakshmi sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी स्तोत्रम् (अगस्त्य कृतम्)\"",
+    "slug": "/lakshmi-sri-lakshmi-stotram-agastya-rachitam",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-stotram-agastya-rachitam",
+    "keywords": "sri lakshmi stotram agastya rachitam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी स्तोत्रम् (महेन्द्र कृतम्)\"",
+    "slug": "/lakshmi-sri-lakshmi-stotram-indra-rachitam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-stotram-indra-rachitam-in-hindi",
+    "keywords": "sri lakshmi stotram indra rachitam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी स्तोत्रम् (महेन्द्र कृतम्)\"",
+    "slug": "/lakshmi-sri-lakshmi-stotram-indra-rachitam",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-stotram-indra-rachitam",
+    "keywords": "sri lakshmi stotram indra rachitam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी स्तोत्रम् (सर्वदेव कृतम्)\"",
+    "slug": "/lakshmi-sri-lakshmi-stotram-sarva-deva-kritam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-lakshmi-stotram-sarva-deva-kritam-in-hindi",
+    "keywords": "sri lakshmi stotram sarva deva kritam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी चतुर्विंशतिनाम स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-mahalakshmi-chaturvimsati-nama-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-mahalakshmi-chaturvimsati-nama-stotram",
+    "keywords": "sri mahalakshmi chaturvimsati nama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी सहस्रनाम स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-mahalakshmi-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-mahalakshmi-sahasranama-stotram",
+    "keywords": "sri mahalakshmi sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी स्तवः\"",
+    "slug": "/lakshmi-sri-mahalakshmi-stava",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-mahalakshmi-stava",
+    "keywords": "sri mahalakshmi stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महालक्ष्मी स्तुतिः\"",
+    "slug": "/lakshmi-sri-mahalakshmi-stuti",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-mahalakshmi-stuti",
+    "keywords": "sri mahalakshmi stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री पद्मावती स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-padmavathi-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-padmavathi-stotram",
+    "keywords": "sri padmavathi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री पद्मावती नवरत्नमालिका स्तुतिः\"",
+    "slug": "/lakshmi-sri-padmavati-navaratna-malika-stuti",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-padmavati-navaratna-malika-stuti",
+    "keywords": "sri padmavati navaratna malika stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सिद्धलक्ष्मी स्तोत्रम् (पाठान्तरम्)\"",
+    "slug": "/lakshmi-sri-siddha-lakshmi-stotram-variation-in-devanagari",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-siddha-lakshmi-stotram-variation-in-devanagari",
+    "keywords": "sri siddha lakshmi stotram variation in devanagari",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सिद्धलक्ष्मी स्तोत्रम्\"",
+    "slug": "/lakshmi-sri-siddhi-lakshmi-stuti-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-siddhi-lakshmi-stuti-in-hindi",
+    "keywords": "sri siddhi lakshmi stuti in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्तोत्रम् (अग्निपुराणे)\"",
+    "slug": "/lakshmi-sri-stotram-agni-purana-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_sri-stotram-agni-purana-in-hindi",
+    "keywords": "sri stotram agni purana in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मी स्तोत्रम् (त्रैलोक्य मङ्गलम्)\"",
+    "slug": "/lakshmi-trailokya-mangala-lakshmi-stotram",
+    "category": "stotras-shlok",
+    "filename": "lakshmi_trailokya-mangala-lakshmi-stotram",
+    "keywords": "trailokya mangala lakshmi stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री ललिता सहस्रनाम स्तोत्रम्",
     "slug": "/lalita-sahasranam",
     "category": "stotras-shlok",
@@ -8143,6 +11464,222 @@
     "keywords": "lalita sahasranam",
     "fmKeywords": "",
     "headings": "॥ ध्यानं ॥"
+  },
+  {
+    "title": "\"श्री देवी खड्गमाला स्तोत्रम्\"",
+    "slug": "/lalitha-devi-khadgamala-stotra",
+    "category": "stotras-shlok",
+    "filename": "lalitha_devi-khadgamala-stotra",
+    "keywords": "devi khadgamala stotra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"देवी वैभवाश्चर्याष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/lalitha-devi-vaibhava-ashcharya-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "lalitha_devi-vaibhava-ashcharya-ashtottara-shatanama-stotram",
+    "keywords": "devi vaibhava ashcharya ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता पञ्चरत्नम्\"",
+    "slug": "/lalitha-lalitha-pancharatnam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lalitha_lalitha-pancharatnam-in-hindi",
+    "keywords": "lalitha pancharatnam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता स्तोत्रम् (सर्व देवत कृतम्)\"",
+    "slug": "/lalitha-sarva-devata-kruta-lalitha-stotram",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sarva-devata-kruta-lalitha-stotram",
+    "keywords": "sarva devata kruta lalitha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सौन्दर्यलहरी\"",
+    "slug": "/lalitha-saundaryalahari-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lalitha_saundaryalahari-in-hindi",
+    "keywords": "saundaryalahari in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामाक्षी स्तोत्रम् २\"",
+    "slug": "/lalitha-sri-kamakshi-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-kamakshi-stotram-2",
+    "keywords": "sri kamakshi stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामाक्षी स्तोत्रम् – ३ (ब्रह्म कृतम्)\"",
+    "slug": "/lalitha-sri-kamakshi-stotram-3-brahma-krutam",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-kamakshi-stotram-3-brahma-krutam",
+    "keywords": "sri kamakshi stotram 3 brahma krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कामाक्षी स्तोत्रम् – ४ (परमाचार्य कृतम्)\"",
+    "slug": "/lalitha-sri-kamakshi-stotram-4-paramacharya-krutam",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-kamakshi-stotram-4-paramacharya-krutam",
+    "keywords": "sri kamakshi stotram 4 paramacharya krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता लकारादि शतनाम स्तोत्रम्\"",
+    "slug": "/lalitha-sri-lalita-lakaradi-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalita-lakaradi-shatanama-stotram",
+    "keywords": "sri lalita lakaradi shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता अष्टकारिका स्तोत्रम् (आविर्भाव स्तुतिः)\"",
+    "slug": "/lalitha-sri-lalitha-ashtakarika-stotram",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-ashtakarika-stotram",
+    "keywords": "sri lalitha ashtakarika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिताष्टोत्तरशतनाम स्तोत्रम् २\"",
+    "slug": "/lalitha-sri-lalitha-ashtottara-shatanama-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-ashtottara-shatanama-stotram-2",
+    "keywords": "sri lalitha ashtottara shatanama stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता पञ्चविंशतिनाम स्तोत्रम्\"",
+    "slug": "/lalitha-sri-lalitha-panchavimsati-nama-stotram",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-panchavimsati-nama-stotram",
+    "keywords": "sri lalitha panchavimsati nama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता सहस्रनाम स्तोत्रम्\"",
+    "slug": "/lalitha-sri-lalitha-sahasranama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-sahasranama-stotram-in-hindi",
+    "keywords": "sri lalitha sahasranama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता सहस्रनाम स्तोत्रम् – पूर्वपीठिका\"",
+    "slug": "/lalitha-sri-lalitha-sahasranama-stotram-poorvapeetika-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-sahasranama-stotram-poorvapeetika-in-hindi",
+    "keywords": "sri lalitha sahasranama stotram poorvapeetika in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता स्तवराजः (विश्वरूप स्तोत्रम्)\"",
+    "slug": "/lalitha-sri-lalitha-stavaraja-stotram",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-stavaraja-stotram",
+    "keywords": "sri lalitha stavaraja stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता स्तोत्रम् (ब्रह्मादि कृतम्)\"",
+    "slug": "/lalitha-sri-lalitha-stotram-brahmaadi-krutam",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-stotram-brahmaadi-krutam",
+    "keywords": "sri lalitha stotram brahmaadi krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता त्रिशती स्तोत्रम्\"",
+    "slug": "/lalitha-sri-lalitha-trisati-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-trisati-stotram-in-hindi",
+    "keywords": "sri lalitha trisati stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिता त्रिशती स्तोत्रम् – पूर्वपीठिका\"",
+    "slug": "/lalitha-sri-lalitha-trisati-stotram-poorvapeetika-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalitha-trisati-stotram-poorvapeetika-in-hindi",
+    "keywords": "sri lalitha trisati stotram poorvapeetika in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ललिताम्बा परमेश्वर स्तवः\"",
+    "slug": "/lalitha-sri-lalithamba-parameshwara-stava",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-lalithamba-parameshwara-stava",
+    "keywords": "sri lalithamba parameshwara stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री राजराजेश्वरी चूर्णिका\"",
+    "slug": "/lalitha-sri-rajarajeshwari-churnika",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-rajarajeshwari-churnika",
+    "keywords": "sri rajarajeshwari churnika",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री राजराजेश्वरी स्तवः\"",
+    "slug": "/lalitha-sri-rajarajeshwari-stava",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-rajarajeshwari-stava",
+    "keywords": "sri rajarajeshwari stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री राज्ञी स्तोत्रम्\"",
+    "slug": "/lalitha-sri-rajni-stotram",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-rajni-stotram",
+    "keywords": "sri rajni stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरसुन्दरी स्तोत्रम् २\"",
+    "slug": "/lalitha-sri-tripura-sundari-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-tripura-sundari-stotram-2",
+    "keywords": "sri tripura sundari stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री त्रिपुरसुन्दरी दण्डकम्\"",
+    "slug": "/lalitha-sri-tripurasundari-dandakam",
+    "category": "stotras-shlok",
+    "filename": "lalitha_sri-tripurasundari-dandakam",
+    "keywords": "sri tripurasundari dandakam",
+    "fmKeywords": "",
+    "headings": ""
   },
   {
     "title": "श्री महालक्ष्मीस्तुतिः",
@@ -8168,6 +11705,33 @@
     "category": "stotras-shlok",
     "filename": "maruti-stotra",
     "keywords": "maruti hanuman stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मनसा देवी द्वादशनाम स्तोत्रम् (नागभय निवारण स्तोत्रम्)\"",
+    "slug": "/naga-devata-sri-manasa-devi-dwadasa-nama-stotram-naga-bhaya-nivarana-stotram",
+    "category": "stotras-shlok",
+    "filename": "naga-devata_sri-manasa-devi-dwadasa-nama-stotram-naga-bhaya-nivarana-stotram",
+    "keywords": "sri manasa devi dwadasa nama stotram naga bhaya nivarana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मनसा देवि स्तोत्रम् (धन्वन्तरि कृतम्)\"",
+    "slug": "/naga-devata-sri-manasa-devi-stotram-dhanvantari-krutam",
+    "category": "stotras-shlok",
+    "filename": "naga-devata_sri-manasa-devi-stotram-dhanvantari-krutam",
+    "keywords": "sri manasa devi stotram dhanvantari krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मनसा देवी स्तोत्रम् (महेन्द्र कृतम्)\"",
+    "slug": "/naga-devata-sri-manasa-devi-stotram-mahendra-krutam",
+    "category": "stotras-shlok",
+    "filename": "naga-devata_sri-manasa-devi-stotram-mahendra-krutam",
+    "keywords": "sri manasa devi stotram mahendra krutam",
     "fmKeywords": "",
     "headings": ""
   },
@@ -8217,6 +11781,96 @@
     "headings": ""
   },
   {
+    "title": "\"श्री प्रत्यङ्गिरा आपन्निवारण स्तुतिः\"",
+    "slug": "/pratyangira-sri-pratyangira-apannivarana-stuti",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-pratyangira-apannivarana-stuti",
+    "keywords": "sri pratyangira apannivarana stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा दण्डकम्\"",
+    "slug": "/pratyangira-sri-pratyangira-dandakam",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-pratyangira-dandakam",
+    "keywords": "sri pratyangira dandakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा खड्गमाला स्तोत्रम्\"",
+    "slug": "/pratyangira-sri-pratyangira-khadgamala-stotram",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-pratyangira-khadgamala-stotram",
+    "keywords": "sri pratyangira khadgamala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा सहस्रनाम स्तोत्रम्\"",
+    "slug": "/pratyangira-sri-pratyangira-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-pratyangira-sahasranama-stotram",
+    "keywords": "sri pratyangira sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा स्तवराजः\"",
+    "slug": "/pratyangira-sri-pratyangira-stavaraja",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-pratyangira-stavaraja",
+    "keywords": "sri pratyangira stavaraja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा स्तोत्रम् – १\"",
+    "slug": "/pratyangira-sri-pratyangira-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-pratyangira-stotram-1",
+    "keywords": "sri pratyangira stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा स्तोत्रम् – २\"",
+    "slug": "/pratyangira-sri-pratyangira-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-pratyangira-stotram-2",
+    "keywords": "sri pratyangira stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री प्रत्यङ्गिरा स्तोत्रम् – ३\"",
+    "slug": "/pratyangira-sri-pratyangira-stotram-3",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-pratyangira-stotram-3",
+    "keywords": "sri pratyangira stotram 3",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विपरीत प्रत्यङ्गिरा स्तोत्रम्\"",
+    "slug": "/pratyangira-sri-vipareeta-pratyangira-stotram",
+    "category": "stotras-shlok",
+    "filename": "pratyangira_sri-vipareeta-pratyangira-stotram",
+    "keywords": "sri vipareeta pratyangira stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवरामाष्टकम्\"",
+    "slug": "/raama-sri-shiva-rama-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "raama_sri-shiva-rama-ashtakam",
+    "keywords": "sri shiva rama ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री राम रक्षा स्तोत्र",
     "slug": "/ram-raksha",
     "category": "stotras-shlok",
@@ -8244,6 +11898,348 @@
     "headings": ""
   },
   {
+    "title": "\"श्री शारदा भुजङ्ग प्रयाताष्टकम्\"",
+    "slug": "/saraswati-sharada-bhujanga-prayata-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sharada-bhujanga-prayata-ashtakam",
+    "keywords": "sharada bhujanga prayata ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भारती भावना स्तोत्रम्\"",
+    "slug": "/saraswati-sri-bharati-bhavana-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-bharati-bhavana-stotram",
+    "keywords": "sri bharati bhavana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री भवसोदर्यष्टकम्\"",
+    "slug": "/saraswati-sri-bhavasodari-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-bhavasodari-ashtakam",
+    "keywords": "sri bhavasodari ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कमलजदयिताष्टकम्\"",
+    "slug": "/saraswati-sri-kamalajadayita-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-kamalajadayita-ashtakam",
+    "keywords": "sri kamalajadayita ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तवम् (अश्वतर कृतम्)\"",
+    "slug": "/saraswati-sri-maha-saraswati-stavam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-maha-saraswati-stavam",
+    "keywords": "sri maha saraswati stavam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती द्वादशनाम स्तोत्रम्\"",
+    "slug": "/saraswati-sri-saraswathi-dvadasanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswathi-dvadasanama-stotram",
+    "keywords": "sri saraswathi dvadasanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तोत्रम् (स्कान्दपुराणे)\"",
+    "slug": "/saraswati-sri-saraswathi-stotram-skandapurane-ambuvichiraja-krutam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswathi-stotram-skandapurane-ambuvichiraja-krutam",
+    "keywords": "sri saraswathi stotram skandapurane ambuvichiraja krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वत्यष्टकम्\"",
+    "slug": "/saraswati-sri-saraswati-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-ashtakam",
+    "keywords": "sri saraswati ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/saraswati-sri-saraswati-ashtottara-satanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-ashtottara-satanama-stotram",
+    "keywords": "sri saraswati ashtottara satanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती दशश्लोकी स्तुतिः\"",
+    "slug": "/saraswati-sri-saraswati-dasha-shloki-stuti",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-dasha-shloki-stuti",
+    "keywords": "sri saraswati dasha shloki stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती नक्षत्रमाला स्तवः\"",
+    "slug": "/saraswati-sri-saraswati-nakshatra-mala-stava",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-nakshatra-mala-stava",
+    "keywords": "sri saraswati nakshatra mala stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती सहस्रनाम स्तोत्रम्\"",
+    "slug": "/saraswati-sri-saraswati-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-sahasranama-stotram",
+    "keywords": "sri saraswati sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती सरसशान्ति सुधारस स्तोत्रम्\"",
+    "slug": "/saraswati-sri-saraswati-sarasashanti-sudharasa-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-sarasashanti-sudharasa-stotram",
+    "keywords": "sri saraswati sarasashanti sudharasa stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तवम् (ब्रह्म कृतम्)\"",
+    "slug": "/saraswati-sri-saraswati-stavam-1-brahma-krutam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stavam-1-brahma-krutam",
+    "keywords": "sri saraswati stavam 1 brahma krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तवम् – २\"",
+    "slug": "/saraswati-sri-saraswati-stavam-2",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stavam-2",
+    "keywords": "sri saraswati stavam 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तवम् (वासुदेवानन्दसरस्वती कृतम्)\"",
+    "slug": "/saraswati-sri-saraswati-stavam-vasudevananda-saraswati-krutam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stavam-vasudevananda-saraswati-krutam",
+    "keywords": "sri saraswati stavam vasudevananda saraswati krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तोत्रम् – १\"",
+    "slug": "/saraswati-sri-saraswati-stotram-1",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stotram-1",
+    "keywords": "sri saraswati stotram 1",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तोत्रम् – २\"",
+    "slug": "/saraswati-sri-saraswati-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stotram-2",
+    "keywords": "sri saraswati stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तोत्रम् – ३\"",
+    "slug": "/saraswati-sri-saraswati-stotram-3",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stotram-3",
+    "keywords": "sri saraswati stotram 3",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तोत्रम् (रुद्रयामले बृहस्पति कृतम्)\"",
+    "slug": "/saraswati-sri-saraswati-stotram-rudrayamale-bruhaspati-krutam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stotram-rudrayamale-bruhaspati-krutam",
+    "keywords": "sri saraswati stotram rudrayamale bruhaspati krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तोत्रम् (वामनपुराणे मार्कण्डेय कृतम्)\"",
+    "slug": "/saraswati-sri-saraswati-stotram-vamana-purane-markandeya-krutam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stotram-vamana-purane-markandeya-krutam",
+    "keywords": "sri saraswati stotram vamana purane markandeya krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाणी स्तवनम् (याज्ञ्यवल्क्य कृतम्)\"",
+    "slug": "/saraswati-sri-saraswati-stotram-yajnavalkya-kritam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stotram-yajnavalkya-kritam",
+    "keywords": "sri saraswati stotram yajnavalkya kritam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तुतिः (वराहपुराणे ब्रह्म कृतम्)\"",
+    "slug": "/saraswati-sri-saraswati-stuti-varaha-purane-brahma-krutam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stuti-varaha-purane-brahma-krutam",
+    "keywords": "sri saraswati stuti varaha purane brahma krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सरस्वती स्तुतिः (वासुदेवानन्दसरस्वती कृतम्)\"",
+    "slug": "/saraswati-sri-saraswati-stuti-vasudevananda-saraswati-krutam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-saraswati-stuti-vasudevananda-saraswati-krutam",
+    "keywords": "sri saraswati stuti vasudevananda saraswati krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शारदा भुजङ्ग प्रयात स्तुतिः\"",
+    "slug": "/saraswati-sri-sharada-bhujanga-prayata-stuti",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-sharada-bhujanga-prayata-stuti",
+    "keywords": "sri sharada bhujanga prayata stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शारदा दशकम्\"",
+    "slug": "/saraswati-sri-sharada-dashakam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-sharada-dashakam",
+    "keywords": "sri sharada dashakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शारदा पञ्चरत्न स्तोत्रम्\"",
+    "slug": "/saraswati-sri-sharada-pancharatna-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-sharada-pancharatna-stotram",
+    "keywords": "sri sharada pancharatna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शारदा पञ्चरत्न स्तुतिः\"",
+    "slug": "/saraswati-sri-sharada-pancharatna-stuti",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-sharada-pancharatna-stuti",
+    "keywords": "sri sharada pancharatna stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शारदा स्तवकदम्बम्\"",
+    "slug": "/saraswati-sri-sharada-stava-kadambam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-sharada-stava-kadambam",
+    "keywords": "sri sharada stava kadambam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शारदा स्तुतिः\"",
+    "slug": "/saraswati-sri-sharada-stuti",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-sharada-stuti",
+    "keywords": "sri sharada stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सिद्धसरस्वती स्तोत्रम्\"",
+    "slug": "/saraswati-sri-siddha-saraswati-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-siddha-saraswati-stotram",
+    "keywords": "sri siddha saraswati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाग्देवी स्तवः\"",
+    "slug": "/saraswati-sri-vagdevi-stava",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-vagdevi-stava",
+    "keywords": "sri vagdevi stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाग्वादिनी सहस्रनाम स्तोत्रम्\"",
+    "slug": "/saraswati-sri-vagvadini-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-vagvadini-sahasranama-stotram",
+    "keywords": "sri vagvadini sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाग्वादिनी षट्कम्\"",
+    "slug": "/saraswati-sri-vagvadini-shatkam",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-vagvadini-shatkam",
+    "keywords": "sri vagvadini shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाणी प्रश्नमाला स्तवः\"",
+    "slug": "/saraswati-sri-vani-prashnamala-stava",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-vani-prashnamala-stava",
+    "keywords": "sri vani prashnamala stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वाणी शरणागति स्तोत्रम्\"",
+    "slug": "/saraswati-sri-vani-sharanagati-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-vani-sharanagati-stotram",
+    "keywords": "sri vani sharanagati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वासर सरस्वती स्तोत्रम्\"",
+    "slug": "/saraswati-sri-vasara-saraswati-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-vasara-saraswati-stotram",
+    "keywords": "sri vasara saraswati stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विधिमानसहंसा स्तोत्रम्\"",
+    "slug": "/saraswati-sri-vidhi-manasa-hamsa-stotram",
+    "category": "stotras-shlok",
+    "filename": "saraswati_sri-vidhi-manasa-hamsa-stotram",
+    "keywords": "sri vidhi manasa hamsa stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री सरस्वती स्तवनम्",
     "slug": "/saraswati-stavan-stotra",
     "category": "stotras-shlok",
@@ -8267,6 +12263,1068 @@
     "category": "stotras-shlok",
     "filename": "shiv-tandav",
     "keywords": "Shiv Tandav stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"आर्तिहर स्तोत्रम्\"",
+    "slug": "/shiva-aarthi-hara-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_aarthi-hara-stotram",
+    "keywords": "aarthi hara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अभिलाषाष्टकम्\"",
+    "slug": "/shiva-abhilashaashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_abhilashaashtakam-in-hindi",
+    "keywords": "abhilashaashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अगस्त्याष्टकम्\"",
+    "slug": "/shiva-agastya-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_agastya-ashtakam",
+    "keywords": "agastya ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अनामय स्तोत्रम्\"",
+    "slug": "/shiva-anamaya-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_anamaya-stotram",
+    "keywords": "anamaya stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तुतिः (अन्धक कृतम्)\"",
+    "slug": "/shiva-andhaka-krita-shiva-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_andhaka-krita-shiva-stuti",
+    "keywords": "andhaka krita shiva stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अर्धनारीश्वर स्तोत्रम्\"",
+    "slug": "/shiva-ardhanareeshwara-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_ardhanareeshwara-stotram-in-hindi",
+    "keywords": "ardhanareeshwara stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अर्धनारीश्वराष्टकम्\"",
+    "slug": "/shiva-ardhanarishvara-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_ardhanarishvara-ashtakam",
+    "keywords": "ardhanarishvara ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अर्धनारीश्वराष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/shiva-ardhanarishvara-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_ardhanarishvara-ashtottara-shatanama-stotram",
+    "keywords": "ardhanarishvara ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अरुणाचलाष्टकम्\"",
+    "slug": "/shiva-arunachala-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_arunachala-ashtakam",
+    "keywords": "arunachala ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अष्टमूर्त्यष्टकम्\"",
+    "slug": "/shiva-ashtamurti-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_ashtamurti-ashtakam",
+    "keywords": "ashtamurti ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तोत्रम् (असित कृतम्)\"",
+    "slug": "/shiva-asitha-krutha-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_asitha-krutha-shiva-stotram",
+    "keywords": "asitha krutha shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"अट्टालसुन्दराष्टकम्\"",
+    "slug": "/shiva-attala-sundara-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_attala-sundara-ashtakam",
+    "keywords": "attala sundara ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तवराजः (बाणेश्वर कवच सहित)\"",
+    "slug": "/shiva-baneshwara-kavacha-sahita-shiva-stavaraja",
+    "category": "stotras-shlok",
+    "filename": "shiva_baneshwara-kavacha-sahita-shiva-stavaraja",
+    "keywords": "baneshwara kavacha sahita shiva stavaraja",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"बिल्वाष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/shiva-bilva-ashttotara-satanama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_bilva-ashttotara-satanama-stotram-in-hindi",
+    "keywords": "bilva ashttotara satanama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"बिल्वाष्टकम्\"",
+    "slug": "/shiva-bilvashtakam-2-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_bilvashtakam-2-in-hindi",
+    "keywords": "bilvashtakam 2 in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"बिल्वाष्टकम्\"",
+    "slug": "/shiva-bilvashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_bilvashtakam-in-hindi",
+    "keywords": "bilvashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महादेव स्तुतिः (ब्रह्मादिदेव कृतम्)\"",
+    "slug": "/shiva-brahmaadi-deva-krita-mahadeva-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_brahmaadi-deva-krita-mahadeva-stuti",
+    "keywords": "brahmaadi deva krita mahadeva stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चन्द्रशेखराष्टकम्\"",
+    "slug": "/shiva-chandrasekhara-ashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_chandrasekhara-ashtakam-in-hindi",
+    "keywords": "chandrasekhara ashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्त्यष्टकम्\"",
+    "slug": "/shiva-dakshinamurthy-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_dakshinamurthy-ashtakam",
+    "keywords": "dakshinamurthy ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"दारिद्र्यदहन शिव स्तोत्रम्\"",
+    "slug": "/shiva-daridrya-dahana-siva-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_daridrya-dahana-siva-stotram-in-hindi",
+    "keywords": "daridrya dahana siva stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"दशश्लोकी स्तुतिः\"",
+    "slug": "/shiva-dasaslokee-stuti-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_dasaslokee-stuti-in-hindi",
+    "keywords": "dasaslokee stuti in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तोत्रम् (देवदानव कृतम्)\"",
+    "slug": "/shiva-deva-danava-krita-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_deva-danava-krita-shiva-stotram",
+    "keywords": "deva danava krita shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तोत्रम् (देव कृतम्)\"",
+    "slug": "/shiva-deva-krita-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_deva-krita-shiva-stotram",
+    "keywords": "deva krita shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तुतिः (देव कृतम्)\"",
+    "slug": "/shiva-deva-krita-shiva-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_deva-krita-shiva-stuti",
+    "keywords": "deva krita shiva stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तुतिः (देवाचार्य कृतम्)\"",
+    "slug": "/shiva-devacharya-krita-shiva-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_devacharya-krita-shiva-stuti",
+    "keywords": "devacharya krita shiva stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री परमेश्वर स्तुतिः (देवदारुवनस्थ मुनि कृतम्)\"",
+    "slug": "/shiva-devadaru-vanastha-muni-krita-parameshwara-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_devadaru-vanastha-muni-krita-parameshwara-stuti",
+    "keywords": "devadaru vanastha muni krita parameshwara stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"द्वादश ज्योतिर्लिङ्ग स्तोत्रम्\"",
+    "slug": "/shiva-dvadasa-jyothirlinga-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_dvadasa-jyothirlinga-stotram-in-hindi",
+    "keywords": "dvadasa jyothirlinga stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तोत्रम् (हिमालय कृतम्)\"",
+    "slug": "/shiva-himalaya-krita-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_himalaya-krita-shiva-stotram",
+    "keywords": "himalaya krita shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तुतिः (इन्द्रादि कृतम्)\"",
+    "slug": "/shiva-indra-krita-shiva-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_indra-krita-shiva-stuti",
+    "keywords": "indra krita shiva stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"ईशान स्तुतिः\"",
+    "slug": "/shiva-ishana-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_ishana-stuti",
+    "keywords": "ishana stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तोत्रम् (कल्कि कृतम्)\"",
+    "slug": "/shiva-kalki-krita-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_kalki-krita-shiva-stotram",
+    "keywords": "kalki krita shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सोमसुन्दर स्तोत्रम् (कुलशेखरपाण्ड्य कृतम्)\"",
+    "slug": "/shiva-kulasekhara-pandya-krita-sri-somasundara-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_kulasekhara-pandya-krita-sri-somasundara-stotram",
+    "keywords": "kulasekhara pandya krita sri somasundara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तुतिः (लंकेश्वर कृतम्)\"",
+    "slug": "/shiva-lankeshwara-krita-shiva-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_lankeshwara-krita-shiva-stuti",
+    "keywords": "lankeshwara krita shiva stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"लिङ्गाष्टकम्\"",
+    "slug": "/shiva-lingashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_lingashtakam-in-hindi",
+    "keywords": "lingashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"महामृत्युञ्जय स्तोत्रम्\"",
+    "slug": "/shiva-maha-mrityunjaya-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_maha-mrityunjaya-stotram-in-hindi",
+    "keywords": "maha mrityunjaya stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महेश्वर पञ्चरत्न स्तोत्रम्\"",
+    "slug": "/shiva-maheshwara-pancharatna-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_maheshwara-pancharatna-stotram-in-hindi",
+    "keywords": "maheshwara pancharatna stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मृतसञ्जीवन स्तोत्रम्\"",
+    "slug": "/shiva-mritasanjeevani-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_mritasanjeevani-stotram-in-hindi",
+    "keywords": "mritasanjeevani stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"मृत्युञ्जय मानसिक पूजा स्तोत्रम्\"",
+    "slug": "/shiva-mrityunjaya-manasika-puja-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_mrityunjaya-manasika-puja-stotram-in-hindi",
+    "keywords": "mrityunjaya manasika puja stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री नीलकण्ठ स्तवः (श्री पार्वतीवल्लभाष्टकम्)\"",
+    "slug": "/shiva-parvathi-vallabha-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_parvathi-vallabha-ashtakam",
+    "keywords": "parvathi vallabha ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"प्रदोषस्तोत्राष्टकम्\"",
+    "slug": "/shiva-pradoshastotra-ashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_pradoshastotra-ashtakam-in-hindi",
+    "keywords": "pradoshastotra ashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तोत्रम् (रतिदेवि कृतम्)\"",
+    "slug": "/shiva-rati-devi-krita-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_rati-devi-krita-shiva-stotram",
+    "keywords": "rati devi krita shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"रुद्राध्याय स्तुतिः (रुद्र नमक स्तोत्रम्)\"",
+    "slug": "/shiva-rudradhyaya-stuti-shatarudriyam",
+    "category": "stotras-shlok",
+    "filename": "shiva_rudradhyaya-stuti-shatarudriyam",
+    "keywords": "rudradhyaya stuti shatarudriyam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रुद्राष्टकम्\"",
+    "slug": "/shiva-rudrashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_rudrashtakam-in-hindi",
+    "keywords": "rudrashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सदाशिवाष्टकम्\"",
+    "slug": "/shiva-sadashiva-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sadashiva-ashtakam",
+    "keywords": "sadashiva ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"उममहेश्वराष्टकम् (सङ्घिल कृतम्)\"",
+    "slug": "/shiva-sanghila-krita-uma-maheswara-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sanghila-krita-uma-maheswara-ashtakam",
+    "keywords": "sanghila krita uma maheswara ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"शिवापराधक्षमापणस्तोत्रम्\"",
+    "slug": "/shiva-shiva-aparadha-kshamapana-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-aparadha-kshamapana-stotram-in-hindi",
+    "keywords": "shiva aparadha kshamapana stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"शिवभुजङ्गम्\"",
+    "slug": "/shiva-shiva-bhujanga-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-bhujanga-stotram-in-hindi",
+    "keywords": "shiva bhujanga stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव केशादिपादान्तवर्णन स्तोत्रम्\"",
+    "slug": "/shiva-shiva-kesadi-padantha-varnana-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-kesadi-padantha-varnana-stotram-in-hindi",
+    "keywords": "shiva kesadi padantha varnana stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव महिम्नः स्तोत्रम्\"",
+    "slug": "/shiva-shiva-mahimna-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-mahimna-stotram-in-hindi",
+    "keywords": "shiva mahimna stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव मानसपूजा स्तोत्रम्\"",
+    "slug": "/shiva-shiva-manasa-puja-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-manasa-puja-stotram-in-hindi",
+    "keywords": "shiva manasa puja stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवमङ्गलाष्टकम्\"",
+    "slug": "/shiva-shiva-mangalashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-mangalashtakam-in-hindi",
+    "keywords": "shiva mangalashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवनामावल्यष्टकम्\"",
+    "slug": "/shiva-shiva-namavalyashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-namavalyashtakam-in-hindi",
+    "keywords": "shiva namavalyashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव पादादिकेशान्तवर्णन स्तोत्रम्\"",
+    "slug": "/shiva-shiva-padadi-kesantha-varnana-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-padadi-kesantha-varnana-stotram-in-hindi",
+    "keywords": "shiva padadi kesantha varnana stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव पञ्चाक्षरनक्षत्रमाला स्तोत्रम्\"",
+    "slug": "/shiva-shiva-panchakshara-nakshatramala-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-panchakshara-nakshatramala-stotram-in-hindi",
+    "keywords": "shiva panchakshara nakshatramala stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव पञ्चाक्षर स्तोत्रम्\"",
+    "slug": "/shiva-shiva-panchakshara-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-panchakshara-stotram-in-hindi",
+    "keywords": "shiva panchakshara stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव षडक्षर स्तोत्रम्\"",
+    "slug": "/shiva-shiva-shadakshara-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-shadakshara-stotram-in-hindi",
+    "keywords": "shiva shadakshara stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव तांडव स्तोत्रम्\"",
+    "slug": "/shiva-shiva-tandav-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_shiva-tandav-stotram-in-hindi",
+    "keywords": "shiva tandav stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"शिवानन्दलहरी\"",
+    "slug": "/shiva-sivanandalahari-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sivanandalahari-in-hindi",
+    "keywords": "sivanandalahari in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवाष्टकम्\"",
+    "slug": "/shiva-sivashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sivashtakam-in-hindi",
+    "keywords": "sivashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चन्द्रमौलीश्वर स्तवः\"",
+    "slug": "/shiva-sri-chandramouleshwara-stava",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-chandramouleshwara-stava",
+    "keywords": "sri chandramouleshwara stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चन्द्रमौलीश स्तोत्रम्\"",
+    "slug": "/shiva-sri-chandramouleshwara-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-chandramouleshwara-stotram",
+    "keywords": "sri chandramouleshwara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चन्द्रमौलीश्वर वर्णमाला स्तोत्रम्\"",
+    "slug": "/shiva-sri-chandramoulishwara-varnamala-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-chandramoulishwara-varnamala-stotram",
+    "keywords": "sri chandramoulishwara varnamala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चिदम्बराष्टकम्\"",
+    "slug": "/shiva-sri-chidambara-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-chidambara-ashtakam",
+    "keywords": "sri chidambara ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चिदम्बर पञ्चचामर स्तोत्रम्\"",
+    "slug": "/shiva-sri-chidambara-panchachamara-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-chidambara-panchachamara-stotram",
+    "keywords": "sri chidambara panchachamara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री चिदम्बरेश्वर स्तोत्रम्\"",
+    "slug": "/shiva-sri-chidambareshwara-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-chidambareshwara-stotram",
+    "keywords": "sri chidambareshwara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति पञ्चरत्न स्तवम्\"",
+    "slug": "/shiva-sri-dakshinamurthy-pancharatna-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-dakshinamurthy-pancharatna-stotram",
+    "keywords": "sri dakshinamurthy pancharatna stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्ति स्तोत्रम् – ४\"",
+    "slug": "/shiva-sri-dakshinamurthy-stotram-4",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-dakshinamurthy-stotram-4",
+    "keywords": "sri dakshinamurthy stotram 4",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री गङ्गाधर स्तोत्रम्\"",
+    "slug": "/shiva-sri-gangadhara-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-gangadhara-stotram",
+    "keywords": "sri gangadhara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री हालास्येशाष्टकम्\"",
+    "slug": "/shiva-sri-halasyesha-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-halasyesha-ashtakam",
+    "keywords": "sri halasyesha ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री हरिहर अष्टोत्तर शतनाम स्तोत्रम्\"",
+    "slug": "/shiva-sri-harihara-ashtottara-shatanama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-harihara-ashtottara-shatanama-stotram-in-hindi",
+    "keywords": "sri harihara ashtottara shatanama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री हाटकेश्वराष्टकम्\"",
+    "slug": "/shiva-sri-hatakeshwara-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-hatakeshwara-ashtakam",
+    "keywords": "sri hatakeshwara ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री हाटकेश्वर स्तुतिः\"",
+    "slug": "/shiva-sri-hatakeshwara-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-hatakeshwara-stuti",
+    "keywords": "sri hatakeshwara stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री काशीविश्वनाथ अष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/shiva-sri-kashi-vishwanatha-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-kashi-vishwanatha-ashtottara-shatanama-stotram",
+    "keywords": "sri kashi vishwanatha ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तोत्रम् (कृष्ण कृतम्)\"",
+    "slug": "/shiva-sri-krishna-krita-sri-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-krishna-krita-sri-shiva-stotram",
+    "keywords": "sri krishna krita sri shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री महादेव स्तोत्रम्\"",
+    "slug": "/shiva-sri-mahadeva-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-mahadeva-stotram-in-hindi",
+    "keywords": "sri mahadeva stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मार्गबन्धु स्तोत्रम्\"",
+    "slug": "/shiva-sri-margabandhu-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-margabandhu-stotram-in-hindi",
+    "keywords": "sri margabandhu stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मेधा दक्षिणामूर्ति मन्त्रवर्णपद स्तुतिः\"",
+    "slug": "/shiva-sri-medha-dakshinamurthy-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-medha-dakshinamurthy-stotram",
+    "keywords": "sri medha dakshinamurthy stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मृत्युञ्जय अक्षरमाला स्तोत्रम्\"",
+    "slug": "/shiva-sri-mrityunjaya-aksharamala-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-mrityunjaya-aksharamala-stotram",
+    "keywords": "sri mrityunjaya aksharamala stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री मृत्युञ्जय स्तोत्रम्\"",
+    "slug": "/shiva-sri-mrityunjaya-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-mrityunjaya-stotram",
+    "keywords": "sri mrityunjaya stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री नटराजाष्टकम्\"",
+    "slug": "/shiva-sri-nataraja-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-nataraja-ashtakam",
+    "keywords": "sri nataraja ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री नटराज स्तोत्रम् (पतञ्जलिमुनि कृतम्)\"",
+    "slug": "/shiva-sri-nataraja-stotram-patanjali-krutam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-nataraja-stotram-patanjali-krutam",
+    "keywords": "sri nataraja stotram patanjali krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री नटेश स्तवः\"",
+    "slug": "/shiva-sri-natesha-stava",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-natesha-stava",
+    "keywords": "sri natesha stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री नटेश्वर भुजङ्ग स्तुतिः\"",
+    "slug": "/shiva-sri-nateshwara-bhujanga-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-nateshwara-bhujanga-stuti",
+    "keywords": "sri nateshwara bhujanga stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"पशुपत्यष्टकम्\"",
+    "slug": "/shiva-sri-pashupathi-ashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-pashupathi-ashtakam-in-hindi",
+    "keywords": "sri pashupathi ashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रुद्र स्तवनम्\"",
+    "slug": "/shiva-sri-rudra-stavanam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-rudra-stavanam",
+    "keywords": "sri rudra stavanam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री रुद्र स्तुतिः\"",
+    "slug": "/shiva-sri-rudra-stuti-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-rudra-stuti-in-hindi",
+    "keywords": "sri rudra stuti in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री साम्बसदाशिव अक्षरमाला स्तोत्रम्\"",
+    "slug": "/shiva-sri-samba-sada-shiva-aksharamala-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-samba-sada-shiva-aksharamala-stotram-in-hindi",
+    "keywords": "sri samba sada shiva aksharamala stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री साम्बसदाशिव भुजङ्ग प्रयात स्तोत्रम्\"",
+    "slug": "/shiva-sri-samba-sada-shiva-bhujanga-prayata-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-samba-sada-shiva-bhujanga-prayata-stotram-in-hindi",
+    "keywords": "sri samba sada shiva bhujanga prayata stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शङ्कराष्टकम्\"",
+    "slug": "/shiva-sri-sankara-ashtakam-2",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-sankara-ashtakam-2",
+    "keywords": "sri sankara ashtakam 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शंकराष्टकम्\"",
+    "slug": "/shiva-sri-shankara-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shankara-ashtakam",
+    "keywords": "sri shankara ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शर्व स्तुतिः (कृष्णार्जुन कृतम्)\"",
+    "slug": "/shiva-sri-sharva-stuti-krishna-arjuna-krutam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-sharva-stuti-krishna-arjuna-krutam",
+    "keywords": "sri sharva stuti krishna arjuna krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवाष्टकम् – २\"",
+    "slug": "/shiva-sri-shiva-ashtakam-2",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-ashtakam-2",
+    "keywords": "sri shiva ashtakam 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवाष्टकम् ३ (शङ्कराचार्य कृतम्)\"",
+    "slug": "/shiva-sri-shiva-ashtakam-3-shankaracharya-kritam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-ashtakam-3-shankaracharya-kritam",
+    "keywords": "sri shiva ashtakam 3 shankaracharya kritam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवाष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/shiva-sri-shiva-ashtottara-satanama-stotra-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-ashtottara-satanama-stotra-in-hindi",
+    "keywords": "sri shiva ashtottara satanama stotra in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव द्वादशनाम स्तोत्रम्\"",
+    "slug": "/shiva-sri-shiva-dvadasha-nama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-dvadasha-nama-stotram-in-hindi",
+    "keywords": "sri shiva dvadasha nama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव गद्यम् (श्री शिवापदान दण्डक स्तोत्रम्)\"",
+    "slug": "/shiva-sri-shiva-gadyam-shivapadana-dandaka-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-gadyam-shivapadana-dandaka-stotram",
+    "keywords": "sri shiva gadyam shivapadana dandaka stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव हृदयम्\"",
+    "slug": "/shiva-sri-shiva-hrudayam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-hrudayam",
+    "keywords": "sri shiva hrudayam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"शिवमानसिकपूजा स्तोत्रम्\"",
+    "slug": "/shiva-sri-shiva-manasika-puja-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-manasika-puja-stotram",
+    "keywords": "sri shiva manasika puja stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव नवरत्न स्तवः\"",
+    "slug": "/shiva-sri-shiva-navaratna-stava",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-navaratna-stava",
+    "keywords": "sri shiva navaratna stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव पञ्चरत्न स्तुतिः (कृष्ण कृतम्)\"",
+    "slug": "/shiva-sri-shiva-pancharatna-stuti-krishna-kritam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-pancharatna-stuti-krishna-kritam",
+    "keywords": "sri shiva pancharatna stuti krishna kritam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव प्रतिपादन स्तोत्रम्\"",
+    "slug": "/shiva-sri-shiva-pratipadana-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-pratipadana-stotram",
+    "keywords": "sri shiva pratipadana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव रक्षा स्तोत्रम्\"",
+    "slug": "/shiva-sri-shiva-raksha-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-raksha-stotram-in-hindi",
+    "keywords": "sri shiva raksha stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव सहस्रनाम स्तोत्रम्\"",
+    "slug": "/shiva-sri-shiva-sahasranama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-sahasranama-stotram-in-hindi",
+    "keywords": "sri shiva sahasranama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव सहस्रनाम स्तोत्रम् – पूर्वपीठिका\"",
+    "slug": "/shiva-sri-shiva-sahasranama-stotram-poorva-peetika-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-sahasranama-stotram-poorva-peetika-in-hindi",
+    "keywords": "sri shiva sahasranama stotram poorva peetika in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवशङ्कर स्तोत्रम्\"",
+    "slug": "/shiva-sri-shiva-shankara-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-shankara-stotram",
+    "keywords": "sri shiva shankara stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तुतिः (वन्दे शम्भुं उमापतिम्)\"",
+    "slug": "/shiva-sri-shiva-stuti-vande-shambhum-umapathim",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-stuti-vande-shambhum-umapathim",
+    "keywords": "sri shiva stuti vande shambhum umapathim",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तुतिः\"",
+    "slug": "/shiva-sri-shiva-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-shiva-stuti",
+    "keywords": "sri shiva stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सोमसुन्दराष्टकम्\"",
+    "slug": "/shiva-sri-somasundara-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_sri-somasundara-ashtakam",
+    "keywords": "sri somasundara ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"सुवर्णमाला स्तुतिः\"",
+    "slug": "/shiva-suvarnamala-stuti-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_suvarnamala-stuti-in-hindi",
+    "keywords": "suvarnamala stuti in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री उमामहेश्वर स्तोत्रम्\"",
+    "slug": "/shiva-uma-maheshwara-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_uma-maheshwara-stotram-in-hindi",
+    "keywords": "uma maheshwara stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"उपमन्युकृत शिवस्तोत्रम्\"",
+    "slug": "/shiva-upamanyu-krutha-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_upamanyu-krutha-shiva-stotram",
+    "keywords": "upamanyu krutha shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री वैद्यनाथाष्टकम्\"",
+    "slug": "/shiva-vaidyanathashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_vaidyanathashtakam-in-hindi",
+    "keywords": "vaidyanathashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिव स्तोत्रम् (वरुण कृतम्)\"",
+    "slug": "/shiva-varuna-krita-shiva-stotram",
+    "category": "stotras-shlok",
+    "filename": "shiva_varuna-krita-shiva-stotram",
+    "keywords": "varuna krita shiva stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री परमेश्वर स्तुतिः (वसिष्ठ कृतम्)\"",
+    "slug": "/shiva-vasishta-krita-parameshwara-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_vasishta-krita-parameshwara-stuti",
+    "keywords": "vasishta krita parameshwara stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"वेदसारशिव स्तोत्रम्\"",
+    "slug": "/shiva-vedasara-siva-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_vedasara-siva-stotram-in-hindi",
+    "keywords": "vedasara siva stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री विश्वनाथाष्टकम्\"",
+    "slug": "/shiva-vishwanatha-ashtakam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "shiva_vishwanatha-ashtakam-in-hindi",
+    "keywords": "vishwanatha ashtakam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दक्षिणामूर्त्यष्टकम् – २ (व्यास कृतम्)\"",
+    "slug": "/shiva-vyasa-krita-dakshinamurthy-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "shiva_vyasa-krita-dakshinamurthy-ashtakam",
+    "keywords": "vyasa krita dakshinamurthy ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री शिवकेशव स्तुतिः (यम कृतम्)\"",
+    "slug": "/shiva-yama-kruta-shiva-keshava-stuti",
+    "category": "stotras-shlok",
+    "filename": "shiva_yama-kruta-shiva-keshava-stuti",
+    "keywords": "yama kruta shiva keshava stuti",
     "fmKeywords": "",
     "headings": ""
   },
@@ -8334,6 +13392,411 @@
     "headings": ""
   },
   {
+    "title": "\"गुह पञ्चरत्नम्\"",
+    "slug": "/subrahmanya-guha-pancharatnam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_guha-pancharatnam",
+    "keywords": "guha pancharatnam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"जय स्कन्द स्तोत्रम्\"",
+    "slug": "/subrahmanya-jaya-skanda-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_jaya-skanda-stotram",
+    "keywords": "jaya skanda stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"शरवणभव देवसेनेश षट्कम्\"",
+    "slug": "/subrahmanya-saravana-bhava-devasenesha-shatkam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_saravana-bhava-devasenesha-shatkam",
+    "keywords": "saravana bhava devasenesha shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"षडाननाष्टकम्\"",
+    "slug": "/subrahmanya-shadanana-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_shadanana-ashtakam",
+    "keywords": "shadanana ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"षडानन स्तुतिः\"",
+    "slug": "/subrahmanya-shadanana-stuti",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_shadanana-stuti",
+    "keywords": "shadanana stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"स्कन्द वेदपाद स्तवः\"",
+    "slug": "/subrahmanya-skanda-veda-pada-stava",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_skanda-veda-pada-stava",
+    "keywords": "skanda veda pada stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दण्डपाणि पञ्चरत्नम्\"",
+    "slug": "/subrahmanya-sri-dandapani-pancharatnam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-dandapani-pancharatnam",
+    "keywords": "sri dandapani pancharatnam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री दण्डायुधपाण्यष्टकम्\"",
+    "slug": "/subrahmanya-sri-dandayudhapani-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-dandayudhapani-ashtakam",
+    "keywords": "sri dandayudhapani ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कार्तिकेयाष्टकम्\"",
+    "slug": "/subrahmanya-sri-karthikeya-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-karthikeya-ashtakam",
+    "keywords": "sri karthikeya ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कार्तिकेय करावलम्ब स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-karthikeya-karavalamba-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-karthikeya-karavalamba-stotram",
+    "keywords": "sri karthikeya karavalamba stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कार्तिकेय स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-karthikeya-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-karthikeya-stotram",
+    "keywords": "sri karthikeya stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कुमार स्तुतिः (देव कृतम्)\"",
+    "slug": "/subrahmanya-sri-kumara-stuti-deva-krutam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-kumara-stuti-deva-krutam",
+    "keywords": "sri kumara stuti deva krutam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री कुमार स्तुतिः (विप्र कृतम्)\"",
+    "slug": "/subrahmanya-sri-kumara-stuti",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-kumara-stuti",
+    "keywords": "sri kumara stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"प्रज्ञाविवर्धन कार्तिकेय स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-pragnya-vivardhana-karthikeya-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-pragnya-vivardhana-karthikeya-stotram-in-hindi",
+    "keywords": "sri pragnya vivardhana karthikeya stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षण्मुख भुजङ्ग स्तुतिः\"",
+    "slug": "/subrahmanya-sri-shanmukha-bhujanga-stuti",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-shanmukha-bhujanga-stuti",
+    "keywords": "sri shanmukha bhujanga stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षण्मुख दण्डकम्\"",
+    "slug": "/subrahmanya-sri-shanmukha-dandakam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-shanmukha-dandakam",
+    "keywords": "sri shanmukha dandakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षण्मुख पञ्चरत्न स्तुतिः\"",
+    "slug": "/subrahmanya-sri-shanmukha-pancharatna-stuti",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-shanmukha-pancharatna-stuti",
+    "keywords": "sri shanmukha pancharatna stuti",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षण्मुख षट्कम्\"",
+    "slug": "/subrahmanya-sri-shanmukha-shatkam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-shanmukha-shatkam",
+    "keywords": "sri shanmukha shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षण्मुख षट्पदी स्तवः\"",
+    "slug": "/subrahmanya-sri-shanmukha-shatpadi-stava",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-shanmukha-shatpadi-stava",
+    "keywords": "sri shanmukha shatpadi stava",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री षण्मुख स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-shanmukha-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-shanmukha-stotram",
+    "keywords": "sri shanmukha stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्कन्द दण्डकम्\"",
+    "slug": "/subrahmanya-sri-skanda-dandakam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-skanda-dandakam",
+    "keywords": "sri skanda dandakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"स्कन्दलहरी\"",
+    "slug": "/subrahmanya-sri-skanda-lahari-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-skanda-lahari-in-hindi",
+    "keywords": "sri skanda lahari in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्कन्द षट्कम्\"",
+    "slug": "/subrahmanya-sri-skanda-shatkam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-skanda-shatkam",
+    "keywords": "sri skanda shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्कन्द स्तवम्\"",
+    "slug": "/subrahmanya-sri-skanda-stavam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-skanda-stavam",
+    "keywords": "sri skanda stavam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री स्कन्द स्तोत्रम् (महाभारते)\"",
+    "slug": "/subrahmanya-sri-skanda-stotram-mahabharatam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-skanda-stotram-mahabharatam",
+    "keywords": "sri skanda stotram mahabharatam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य अपराधक्षमापण स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-aparadha-kshamapana-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-aparadha-kshamapana-stotram",
+    "keywords": "sri subrahmanya aparadha kshamapana stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्याष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-ashtottara-satanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-ashtottara-satanama-stotram",
+    "keywords": "sri subrahmanya ashtottara satanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य भुजङ्ग प्रयात स्तोत्रम् २\"",
+    "slug": "/subrahmanya-sri-subrahmanya-bhujanga-prayata-stotram-2",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-bhujanga-prayata-stotram-2",
+    "keywords": "sri subrahmanya bhujanga prayata stotram 2",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य भुजङ्ग प्रयात स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-bhujanga-prayata-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-bhujanga-prayata-stotram",
+    "keywords": "sri subrahmanya bhujanga prayata stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य दण्डकम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-dandakam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-dandakam",
+    "keywords": "sri subrahmanya dandakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य गद्यम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-gadyam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-gadyam",
+    "keywords": "sri subrahmanya gadyam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य हृदय स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-hrudaya-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-hrudaya-stotram",
+    "keywords": "sri subrahmanya hrudaya stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य कवच स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-kavacha-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-kavacha-stotram-in-hindi",
+    "keywords": "sri subrahmanya kavacha stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य मानसपूजा स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-manasa-puja-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-manasa-puja-stotram",
+    "keywords": "sri subrahmanya manasa puja stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य मङ्गलाष्टकम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-mangala-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-mangala-ashtakam",
+    "keywords": "sri subrahmanya mangala ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य सहस्रनाम स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-sahasranama-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-sahasranama-stotram",
+    "keywords": "sri subrahmanya sahasranama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य शरणागति गद्यम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-sharanagati-gadyam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-sharanagati-gadyam",
+    "keywords": "sri subrahmanya sharanagati gadyam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य षट्कम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-shatkam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-shatkam",
+    "keywords": "sri subrahmanya shatkam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य षोडशनाम स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-shodasa-nama-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-shodasa-nama-stotram-in-hindi",
+    "keywords": "sri subrahmanya shodasa nama stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmanya-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmanya-stotram-in-hindi",
+    "keywords": "sri subrahmanya stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्याक्षरमालिका स्तोत्रम्\"",
+    "slug": "/subrahmanya-sri-subrahmaya-aksharamalika-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_sri-subrahmaya-aksharamalika-stotram",
+    "keywords": "sri subrahmaya aksharamalika stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य अष्टकम् (करावलम्ब स्तोत्रम्)\"",
+    "slug": "/subrahmanya-subrahmanya-ashtakam",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_subrahmanya-ashtakam",
+    "keywords": "subrahmanya ashtakam",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य भुजङ्ग स्तोत्रम्\"",
+    "slug": "/subrahmanya-subrahmanya-bhujanga-stotram-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_subrahmanya-bhujanga-stotram-in-hindi",
+    "keywords": "subrahmanya bhujanga stotram in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री सुब्रह्मण्य पञ्चरत्नम्\"",
+    "slug": "/subrahmanya-subrahmanya-pancharatnam-in-hindi",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_subrahmanya-pancharatnam-in-hindi",
+    "keywords": "subrahmanya pancharatnam in hindi",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"षडक्षराष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/subrahmanya-subrahmanya-shadakshara-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "subrahmanya_subrahmanya-shadakshara-ashtottara-shatanama-stotram",
+    "keywords": "subrahmanya shadakshara ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री स्वामी समर्थ तारक मंत्र",
     "slug": "/swami-samarth-taarak-mantra",
     "category": "stotras-shlok",
@@ -8384,6 +13847,24 @@
     "category": "stotras-shlok",
     "filename": "vishnu-stotra",
     "keywords": "vishnu  stotra",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री लक्ष्मीनारायणाष्टोत्तरशतनाम स्तोत्रम्\"",
+    "slug": "/vishnu-sri-lakshmi-narayana-ashtottara-shatanama-stotram",
+    "category": "stotras-shlok",
+    "filename": "vishnu_sri-lakshmi-narayana-ashtottara-shatanama-stotram",
+    "keywords": "sri lakshmi narayana ashtottara shatanama stotram",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "\"श्री ब्रह्म स्तोत्रम् (देव कृतम्)\"",
+    "slug": "/vividha-brahma-stotram-deva-krutam",
+    "category": "stotras-shlok",
+    "filename": "vividha_brahma-stotram-deva-krutam",
+    "keywords": "brahma stotram deva krutam",
     "fmKeywords": "",
     "headings": ""
   },
