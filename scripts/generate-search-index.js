@@ -57,6 +57,10 @@ function parseMarkdownFile(filePath) {
     const titleMatch = fmText.match(/^title:\s*(.+)$/m);
     if (titleMatch) {
       title = titleMatch[1].trim();
+      const quote = title[0];
+      if ((quote === '"' || quote === "'") && title.endsWith(quote)) {
+        title = title.slice(1, -1).trim();
+      }
     }
     
     // Parse keywords in frontmatter if any

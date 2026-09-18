@@ -1,6 +1,6 @@
 ---
 sidebar_position: 84
-title: "श्री बाला कवचम् – ३ (दुःस्वप्ननाशकम्)"
+title: श्री बाला कवचम् – ३ (दुःस्वप्ननाशकम्)
 slug: /bala-duswapna-nashaka-bala-kavacham
 ---
 # श्री बाला कवचम् – ३ (दुःस्वप्ननाशकम्)
