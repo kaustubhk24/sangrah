@@ -2,7 +2,7 @@
 slug: /jestha-gauri-resources
 ---
 
-## इतर माहिती
+# इतर माहिती
 
 - [गौरी व गणपतीची पूजा विधी](/gauri-mahalaxmi-poojan)
 - [गौर्यष्टोत्तरशत नामावलिः](/gauri-namavali)
