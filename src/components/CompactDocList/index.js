@@ -36,9 +36,21 @@ function PathIcon({ added }) {
   );
 }
 
-export default function CompactDocList({ items, showActions = true }) {
+function SearchIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="m16 16 4.5 4.5" />
+    </svg>
+  );
+}
+
+export default function CompactDocList({ items, showActions = true, searchable = true }) {
   const [bookmarks, setBookmarks] = useState([]);
   const [dailyPath, setDailyPath] = useState([]);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchMetadata, setSearchMetadata] = useState({});
 
   const loadState = () => {
     setBookmarks(readStorage('bookmarks'));
@@ -50,6 +62,31 @@ export default function CompactDocList({ items, showActions = true }) {
     window.addEventListener('sangrah-storage-change', loadState);
     return () => window.removeEventListener('sangrah-storage-change', loadState);
   }, []);
+
+  useEffect(() => {
+    if (!searchOpen) return undefined;
+
+    let cancelled = false;
+    import('@site/src/data/searchIndex.json').then((module) => {
+      if (cancelled) return;
+      const metadata = module.default.reduce((result, entry) => {
+        result[entry.slug] = [
+          entry.title,
+          entry.slug,
+          entry.filename,
+          entry.keywords,
+          entry.fmKeywords,
+          entry.headings,
+        ].filter(Boolean).join(' ');
+        return result;
+      }, {});
+      setSearchMetadata(metadata);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [searchOpen]);
 
   const toggleBookmark = (event, item) => {
     event.preventDefault();
@@ -73,9 +110,42 @@ export default function CompactDocList({ items, showActions = true }) {
     setDailyPath(updated);
   };
 
+  const searchTokens = searchQuery.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+  const filteredItems = searchTokens.length
+    ? items.filter((item) => {
+        const href = item.href || (item.type === 'category' ? findFirstSidebarItemLink(item) : '');
+        const searchText = `${item.label || ''} ${item.meta || ''} ${href} ${searchMetadata[href] || ''}`.toLocaleLowerCase();
+        return searchTokens.every((token) => searchText.includes(token));
+      })
+    : items;
+
   return (
-    <ul className={styles.list}>
-      {items.map((item) => {
+    <>
+      {searchable && <div className={styles.toolbar}>
+        {searchOpen ? (
+          <input
+            type="search"
+            className={styles.searchInput}
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            placeholder="या यादीत शोधा..."
+            aria-label="या यादीत शोधा"
+            autoFocus
+          />
+        ) : (
+          <button
+            type="button"
+            className={styles.searchButton}
+            onClick={() => setSearchOpen(true)}
+            aria-label="या यादीत शोधा"
+            title="या यादीत शोधा"
+          >
+            <SearchIcon />
+          </button>
+        )}
+      </div>}
+      <ul className={styles.list}>
+      {filteredItems.map((item) => {
         const href = item.href || (item.type === 'category' ? findFirstSidebarItemLink(item) : null);
         if (!href) return null;
         const rowItem = { ...item, href };
@@ -112,6 +182,8 @@ export default function CompactDocList({ items, showActions = true }) {
           </li>
         );
       })}
-    </ul>
+      </ul>
+      {searchTokens.length > 0 && filteredItems.length === 0 && <p className={styles.noResults}>काहीही सापडले नाही.</p>}
+    </>
   );
 }

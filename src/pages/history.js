@@ -34,10 +34,14 @@ export default function HistoryPage() {
     try {
       const stored = JSON.parse(window.localStorage.getItem('pageHistory') || '[]');
       const cleaned = Array.isArray(stored)
-        ? stored.filter((item) => item && typeof item.path === 'string')
+        ? stored.filter((item) => {
+            if (!item || typeof item.path !== 'string') return false;
+            return item.path.split(/[?#]/)[0].replace(/\/+$/, '') !== '/search';
+          })
         : [];
       const sorted = cleaned.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
       setHistoryItems(sorted);
+      window.localStorage.setItem('pageHistory', JSON.stringify(sorted));
     } catch (error) {
       console.error('Error reading page history:', error);
       setHistoryItems([]);

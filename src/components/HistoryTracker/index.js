@@ -22,12 +22,13 @@ function HistoryTracker() {
       '/',
       '/bookmarks',
       '/history',
+      '/search',
       '/counter',
       '/settings',
       '/categories'
     ];
     
-    // Ignore homepage, bookmarks, history, settings, counter, and category directory lists
+    // Ignore utility pages and category directory lists
     if (ignorePaths.includes(pathname) || pathname.startsWith('/category/')) {
       return;
     }

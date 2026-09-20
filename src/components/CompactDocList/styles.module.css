@@ -1,3 +1,55 @@
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 2.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.searchButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.45rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.4rem;
+  color: var(--ifm-color-emphasis-700);
+  background: transparent;
+  cursor: pointer;
+}
+
+.searchButton:hover,
+.searchButton:focus-visible {
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.searchButton svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.searchInput {
+  width: min(100%, 22rem);
+  min-height: 2.25rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.4rem;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-background-surface-color);
+}
+
+.noResults {
+  margin: 1rem 0;
+  color: var(--ifm-color-emphasis-600);
+}
+
 .list {
   list-style: none;
   margin: 1.5rem 0 0;

@@ -214,13 +214,13 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
 
-      // announcementBar: {
-      //   id: 'IMP',
-      //   content: 'नवीन अपडेट: कसे वापरावे यावरील  <a target ="_blank" href="https://www.youtube.com/shorts/tg4Qt11pgIk">व्हिडिओ पाहा</a>',
-      //   backgroundColor: '#FFF4E5',
-      //   textColor: '#C75D00',
-      //   isCloseable: true,
-      // },
+      announcementBar: {
+        id: 'feedback_required',
+        content: 'कृपया आपला <b><a target ="_blank" href="https://forms.gle/MPuDTkCpVTDpaoQG9">अभिप्राय द्या.</a></b>',
+        backgroundColor: '#FFF4E5',
+        textColor: '#C75D00',
+        isCloseable: true,
+      },
 
       navbar: {
         style: 'primary',
