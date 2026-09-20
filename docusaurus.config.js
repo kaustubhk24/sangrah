@@ -118,6 +118,16 @@ const config = {
   ],
 
   plugins: [
+    function sourceMapPlugin() {
+      return {
+        name: 'source-map-plugin',
+        configureWebpack(_config, isServer) {
+          return {
+            devtool: isServer ? false : 'source-map',
+          };
+        },
+      };
+    },
     [
       '@docusaurus/plugin-google-gtag',
       {

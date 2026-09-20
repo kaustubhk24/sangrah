@@ -58,8 +58,6 @@ a {
   color: inherit;
 }
 
-.article-content,
-.docItemContent,
 .markdown {
   font-size: var(--content-font-size);
   line-height: var(--content-line-height);
@@ -162,26 +160,6 @@ html.elder-mode a {
 
 
 
-.searchResults {
-  margin-top: 14px;
-}
-
-.searchResultCard {
-  display: block;
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: #fff;
-  border: 1px solid #f3d3b0;
-  margin-bottom: 10px;
-  color: #222;
-  text-decoration: none;
-}
-
-.searchResultCard:hover,
-.searchResultCard:focus {
-  background: #fff7ef;
-}
-
 /* App-specific overrides */
 .index-text {
   display: none;
@@ -221,6 +199,18 @@ html.elder-mode a {
   background-color: rgba(255, 152, 0, 0.2) !important;
 }
 
+.navbar-sidebar .menu__link--active,
+.navbar-sidebar .menu__link--active:hover {
+  color: #ffffff !important;
+  background-color: var(--ifm-color-primary) !important;
+}
+
+[data-theme='dark'] .navbar-sidebar .menu__link--active,
+[data-theme='dark'] .navbar-sidebar .menu__link--active:hover {
+  color: #1a1613 !important;
+  background-color: var(--ifm-color-primary) !important;
+}
+
 .menu__list-item a {
   text-decoration: none;
 }
@@ -249,20 +239,6 @@ textarea:focus {
     transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
   }
-}
-
-/* Navbar styling to prevent black text on saffron */
-.navbar--primary,
-.navbar--primary .navbar__title,
-.navbar--primary .navbar__link,
-.navbar--primary .navbar__item,
-.navbar--primary .navbar__toggle {
-  color: #ffffff !important;
-}
-
-.navbar--primary .navbar__link:hover,
-.navbar--primary .navbar__link--active {
-  color: #ffe8d6 !important;
 }
 
 /* Restore Table of Contents (TOC) globally */
