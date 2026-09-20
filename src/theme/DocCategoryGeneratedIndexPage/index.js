@@ -32,14 +32,18 @@ export default function DocCategoryGeneratedIndexPage({ categoryGeneratedIndex }
         <DocVersionBanner />
         <DocBreadcrumbs />
         <DocVersionBadge />
-        <header>
-          <Heading as="h1" className={styles.title}>
-            {categoryGeneratedIndex.title}
-          </Heading>
-          {categoryGeneratedIndex.description && <p>{categoryGeneratedIndex.description}</p>}
-        </header>
         <article className="margin-top--lg">
-          <CompactDocList items={items} />
+          <CompactDocList
+            items={items}
+            header={(
+              <header>
+                <Heading as="h1" className={styles.title}>
+                  {categoryGeneratedIndex.title}
+                </Heading>
+                {categoryGeneratedIndex.description && <p>{categoryGeneratedIndex.description}</p>}
+              </header>
+            )}
+          />
         </article>
         <footer className="margin-top--md">
           <DocPaginator

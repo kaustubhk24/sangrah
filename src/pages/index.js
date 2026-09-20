@@ -257,6 +257,8 @@ export default function HomePage() {
       { key: 'namavali', mrLabel: 'नामावली', hiLabel: 'नामावली', enLabel: 'Namavali', slug: 'नामावली', icon: '📝' },
       { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', enLabel: 'Palana', slug: 'पाळणा-संग्रह', icon: '👶' },
       { key: 'pooja', mrLabel: 'पूजा-व्रत', hiLabel: 'पूजा-व्रत', enLabel: 'Pooja-Vrat', slug: 'पूजा-व्रत', icon: '🏺' },
+            { key: 'shastrarth', mrLabel: 'शास्त्रार्थ', hiLabel: 'शास्त्रार्थ', enLabel: 'Shastrarth', slug: 'शास्त्रार्थ', icon: '📚' },
+
       { key: 'kavacham', mrLabel: 'कवच संग्रह', hiLabel: 'कवच संग्रह', enLabel: 'Kavacham', slug: 'कवचम्', icon: '🛡️' },
       { key: 'mantras', mrLabel: 'मंत्र संग्रह', hiLabel: 'मंत्र संग्रह', enLabel: 'Mantras', slug: 'मंत्र', icon: '🔔' },
       { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', enLabel: 'Audio Bhajan', slug: 'ऑडियो-भजन', icon: '🎵' },

@@ -45,7 +45,7 @@ function SearchIcon() {
   );
 }
 
-export default function CompactDocList({ items, showActions = true, searchable = true }) {
+export default function CompactDocList({ items, showActions = true, searchable = true, header = null }) {
   const [bookmarks, setBookmarks] = useState([]);
   const [dailyPath, setDailyPath] = useState([]);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -119,9 +119,8 @@ export default function CompactDocList({ items, showActions = true, searchable =
       })
     : items;
 
-  return (
-    <>
-      {searchable && <div className={styles.toolbar}>
+  const searchControl = searchable && (
+    <div className={header ? styles.headingSearch : styles.toolbar}>
         {searchOpen ? (
           <input
             type="search"
@@ -143,7 +142,15 @@ export default function CompactDocList({ items, showActions = true, searchable =
             <SearchIcon />
           </button>
         )}
-      </div>}
+      </div>
+  );
+
+  return (
+    <>
+      {header ? <div className={styles.listHeader}>
+        <div className={styles.headerContent}>{header}</div>
+        {searchControl}
+      </div> : searchControl}
       <ul className={styles.list}>
       {filteredItems.map((item) => {
         const href = item.href || (item.type === 'category' ? findFirstSidebarItemLink(item) : null);

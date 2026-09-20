@@ -1,0 +1,11 @@
+{
+    "label": "शास्त्रार्थ",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "शास्त्रार्थ"
+    }
+   
+  }

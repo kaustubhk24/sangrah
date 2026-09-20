@@ -190,7 +190,6 @@ export default function SearchPage() {
               <li key={`${item.slug}-${index}`} className={styles.searchResultItem}>
                 <Link to={item.slug} className={styles.searchResultLink}>
                   <div className={styles.searchResultTitle}>{item.title}</div>
-                  <div className={styles.searchResultPath}>{item.slug}</div>
                 </Link>
                 {item.category && (
                   <span className={styles.searchResultCategory}>

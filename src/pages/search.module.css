@@ -75,12 +75,6 @@
   margin-bottom: 0.25rem;
 }
 
-.searchResultPath {
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-600);
-  word-break: break-all;
-}
-
 .searchResultCategory {
   font-size: 0.8rem;
   font-weight: 600;
