@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import styles from './bookmarks.module.css';
+import CompactDocList from '@site/src/components/CompactDocList';
 
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useState([]);
@@ -12,12 +11,6 @@ export default function Bookmarks() {
     const sorted = stored.sort((a, b) => new Date(b.date) - new Date(a.date));
     setBookmarks(sorted);
   }, []);
-
-  const removeBookmark = (path) => {
-    const newBookmarks = bookmarks.filter(bookmark => bookmark.path !== path);
-    localStorage.setItem('bookmarks', JSON.stringify(newBookmarks));
-    setBookmarks(newBookmarks);
-  };
 
   return (
     <Layout title="My Bookmarks">
@@ -32,23 +25,12 @@ export default function Bookmarks() {
         तुमची सर्व चिन्हांकित पाने "चिन्हांकित पाने" मध्ये पाहू शकता.
       </span></p>
             ) : (
-              <ul className={styles.bookmarksList}>
-                {bookmarks.map((bookmark) => (
-                  <li key={bookmark.path} className={styles.bookmarkItem}>
-                    <Link to={bookmark.path} className={styles.bookmarkLink}>
-                      <div className={styles.bookmarkTitle}>{bookmark.title || bookmark.path}</div>
-                      <div className={styles.bookmarkPath}>{bookmark.path}</div>
-                    </Link>
-                    <button
-                      onClick={() => removeBookmark(bookmark.path)}
-                      className={styles.removeButton}
-                      aria-label="Remove bookmark"
-                    >
-                      ✕
-                    </button>
-                  </li>
-                ))}
-              </ul>
+              <CompactDocList
+                items={bookmarks.map((bookmark) => ({
+                  href: bookmark.path,
+                  label: bookmark.title || 'पान',
+                }))}
+              />
             )}
           </div>
         </div>

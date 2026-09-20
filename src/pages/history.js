@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
+import CompactDocList from '@site/src/components/CompactDocList';
 import styles from './history.module.css';
 
 const formatTime = (timestamp) => {
@@ -61,17 +61,14 @@ export default function HistoryPage() {
           </div>
         ) : (
           <>
-            <ul className={styles.historyList}>
-              {historyItems.map((item, index) => (
-                <li key={`${item.path}-${index}`} className={styles.historyItem}>
-                  <Link to={item.path} className={styles.historyLink}>
-                    <div className={styles.historyTitle}>{item.title || item.path}</div>
-                    <div className={styles.historyPath}>{item.path}</div>
-                  </Link>
-                  <div className={styles.historyTime}>{formatTime(item.timestamp)}</div>
-                </li>
-              ))}
-            </ul>
+            <CompactDocList
+              items={historyItems.map((item) => ({
+                href: item.path,
+                label: item.title || 'पान',
+                meta: formatTime(item.timestamp),
+              }))}
+              showActions={false}
+            />
             <button type="button" className={styles.clearButton} onClick={clearHistory}>
               इतिहास साफ करा
             </button>
