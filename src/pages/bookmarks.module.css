@@ -32,7 +32,7 @@
 }
 
 .bookmarkPath {
-  font-size: 0.9rem;
+  font-size: var(--app-font-size-base);
   color: var(--ifm-color-emphasis-600);
   word-break: break-all;
 }

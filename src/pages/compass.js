@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
+import { useTranslation } from '../utils/translations';
 import styles from './compass.module.css';
 
 const normalizeHeading = (heading) => (heading + 360) % 360;
 
 export default function CompassPage() {
+  const { t } = useTranslation();
   const [sensorAvailable, setSensorAvailable] = useState(null);
   const [permissionState, setPermissionState] = useState('idle');
   const [heading, setHeading] = useState(null);
@@ -26,15 +28,21 @@ export default function CompassPage() {
   useEffect(() => {
     if (permissionState !== 'granted') return undefined;
 
+    const unsupportedTimer = window.setTimeout(() => {
+      setPermissionState((currentState) => (currentState === 'granted' && heading === null ? 'unsupported' : currentState));
+    }, 5000);
+
     const handleOrientation = (event) => {
       const safariHeading = Number(event.webkitCompassHeading);
       if (Number.isFinite(safariHeading)) {
+        window.clearTimeout(unsupportedTimer);
         setHeading(normalizeHeading(safariHeading));
         return;
       }
 
       const alpha = Number(event.alpha);
-      if (event.absolute && Number.isFinite(alpha)) {
+      if (Number.isFinite(alpha)) {
+        window.clearTimeout(unsupportedTimer);
         setHeading(normalizeHeading(360 - alpha));
       }
     };
@@ -43,10 +51,11 @@ export default function CompassPage() {
     window.addEventListener('deviceorientation', handleOrientation, true);
 
     return () => {
+      window.clearTimeout(unsupportedTimer);
       window.removeEventListener('deviceorientationabsolute', handleOrientation, true);
       window.removeEventListener('deviceorientation', handleOrientation, true);
     };
-  }, [permissionState]);
+  }, [permissionState, heading]);
 
   const enableCompass = async () => {
     setErrorMessage('');
@@ -89,18 +98,22 @@ export default function CompassPage() {
   const displayHeading = heading === null ? '--' : `${Math.round(heading)}°`;
 
   return (
-    <Layout title="कम्पास">
+    <Layout title={t('compassLabel')}>
       <main className={styles.page}>
         <section className={styles.compassPanel} aria-labelledby="compass-title">
-          <p className={styles.eyebrow}>दिशादर्शक</p>
-          <h1 id="compass-title">कम्पास</h1>
+          <p className={styles.eyebrow}>{t('compassLabel')}</p>
+          <h1 id="compass-title">{t('compassLabel')}</h1>
           <p className={styles.status} role="status">{statusMessage()}</p>
 
           <div className={styles.compass} aria-label={isEnabled && heading !== null ? `दिशा ${displayHeading}` : 'कम्पास'}>
             <div className={styles.cardinalNorth}>उ</div>
+            <div className={styles.cardinalNorthEast}>ईशा</div>
             <div className={styles.cardinalEast}>पू</div>
+            <div className={styles.cardinalSouthEast}>आग्ने</div>
             <div className={styles.cardinalSouth}>द</div>
+            <div className={styles.cardinalSouthWest}>नैऋ</div>
             <div className={styles.cardinalWest}>प</div>
+            <div className={styles.cardinalNorthWest}>वाय</div>
             <div
               className={styles.needle}
               style={{ transform: `translate(-50%, -50%) rotate(${heading || 0}deg)` }}

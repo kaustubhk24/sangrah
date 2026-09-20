@@ -76,13 +76,13 @@
 }
 
 .name {
-  font-size: 16px;
+  font-size: var(--app-font-size-base);
   font-weight: 700;
   color: inherit;
 }
 
 .count {
-  font-size: 13px;
+  font-size: var(--app-font-size-base);
   color: #666;
   margin-top: 2px;
 }

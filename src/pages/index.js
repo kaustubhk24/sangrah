@@ -264,12 +264,13 @@ export default function HomePage() {
       { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', enLabel: 'Audio Bhajan', slug: 'ऑडियो-भजन', icon: '🎵' },
       { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', enLabel: 'Pravachane', slug: 'प्रवचने', icon: '🧘', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
       { key: 'muhurt', mrLabel: 'मुहूर्त', hiLabel: 'मुहूर्त', enLabel: 'Muhurt', slug: null, icon: '⏳', specialTo: '/muhurt' },
+      { key: 'compass', labelKey: 'compassLabel', icon: '🧭', specialTo: '/compass' },
       { key: 'project-information', mrLabel: 'प्रकल्प माहिती', hiLabel: 'प्रकल्प माहिती', enLabel: 'Project Information', slug: null, icon: 'ℹ️', specialTo: '/project-information' },
     ];
     
     return folders.map(f => {
       const count = categoryCounts[f.key] || 0;
-      const label = lang === 'hi' ? f.hiLabel : lang === 'en' ? f.enLabel : f.mrLabel;
+      const label = f.labelKey ? t(f.labelKey) : lang === 'hi' ? f.hiLabel : lang === 'en' ? f.enLabel : f.mrLabel;
       return {
         label,
         count,
@@ -278,7 +279,7 @@ export default function HomePage() {
         specialTo: f.specialTo
       };
     }).filter(f => f.specialTo || f.count > 0);
-  }, [categoryCounts, lang]);
+  }, [categoryCounts, lang, t]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;

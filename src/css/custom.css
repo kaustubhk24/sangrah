@@ -357,7 +357,7 @@ textarea:focus {
 /* Adjust heading/title inside category page cards */
 .theme-doc-card-container .theme-doc-card-heading {
   margin: 0 !important;
-  font-size: 15px !important;
+  font-size: var(--app-font-size-base) !important;
   font-weight: 600 !important;
   display: flex !important;
   justify-content: center !important;

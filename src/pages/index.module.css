@@ -449,7 +449,7 @@
 }
 
 .deityName {
-  font-size: 15px;
+  font-size: var(--app-font-size-base);
   font-weight: 600;
 }
 
@@ -498,7 +498,7 @@
 }
 
 .categoryName {
-  font-size: 15px;
+  font-size: var(--app-font-size-base);
   font-weight: 600;
 }
 

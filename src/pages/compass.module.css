@@ -65,9 +65,13 @@
 }
 
 .cardinalNorth,
+.cardinalNorthEast,
 .cardinalEast,
+.cardinalSouthEast,
 .cardinalSouth,
-.cardinalWest {
+.cardinalSouthWest,
+.cardinalWest,
+.cardinalNorthWest {
   position: absolute;
   z-index: 1;
   font-weight: 800;
@@ -75,9 +79,13 @@
 }
 
 .cardinalNorth { top: 0.25rem; left: 50%; transform: translateX(-50%); }
+.cardinalNorthEast { top: 22%; right: 22%; transform: translate(50%, -50%); }
 .cardinalEast { top: 50%; right: 0.35rem; transform: translateY(-50%); }
+.cardinalSouthEast { bottom: 22%; right: 22%; transform: translate(50%, 50%); }
 .cardinalSouth { bottom: 0.25rem; left: 50%; transform: translateX(-50%); }
+.cardinalSouthWest { bottom: 22%; left: 22%; transform: translate(-50%, 50%); }
 .cardinalWest { top: 50%; left: 0.35rem; transform: translateY(-50%); }
+.cardinalNorthWest { top: 22%; left: 22%; transform: translate(-50%, -50%); }
 
 .needle {
   position: absolute;
