@@ -1,6 +1,10 @@
 {
     "short_name": "संग्रह",
     "name": "संपूर्ण संग्रह",
+    "description": "धार्मिक ग्रंथ, स्तोत्रे, आरत्या आणि मंत्रांचा सर्वसमावेशक संग्रह.",
+    "lang": "mr",
+    "dir": "ltr",
+    "orientation": "any",
     "icons": [
       {
         "src": "/img/pwa/512X512.png",
@@ -19,12 +23,12 @@
         "sizes": "96x96"
       }
       ,{
-        "src": "/img/pwa/48X48.png",
+        "src": "/img/pwa/48temp48.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "/img/pwa/72X72.png",
+        "src": "/img/pwa/72temp72.png",
         "type": "image/png",
         "sizes": "72x72"
       },
