@@ -63,6 +63,15 @@ a {
   line-height: var(--content-line-height);
 }
 
+.markdown a,
+.markdown a:visited {
+  color: var(--ifm-color-primary) !important;
+}
+
+.markdown a:hover {
+  color: var(--ifm-color-primary-dark) !important;
+}
+
 [data-theme='dark'] {
   --ifm-color-primary: #ff9f43;
   --ifm-color-primary-dark: #e68425;
