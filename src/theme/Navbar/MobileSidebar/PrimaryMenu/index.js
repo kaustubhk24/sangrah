@@ -38,7 +38,7 @@ export default function NavbarMobilePrimaryMenu() {
     const folders = [
       { key: 'aarati', mrLabel: 'आरती संग्रह', hiLabel: 'आरती संग्रह', slug: 'आरती-संग्रह' },
       { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', hiLabel: 'स्तोत्र / श्लोक संग्रह', slug: 'स्तोत्र--श्लोक-संग्रह' },
-      { key: 'katha', mrLabel: 'कथा संग्रह', hiLabel: 'कथा संग्रह', slug: 'कथा-संग्रह' },
+      { key: 'katha', mrLabel: 'कथा/कहाणी संग्रह', hiLabel: 'कथा/कहाणी संग्रह', slug: 'कथा-संग्रह' },
       { key: 'pothi', mrLabel: 'पोथी', hiLabel: 'पोथी', slug: 'पोथी' },
       { key: 'Sukt', mrLabel: 'सूक्त संग्रह', hiLabel: 'सूक्त संग्रह', slug: 'सूक्त-संग्रह' },
       { key: 'chalisa', mrLabel: 'चालीसा संग्रह', hiLabel: 'चालीसा संग्रह', slug: 'चालीसा-संग्रह' },

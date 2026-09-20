@@ -144,13 +144,13 @@ const ProjDevCards = [
   },
  
   {
-    name: 'कथा संग्रह',
+    name: 'कथा/कहाणी संग्रह',
     image: '',
     url: {
       page: '/category/कथा-संग्रह',
     },
     description: (
-      <span>कथा संग्रह</span>
+      <span>कथा/कहाणी संग्रह</span>
     )
     
   },

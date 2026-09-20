@@ -44,4 +44,7 @@ slug: /mahalaxmi
 जय देवी जय देवी...॥
 
 
+[आरती (गौरी) महालक्ष्मीची](/mahalaxmi-gauri)
+
+
 <span class='index-text'> mahalaxmi aarati, jay devi jay devi</span>

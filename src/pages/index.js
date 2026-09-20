@@ -247,7 +247,7 @@ export default function HomePage() {
     const folders = [
       { key: 'aarati', mrLabel: 'आरती संग्रह', hiLabel: 'आरती संग्रह', enLabel: 'Aarati', slug: 'आरती-संग्रह', icon: '🪔' },
       { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', hiLabel: 'स्तोत्र / श्लोक संग्रह', enLabel: 'Stotra / Shlok', slug: 'स्तोत्र--श्लोक-संग्रह', icon: '📿' },
-      { key: 'katha', mrLabel: 'कथा संग्रह', hiLabel: 'कथा संग्रह', enLabel: 'Katha', slug: 'कथा-संग्रह', icon: '📖' },
+      { key: 'katha', mrLabel: 'कथा/कहाणी संग्रह', hiLabel: 'कथा/कहाणी संग्रह', enLabel: 'Katha', slug: 'कथा-संग्रह', icon: '📖' },
       { key: 'pothi', mrLabel: 'पोथी', hiLabel: 'पोथी', enLabel: 'Pothi', slug: 'पोथी', icon: '🙏' },
       { key: 'Sukt', mrLabel: 'सूक्त संग्रह', hiLabel: 'सूक्त संग्रह', enLabel: 'Sukta', slug: 'सूक्त-संग्रह', icon: '📜' },
       { key: 'chalisa', mrLabel: 'चालीसा संग्रह', hiLabel: 'चालीसा संग्रह', enLabel: 'Chalisa', slug: 'चालीसा-संग्रह', icon: '📚' },

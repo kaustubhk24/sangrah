@@ -1,12 +1,12 @@
 {
     "position": 9,
-    "label": "कथा संग्रह",
+    "label": "कथा/कहाणी संग्रह",
     "collapsible": true,
     "collapsed": true,
     "className": "red",
     "link": {
       "type": "generated-index",
-      "title": "कथा संग्रह"
+      "title": "कथा/कहाणी संग्रह"
     }
    
   }
