@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Layout from '@theme/Layout';
 import { useTranslation } from '../utils/translations';
 import styles from './compass.module.css';
 
 const normalizeHeading = (heading) => (heading + 360) % 360;
+const shortestHeadingDelta = (from, to) => ((to - from + 540) % 360) - 180;
 
 export default function CompassPage() {
   const { t } = useTranslation();
   const [sensorAvailable, setSensorAvailable] = useState(null);
   const [permissionState, setPermissionState] = useState('idle');
   const [heading, setHeading] = useState(null);
+  const [calibrationOffset, setCalibrationOffset] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
+  const headingRef = useRef(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return undefined;
@@ -22,29 +25,51 @@ export default function CompassPage() {
       setPermissionState('unsupported');
     }
 
+    const savedOffset = Number(window.localStorage.getItem('compassCalibrationOffset'));
+    if (Number.isFinite(savedOffset)) {
+      setCalibrationOffset(savedOffset);
+    }
+
     return undefined;
   }, []);
 
   useEffect(() => {
     if (permissionState !== 'granted') return undefined;
 
+    headingRef.current = null;
+
     const unsupportedTimer = window.setTimeout(() => {
-      setPermissionState((currentState) => (currentState === 'granted' && heading === null ? 'unsupported' : currentState));
+      setPermissionState((currentState) => (currentState === 'granted' && headingRef.current === null ? 'unsupported' : currentState));
     }, 5000);
 
     const handleOrientation = (event) => {
+      let rawHeading = null;
       const safariHeading = Number(event.webkitCompassHeading);
       if (Number.isFinite(safariHeading)) {
-        window.clearTimeout(unsupportedTimer);
-        setHeading(normalizeHeading(safariHeading));
+        rawHeading = normalizeHeading(safariHeading);
+      } else {
+        const alpha = Number(event.alpha);
+        if (Number.isFinite(alpha)) {
+          rawHeading = normalizeHeading(360 - alpha);
+        }
+      }
+
+      if (rawHeading === null) return;
+      window.clearTimeout(unsupportedTimer);
+
+      const previousHeading = headingRef.current;
+      if (previousHeading === null) {
+        headingRef.current = rawHeading;
+        setHeading(rawHeading);
         return;
       }
 
-      const alpha = Number(event.alpha);
-      if (Number.isFinite(alpha)) {
-        window.clearTimeout(unsupportedTimer);
-        setHeading(normalizeHeading(360 - alpha));
-      }
+      const delta = shortestHeadingDelta(previousHeading, rawHeading);
+      if (Math.abs(delta) < 1.5) return;
+
+      const filteredHeading = normalizeHeading(previousHeading + delta * 0.2);
+      headingRef.current = filteredHeading;
+      setHeading(filteredHeading);
     };
 
     window.addEventListener('deviceorientationabsolute', handleOrientation, true);
@@ -55,7 +80,7 @@ export default function CompassPage() {
       window.removeEventListener('deviceorientationabsolute', handleOrientation, true);
       window.removeEventListener('deviceorientation', handleOrientation, true);
     };
-  }, [permissionState, heading]);
+  }, [permissionState]);
 
   const enableCompass = async () => {
     setErrorMessage('');
@@ -95,7 +120,21 @@ export default function CompassPage() {
   };
 
   const isEnabled = permissionState === 'granted';
-  const displayHeading = heading === null ? '--' : `${Math.round(heading)}°`;
+  const calibratedHeading = heading === null ? null : normalizeHeading(heading + calibrationOffset);
+  const displayHeading = calibratedHeading === null ? '--' : `${Math.round(calibratedHeading)}°`;
+
+  const calibrateCompass = () => {
+    if (heading === null) return;
+
+    const offset = normalizeHeading(-heading);
+    setCalibrationOffset(offset);
+    window.localStorage.setItem('compassCalibrationOffset', String(offset));
+  };
+
+  const resetCalibration = () => {
+    setCalibrationOffset(0);
+    window.localStorage.removeItem('compassCalibrationOffset');
+  };
 
   return (
     <Layout title={t('compassLabel')}>
@@ -105,7 +144,7 @@ export default function CompassPage() {
           <h1 id="compass-title">{t('compassLabel')}</h1>
           <p className={styles.status} role="status">{statusMessage()}</p>
 
-          <div className={styles.compass} aria-label={isEnabled && heading !== null ? `दिशा ${displayHeading}` : 'कम्पास'}>
+          <div className={styles.compass} aria-label={isEnabled && calibratedHeading !== null ? `दिशा ${displayHeading}` : 'कम्पास'}>
             <div className={styles.cardinalNorth}>उ</div>
             <div className={styles.cardinalNorthEast}>ईशा</div>
             <div className={styles.cardinalEast}>पू</div>
@@ -116,7 +155,7 @@ export default function CompassPage() {
             <div className={styles.cardinalNorthWest}>वाय</div>
             <div
               className={styles.needle}
-              style={{ transform: `translate(-50%, -50%) rotate(${heading || 0}deg)` }}
+              style={{ transform: `translate(-50%, -50%) rotate(${calibratedHeading || 0}deg)` }}
               aria-hidden="true"
             >
               <span className={styles.needleNorth} />
@@ -138,6 +177,20 @@ export default function CompassPage() {
 
           {isEnabled && heading === null && (
             <p className={styles.helpText}>कृपया फोन सपाट धरून काही क्षण थांबा.</p>
+          )}
+
+          {isEnabled && heading !== null && (
+            <div className={styles.calibrationControls}>
+              <button type="button" className={styles.calibrateButton} onClick={calibrateCompass}>
+                कॅलिब्रेट करा
+              </button>
+              {calibrationOffset !== 0 && (
+                <button type="button" className={styles.resetButton} onClick={resetCalibration}>
+                  रीसेट
+                </button>
+              )}
+              <span className={styles.calibrationHint}>फोन योग्य दिशेला धरून कॅलिब्रेट करा</span>
+            </div>
           )}
         </section>
       </main>

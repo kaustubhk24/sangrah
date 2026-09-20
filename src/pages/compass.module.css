@@ -2,7 +2,7 @@
   min-height: calc(100vh - 60px);
   display: grid;
   place-items: center;
-  padding: 2rem 1rem 6rem;
+  padding: 1rem;
   background:
     radial-gradient(circle at 50% 0%, rgba(255, 166, 77, 0.2), transparent 42%),
     var(--ifm-color-background);
@@ -10,7 +10,7 @@
 
 .compassPanel {
   width: min(100%, 34rem);
-  padding: 2.5rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   text-align: center;
   border: 1px solid rgba(224, 107, 0, 0.2);
   border-radius: var(--card-radius);
@@ -35,17 +35,17 @@
 }
 
 .status {
-  min-height: 3.5rem;
-  margin: 0.75rem auto 1.25rem;
+  min-height: 2.5rem;
+  margin: 0.5rem auto 0.75rem;
   color: var(--ifm-color-muted);
 }
 
 .compass {
   position: relative;
-  width: min(72vw, 17rem);
+  width: min(58vw, 13rem);
   aspect-ratio: 1;
-  margin: 0 auto 1.25rem;
-  border: 0.7rem solid var(--ifm-color-primary);
+  margin: 0 auto 0.75rem;
+  border: 0.55rem solid var(--ifm-color-primary);
   border-radius: 50%;
   background: repeating-conic-gradient(from -2deg, rgba(224, 107, 0, 0.16) 0 1deg, transparent 1deg 30deg), var(--ifm-color-background);
   box-shadow: inset 0 0 0 1px rgba(224, 107, 0, 0.2), 0 0.75rem 1.75rem rgba(71, 42, 18, 0.16);
@@ -135,7 +135,7 @@
 .reading {
   display: grid;
   gap: 0.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .reading strong {
@@ -150,8 +150,8 @@
 }
 
 .enableButton {
-  min-height: 3rem;
-  padding: 0.65rem 1.25rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 1.25rem;
   border: 0;
   border-radius: 999px;
   color: #fff;
@@ -168,12 +168,48 @@
   margin: 0;
 }
 
+.calibrationControls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.calibrateButton,
+.resetButton {
+  min-height: 2.25rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 999px;
+  color: var(--ifm-color-primary-dark);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.calibrateButton {
+  color: #fff;
+  background: var(--ifm-color-primary);
+}
+
+.calibrateButton:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+.calibrationHint {
+  flex-basis: 100%;
+  color: var(--ifm-color-muted);
+  font-size: 0.8rem;
+}
+
 @media (max-width: 480px) {
   .page {
     padding-inline: 0.75rem;
   }
 
   .compassPanel {
-    padding: 2rem 1rem;
+    padding: 1rem;
   }
 }
