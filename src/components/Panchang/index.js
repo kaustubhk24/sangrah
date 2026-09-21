@@ -282,19 +282,16 @@ export default function PanchangSection() {
     timezoneOffset: 330,
   });
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  const resolveTithiName = (value) => {
+    if (value === undefined || value === null || value === '') return value;
 
-    const observer = new Observer(location.lat, location.lon, location.elevation || 0);
-    const timezoneOffset = location.timezoneOffset ?? getTimeZoneOffsetMinutes(location.timezone);
-    const data = getPanchangam(selectedDate, observer, { timezoneOffset, calendarType: 'amanta' });
-    setPanchang(data);
-  }, [selectedDate, location.lat, location.lon, location.elevation, location.timezone, location.timezoneOffset]);
+    const index = Number(value);
+    if (Number.isInteger(index) && tithiNames && index >= 0 && index < tithiNames.length) {
+      return tithiNames[index];
+    }
 
-  useEffect(() => {
-    const timer = window.setInterval(() => setCurrentTime(new Date()), 30000);
-    return () => window.clearInterval(timer);
-  }, []);
+    return value;
+  };
 
   useEffect(() => {
     if (locationMode !== 'custom') return;
@@ -581,6 +578,9 @@ export default function PanchangSection() {
 
     const karanaMap = {
       mr: {
+        Shakuni: 'शकुनी',
+        Chatushpada: 'चतुष्पाद',
+        Naga: 'नाग',
         Kimstughna: 'किंस्तुघ्न',
         Bava: 'बव',
         Balava: 'बालव',
@@ -593,6 +593,9 @@ export default function PanchangSection() {
         Vishti: 'विष्टि',
       },
       hi: {
+        Shakuni: 'शकुनी',
+        Chatushpada: 'चतुष्पाद',
+        Naga: 'नाग',
         Kimstughna: 'किंस्तुघ्न',
         Bava: 'बव',
         Balava: 'बालव',
@@ -716,7 +719,7 @@ export default function PanchangSection() {
     }) || panchang.tithis?.[0];
     const tithiDisplay = getTranslatedValue(
       lang,
-      tithiNames?.[currentTithi?.index] || currentTithi?.name || panchang.tithi,
+      resolveTithiName(tithiNames?.[currentTithi?.index] || currentTithi?.name || panchang.tithi),
       tithiMap,
       ''
     );
@@ -940,7 +943,7 @@ export default function PanchangSection() {
         Chaturdashi: 'चतुर्दशी',
         Purnima: 'पूर्णिमा',
         Amavasya: 'अमावस्या',
-      }[safeValue(tithiNames?.[currentTithi?.index] || currentTithi?.name || panchang.tithi)] || safeValue(tithiDisplay);
+      }[safeValue(resolveTithiName(tithiNames?.[currentTithi?.index] || currentTithi?.name || panchang.tithi))] || safeValue(tithiDisplay);
 
       const vasaraSanskrit = {
         Sunday: 'भानु',

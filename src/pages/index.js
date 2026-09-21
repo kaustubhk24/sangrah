@@ -220,6 +220,17 @@ const getTranslatedValue = (lang, value, map, fallback = '') => {
   return typeof value === 'number' ? value : value;
 };
 
+const resolveTithiName = (value) => {
+  if (value === undefined || value === null || value === '') return value;
+
+  const index = Number(value);
+  if (Number.isInteger(index) && tithiNames && index >= 0 && index < tithiNames.length) {
+    return tithiNames[index];
+  }
+
+  return value;
+};
+
 export default function HomePage() {
   const { lang, t, translateNumbers } = useTranslation();
   const [recentReads, setRecentReads] = useState([]);
@@ -326,7 +337,7 @@ export default function HomePage() {
     return entry.startTime.getTime() <= time && time < entry.endTime.getTime();
   });
   const tithiDisplay = panchangWidget
-    ? getTranslatedValue(lang, tithiNames?.[currentTithi?.index] || currentTithi?.name || panchangWidget.tithi, panchangValueMappings.tithi, '—')
+    ? getTranslatedValue(lang, resolveTithiName(tithiNames?.[currentTithi?.index] || currentTithi?.name || panchangWidget.tithi), panchangValueMappings.tithi, '—')
     : '—';
   const nakshatraDisplay = panchangWidget ? getTranslatedValue(lang, nakshatraNames?.[panchangWidget.nakshatra] || panchangWidget.nakshatra, panchangValueMappings.nakshatra, '—') : '—';
 

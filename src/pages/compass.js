@@ -5,6 +5,24 @@ import styles from './compass.module.css';
 
 const normalizeHeading = (heading) => (heading + 360) % 360;
 const shortestHeadingDelta = (from, to) => ((to - from + 540) % 360) - 180;
+const getDirectionLabel = (heading) => {
+  const normalized = normalizeHeading(heading);
+  const sectors = [
+    { label: 'उत्तर', min: 337.5, max: 360 },
+    { label: 'उत्तर-पूर्व', min: 22.5, max: 67.5 },
+    { label: 'पूर्व', min: 67.5, max: 112.5 },
+    { label: 'आग्नेय', min: 112.5, max: 157.5 },
+    { label: 'दक्षिण', min: 157.5, max: 202.5 },
+    { label: 'नैऋत्य', min: 202.5, max: 247.5 },
+    { label: 'पश्चिम', min: 247.5, max: 292.5 },
+    { label: 'वायव्य', min: 292.5, max: 337.5 },
+  ];
+
+  const match = sectors.find(({ min, max }) => normalized >= min && normalized < max);
+  if (match) return match.label;
+
+  return 'उत्तर';
+};
 
 export default function CompassPage() {
   const { t } = useTranslation();
@@ -50,7 +68,7 @@ export default function CompassPage() {
       } else {
         const alpha = Number(event.alpha);
         if (Number.isFinite(alpha)) {
-          rawHeading = normalizeHeading(360 - alpha);
+          rawHeading = normalizeHeading(alpha);
         }
       }
 
@@ -122,6 +140,7 @@ export default function CompassPage() {
   const isEnabled = permissionState === 'granted';
   const calibratedHeading = heading === null ? null : normalizeHeading(heading + calibrationOffset);
   const displayHeading = calibratedHeading === null ? '--' : `${Math.round(calibratedHeading)}°`;
+  const directionLabel = calibratedHeading === null ? '—' : getDirectionLabel(calibratedHeading);
 
   const calibrateCompass = () => {
     if (heading === null) return;
@@ -166,7 +185,7 @@ export default function CompassPage() {
 
           <div className={styles.reading} aria-live="polite">
             <strong>{displayHeading}</strong>
-            <span>उत्तरापासूनचा कोन</span>
+            <span>{directionLabel}</span>
           </div>
 
           {!isEnabled && permissionState !== 'unsupported' && (
