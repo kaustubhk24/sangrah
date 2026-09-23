@@ -32,6 +32,7 @@ const translations = {
     moonRashi: 'चंद्र राशि',
     sunRashi: 'सूर्य राशि',
     loading: 'पंचांगाची माहिती लोड होत आहे...',
+    error: 'पंचांग माहिती मिळवता आली नाही. कृपया स्थान किंवा तारीख तपासा.',
     defaultLocation: 'पुणे, भारत',
     mantra: 'मंत्र',
     prevDay: 'मागील दिवस',
@@ -72,6 +73,7 @@ const translations = {
     moonRashi: 'चंद्र राशि',
     sunRashi: 'सूर्य राशि',
     loading: 'पंचांग डेटा लोड हो रहा है...',
+    error: 'पंचांग की जानकारी प्राप्त नहीं हो सकी। कृपया स्थान या तारीख जांचें।',
     defaultLocation: 'पुणे, भारत',
     mantra: 'मंत्र',
     prevDay: 'पिछला दिन',
@@ -112,6 +114,7 @@ const translations = {
     moonRashi: 'Moon Rashi',
     sunRashi: 'Sun Rashi',
     loading: 'Loading Panchang data...',
+    error: 'Unable to load Panchang data. Please check the location or date.',
     defaultLocation: 'Pune, India',
     mantra: 'Mantra',
     prevDay: 'Previous day',
@@ -268,6 +271,7 @@ const getTranslatedValue = (lang, value, map, fallback = '') => {
 export default function PanchangSection() {
   const { lang, translateNumbers } = useTranslation();
   const [panchang, setPanchang] = useState(null);
+  const [panchangError, setPanchangError] = useState(null);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [locationMode, setLocationMode] = useState('preset');
   const [selectedCity, setSelectedCity] = useState('pune');
@@ -308,6 +312,32 @@ export default function PanchangSection() {
       timezoneOffset: current.timezoneOffset ?? 330,
     }));
   }, [customCoords.lat, customCoords.lon, locationMode]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    try {
+      const observer = new Observer(location.lat, location.lon, location.elevation || 0);
+      const data = getPanchangam(selectedDate, observer, {
+        timezoneOffset: location.timezoneOffset ?? 330,
+        calendarType: 'amanta',
+      });
+
+      if (!cancelled) {
+        setPanchang(data);
+        setPanchangError(null);
+      }
+    } catch (error) {
+      if (!cancelled) {
+        setPanchang(null);
+        setPanchangError(error);
+      }
+    }
+
+    return () => {
+      cancelled = true;
+    };
+  }, [location.lat, location.lon, location.elevation, location.timezoneOffset, selectedDate]);
 
   const useCurrentLocation = () => {
     if (typeof window === 'undefined' || !navigator.geolocation) return;
@@ -1125,7 +1155,9 @@ export default function PanchangSection() {
           </div>
 
           {!panchang || !displayData ? (
-            <div className={styles.loadingState}>{label('loading')}</div>
+            <div className={styles.loadingState}>
+              {panchangError ? label('error') : label('loading')}
+            </div>
           ) : (
             <>
              

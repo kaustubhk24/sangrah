@@ -1,5 +1,14 @@
 [
   {
+    "title": "अनंताची आरती",
+    "slug": "/anant-aarati",
+    "category": "aarati",
+    "filename": "anantachi-arati",
+    "keywords": "anantachi aarati",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री संत बाळूमामा आरती",
     "slug": "/balumama-aarati",
     "category": "aarati",
@@ -14,6 +23,24 @@
     "category": "aarati",
     "filename": "bhairavnath",
     "keywords": "bhairavnath aarati",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "आरती भुवनसुंदराची",
+    "slug": "/bhuvan-sundar",
+    "category": "aarati",
+    "filename": "bhuvan-sundarachi",
+    "keywords": "bhuvan sundarachi aarati",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "चक्रपाणीची आरती",
+    "slug": "/chakrapani",
+    "category": "aarati",
+    "filename": "chakrapani",
+    "keywords": "CHAKRAPANICHI ARATI",
     "fmKeywords": "",
     "headings": ""
   },
@@ -88,6 +115,15 @@
     "keywords": "ganapati aarati , sukhkrta dukhkarta tu sukhkrta dukhkarta gajanana shri ganraya bappa moraya re jay ganesh jay ganesh jay ganesh deva shendur lal chadhayo ganapati aarati na na parimal durva shendur shamipatre gnapati aarati",
     "fmKeywords": "",
     "headings": "सुखकर्ता दुखहर्ता वार्ता विघ्नाची तू सुखकर्ता तू दुःखहर्ता विघ्‍न विनाशक मोरया गजानना श्रीगणराया आधी वंदू तुज मोरया बाप्पा मोरया रे, बाप्पा मोरया रे जय गणेश जय गणेश शेंदुर लाल चढ़ायो नानापरिमळ दुर्वा शेंदूर शमिपत्रें"
+  },
+  {
+    "title": "जय देव वैनतेया - गरुडाची आरती",
+    "slug": "/garud",
+    "category": "aarati",
+    "filename": "garud",
+    "keywords": "garud arati",
+    "fmKeywords": "",
+    "headings": ""
   },
   {
     "title": "आरती (गौरी) महालक्ष्मीची",
@@ -279,6 +315,15 @@
     "headings": ""
   },
   {
+    "title": "पंचायतन आरती",
+    "slug": "/panchayatan",
+    "category": "aarati",
+    "filename": "panchayatan",
+    "keywords": "panchayatanachi arati",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री साईबाबा आरती",
     "slug": "/saibaba-aarati",
     "category": "aarati",
@@ -418,9 +463,9 @@
     "slug": "/vishnu",
     "category": "aarati",
     "filename": "vishnu",
-    "keywords": "vishnu aarati , om jai jagadish hare",
+    "keywords": "vishnu aarati , arati vishwambhara, avadi gangajale, om jay jagdish hare",
     "fmKeywords": "",
-    "headings": "आवडी गंगाजळे देवा न्हाणीलें आरती भुवनसुंदराची ॐ जय जगदीश हरे"
+    "headings": "आवडी गंगाजळे देवा न्हाणीलें आरती विश्वंभरा । ॐ जय जगदीश हरे"
   },
   {
     "title": "श्री विठ्ठलाची आरती",
@@ -429,7 +474,7 @@
     "filename": "vitthal",
     "keywords": "vitthal pandurang aarati, yuge atthavis ,yei o vitthale",
     "fmKeywords": "",
-    "headings": "युगे अठ्ठावीस विटेवरी उभा येई हो विठ्ठले माझे माउली ये"
+    "headings": "युगे अठ्ठावीस विटेवरी उभा येई हो विठ्ठले माझे माउली ये आरती अनंतभुजा"
   },
   {
     "title": "घालीन लोटांगण",
