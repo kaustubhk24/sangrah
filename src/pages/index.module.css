@@ -180,6 +180,74 @@
 }
 
 /* Compact Panchang Widget */
+.pitrupakshaBanner {
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fff4d6;
+  border: 1px solid #e5bf68;
+  border-radius: 14px;
+  color: #5a3b0a;
+}
+
+.pitrupakshaBannerCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pitrupakshaBannerCopy strong {
+  font-size: 0.95rem;
+}
+
+.pitrupakshaBannerCopy span {
+  font-size: 0.84rem;
+}
+
+.pitrupakshaBannerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.pitrupakshaBannerLink {
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #8b5e13;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pitrupakshaBannerLink:hover,
+.pitrupakshaBannerLink:focus-visible {
+  background: #68450d;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pitrupakshaBannerDismiss {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #5a3b0a;
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.pitrupakshaBannerDismiss:hover,
+.pitrupakshaBannerDismiss:focus-visible {
+  background: rgba(90, 59, 10, 0.12);
+}
+
 .panchangWidgetCard {
   display: block;
   background: #FFFDF8;
@@ -289,6 +357,16 @@
 }
 
 @media (max-width: 480px) {
+  .pitrupakshaBanner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pitrupakshaBannerActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .panchangWidgetMeta {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

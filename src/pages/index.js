@@ -237,6 +237,7 @@ export default function HomePage() {
   const [dailyPath, setDailyPath] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [panchangWidget, setPanchangWidget] = useState(null);
+  const [showPitrupakshaBanner, setShowPitrupakshaBanner] = useState(true);
   const [currentTime, setCurrentTime] = useState(() => new Date());
 
   const categoryCounts = React.useMemo(() => {
@@ -306,6 +307,7 @@ export default function HomePage() {
 
     const storedBookmarks = JSON.parse(window.localStorage.getItem('bookmarks') || '[]');
     setFavorites(Array.isArray(storedBookmarks) ? storedBookmarks : []);
+    setShowPitrupakshaBanner(window.localStorage.getItem('pitrupaksha-home-banner-dismissed') !== 'true');
 
     const observer = new Observer(18.5204, 73.8567, 10);
     const data = getPanchangam(new Date(), observer, { timezoneOffset: 330, calendarType: 'amanta' });
@@ -320,6 +322,13 @@ export default function HomePage() {
   const handleRecentClick = (item) => {
     if (typeof window !== 'undefined' && item.scrollPosition) {
       window.localStorage.setItem('resumeScroll', item.scrollPosition.toString());
+    }
+  };
+
+  const dismissPitrupakshaBanner = () => {
+    setShowPitrupakshaBanner(false);
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('pitrupaksha-home-banner-dismissed', 'true');
     }
   };
 
@@ -347,6 +356,22 @@ export default function HomePage() {
         <PwaInstallButton />
 
         <section className={styles.sectionBlock}>
+          {showPitrupakshaBanner && (
+            <aside className={styles.pitrupakshaBanner} aria-labelledby="pitrupaksha-banner-title">
+              <div className={styles.pitrupakshaBannerCopy}>
+                <strong id="pitrupaksha-banner-title">{t('pitrupakshaBannerTitle')}</strong>
+                <span>{t('pitrupakshaBannerText')}</span>
+              </div>
+              <div className={styles.pitrupakshaBannerActions}>
+                <Link className={styles.pitrupakshaBannerLink} to="/pitrupaksha">
+                  {t('pitrupakshaBannerLink')}
+                </Link>
+                <button type="button" className={styles.pitrupakshaBannerDismiss} onClick={dismissPitrupakshaBanner} aria-label={t('dismissBanner')}>
+                  ×
+                </button>
+              </div>
+            </aside>
+          )}
           <div className={styles.sectionHeader}>
             <h2>{t('panchangWidgetTitle')}</h2>
             <div className={styles.sectionLinks}>

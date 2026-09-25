@@ -1,0 +1,10 @@
+{
+  "label": "पितृपक्ष",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "पितृपक्ष"
+  }
+}
