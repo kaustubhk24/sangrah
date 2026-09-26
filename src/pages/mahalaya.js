@@ -16,10 +16,10 @@ const labels = {
     year: 'वर्ष निवडा',
     location: 'पुणे, महाराष्ट्र',
     rule: 'श्राद्धाची तारीख त्या दिवशीच्या अपराह्न काळात असलेल्या तिथीनुसार ठरवली आहे. त्यामुळे क्षय तिथी स्वतंत्र दिवस म्हणून न दाखवता मागील उपलब्ध श्राद्ध तिथीसोबत दाखवली जाते आणि वृद्धी तिथी असल्यास दोन्ही दिवस दाखवले जातात.',
-    day: 'दिवस',
     date: 'दिनांक',
     tithi: 'तिथी',
     observance: 'श्राद्ध',
+    bharaniShraddha: 'भरणी श्राद्ध',
     start: 'महालया आरंभ',
     end: 'सर्वपितृ दर्श अमावस्या',
     loading: 'माहिती तयार होत आहे...',
@@ -30,10 +30,10 @@ const labels = {
     year: 'वर्ष चुनें',
     location: 'पुणे, महाराष्ट्र',
     rule: 'श्राद्ध की तारीख उस दिन के अपराह्न में चल रही तिथि से निर्धारित होती है। क्षय तिथि को अलग दिन के रूप में न दिखाकर पिछली उपलब्ध श्राद्ध तिथि के साथ दिखाया जाता है और वृद्धि तिथि होने पर दोनों दिन दिखाए जाते हैं।',
-    day: 'दिन',
     date: 'दिनांक',
     tithi: 'तिथि',
     observance: 'श्राद्ध',
+    bharaniShraddha: 'भरणी श्राद्ध',
     start: 'महालयारंभ',
     end: 'सर्वपितृ दर्श अमावस्या',
     loading: 'जानकारी तैयार हो रही है...',
@@ -44,10 +44,10 @@ const labels = {
     year: 'Select year',
     location: 'Pune, Maharashtra',
     rule: 'Shraddha is assigned to the tithi prevailing during the afternoon (aparahna). A kshaya tithi is therefore shown with the previous available Shraddha date instead of receiving a separate row, while a vriddhi tithi remains on both observed dates.',
-    day: 'Day',
     date: 'Date',
     tithi: 'Tithi',
     observance: 'Shraddha',
+    bharaniShraddha: 'Bharani Shraddha',
     start: 'Mahalaya Arambh',
     end: 'Sarvapitri Darsha Amavasya',
     loading: 'Preparing dates...',
@@ -117,6 +117,14 @@ const getPitruDates = (year) => {
     const date = createIndiaDate(year, cursor.getUTCMonth(), cursor.getUTCDate());
     const panchang = getPanchangam(date, observer, { timezoneOffset, calendarType });
     const tithi = getAparahnaTithi(panchang);
+    const aparahnaStart = panchang.sunrise && panchang.sunset
+      ? panchang.sunrise.getTime() + ((panchang.sunset.getTime() - panchang.sunrise.getTime()) * 3) / 5
+      : null;
+    const nakshatra = aparahnaStart === null
+      ? null
+      : (panchang.nakshatras || []).find((entry) => (
+        entry.startTime.getTime() <= aparahnaStart && aparahnaStart < entry.endTime.getTime()
+      ));
     const info = getPitruPakshaInfo(panchang.masa.index, panchang.paksha, tithi + 1, false);
 
     if (info) {
@@ -126,6 +134,7 @@ const getPitruDates = (year) => {
         info,
         tithiNumber: tithi + 1,
         observanceTithis: [tithi + 1],
+        hasBharaniShraddha: nakshatra?.index === 1,
       });
     }
   }
@@ -171,14 +180,12 @@ export default function MahalayaPage() {
 
         <section className={styles.schedule} aria-label={getLabel(lang, 'title')}>
           <div className={styles.scheduleHeader}>
-            <span>{getLabel(lang, 'day')}</span>
             <span>{getLabel(lang, 'date')}</span>
             <span>{getLabel(lang, 'tithi')}</span>
             <span>{getLabel(lang, 'observance')}</span>
           </div>
           {dates.map((entry, index) => (
             <div className={styles.row} key={`${entry.date.toISOString()}-${entry.tithi}`}>
-              <strong>{index + 1}</strong>
               <time dateTime={entry.date.toISOString().slice(0, 10)}>{formatDate(entry.date, lang)}</time>
               <span>{getTithiLabel(entry.tithiNumber, lang)}</span>
               <span>
@@ -186,6 +193,9 @@ export default function MahalayaPage() {
                 {entry.observanceTithis.map((tithiNumber) => (
                   shraddhaNames[normalizeLanguage(lang)]?.[tithiNumber] || shraddhaNames.mr[tithiNumber]
                 )).join(' / ')}
+                {entry.hasBharaniShraddha && (
+                  <> / {getLabel(lang, 'bharaniShraddha')}</>
+                )}
                 {index === dates.length - 1 && <b> · {getLabel(lang, 'end')}</b>}
               </span>
             </div>
