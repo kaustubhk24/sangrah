@@ -397,6 +397,13 @@
   gap: 8px;
 }
 
+.dailyPathRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
 .dailyPathItem {
   display: flex;
   align-items: center;
@@ -411,6 +418,7 @@
   transition: all 0.2s;
   min-width: 0;
   max-width: 100%;
+  flex: 1;
 }
 
 .dailyPathItem span {
@@ -441,6 +449,46 @@
   color: #C75D00;
   font-weight: 700;
   font-size: 13px;
+}
+
+.dailyPathRemove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #ECE4D8;
+  border-radius: 50%;
+  background: #fff;
+  color: #C75D00;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dailyPathRemove:hover {
+  background: #fff2e5;
+}
+
+.dailyPathRemove:focus-visible {
+  outline: 2px solid #C75D00;
+  outline-offset: 2px;
+}
+
+[data-theme='dark'] .dailyPathRemove {
+  border-color: #3a2e24;
+  background: #2b221a;
+  color: #ffa726;
+}
+
+[data-theme='dark'] .dailyPathRemove:hover {
+  background: #3a2e24;
+}
+
+[data-theme='dark'] .dailyPathRemove:focus-visible {
+  outline-color: #ffa726;
 }
 
 [data-theme='dark'] .dailyPathIndex {

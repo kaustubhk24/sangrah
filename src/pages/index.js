@@ -325,6 +325,12 @@ export default function HomePage() {
     }
   };
 
+  const removeDailyPathItem = (to) => {
+    const updated = dailyPath.filter((item) => item.to !== to);
+    setDailyPath(updated);
+    window.localStorage.setItem('dailyPath', JSON.stringify(updated));
+  };
+
   const dismissPitrupakshaBanner = () => {
     setShowPitrupakshaBanner(false);
     if (typeof window !== 'undefined') {
@@ -419,14 +425,24 @@ export default function HomePage() {
               <>
                 <div className={styles.dailyPathList}>
                   {dailyPath.map((item, index) => (
-                    <Link 
-                      key={index} 
-                      className={styles.dailyPathItem} 
-                      to={`${item.to}?dailyPath=true&index=${index}`}
-                    >
-                      <span className={styles.dailyPathIndex}>{translateNumbers(index + 1)}</span>
-                      <span>{item.title}</span>
-                    </Link>
+                    <div key={item.to} className={styles.dailyPathRow}>
+                      <Link
+                        className={styles.dailyPathItem}
+                        to={`${item.to}?dailyPath=true&index=${index}`}
+                      >
+                        <span className={styles.dailyPathIndex}>{translateNumbers(index + 1)}</span>
+                        <span>{item.title}</span>
+                      </Link>
+                      <button
+                        type="button"
+                        className={styles.dailyPathRemove}
+                        aria-label={`${t('removeDailyPathItem')}: ${item.title}`}
+                        title={t('removeDailyPathItem')}
+                        onClick={() => removeDailyPathItem(item.to)}
+                      >
+                        ×
+                      </button>
+                    </div>
                   ))}
                 </div>
                 <Link 
