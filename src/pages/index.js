@@ -6,6 +6,7 @@ import DeityIcon from '../components/DeityIcon';
 import { getPanchangam, Observer, tithiNames, nakshatraNames, dayNames } from '@ishubhamx/panchangam-js';
 import { useTranslation } from '../utils/translations';
 import searchIndex from '../data/searchIndex.json';
+import festivalBannerDates from '../data/festivalBannerDates.json';
 import styles from './index.module.css';
 
 const panchangValueMappings = {
@@ -237,7 +238,7 @@ export default function HomePage() {
   const [dailyPath, setDailyPath] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [panchangWidget, setPanchangWidget] = useState(null);
-  const [showPitrupakshaBanner, setShowPitrupakshaBanner] = useState(true);
+  const [dismissedFestivalBanners, setDismissedFestivalBanners] = useState(null);
   const [currentTime, setCurrentTime] = useState(() => new Date());
 
   const categoryCounts = React.useMemo(() => {
@@ -307,7 +308,13 @@ export default function HomePage() {
 
     const storedBookmarks = JSON.parse(window.localStorage.getItem('bookmarks') || '[]');
     setFavorites(Array.isArray(storedBookmarks) ? storedBookmarks : []);
-    setShowPitrupakshaBanner(window.localStorage.getItem('pitrupaksha-home-banner-dismissed') !== 'true');
+
+    try {
+      const dismissals = JSON.parse(window.localStorage.getItem('festival-banner-dismissals') || '[]');
+      setDismissedFestivalBanners(Array.isArray(dismissals) ? dismissals : []);
+    } catch {
+      setDismissedFestivalBanners([]);
+    }
 
     const observer = new Observer(18.5204, 73.8567, 10);
     const data = getPanchangam(new Date(), observer, { timezoneOffset: 330, calendarType: 'amanta' });
@@ -331,12 +338,22 @@ export default function HomePage() {
     window.localStorage.setItem('dailyPath', JSON.stringify(updated));
   };
 
-  const dismissPitrupakshaBanner = () => {
-    setShowPitrupakshaBanner(false);
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem('pitrupaksha-home-banner-dismissed', 'true');
-    }
+  const dismissFestivalBanner = (key) => {
+    setDismissedFestivalBanners((current) => {
+      const updated = [...(current || []), key];
+      window.localStorage.setItem('festival-banner-dismissals', JSON.stringify(updated));
+      return updated;
+    });
   };
+
+  const activeFestivalBanners = dismissedFestivalBanners === null ? [] : festivalBannerDates
+    .filter((banner) => {
+      const startsAt = Date.parse(`${banner.showFromDate}T00:01:00+05:30`);
+      const endsAt = Date.parse(`${banner.endDate}T23:59:59.999+05:30`);
+      return !dismissedFestivalBanners.includes(banner.key)
+        && startsAt <= currentTime.getTime()
+        && currentTime.getTime() <= endsAt;
+    });
 
   const formatWidgetDate = () => {
     if (!panchangWidget) return '—';
@@ -362,22 +379,32 @@ export default function HomePage() {
         <PwaInstallButton />
 
         <section className={styles.sectionBlock}>
-          {showPitrupakshaBanner && (
-            <aside className={styles.pitrupakshaBanner} aria-labelledby="pitrupaksha-banner-title">
-              <div className={styles.pitrupakshaBannerCopy}>
-                <strong id="pitrupaksha-banner-title">{t('pitrupakshaBannerTitle')}</strong>
-                <span>{t('pitrupakshaBannerText')}</span>
-              </div>
-              <div className={styles.pitrupakshaBannerActions}>
-                <Link className={styles.pitrupakshaBannerLink} to="/pitrupaksha">
-                  {t('pitrupakshaBannerLink')}
-                </Link>
-                <button type="button" className={styles.pitrupakshaBannerDismiss} onClick={dismissPitrupakshaBanner} aria-label={t('dismissBanner')}>
-                  ×
-                </button>
-              </div>
-            </aside>
-          )}
+          {activeFestivalBanners.map((banner) => {
+            const locale = lang === 'en' ? 'en-IN' : lang === 'hi' ? 'hi-IN' : 'mr-IN';
+            const startDate = new Intl.DateTimeFormat(locale, {
+              day: 'numeric',
+              month: 'short',
+              year: 'numeric',
+              timeZone: 'Asia/Kolkata',
+            }).format(new Date(`${banner.startDate}T12:00:00+05:30`));
+
+            return (
+              <aside key={banner.key} className={styles.festivalBanner} aria-labelledby={`festival-banner-title-${banner.key}`}>
+                <div className={styles.pitrupakshaBannerCopy}>
+                  <strong id={`festival-banner-title-${banner.key}`}>{banner.title[lang] || banner.title.en}</strong>
+                  <span>{banner.message[lang] || banner.message.en} {translateNumbers(startDate)}</span>
+                </div>
+                <div className={styles.pitrupakshaBannerActions}>
+                  <Link className={styles.festivalBannerLink} to={banner.href}>
+                    {banner.linkLabel[lang] || banner.linkLabel.en} <span aria-hidden="true">→</span>
+                  </Link>
+                  <button type="button" className={styles.pitrupakshaBannerDismiss} onClick={() => dismissFestivalBanner(banner.key)} aria-label={t('dismissBanner')}>
+                    ×
+                  </button>
+                </div>
+              </aside>
+            );
+          })}
           <div className={styles.sectionHeader}>
             <h2>{t('panchangWidgetTitle')}</h2>
             <div className={styles.sectionLinks}>

@@ -180,6 +180,42 @@
 }
 
 /* Compact Panchang Widget */
+.festivalBanner {
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #e9f4f1;
+  border: 1px solid #77a99c;
+  border-radius: 8px;
+  color: #173c34;
+}
+
+[data-theme='dark'] .festivalBanner {
+  background: #1e302c;
+  border-color: #456e63;
+  color: #e0f2ec;
+}
+
+.festivalBannerLink {
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: #246b5a;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.festivalBannerLink:hover,
+.festivalBannerLink:focus-visible {
+  background: #194f42;
+  color: #fff;
+  text-decoration: none;
+}
+
 .pitrupakshaBanner {
   margin-bottom: 12px;
   padding: 12px 14px;
@@ -357,6 +393,11 @@
 }
 
 @media (max-width: 480px) {
+  .festivalBanner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .pitrupakshaBanner {
     align-items: flex-start;
     flex-direction: column;

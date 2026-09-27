@@ -1908,6 +1908,15 @@
     "headings": ""
   },
   {
+    "title": "खुलभर दुधाची कहाणी",
+    "slug": "/dudhachi-khulbhar-kahani",
+    "category": "katha",
+    "filename": "dudhachi",
+    "keywords": "dudhachi kahani, khulbhar dudhachi kahani katha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "ज्येष्ठागौरीची / महालक्ष्मीची  कहाणी",
     "slug": "/jestha-gauri-kahani",
     "category": "katha",
@@ -2016,11 +2025,38 @@
     "headings": ""
   },
   {
+    "title": "सोमवारची फसकीची  कहाणी",
+    "slug": "/somvar-fasaki-kahani",
+    "category": "katha",
+    "filename": "somvar-fasaki",
+    "keywords": "somvar fasaki chi kahani,",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "सोमवारची शिवामुठीची कहाणी",
+    "slug": "/shivamuth-kahani",
+    "category": "katha",
+    "filename": "somvar-shivamuth",
+    "keywords": "shivamuthichi kahani,",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "सोमवारची  कहाणी",
     "slug": "/somvar-kahani",
     "category": "katha",
     "filename": "somvar",
     "keywords": "somvar devanchi kahani katha",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
+    "title": "सोमवती अमावस्येची कहाणी",
+    "slug": "/somvati-kahani",
+    "category": "katha",
+    "filename": "somvati",
+    "keywords": "somvati amavasya kahani",
     "fmKeywords": "",
     "headings": ""
   },

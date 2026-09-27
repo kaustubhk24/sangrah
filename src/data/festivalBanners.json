@@ -1,0 +1,58 @@
+[
+  {
+    "id": "pitru-paksha",
+    "title": {
+      "en": "Pitru Paksha",
+      "hi": "पितृपक्ष",
+      "mr": "पितृपक्ष"
+    },
+    "message": {
+      "en": "starts from",
+      "hi": "आरंभ",
+      "mr": "आरंभ"
+    },
+    "linkLabel": {
+      "en": "Read more",
+      "hi": "जानकारी देखें",
+      "mr": "माहिती पहा"
+    },
+    "href": "/pitrupaksha",
+    "startRule": {
+      "masa": "Bhadrapada",
+      "paksha": "Krishna",
+      "tithi": "Pratipada"
+    },
+    "endRule": {
+      "masa": "Bhadrapada",
+      "paksha": "Krishna",
+      "tithi": "Amavasya"
+    }
+  },
+  {
+    "id": "sharad-navaratri",
+    "title": {
+      "en": "Sharad Navaratri",
+      "hi": "शारदीय नवरात्रि",
+      "mr": "शारदीय नवरात्र"
+    },
+    "message": {
+      "en": "starts from",
+      "hi": "आरंभ",
+      "mr": "आरंभ"
+    },
+    "linkLabel": {
+      "en": "Read more",
+      "hi": "जानकारी देखें",
+      "mr": "माहिती पहा"
+    },
+    "href": "/ghat-sthapana-puja",
+    "startRule": {
+      "festival": "Navaratri Ghatasthapana"
+    },
+    "endRule": {
+      "masa": "Ashwina",
+      "paksha": "Shukla",
+      "tithi": "Navami"
+    }
+  }
+]

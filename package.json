@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "node scripts/generate-search-index.js && docusaurus start",
-    "build": "node scripts/generate-search-index.js && docusaurus build",
+    "start": "node scripts/generate-festival-banners.js && node scripts/generate-search-index.js && docusaurus start",
+    "build": "node scripts/generate-festival-banners.js && node scripts/generate-search-index.js && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
