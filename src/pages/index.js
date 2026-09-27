@@ -326,6 +326,27 @@ export default function HomePage() {
     return () => window.clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    if (dismissedFestivalBanners === null || typeof window === 'undefined') return;
+
+    const now = currentTime.getTime();
+    const validDismissals = [...new Set(dismissedFestivalBanners.filter((key) => {
+      const banner = festivalBannerDates.find((item) => item.key === key);
+      return banner && Date.parse(`${banner.endDate}T23:59:59.999+05:30`) >= now;
+    }))];
+    const serializedDismissals = JSON.stringify(validDismissals);
+    const storedDismissals = window.localStorage.getItem('festival-banner-dismissals');
+
+    if (JSON.stringify(dismissedFestivalBanners) !== serializedDismissals) {
+      setDismissedFestivalBanners(validDismissals);
+    }
+    if (storedDismissals !== null && storedDismissals !== serializedDismissals) {
+      window.localStorage.setItem('festival-banner-dismissals', serializedDismissals);
+    } else if (storedDismissals === null && validDismissals.length > 0) {
+      window.localStorage.setItem('festival-banner-dismissals', serializedDismissals);
+    }
+  }, [currentTime, dismissedFestivalBanners]);
+
   const handleRecentClick = (item) => {
     if (typeof window !== 'undefined' && item.scrollPosition) {
       window.localStorage.setItem('resumeScroll', item.scrollPosition.toString());
@@ -340,7 +361,7 @@ export default function HomePage() {
 
   const dismissFestivalBanner = (key) => {
     setDismissedFestivalBanners((current) => {
-      const updated = [...(current || []), key];
+      const updated = [...new Set([...(current || []), key])];
       window.localStorage.setItem('festival-banner-dismissals', JSON.stringify(updated));
       return updated;
     });

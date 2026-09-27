@@ -57,12 +57,12 @@
     "endRule": {
       "masa": "Ashwina",
       "paksha": "Shukla",
-      "tithi": "Navami"
+      "tithi": "Dashami"
     },
     "key": "sharad-navaratri-2025",
     "year": 2025,
     "startDate": "2025-09-22",
-    "endDate": "2025-10-01",
+    "endDate": "2025-10-02",
     "showFromDate": "2025-09-20"
   },
   {
@@ -123,12 +123,12 @@
     "endRule": {
       "masa": "Ashwina",
       "paksha": "Shukla",
-      "tithi": "Navami"
+      "tithi": "Dashami"
     },
     "key": "sharad-navaratri-2026",
     "year": 2026,
     "startDate": "2026-10-11",
-    "endDate": "2026-10-20",
+    "endDate": "2026-10-21",
     "showFromDate": "2026-10-09"
   },
   {
@@ -189,12 +189,12 @@
     "endRule": {
       "masa": "Ashwina",
       "paksha": "Shukla",
-      "tithi": "Navami"
+      "tithi": "Dashami"
     },
     "key": "sharad-navaratri-2027",
     "year": 2027,
     "startDate": "2027-09-30",
-    "endDate": "2027-10-09",
+    "endDate": "2027-10-10",
     "showFromDate": "2027-09-28"
   }
 ]
