@@ -9,6 +9,15 @@
     "headings": ""
   },
   {
+    "title": "अन्नपूर्णा देवीची आरती",
+    "slug": "/annapurna-aarat",
+    "category": "aarati",
+    "filename": "annapurna",
+    "keywords": "annapurna aarati",
+    "fmKeywords": "",
+    "headings": ""
+  },
+  {
     "title": "श्री संत बाळूमामा आरती",
     "slug": "/balumama-aarati",
     "category": "aarati",
@@ -168,7 +177,7 @@
     "filename": "jay-devi-saptshrungi",
     "keywords": "jay saptshrungi aarati",
     "fmKeywords": "",
-    "headings": ""
+    "headings": "जय देवी सप्तश्रुंगा पखंड चंडाबाई सप्तशृंग निवासीनी हो"
   },
   {
     "title": "श्री रेणुका माता आरती",
@@ -232,6 +241,15 @@
     "keywords": "shri krushnachi aarati, ovalu aarati madangopala shri krushnachi aarati,vande gopal vande gopal bhuvan sundarachi aarati, indiravara mukundachi",
     "fmKeywords": "",
     "headings": "ओवाळू आरती मदनगोपाळा वन्दे गोपालं वन्दे गोपालं। श्री भुवन सुंदराची आरती"
+  },
+  {
+    "title": "महाकालीची आरती",
+    "slug": "/mahakali-aarati",
+    "category": "aarati",
+    "filename": "mahakali",
+    "keywords": "mahakali aarati",
+    "fmKeywords": "",
+    "headings": ""
   },
   {
     "title": "श्री महालक्ष्मीची आरती",
@@ -340,6 +358,15 @@
     "keywords": "sant tukaram maharaj aarati",
     "fmKeywords": "",
     "headings": "प्रपंञ्चरचना सर्वहि भोगूनि त्यागिली आरती तुकारामा"
+  },
+  {
+    "title": "सरस्वतीची आरती",
+    "slug": "/sarswati-aarati",
+    "category": "aarati",
+    "filename": "sarswati",
+    "keywords": "sarswatichi aarati",
+    "fmKeywords": "",
+    "headings": ""
   },
   {
     "title": "श्री सत्यनारायण महाराज आरती",

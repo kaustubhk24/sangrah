@@ -23,6 +23,11 @@ const labels = {
     start: 'महालया आरंभ',
     end: 'सर्वपितृ दर्श अमावस्या',
     loading: 'माहिती तयार होत आहे...',
+    supplemental2026: '२०२६ साठी पूरक नोंदी',
+    purnimaMahalaya: 'पौर्णिमा महालयासाठी',
+    chooseOneDate: 'यांपैकी कोणताही एक दिवस निवडा.',
+    avidhavaNavami: 'अविधवा नवमी',
+    navamiRuleConfirmed: '',
   },
   hi: {
     title: 'महालय और पितृपक्ष',
@@ -37,6 +42,11 @@ const labels = {
     start: 'महालयारंभ',
     end: 'सर्वपितृ दर्श अमावस्या',
     loading: 'जानकारी तैयार हो रही है...',
+    supplemental2026: '2026 के लिए अतिरिक्त जानकारी',
+    purnimaMahalaya: 'पूर्णिमा महालय के लिए',
+    chooseOneDate: 'इनमें से कोई एक दिन चुनें।',
+    avidhavaNavami: 'अविधवा नवमी',
+    navamiRuleConfirmed: '',
   },
   en: {
     title: 'Mahalaya and Pitru Paksha',
@@ -51,6 +61,11 @@ const labels = {
     start: 'Mahalaya Arambh',
     end: 'Sarvapitri Darsha Amavasya',
     loading: 'Preparing dates...',
+    supplemental2026: 'Additional notes for 2026',
+    purnimaMahalaya: 'Purnima Mahalaya',
+    chooseOneDate: 'Choose any one of these dates.',
+    avidhavaNavami: 'Avidhava Navami',
+    navamiRuleConfirmed: '',
   },
 };
 
@@ -71,6 +86,15 @@ const getLabel = (lang, key) => labels[normalizeLanguage(lang)]?.[key] || labels
 const createIndiaDate = (year, month, day) => (
   new Date(Date.UTC(year, month, day, 12, 0))
 );
+
+const purnimaMahalayaDates2026 = [
+  createIndiaDate(2026, 8, 29),
+  createIndiaDate(2026, 9, 2),
+  createIndiaDate(2026, 9, 3),
+  createIndiaDate(2026, 9, 7),
+  createIndiaDate(2026, 9, 10),
+];
+const avidhavaNavamiDate2026 = createIndiaDate(2026, 9, 4);
 
 const formatDate = (date, lang) => new Intl.DateTimeFormat(
   lang === 'hi' ? 'hi-IN' : lang === 'en' ? 'en-IN' : 'mr-IN',
@@ -177,6 +201,14 @@ export default function MahalayaPage() {
         </section>
 
         <p className={styles.rule}>{getLabel(lang, 'rule')}</p>
+
+        {selectedYear === 2026 && (
+          <p className={styles.rule}>
+            <strong>{getLabel(lang, 'supplemental2026')}</strong><br />
+            {getLabel(lang, 'purnimaMahalaya')}: {purnimaMahalayaDates2026.map((date) => formatDate(date, lang)).join(', ')}. {getLabel(lang, 'chooseOneDate')}<br />
+            {getLabel(lang, 'avidhavaNavami')}: {formatDate(avidhavaNavamiDate2026, lang)}. {getLabel(lang, 'navamiRuleConfirmed')}
+          </p>
+        )}
 
         <section className={styles.schedule} aria-label={getLabel(lang, 'title')}>
           <div className={styles.scheduleHeader}>
