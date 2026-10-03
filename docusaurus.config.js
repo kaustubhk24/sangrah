@@ -5,18 +5,42 @@ const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
+const isCloudflarePages = process.env.CF_PAGES === '1';
+const isMigrationLive = process.env.SANGRAH_MIGRATION_LIVE === 'true';
+const isCloudflarePreview = isCloudflarePages && !isMigrationLive;
+const siteUrl = isCloudflarePages && isMigrationLive
+  ? 'https://shrisangrah.com'
+  : isCloudflarePreview && process.env.CF_PAGES_URL
+    ? process.env.CF_PAGES_URL
+    : 'https://sangrah.justinclicks.com';
+const canonicalBaseUrl = isCloudflarePages && isMigrationLive
+  ? 'https://shrisangrah.com'
+  : 'https://sangrah.justinclicks.com';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'संपूर्ण संग्रह',
+  title: 'श्री संग्रह',
   tagline: '',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://sangrah.justinclicks.com',
+  url: siteUrl,
   //url:'https://stage-sangrah.netlify.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  customFields: {
+    canonicalBaseUrl,
+  },
+  headTags: isCloudflarePreview
+    ? [{
+        tagName: 'meta',
+        attributes: {
+          name: 'robots',
+          content: 'noindex, nofollow',
+        },
+      }]
+    : [],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

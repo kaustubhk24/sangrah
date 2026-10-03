@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react';
+import Head from '@docusaurus/Head';
+import { useLocation } from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HistoryTracker from '../components/HistoryTracker';
 import LanguagePopup from '../components/LanguagePopup';
 import { LanguageProvider } from '../utils/translations';
@@ -6,6 +9,11 @@ import { AudioProvider } from '../context/AudioContext';
 import FloatingAudioPlayer from '../components/FloatingAudioPlayer';
 
 export default function Root({children}) {
+  const {pathname} = useLocation();
+  const {siteConfig} = useDocusaurusContext();
+  const canonicalBaseUrl = siteConfig.customFields.canonicalBaseUrl;
+  const canonicalUrl = new URL(pathname, canonicalBaseUrl).href;
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -19,14 +27,19 @@ export default function Root({children}) {
   }, []);
 
   return (
-    <LanguageProvider>
-      <AudioProvider>
-        {children}
-        <FloatingAudioPlayer />
-        <HistoryTracker />
-        <LanguagePopup />
-      </AudioProvider>
-    </LanguageProvider>
+    <>
+      <Head>
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
+      <LanguageProvider>
+        <AudioProvider>
+          {children}
+          <FloatingAudioPlayer />
+          <HistoryTracker />
+          <LanguagePopup />
+        </AudioProvider>
+      </LanguageProvider>
+    </>
   );
 }
 
