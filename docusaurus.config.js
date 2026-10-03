@@ -248,9 +248,9 @@ const config = {
 
       navbar: {
         style: 'primary',
-        title: 'संपूर्ण संग्रह',
+        title: 'श्री संग्रह',
         logo: {
-          alt: 'संपूर्ण संग्रह',
+          alt: 'श्री संग्रह',
           src: 'img/favicon.ico',
         },
         items: [
