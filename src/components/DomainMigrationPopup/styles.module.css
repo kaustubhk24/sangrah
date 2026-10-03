@@ -1,0 +1,162 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(24, 20, 16, 0.62);
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  position: relative;
+  width: min(100%, 520px);
+  max-height: min(88dvh, 760px);
+  overflow-y: auto;
+  padding: 28px;
+  border: 1px solid #e8c59f;
+  border-top: 5px solid var(--ifm-color-primary);
+  border-radius: 12px;
+  background: var(--ifm-color-background);
+  color: var(--ifm-color-text);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.28);
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ifm-color-muted);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+  background: rgba(224, 107, 0, 0.1);
+  color: var(--ifm-color-primary);
+}
+
+.eyebrow {
+  margin: 0 48px 8px 0;
+  color: var(--ifm-color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0 42px 8px 0;
+  font-size: 1.55rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.lead {
+  margin: 0 0 20px;
+  color: var(--ifm-color-muted);
+  line-height: 1.55;
+}
+
+.details {
+  display: grid;
+  gap: 12px;
+}
+
+.detailSection {
+  padding: 12px 14px;
+  border-left: 3px solid var(--ifm-color-primary);
+  background: rgba(224, 107, 0, 0.06);
+}
+
+.detailSection h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.detailSection p {
+  margin: 0;
+  color: var(--ifm-color-muted);
+  line-height: 1.5;
+}
+
+.dataNote {
+  margin: 14px 0 0;
+  color: var(--ifm-color-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.installButton,
+.importButton {
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.installButton {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.installButton:hover,
+.installButton:focus-visible {
+  background: var(--ifm-color-primary-dark);
+}
+
+.importButton {
+  background: transparent;
+  color: var(--ifm-color-primary);
+}
+
+.importButton:hover,
+.importButton:focus-visible {
+  background: rgba(224, 107, 0, 0.08);
+}
+
+.closeButton:focus-visible,
+.installButton:focus-visible,
+.importButton:focus-visible {
+  outline: 3px solid rgba(224, 107, 0, 0.32);
+  outline-offset: 2px;
+}
+
+.fileInput {
+  display: none;
+}
+
+[data-theme='dark'] .modal {
+  border-color: #67461f;
+}
+
+[data-theme='dark'] .detailSection {
+  background: rgba(255, 159, 67, 0.08);
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 24px 18px 18px;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+}

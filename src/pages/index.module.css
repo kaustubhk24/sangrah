@@ -308,10 +308,21 @@
   margin-bottom: 10px;
 }
 
+.panchangWidgetDetails {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .panchangWidgetDate {
   font-size: 15px;
   font-weight: 700;
   color: #C75D00;
+  flex-shrink: 0;
 }
 
 [data-theme='dark'] .panchangWidgetDate {
@@ -321,7 +332,22 @@
 .panchangWidgetDay {
   font-size: 13px;
   color: #5A5A5A;
-  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.panchangWidgetDay::before,
+.panchangWidgetLocation::before {
+  content: '·';
+  margin-right: 8px;
+  color: var(--ifm-color-muted);
+}
+
+.panchangWidgetLocation {
+  color: var(--ifm-color-muted);
+  font-size: 12px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 [data-theme='dark'] .panchangWidgetDay {
@@ -677,6 +703,17 @@
   padding: 18px;
   color: #6b6865;
   font-size: 15px;
+}
+
+.dailyPathEmpty {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  color: var(--ifm-color-muted);
+}
+
+.dailyPathEmpty p {
+  margin: 0;
 }
 
 [data-theme='dark'] .infoCard {

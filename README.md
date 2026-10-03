@@ -1,4 +1,4 @@
-# संपूर्ण संग्रह
+# श्री संग्रह
 
 ## Contribute
 While contributing please take care of the things below.

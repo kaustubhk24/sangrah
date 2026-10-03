@@ -4,6 +4,8 @@ import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HistoryTracker from '../components/HistoryTracker';
 import LanguagePopup from '../components/LanguagePopup';
+import DomainMigrationPopup from '../components/DomainMigrationPopup';
+import PwaInstallButton from '../components/PwaInstallButton';
 import { LanguageProvider } from '../utils/translations';
 import { AudioProvider } from '../context/AudioContext';
 import FloatingAudioPlayer from '../components/FloatingAudioPlayer';
@@ -34,8 +36,10 @@ export default function Root({children}) {
       <LanguageProvider>
         <AudioProvider>
           {children}
+          <PwaInstallButton showBanner={pathname === '/'} />
           <FloatingAudioPlayer />
           <HistoryTracker />
+          <DomainMigrationPopup />
           <LanguagePopup />
         </AudioProvider>
       </LanguageProvider>

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { useTranslation } from '../utils/translations';
+import { importBackupFile } from '../utils/importBackup';
 import searchIndex from '../data/searchIndex.json';
 import styles from './settings.module.css';
 
@@ -72,155 +73,125 @@ export default function Settings() {
     }
   };
 
-  const increaseFont = (e) => {
-    if (e && e.preventDefault) e.preventDefault();
-    const currentIndex = fontOptions.indexOf(fontSize);
-    if (currentIndex < fontOptions.length - 1) {
-      handleFontChange(fontOptions[currentIndex + 1]);
-    }
-  };
-
-  const handleElderMode = () => {
-    const next = !elderMode;
-    setElderMode(next);
-    window.localStorage.setItem('elder-mode', next.toString());
-    document.documentElement.classList.toggle('elder-mode', next);
-  };
-
-  const handleThemeChange = (key) => {
-    setTheme(key);
-    window.localStorage.setItem('site-theme', key);
-    document.documentElement.setAttribute('data-theme', key);
-  };
-
-  const handleScrollSpeedChange = (key) => {
-    setScrollSpeed(key);
-    window.localStorage.setItem('autoScrollSpeed', key);
-  };
-
-  const addToDailyPath = (item) => {
-    if (dailyPath.some((x) => x.to === item.slug)) return;
-    const updated = [...dailyPath, { title: item.title, to: item.slug }];
-    setDailyPath(updated);
-    window.localStorage.setItem('dailyPath', JSON.stringify(updated));
-  };
-
-  const removeFromDailyPath = (to) => {
-    const updated = dailyPath.filter((x) => x.to !== to);
-    setDailyPath(updated);
-    window.localStorage.setItem('dailyPath', JSON.stringify(updated));
-  };
-
-  const reorderDailyPath = (index, direction) => {
-    const nextIndex = index + direction;
-    if (nextIndex < 0 || nextIndex >= dailyPath.length) return;
-    const updated = [...dailyPath];
-    const temp = updated[index];
-    updated[index] = updated[nextIndex];
-    updated[nextIndex] = temp;
-    setDailyPath(updated);
-    window.localStorage.setItem('dailyPath', JSON.stringify(updated));
-  };
-
-  const handleExportData = () => {
-    const data = {};
-    for (let i = 0; i < window.localStorage.length; i++) {
-      const key = window.localStorage.key(i);
-      data[key] = window.localStorage.getItem(key);
-    }
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `sangrah-backup-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  const handleImportData = (e) => {
-    if (e && e.preventDefault) e.preventDefault();
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = '.json';
-    input.onchange = (event) => {
-      const file = event.target.files[0];
-      if (!file) return;
-      
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        try {
-          const parsed = JSON.parse(ev.target.result);
-          if (typeof parsed !== 'object' || parsed === null) {
-            throw new Error('Invalid backup format');
-          }
-          
-          const confirmMsg = lang === 'en'
-            ? 'Importing backup will overwrite all current settings. Proceed?'
-            : (lang === 'hi' ? 'बैकअप आयात करने से सभी वर्तमान सेटिंग्स बदल जाएंगी। जारी रखें?' : 'बैकअप आयात केल्याने सध्याच्या सर्व सेटिंग्ज बदलल्या जातील. पुढे जावे?');
-            
-          if (window.confirm(confirmMsg)) {
-            window.localStorage.clear();
-            Object.entries(parsed).forEach(([key, val]) => {
-              window.localStorage.setItem(key, val);
-            });
-            window.location.reload();
-          }
-        } catch (err) {
-          const errMsg = lang === 'en'
-            ? 'Failed to parse backup file. Please make sure it is a valid JSON file.'
-            : (lang === 'hi' ? 'बैकअप फ़ाइल लोड करने में विफल। कृपया सुनिश्चित करें कि यह एक मान्य JSON फ़ाइल है।' : 'बैकअप फाईल लोड करण्यात अयशस्वी. कृपया ती वैध JSON फाईल असल्याची खात्री करा.');
-          window.alert(errMsg);
-        }
-      };
-      reader.readAsText(file);
+    const increaseFont = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      const currentIndex = fontOptions.indexOf(fontSize);
+      if (currentIndex < fontOptions.length - 1) {
+        handleFontChange(fontOptions[currentIndex + 1]);
+      }
     };
-    input.click();
-  };
 
-  const handleResetData = () => {
-    const msg = lang === 'en' 
-      ? 'Are you sure you want to reset all data?' 
-      : (lang === 'hi' ? 'क्या आप सारा डेटा रीसेट करना चाहते हैं?' : 'तुम्हाला सर्व डेटा रीसेट करायचा आहे का?');
-    if (window.confirm(msg)) {
-      window.localStorage.clear();
-      window.location.reload();
-    }
-  };
+    const handleElderMode = () => {
+      const next = !elderMode;
+      setElderMode(next);
+      window.localStorage.setItem('elder-mode', next.toString());
+      document.documentElement.classList.toggle('elder-mode', next);
+    };
 
-  const filteredItems = useMemo(() => {
-    const query = searchQuery.trim().toLowerCase();
-    if (!query) {
-      const defaults = [
-        "/ganpati",
-        "/ram-raksha",
-        "/hanuman",
-        "/datt",
-        "/shri-sukta"
-      ];
-      return searchIndex.filter((item) => defaults.includes(item.slug));
-    }
+    const handleThemeChange = (key) => {
+      setTheme(key);
+      window.localStorage.setItem('site-theme', key);
+      document.documentElement.setAttribute('data-theme', key);
+    };
 
-    const tokens = query.split(/\s+/).filter((t) => t.length > 0);
-    if (tokens.length === 0) return [];
+    const handleScrollSpeedChange = (key) => {
+      setScrollSpeed(key);
+      window.localStorage.setItem('autoScrollSpeed', key);
+    };
 
-    return searchIndex.filter((item) => {
-      const titleLower = (item.title || '').toLowerCase();
-      const slugLower = (item.slug || '').toLowerCase();
-      const filenameLower = (item.filename || '').toLowerCase();
-      const keywordsLower = (item.keywords || '').toLowerCase();
-      const fmKeywordsLower = (item.fmKeywords || '').toLowerCase();
+    const addToDailyPath = (item) => {
+      if (dailyPath.some((x) => x.to === item.slug)) return;
+      const updated = [...dailyPath, { title: item.title, to: item.slug }];
+      setDailyPath(updated);
+      window.localStorage.setItem('dailyPath', JSON.stringify(updated));
+    };
 
-      return tokens.every((token) => {
-        return (
+    const removeFromDailyPath = (to) => {
+      const updated = dailyPath.filter((x) => x.to !== to);
+      setDailyPath(updated);
+      window.localStorage.setItem('dailyPath', JSON.stringify(updated));
+    };
+
+    const reorderDailyPath = (index, direction) => {
+      const nextIndex = index + direction;
+      if (nextIndex < 0 || nextIndex >= dailyPath.length) return;
+      const updated = [...dailyPath];
+      const temp = updated[index];
+      updated[index] = updated[nextIndex];
+      updated[nextIndex] = temp;
+      setDailyPath(updated);
+      window.localStorage.setItem('dailyPath', JSON.stringify(updated));
+    };
+
+    const handleExportData = () => {
+      const data = {};
+      for (let i = 0; i < window.localStorage.length; i++) {
+        const key = window.localStorage.key(i);
+        data[key] = window.localStorage.getItem(key);
+      }
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `sangrah-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    };
+
+    const handleImportData = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.json,application/json';
+      input.onchange = (event) => {
+        const file = event.target.files?.[0];
+        if (file) importBackupFile(file, lang);
+      };
+      input.click();
+    };
+
+    const handleResetData = () => {
+      const msg = lang === 'en'
+        ? 'Are you sure you want to reset all data?'
+        : (lang === 'hi' ? 'क्या आप सारा डेटा रीसेट करना चाहते हैं?' : 'तुम्हाला सर्व डेटा रीसेट करायचा आहे का?');
+      if (window.confirm(msg)) {
+        window.localStorage.clear();
+        window.location.reload();
+      }
+    };
+
+    const filteredItems = useMemo(() => {
+      const query = searchQuery.trim().toLowerCase();
+      if (!query) {
+        const defaults = [
+          "/ganpati",
+          "/ram-raksha",
+          "/hanuman",
+          "/datt",
+          "/shri-sukta"
+        ];
+        return searchIndex.filter((item) => defaults.includes(item.slug));
+      }
+
+      const tokens = query.split(/\s+/).filter((t) => t.length > 0);
+      if (tokens.length === 0) return [];
+
+      return searchIndex.filter((item) => {
+        const titleLower = (item.title || '').toLowerCase();
+        const slugLower = (item.slug || '').toLowerCase();
+        const filenameLower = (item.filename || '').toLowerCase();
+        const keywordsLower = (item.keywords || '').toLowerCase();
+        const fmKeywordsLower = (item.fmKeywords || '').toLowerCase();
+
+        return tokens.every((token) => (
           titleLower.includes(token) ||
           slugLower.includes(token) ||
           filenameLower.includes(token) ||
           keywordsLower.includes(token) ||
           fmKeywordsLower.includes(token)
-        );
-      });
-    }).slice(0, 10);
-  }, [searchQuery]);
+        ));
+      }).slice(0, 10);
+    }, [searchQuery]);
 
   const getFontSizeLabel = (key) => {
     const labels = {

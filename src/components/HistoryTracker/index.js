@@ -41,7 +41,7 @@ function HistoryTracker() {
         
         let pageTitle = document.title;
         // If document.title hasn't updated or is fallback, extract the header text of the article
-        if (!pageTitle || pageTitle === 'संपूर्ण संग्रह' || pageTitle.includes('localhost') || pageTitle.includes('http')) {
+        if (!pageTitle || pageTitle === 'श्री संग्रह' || pageTitle.includes('localhost') || pageTitle.includes('http')) {
           const h1 = document.querySelector('article h1') || document.querySelector('h1');
           if (h1) {
             pageTitle = h1.textContent || h1.innerText;

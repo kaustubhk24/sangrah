@@ -46,6 +46,7 @@ export default function LanguagePopup() {
     changeLanguage(tempLang);
     if (typeof window !== 'undefined') {
       window.localStorage.setItem('language-popup-dismissed', 'true');
+      window.dispatchEvent(new Event('sangrah:language-selected'));
     }
     setIsOpen(false);
   };

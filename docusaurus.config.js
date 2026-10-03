@@ -255,6 +255,11 @@ const config = {
         },
         items: [
           {
+            to: '/search',
+            label: 'शोधा',
+            position: 'right',
+          },
+          {
             to: '/bookmarks',
             label: 'चिन्हांकित पाने',
             position: 'right',

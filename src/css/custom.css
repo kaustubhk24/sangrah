@@ -27,7 +27,7 @@
 }
 
 html {
-  font-size: var(--ifm-font-size-base);
+  font-size: var(--app-font-size-base);
 }
 
 body {
@@ -108,57 +108,6 @@ a {
 [data-font-size='xlarge'] {
   --app-font-size-base: 20px;
   --content-font-size: 20px;
-}
-
-.markdown,
-.markdown p,
-.markdown li,
-.markdown blockquote,
-.markdown td,
-.markdown code,
-.markdown pre,
-.markdown span,
-.markdown em,
-.markdown strong {
-  font-size: var(--content-font-size) !important;
-}
-
-.markdown h1 {
-  font-size: calc(var(--content-font-size) * 1.4) !important;
-}
-
-.markdown h2 {
-  font-size: calc(var(--content-font-size) * 1.25) !important;
-}
-
-.markdown h3 {
-  font-size: calc(var(--content-font-size) * 1.15) !important;
-}
-
-/* Keep regular interface text consistent with the Settings font-size choice. */
-body * {
-  font-size: var(--app-font-size-base) !important;
-}
-
-body h1 {
-  font-size: calc(var(--app-font-size-base) * 1.75) !important;
-}
-
-body h2 {
-  font-size: calc(var(--app-font-size-base) * 1.45) !important;
-}
-
-body h3 {
-  font-size: calc(var(--app-font-size-base) * 1.25) !important;
-}
-
-body h4 {
-  font-size: calc(var(--app-font-size-base) * 1.1) !important;
-}
-
-body h5,
-body h6 {
-  font-size: var(--app-font-size-base) !important;
 }
 
 /* Global Elder Mode scaling - scales up the entire app base size */
