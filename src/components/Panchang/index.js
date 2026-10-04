@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Layout from '@theme/Layout';
 import { useTranslation } from '../../utils/translations';
+import { DEFAULT_PANCHANG_LOCATION, PANCHANG_LOCATION_STORAGE_KEY, getPanchangCityName, getPanchangLocationLabel, readPanchangLocationPreferences } from '../../utils/panchangLocation';
 import { getPanchangam, Observer, tithiNames, nakshatraNames, rashiNames, dayNames, yogaNames, karanaNames } from '@ishubhamx/panchangam-js';
 import styles from './panchang.module.css';
 
@@ -276,15 +277,28 @@ export default function PanchangSection() {
   const [locationMode, setLocationMode] = useState('preset');
   const [selectedCity, setSelectedCity] = useState('pune');
   const [customCoords, setCustomCoords] = useState({ lat: '', lon: '' });
+  const [locationLoaded, setLocationLoaded] = useState(false);
   const [currentTime, setCurrentTime] = useState(() => new Date());
-  const [location, setLocation] = useState({
-    label: 'Pune, Maharashtra',
-    lat: 18.5204,
-    lon: 73.8567,
-    elevation: 10,
-    timezone: 'Asia/Kolkata',
-    timezoneOffset: 330,
-  });
+  const [location, setLocation] = useState(() => ({ ...DEFAULT_PANCHANG_LOCATION }));
+
+  useEffect(() => {
+    const preferences = readPanchangLocationPreferences();
+    setLocation(preferences.location);
+    setLocationMode(preferences.locationMode);
+    setSelectedCity(preferences.selectedCity);
+    setCustomCoords(preferences.customCoords);
+    setLocationLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (!locationLoaded || typeof window === 'undefined') return;
+    window.localStorage.setItem(PANCHANG_LOCATION_STORAGE_KEY, JSON.stringify({
+      location,
+      locationMode,
+      selectedCity,
+      customCoords,
+    }));
+  }, [customCoords, location, locationLoaded, locationMode, selectedCity]);
 
   const resolveTithiName = (value) => {
     if (value === undefined || value === null || value === '') return value;
@@ -1109,9 +1123,10 @@ export default function PanchangSection() {
                 <label className={styles.inputGroup}>
                   <span>{label('cityLabel')}</span>
                   <select className={styles.locationSelect} value={selectedCity} onChange={(e) => handleCityChange(e.target.value)}>
+                    {locationMode === 'geo' && <option value="current">{getPanchangLocationLabel({ location, locationMode, selectedCity }, lang)}</option>}
                     {majorIndianCities.map((city) => (
                       <option key={city.id} value={city.id}>
-                        {city.label}
+                        {getPanchangCityName(city.id, lang)}
                       </option>
                     ))}
                     <option value="__custom__">{label('customLocation')}</option>
@@ -1149,7 +1164,7 @@ export default function PanchangSection() {
                 <div className={styles.locationHint}>{label('locationHint')}</div>
               </div>
               <div><strong>{label('dateLabel')}:</strong> {formattedDate}</div>
-              <div><strong>{label('locationLabel')}:</strong> {location.label}</div>
+              <div><strong>{label('locationLabel')}:</strong> {getPanchangLocationLabel({ location, locationMode, selectedCity }, lang)}</div>
               <div><strong>Lat / Lon:</strong> {location.lat.toFixed(4)}, {location.lon.toFixed(4)}</div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import Layout from '@theme-original/DocItem/Layout';
-import BookmarkButton from '@site/src/components/BookmarkButton';
+import ReadingActions, { useReadingActions } from '@site/src/components/ReadingActions';
 import ShareButton from '@site/src/components/ShareButton';
 import AutoScrollControl from '@site/src/components/AutoScrollControl';
 import CustomAudioPlayer from '@site/src/components/CustomAudioPlayer';
@@ -14,6 +14,7 @@ import styles from './styles.module.css';
 
 export default function DocItemLayoutWrapper(props) {
   const { t, lang, translateNumbers } = useTranslation();
+  const readingActions = useReadingActions();
   const location = useLocation();
   const history = useHistory();
   const { frontMatter, metadata } = useDoc();
@@ -391,7 +392,12 @@ export default function DocItemLayoutWrapper(props) {
           </div>
           <div className={styles.iconActionsGroup}>
             <ShareButton className={styles.iconBtn} />
-            <BookmarkButton className={styles.iconBtn} />
+            <ReadingActions
+              path={cleanPath}
+              title={currentDoc?.title || metadata?.title || ''}
+              actions={readingActions}
+              className={styles.iconBtn}
+            />
           </div>
         </div>
 

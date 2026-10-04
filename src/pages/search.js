@@ -3,13 +3,15 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { useLocation, useHistory } from '@docusaurus/router';
 import { useTranslation } from '@site/src/utils/translations';
+import ReadingActions, { useReadingActions } from '@site/src/components/ReadingActions';
 import styles from './search.module.css';
 
 export default function SearchPage() {
-  const { t } = useTranslation();
+  const { lang, t, translateNumbers } = useTranslation();
   const location = useLocation();
   const history = useHistory();
   const inputRef = useRef(null);
+  const readingActions = useReadingActions();
   
   // Get initial query from URL search param 'q'
   const getQueryParam = () => {
@@ -143,13 +145,13 @@ export default function SearchPage() {
       chalisa: { mr: 'चालीसा', hi: 'चालीसा', en: 'Chalisa' },
     };
     const key = (cat || '').toLowerCase();
-    const currentLang = typeof window !== 'undefined' ? (window.localStorage.getItem('site-language') || 'mr') : 'mr';
-    return (labels[key] && labels[key][currentLang]) || cat;
+    return (labels[key] && labels[key][lang]) || cat;
   };
 
-  const displayResults = searchTerm.trim() === ''
-    ? [...searchIndex].sort((a, b) => a.title.localeCompare(b.title))
-    : searchResults;
+  const hasQuery = searchTerm.trim().length > 0;
+  const popularResults = ['/ganpati', '/ram-raksha', '/hanuman', '/datt', '/shri-sukta']
+    .map((slug) => searchIndex.find((item) => item.slug === slug))
+    .filter(Boolean);
 
   return (
     <Layout title={t('searchTab')}>
@@ -160,15 +162,18 @@ export default function SearchPage() {
         <div className={styles.searchBarContainer}>
           <input
             ref={inputRef}
-            type="text"
+            type="search"
             className={styles.searchPageInput}
-            placeholder={t('nityapathSearchPlaceholder')}
+            placeholder={t('searchPrompt')}
+            aria-label={t('searchTab')}
             value={searchTerm}
             onChange={handleInputChange}
           />
           {searchTerm.trim() && (
-            <button 
+            <button
+              type="button"
               className={styles.clearBtn} 
+              aria-label={t('clearSearch')}
               onClick={() => {
                 setSearchTerm('');
                 history.replace({ search: '' });
@@ -179,26 +184,46 @@ export default function SearchPage() {
           )}
         </div>
 
-        {/* Results List */}
-        {displayResults.length === 0 ? (
-          <div className={styles.emptyState}>
-            <p>काहीही आढळले नाही</p>
+        {!hasQuery ? (
+          <section className={styles.searchSuggestions} aria-labelledby="popular-searches-heading">
+            <h2 id="popular-searches-heading">{t('searchPopularReads')}</h2>
+            <ul className={styles.searchResultList}>
+              {popularResults.map((item) => (
+                <li key={item.slug} className={styles.searchResultItem}>
+                  <Link to={item.slug} className={styles.searchResultLink}>
+                    <div className={styles.searchResultTitle}>{item.title}</div>
+                  </Link>
+                  {item.category && <span className={styles.searchResultCategory}>{getCategoryLabel(item.category)}</span>}
+                  <ReadingActions path={item.slug} title={item.title} actions={readingActions} className={styles.searchActionButton} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : searchResults.length === 0 ? (
+          <div className={styles.emptyState} role="status">
+            <p>{t('searchNoResults')}</p>
           </div>
         ) : (
-          <ul className={styles.searchResultList}>
-            {displayResults.map((item, index) => (
-              <li key={`${item.slug}-${index}`} className={styles.searchResultItem}>
-                <Link to={item.slug} className={styles.searchResultLink}>
-                  <div className={styles.searchResultTitle}>{item.title}</div>
-                </Link>
-                {item.category && (
-                  <span className={styles.searchResultCategory}>
-                    {getCategoryLabel(item.category)}
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
+          <>
+            <p className={styles.searchResultsCount} aria-live="polite">
+              {translateNumbers(searchResults.length)} {t('searchResultsLabel')}
+            </p>
+            <ul className={styles.searchResultList}>
+              {searchResults.map((item, index) => (
+                <li key={`${item.slug}-${index}`} className={styles.searchResultItem}>
+                  <Link to={item.slug} className={styles.searchResultLink}>
+                    <div className={styles.searchResultTitle}>{item.title}</div>
+                  </Link>
+                  {item.category && (
+                    <span className={styles.searchResultCategory}>
+                      {getCategoryLabel(item.category)}
+                    </span>
+                  )}
+                  <ReadingActions path={item.slug} title={item.title} actions={readingActions} className={styles.searchActionButton} />
+                </li>
+              ))}
+            </ul>
+          </>
         )}
       </div>
     </Layout>

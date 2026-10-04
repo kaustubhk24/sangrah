@@ -1,14 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import '../css/pwa-install.css';
+import { useTranslation } from '../utils/translations';
+
+const installHelpCopy = {
+  mr: {
+    title: 'ॲप इन्स्टॉल करा',
+    ios: 'शेअर बटण दाबा आणि “होम स्क्रीनवर जोडा” निवडा.',
+    other: 'ब्राउझर मेनूमधून “Install app” किंवा “Add to Home Screen” निवडा.',
+    close: 'बंद करा',
+  },
+  hi: {
+    title: 'ऐप इंस्टॉल करें',
+    ios: 'शेयर बटन दबाएँ और “होम स्क्रीन पर जोड़ें” चुनें।',
+    other: 'ब्राउज़र मेन्यू में “Install app” या “Add to Home Screen” चुनें।',
+    close: 'बंद करें',
+  },
+  en: {
+    title: 'Install the app',
+    ios: 'Tap the Share button, then choose “Add to Home Screen”.',
+    other: 'Open your browser menu and choose “Install app” or “Add to Home Screen”.',
+    close: 'Close',
+  },
+};
 
 export default function PwaInstallButton() {
+  const { lang } = useTranslation();
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [visible, setVisible] = useState(false);
   const [showIosHelp, setShowIosHelp] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
+  const [isIos, setIsIos] = useState(false);
 
   useEffect(() => {
     const inStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
+    const isIosDevice = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    setIsIos(isIosDevice);
     const iosStandalone = window.navigator.standalone;
     const currentlyInstalled = !!inStandalone || !!iosStandalone;
     if (currentlyInstalled) {
@@ -33,9 +59,8 @@ export default function PwaInstallButton() {
     window.addEventListener('beforeinstallprompt', onBeforeInstallPrompt);
     window.addEventListener('appinstalled', onAppInstalled);
 
-    const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
     const isInStandalone = inStandalone || iosStandalone;
-    if (isIos && !isInStandalone && !currentlyInstalled) {
+    if (isIosDevice && !isInStandalone && !currentlyInstalled) {
       setVisible(true);
     }
 
@@ -62,6 +87,7 @@ export default function PwaInstallButton() {
   };
 
   if (isInstalled || !visible) return null;
+  const help = installHelpCopy[lang] || installHelpCopy.mr;
 
   return (
     <>
@@ -84,9 +110,9 @@ export default function PwaInstallButton() {
       {showIosHelp && (
         <div className="pwa-ios-modal" role="dialog" aria-modal="true">
           <div className="pwa-ios-modal-content">
-            <h3>ॲप इन्स्टॉल कसे करावे</h3>
-            <p>iPhone किंवा iPad वर, शेअर बटण दाबा आणि "होम स्क्रीनवर जोडा" निवडा.</p>
-            <button className="pwa-modal-close" onClick={() => setShowIosHelp(false)}>बंद करा</button>
+            <h3>{help.title}</h3>
+            <p>{isIos ? help.ios : help.other}</p>
+            <button className="pwa-modal-close" onClick={() => setShowIosHelp(false)}>{help.close}</button>
           </div>
         </div>
       )}

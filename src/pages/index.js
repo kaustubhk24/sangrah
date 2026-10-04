@@ -5,6 +5,7 @@ import PwaInstallButton from '../components/PwaInstallButton';
 import DeityIcon from '../components/DeityIcon';
 import { getPanchangam, Observer, tithiNames, nakshatraNames, dayNames } from '@ishubhamx/panchangam-js';
 import { useTranslation } from '../utils/translations';
+import { DEFAULT_PANCHANG_LOCATION, getPanchangCityName, getPanchangLocationLabel, readPanchangLocationPreferences } from '../utils/panchangLocation';
 import searchIndex from '../data/searchIndex.json';
 import festivalBannerDates from '../data/festivalBannerDates.json';
 import styles from './index.module.css';
@@ -238,6 +239,8 @@ export default function HomePage() {
   const [dailyPath, setDailyPath] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [panchangWidget, setPanchangWidget] = useState(null);
+  const [panchangLocation, setPanchangLocation] = useState(() => ({ ...DEFAULT_PANCHANG_LOCATION }));
+  const [panchangLocationLabel, setPanchangLocationLabel] = useState(() => getPanchangCityName('pune', lang));
   const [dismissedFestivalBanners, setDismissedFestivalBanners] = useState(null);
   const [currentTime, setCurrentTime] = useState(() => new Date());
 
@@ -248,7 +251,8 @@ export default function HomePage() {
         const parts = doc.category.split('/');
         let current = '';
         parts.forEach((part, index) => {
-          current = index === 0 ? part : `${current}/${part}`;
+          const normalizedPart = part.toLocaleLowerCase();
+          current = index === 0 ? normalizedPart : `${current}/${normalizedPart}`;
           counts[current] = (counts[current] || 0) + 1;
         });
       }
@@ -270,8 +274,7 @@ export default function HomePage() {
       { key: 'namavali', mrLabel: 'नामावली', hiLabel: 'नामावली', enLabel: 'Namavali', slug: 'नामावली', icon: '📝' },
       { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', enLabel: 'Palana', slug: 'पाळणा-संग्रह', icon: '👶' },
       { key: 'pooja', mrLabel: 'पूजा-व्रत', hiLabel: 'पूजा-व्रत', enLabel: 'Pooja-Vrat', slug: 'पूजा-व्रत', icon: '🏺' },
-            { key: 'shastrarth', mrLabel: 'शास्त्रार्थ', hiLabel: 'शास्त्रार्थ', enLabel: 'Shastrarth', slug: 'शास्त्रार्थ', icon: '📚' },
-
+      { key: 'shastrarth', mrLabel: 'शास्त्रार्थ', hiLabel: 'शास्त्रार्थ', enLabel: 'Shastrarth', slug: 'शास्त्रार्थ', icon: '📚' },
       { key: 'kavacham', mrLabel: 'कवच संग्रह', hiLabel: 'कवच संग्रह', enLabel: 'Kavacham', slug: 'कवचम्', icon: '🛡️' },
       { key: 'mantras', mrLabel: 'मंत्र संग्रह', hiLabel: 'मंत्र संग्रह', enLabel: 'Mantras', slug: 'मंत्र', icon: '🔔' },
       { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', enLabel: 'Audio Bhajan', slug: 'ऑडियो-भजन', icon: '🎵' },
@@ -282,7 +285,7 @@ export default function HomePage() {
     ];
     
     return folders.map(f => {
-      const count = categoryCounts[f.key] || 0;
+      const count = categoryCounts[f.key.toLocaleLowerCase()] || 0;
       const label = f.labelKey ? t(f.labelKey) : lang === 'hi' ? f.hiLabel : lang === 'en' ? f.enLabel : f.mrLabel;
       return {
         label,
@@ -316,10 +319,26 @@ export default function HomePage() {
       setDismissedFestivalBanners([]);
     }
 
-    const observer = new Observer(18.5204, 73.8567, 10);
-    const data = getPanchangam(new Date(), observer, { timezoneOffset: 330, calendarType: 'amanta' });
-    setPanchangWidget(data);
   }, []);
+
+  useEffect(() => {
+    const preferences = readPanchangLocationPreferences();
+    setPanchangLocation(preferences.location);
+    setPanchangLocationLabel(getPanchangLocationLabel(preferences, lang));
+  }, [lang]);
+
+  useEffect(() => {
+    try {
+      const observer = new Observer(panchangLocation.lat, panchangLocation.lon, panchangLocation.elevation || 0);
+      const data = getPanchangam(new Date(), observer, {
+        timezoneOffset: panchangLocation.timezoneOffset ?? 330,
+        calendarType: 'amanta',
+      });
+      setPanchangWidget(data);
+    } catch {
+      setPanchangWidget(null);
+    }
+  }, [panchangLocation]);
 
   useEffect(() => {
     const timer = window.setInterval(() => setCurrentTime(new Date()), 30000);
@@ -379,7 +398,12 @@ export default function HomePage() {
   const formatWidgetDate = () => {
     if (!panchangWidget) return '—';
     const locale = lang === 'en' ? 'en-IN' : lang === 'hi' ? 'hi-IN' : 'mr-IN';
-    return translateNumbers(new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date()));
+    return translateNumbers(new Intl.DateTimeFormat(locale, {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+      timeZone: panchangLocation.timezone || 'Asia/Kolkata',
+    }).format(new Date()));
   };
 
   const dayDisplay = panchangWidget ? getTranslatedValue(lang, dayNames?.[panchangWidget.vara] || panchangWidget.vara, panchangValueMappings.day, '—') : '—';
@@ -398,7 +422,6 @@ export default function HomePage() {
     <Layout title={t('appTitle')} description={t('appSubtitle')}>
       <main className={styles.pageWrapper}>
         <PwaInstallButton />
-
         <section className={styles.sectionBlock}>
           {activeFestivalBanners.map((banner) => {
             const locale = lang === 'en' ? 'en-IN' : lang === 'hi' ? 'hi-IN' : 'mr-IN';
@@ -435,9 +458,10 @@ export default function HomePage() {
           </div>
           <Link to="/panchang" className={styles.panchangWidgetCard}>
             <div className={styles.panchangWidgetTop}>
-              <div>
-                <div className={styles.panchangWidgetDate}>{formatWidgetDate()}</div>
-                <div className={styles.panchangWidgetDay}>{dayDisplay}</div>
+              <div className={styles.panchangWidgetDetails}>
+                <span className={styles.panchangWidgetDate}>{formatWidgetDate()}</span>
+                <span className={styles.panchangWidgetDay}>{dayDisplay}</span>
+                <span className={styles.panchangWidgetLocation}>{panchangLocationLabel}</span>
               </div>
               <span className={styles.panchangWidgetBadge}>{t('panchangWidgetBadge')}</span>
             </div>
@@ -501,8 +525,11 @@ export default function HomePage() {
                 </Link>
               </>
             ) : (
-              <div className={styles.infoCard}>
+              <div className={styles.dailyPathEmpty}>
                 <p>{t('nityapathEmpty')}</p>
+                <Link to="/settings#nityapath" className={styles.primaryButton}>
+                  {t('dailyPathSetup')}
+                </Link>
               </div>
             )}
           </div>

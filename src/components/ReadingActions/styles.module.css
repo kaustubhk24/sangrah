@@ -1,0 +1,56 @@
+.actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  padding: 0;
+  border: 1px solid #dfd3c4;
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-muted);
+  cursor: pointer;
+}
+
+.actionButton:hover,
+.actionButton:focus-visible,
+.actionButton.active {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.actionButton:focus-visible {
+  outline: 3px solid rgba(224, 107, 0, 0.2);
+  outline-offset: 2px;
+}
+
+.actionButton svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+[data-theme='dark'] .actionButton {
+  border-color: #514235;
+  background: #241f1b;
+  color: #c5b8a8;
+}
+
+[data-theme='dark'] .actionButton:hover,
+[data-theme='dark'] .actionButton:focus-visible,
+[data-theme='dark'] .actionButton.active {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
