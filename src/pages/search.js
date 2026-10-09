@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { useLocation, useHistory } from '@docusaurus/router';
 import { useTranslation } from '@site/src/utils/translations';
+import ReadingActions, { useReadingActions } from '@site/src/components/ReadingActions';
 import styles from './search.module.css';
 
 export default function SearchPage() {
@@ -10,6 +11,7 @@ export default function SearchPage() {
   const location = useLocation();
   const history = useHistory();
   const inputRef = useRef(null);
+  const readingActions = useReadingActions();
   
   // Get initial query from URL search param 'q'
   const getQueryParam = () => {
@@ -192,6 +194,7 @@ export default function SearchPage() {
                     <div className={styles.searchResultTitle}>{item.title}</div>
                   </Link>
                   {item.category && <span className={styles.searchResultCategory}>{getCategoryLabel(item.category)}</span>}
+                  <ReadingActions path={item.slug} title={item.title} actions={readingActions} className={styles.searchActionButton} />
                 </li>
               ))}
             </ul>
@@ -216,6 +219,7 @@ export default function SearchPage() {
                       {getCategoryLabel(item.category)}
                     </span>
                   )}
+                  <ReadingActions path={item.slug} title={item.title} actions={readingActions} className={styles.searchActionButton} />
                 </li>
               ))}
             </ul>

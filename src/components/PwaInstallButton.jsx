@@ -2,6 +2,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../css/pwa-install.css';
 import { useTranslation } from '../utils/translations';
 
+let pendingInstallPrompt = null;
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    pendingInstallPrompt = event;
+    window.dispatchEvent(new Event('sangrah:install-prompt-available'));
+  });
+}
+
 const installHelpCopy = {
   mr: {
     title: 'ॲप इन्स्टॉल करा',
@@ -42,10 +52,9 @@ export default function PwaInstallButton({ showBanner = true }) {
       return;
     }
 
-    function onBeforeInstallPrompt(e) {
-      e.preventDefault();
-      if (isInstalled) return;
-      setDeferredPrompt(e);
+    function syncInstallPrompt() {
+      if (isInstalled || !pendingInstallPrompt) return;
+      setDeferredPrompt(pendingInstallPrompt);
       setVisible(true);
     }
 
@@ -53,10 +62,12 @@ export default function PwaInstallButton({ showBanner = true }) {
       setIsInstalled(true);
       setVisible(false);
       setDeferredPrompt(null);
+      pendingInstallPrompt = null;
     }
 
-    window.addEventListener('beforeinstallprompt', onBeforeInstallPrompt);
+    window.addEventListener('sangrah:install-prompt-available', syncInstallPrompt);
     window.addEventListener('appinstalled', onAppInstalled);
+    syncInstallPrompt();
 
     const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
     setIsIos(isIos);
@@ -66,18 +77,20 @@ export default function PwaInstallButton({ showBanner = true }) {
     }
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', onBeforeInstallPrompt);
+      window.removeEventListener('sangrah:install-prompt-available', syncInstallPrompt);
       window.removeEventListener('appinstalled', onAppInstalled);
     };
   }, [isInstalled]);
 
   const onInstallClick = async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const choiceResult = await deferredPrompt.userChoice;
+    const prompt = deferredPrompt || pendingInstallPrompt;
+    if (prompt) {
+      pendingInstallPrompt = null;
+      setDeferredPrompt(null);
+      await prompt.prompt();
+      const choiceResult = await prompt.userChoice;
       if (choiceResult.outcome === 'accepted') {
         setVisible(false);
-        setDeferredPrompt(null);
         setIsInstalled(true);
       } else {
         setVisible(false);
