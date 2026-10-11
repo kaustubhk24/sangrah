@@ -246,7 +246,7 @@ export default function SearchPage() {
                       {getCategoryLabel(item.category)}
                     </span>
                   )}
-                  <ReadingActions path={item.parentSlug || item.slug} title={item.title} actions={readingActions} className={styles.searchActionButton} />
+                  <ReadingActions path={item.slug} title={item.title} actions={readingActions} className={styles.searchActionButton} />
                 </li>
               ))}
             </ul>

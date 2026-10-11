@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import CompactDocList from '@site/src/components/CompactDocList';
+import searchIndex from '../data/searchIndex.json';
+
+function getBookmarkPath(bookmark) {
+  if (bookmark.path.includes('#')) return bookmark.path;
+
+  const document = searchIndex.find((item) => item.slug === bookmark.path);
+  const section = document?.sections?.find((entry) => entry.title === bookmark.title);
+  return section ? `${bookmark.path}#${section.id}` : bookmark.path;
+}
 
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useState([]);
@@ -27,7 +36,7 @@ export default function Bookmarks() {
             ) : (
               <CompactDocList
                 items={bookmarks.map((bookmark) => ({
-                  href: bookmark.path,
+                  href: getBookmarkPath(bookmark),
                   label: bookmark.title || 'पान',
                 }))}
               />

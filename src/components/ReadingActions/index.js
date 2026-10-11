@@ -50,12 +50,18 @@ export function useReadingActions() {
     return () => window.removeEventListener('sangrah-storage-change', syncLists);
   }, []);
 
-  const isBookmarked = (path) => bookmarks.some((bookmark) => bookmark.path === path);
+  const isBookmarked = (path, title) => bookmarks.some((bookmark) => (
+    bookmark.path === path
+    || (path.includes('#') && bookmark.path === path.split('#')[0] && bookmark.title === title)
+  ));
   const isInDailyPath = (path) => dailyPath.some((entry) => entry.to === path);
 
   const toggleBookmark = (path, title) => {
-    const updated = isBookmarked(path)
-      ? bookmarks.filter((bookmark) => bookmark.path !== path)
+    const updated = isBookmarked(path, title)
+      ? bookmarks.filter((bookmark) => (
+        bookmark.path !== path
+        && !(path.includes('#') && bookmark.path === path.split('#')[0] && bookmark.title === title)
+      ))
       : [...bookmarks, { path, title, date: new Date().toISOString() }];
     writeList('bookmarks', updated);
     setBookmarks(updated);
@@ -74,7 +80,7 @@ export function useReadingActions() {
 
 export default function ReadingActions({ path, title, actions, className = '' }) {
   const { t } = useTranslation();
-  const bookmarked = actions.isBookmarked(path);
+  const bookmarked = actions.isBookmarked(path, title);
   const inDailyPath = actions.isInDailyPath(path);
   const bookmarkLabel = t(bookmarked ? 'bookmarkRemove' : 'bookmarkAdd');
   const dailyPathLabel = t(inDailyPath ? 'dailyPathRemove' : 'dailyPathAdd');
