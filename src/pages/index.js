@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import PwaInstallButton from '../components/PwaInstallButton';
 import DeityIcon from '../components/DeityIcon';
 import { getPanchangam, Observer, tithiNames, nakshatraNames, dayNames } from '@ishubhamx/panchangam-js';
 import { useTranslation } from '../utils/translations';
@@ -420,6 +421,7 @@ export default function HomePage() {
   return (
     <Layout title={t('appTitle')} description={t('appSubtitle')}>
       <main className={styles.pageWrapper}>
+        <PwaInstallButton />
         <section className={styles.sectionBlock}>
           {activeFestivalBanners.map((banner) => {
             const locale = lang === 'en' ? 'en-IN' : lang === 'hi' ? 'hi-IN' : 'mr-IN';
