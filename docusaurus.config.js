@@ -177,7 +177,8 @@ const config = {
                 /^assets\/js\/runtime~main\..*\.js$/,
                 /^img\/favicon\.ico$/,
                 /^img\/logo\.svg$/,
-                /^img\/pwa\/(512X512|192X192|96X96|48X48|72X72|144X144)\.png$/,
+                /^img\/android\/launchericon-(48|72|96|144|192|512)x\1\.png$/,
+                /^img\/ios\/180\.png$/,
                 /\.sw\.js$/,
               ];
               const manifest = manifestEntries.filter((entry) =>
@@ -198,7 +199,7 @@ const config = {
           {
             tagName: 'meta',
             name: 'theme-color',
-            content: '#bf43bb',
+            content: '#2b0014',
           },
           {
             tagName: 'meta',
@@ -207,8 +208,28 @@ const config = {
           },
           {
             tagName: 'meta',
+            name: 'apple-mobile-web-app-title',
+            content: 'श्री संग्रह',
+          },
+          {
+            tagName: 'meta',
             name: 'apple-mobile-web-app-status-bar-style',
-            content: '#bf43bb',
+            content: 'black-translucent',
+          },
+          {
+            tagName: 'link',
+            rel: 'apple-touch-icon',
+            href: '/img/ios/180.png',
+          },
+          {
+            tagName: 'meta',
+            name: 'msapplication-TileColor',
+            content: '#2b0014',
+          },
+          {
+            tagName: 'meta',
+            name: 'msapplication-config',
+            content: '/browserconfig.xml',
           },
         ],
       },
