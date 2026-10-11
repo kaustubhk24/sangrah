@@ -154,15 +154,24 @@ export default function SearchPage() {
 
   const getCategoryLabel = (cat) => {
     const labels = {
-      aarati: { mr: 'आरती', hi: 'आरती', en: 'Aarti' },
-      stotras: { mr: 'स्तोत्र', hi: 'स्तोत्र', en: 'Stotra' },
-      'stotras-shlok': { mr: 'स्तोत्र/श्लोक', hi: 'स्तोत्र/श्लोक', en: 'Stotra/Shloka' },
-      katha: { mr: 'कथा', hi: 'कथा', en: 'Katha' },
+      ashtak: { mr: 'अष्टक संग्रह', hi: 'अष्टक संग्रह', en: 'Ashtak' },
+      sukt: { mr: 'सूक्त संग्रह', hi: 'सूक्त संग्रह', en: 'Sukta' },
+      aarati: { mr: 'आरती संग्रह', hi: 'आरती संग्रह', en: 'Aarati' },
+      abhang: { mr: 'अभंग संग्रह', hi: 'अभंग संग्रह', en: 'Abhang' },
+      'audio bhajan': { mr: 'ऑडिओ भजन', hi: 'ऑडियो भजन', en: 'Audio Bhajan' },
+      chalisa: { mr: 'चालीसा संग्रह', hi: 'चालीसा संग्रह', en: 'Chalisa' },
+      katha: { mr: 'कथा/कहाणी संग्रह', hi: 'कथा/कहाणी संग्रह', en: 'Katha' },
+      kavacham: { mr: 'कवच संग्रह', hi: 'कवच संग्रह', en: 'Kavacham' },
+      managalastak: { mr: 'मंगलाष्टका', hi: 'मंगलाष्टका', en: 'Mangalashtaka' },
+      mantras: { mr: 'मंत्र संग्रह', hi: 'मंत्र संग्रह', en: 'Mantras' },
+      namavali: { mr: 'नामावली', hi: 'नामावली', en: 'Namavali' },
+      palana: { mr: 'पाळणा संग्रह', hi: 'पालना संग्रह', en: 'Palana' },
+      pooja: { mr: 'पूजा-व्रत', hi: 'पूजा-व्रत', en: 'Pooja-Vrat' },
       pothi: { mr: 'पोथी', hi: 'पोथी', en: 'Pothi' },
-      sukta: { mr: 'सूक्त', hi: 'सूक्त', en: 'Sukta' },
-      chalisa: { mr: 'चालीसा', hi: 'चालीसा', en: 'Chalisa' },
+      shastrarth: { mr: 'शास्त्रार्थ', hi: 'शास्त्रार्थ', en: 'Shastrarth' },
+      'stotras-shlok': { mr: 'स्तोत्र / श्लोक संग्रह', hi: 'स्तोत्र / श्लोक संग्रह', en: 'Stotra / Shlok' },
     };
-    const key = (cat || '').toLowerCase();
+    const key = (cat || '').split('/')[0].trim().toLowerCase();
     return (labels[key] && labels[key][lang]) || cat;
   };
 
