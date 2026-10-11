@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { createSlugger } = require('@docusaurus/utils');
 
 const docsDir = path.join(__dirname, '..', 'docs');
 const outputDir = path.join(__dirname, '..', 'src', 'data');
@@ -104,6 +105,44 @@ function parseMarkdownFile(filePath) {
   while ((headingMatch = headingRegex.exec(mainContent)) !== null) {
     headings.push(headingMatch[1].trim());
   }
+
+  // Index each H2 section separately on documents containing multiple entries.
+  const slugger = createSlugger();
+  const sectionHeadingRegex = /^(#{1,6})\s+(.+)$/gm;
+  const sectionHeadings = [];
+  let sectionHeadingMatch;
+  while ((sectionHeadingMatch = sectionHeadingRegex.exec(mainContent)) !== null) {
+    const headingText = sectionHeadingMatch[2].trim();
+    const id = slugger.slug(headingText);
+    if (sectionHeadingMatch[1].length === 2) {
+      sectionHeadings.push({
+        title: headingText,
+        id,
+        start: sectionHeadingMatch.index,
+      });
+    }
+  }
+
+  const sections = sectionHeadings.length > 1
+    ? sectionHeadings.map((section, index) => {
+      const end = sectionHeadings[index + 1]?.start ?? mainContent.length;
+      const content = mainContent.slice(section.start, end)
+        .replace(/^##\s+.+$/m, '')
+        .replace(/<[^>]*>/g, ' ')
+        .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+        .replace(/\{[^}]*\}/g, ' ')
+        .replace(/[`*_~#>]/g, ' ')
+        .replace(/&nbsp;/gi, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      return {
+        title: section.title,
+        id: section.id,
+        keywords: content,
+      };
+    })
+    : [];
   
   // Extract category from folder name
   const parentFolder = path.dirname(relativePath);
@@ -123,6 +162,7 @@ function parseMarkdownFile(filePath) {
     keywords: indexSpansText.join(' '),
     fmKeywords,
     headings: headings.join(' '),
+    ...(sections.length ? { sections } : {}),
   };
 }
 

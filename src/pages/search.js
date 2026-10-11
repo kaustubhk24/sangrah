@@ -64,7 +64,20 @@ export default function SearchPage() {
       return;
     }
 
-    const scored = searchIndex
+    const searchItems = searchIndex.flatMap((item) => [
+      ...((item.sections || []).map((section) => ({
+        ...item,
+        title: section.title,
+        slug: `${item.slug}#${section.id}`,
+        parentSlug: item.slug,
+        isSection: true,
+        keywords: section.keywords,
+        headings: section.title,
+      }))),
+      item,
+    ]);
+
+    const matchingItems = searchItems
       .map((item) => {
         const titleLower = (item.title || '').toLowerCase();
         const slugLower = (item.slug || '').toLowerCase();
@@ -117,7 +130,12 @@ export default function SearchPage() {
       .filter((item) => item.score > 0)
       .sort((a, b) => b.score - a.score);
 
-    setSearchResults(scored);
+    const documentsWithSectionMatches = new Set(
+      matchingItems.filter((item) => item.isSection).map((item) => item.parentSlug),
+    );
+    setSearchResults(matchingItems.filter(
+      (item) => item.isSection || !documentsWithSectionMatches.has(item.slug),
+    ));
   }, [searchTerm]);
 
   const handleInputChange = (e) => {
@@ -219,7 +237,7 @@ export default function SearchPage() {
                       {getCategoryLabel(item.category)}
                     </span>
                   )}
-                  <ReadingActions path={item.slug} title={item.title} actions={readingActions} className={styles.searchActionButton} />
+                  <ReadingActions path={item.parentSlug || item.slug} title={item.title} actions={readingActions} className={styles.searchActionButton} />
                 </li>
               ))}
             </ul>
