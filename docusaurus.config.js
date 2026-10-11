@@ -21,7 +21,7 @@ const canonicalBaseUrl = isCloudflarePages && isMigrationLive
 const config = {
   title: 'श्री संग्रह',
   tagline: '',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/android/launchericon-512x512.png',
 
   // Set the production url of your site here
   url: siteUrl,
