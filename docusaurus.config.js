@@ -214,13 +214,13 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.png',
 
-      announcementBar: {
-        id: 'feedback_required',
-        content: 'कृपया आपला <b><a target ="_blank" href="https://forms.gle/MPuDTkCpVTDpaoQG9">अभिप्राय द्या.</a></b>',
-        backgroundColor: '#FFF4E5',
-        textColor: '#C75D00',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'attention_bar',
+      //   content: '',
+      //   backgroundColor: '#FFF4E5',
+      //   textColor: '#C75D00',
+      //   isCloseable: false,
+      // },
 
       navbar: {
         style: 'primary',
