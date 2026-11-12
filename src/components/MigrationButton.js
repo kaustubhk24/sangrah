@@ -27,11 +27,13 @@ export default function MigrationButton() {
         `${migrationUrl.replace(/^https:/, 'intent:')}#Intent;` +
         `scheme=https;package=com.android.chrome;` +
         `S.browser_fallback_url=${encodeURIComponent(migrationUrl)};end`;
-      const destinationUrl = /Android/i.test(window.navigator.userAgent)
-        ? androidIntentUrl
-        : migrationUrl;
+      if (/Android/i.test(window.navigator.userAgent)) {
+        window.location.assign(androidIntentUrl);
+        return;
+      }
+
       const link = document.createElement('a');
-      link.href = destinationUrl;
+      link.href = migrationUrl;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
       document.body.appendChild(link);
