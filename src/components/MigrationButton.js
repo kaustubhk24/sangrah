@@ -25,7 +25,9 @@ export default function MigrationButton() {
       const migrationUrl = `${MIGRATION_URL}#migration_data=${compressedData}`;
       const androidIntentUrl =
         `${migrationUrl.replace(/^https:/, 'intent:')}#Intent;` +
-        `scheme=https;package=com.android.chrome;` +
+        `scheme=https;action=android.intent.action.VIEW;` +
+        `category=android.intent.category.BROWSABLE;` +
+        `category=android.intent.category.APP_BROWSER;` +
         `S.browser_fallback_url=${encodeURIComponent(migrationUrl)};end`;
       if (/Android/i.test(window.navigator.userAgent)) {
         window.location.assign(androidIntentUrl);
