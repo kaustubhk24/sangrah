@@ -7,7 +7,7 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'संपूर्ण संग्रह',
+  title: 'श्री संग्रह',
   tagline: '',
   favicon: 'img/favicon.ico',
 
@@ -224,9 +224,9 @@ const config = {
 
       navbar: {
         style: 'primary',
-        title: 'संपूर्ण संग्रह',
+        title: 'श्री संग्रह',
         logo: {
-          alt: 'संपूर्ण संग्रह',
+          alt: 'श्री संग्रह',
           src: 'img/favicon.ico',
         },
         items: [

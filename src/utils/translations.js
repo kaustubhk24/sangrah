@@ -2,8 +2,8 @@ import React, { createContext, useContext, useEffect } from 'react';
 
 const translations = {
   mr: {
-    appTitle: "संपूर्ण संग्रह",
-    appSubtitle: "आध्यात्मिक वाचनाचा संपूर्ण संग्रह",
+    appTitle: "श्री संग्रह",
+    appSubtitle: "मराठी भक्तिसाहित्याचा संग्रह",
     homeTab: "होम",
     searchTab: "शोधा",
     jaapTab: "जप",

@@ -1,4 +1,4 @@
-# संपूर्ण संग्रह
+# Shri Sangrah
 
 ## Contribute
 While contributing please take care of the things below.
