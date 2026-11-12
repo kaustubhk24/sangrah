@@ -6,11 +6,19 @@ const MAX_AGE_MS = 5 * 60 * 1000;
 const EXPIRED_MESSAGE = 'The migration link has expired for security reasons. Please try again.';
 const SUCCESS_MESSAGE = 'तुमचा डेटा यशस्वीरित्या ट्रान्सफर झाला आहे! (Your data was successfully transferred!)';
 
+function readMigrationParameter(parameters) {
+  return new URLSearchParams(parameters.replace(/\+/g, '%2B')).get('migration_data');
+}
+
 function clearMigrationParameter() {
   const url = new URL(window.location.href);
   url.searchParams.delete('migration_data');
-  const search = url.searchParams.toString();
-  const clearedUrl = `${url.pathname}${search ? `?${search}` : ''}${url.hash}`;
+  const hashParameters = new URLSearchParams(url.hash.slice(1).replace(/\+/g, '%2B'));
+  if (hashParameters.has('migration_data')) {
+    hashParameters.delete('migration_data');
+    url.hash = hashParameters.toString();
+  }
+  const clearedUrl = `${url.pathname}${url.search}${url.hash}`;
   window.history.replaceState(window.history.state, '', clearedUrl);
 }
 
@@ -20,7 +28,9 @@ export default function MigrationReceiver() {
   useEffect(() => {
     if (typeof window === 'undefined' || processed.current) return;
 
-    const migrationData = new URLSearchParams(window.location.search).get('migration_data');
+    const migrationData =
+      readMigrationParameter(window.location.hash.slice(1)) ||
+      readMigrationParameter(window.location.search.slice(1));
     if (!migrationData) return;
 
     processed.current = true;
