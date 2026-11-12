@@ -95,7 +95,7 @@ export default function CustomAudioPlayer() {
     <div className={styles.playerContainer}>
       <div className={styles.playerCard}>
         <div className={styles.playerHeader}>
-          <span className={styles.playerTitle}>🎵 Audio</span>
+          <span className={styles.playerTitle}>🎵 ध्वनी</span>
           {isLoading && isCurrentAudioActive && <span className={styles.loadingSpinner}>⟳</span>}
         </div>
 
@@ -103,7 +103,7 @@ export default function CustomAudioPlayer() {
           <button
             className={styles.playButton}
             onClick={handlePlayPause}
-            aria-label={isCurrentAudioActive && isPlaying ? 'Pause' : 'Play'}
+            aria-label={isCurrentAudioActive && isPlaying ? 'थांबवा' : 'सुरू करा'}
             disabled={isCurrentAudioActive && isLoading}
           >
             {isCurrentAudioActive && isLoading ? '⟳' : (isCurrentAudioActive && isPlaying ? '⏸' : '▶')}
@@ -117,7 +117,7 @@ export default function CustomAudioPlayer() {
               value={isCurrentAudioActive && duration > 0 ? (currentTime / duration) * 100 : 0}
               onChange={handleSeek}
               className={styles.progressBar}
-              aria-label="Seek audio"
+              aria-label="ध्वनीतील जागा निवडा"
               disabled={!isCurrentAudioActive || (isCurrentAudioActive && isLoading)}
             />
           </div>
@@ -133,7 +133,7 @@ export default function CustomAudioPlayer() {
               className={styles.speedSelect}
               value={playbackSpeed}
               onChange={(e) => setPlaybackSpeed(parseFloat(e.target.value))}
-              aria-label="Audio speed"
+              aria-label="ध्वनीचा वेग"
               disabled={!isCurrentAudioActive}
             >
               <option value="0.5">0.5x</option>

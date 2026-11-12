@@ -35,7 +35,7 @@ const config = {
     locales: ['mr'],
     localeConfigs: {
       mr: {
-        label: 'देवनागरी',
+        label: 'मराठी',
         direction: 'ltr',
         htmlLang: 'mr-IN',
         path: 'mr',

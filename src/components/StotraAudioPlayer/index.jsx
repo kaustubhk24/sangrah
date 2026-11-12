@@ -141,8 +141,8 @@ export default function StotraAudioPlayer() {
   return (
     <div className={styles.playerCard}>
       <div className={styles.playerHeader}>
-        <span className={styles.playerBadge}>🎧 Audio + Lyrics</span>
-        <span className={styles.playerHint}>Lyrics move with playback</span>
+        <span className={styles.playerBadge}>🎧 ध्वनी + स्तोत्र</span>
+        <span className={styles.playerHint}>गाण्यासोबत शब्द पुढे सरकतील</span>
       </div>
 
       <audio
@@ -152,11 +152,11 @@ export default function StotraAudioPlayer() {
         preload="metadata"
         src={audioSrc}
       >
-        Your browser does not support the HTML5 audio element.
+        तुमच्या ब्राउझरमध्ये ध्वनी ऐकण्याची सुविधा उपलब्ध नाही.
       </audio>
 
       <div className={styles.playerControls}>
-        <button className={styles.playBtn} onClick={togglePlayback} type="button" aria-label={isPlaying ? 'Pause audio' : 'Play audio'}>
+        <button className={styles.playBtn} onClick={togglePlayback} type="button" aria-label={isPlaying ? 'ध्वनी थांबवा' : 'ध्वनी सुरू करा'}>
           {isPlaying ? '⏸' : '▶'}
         </button>
         <input
@@ -166,7 +166,7 @@ export default function StotraAudioPlayer() {
           max="100"
           value={duration > 0 ? (currentTime / duration) * 100 : 0}
           onChange={handleSeek}
-          aria-label="Seek audio"
+          aria-label="ध्वनीतील जागा निवडा"
         />
         <span className={styles.timeText}>{formatTime(currentTime)} / {formatTime(duration)}</span>
       </div>

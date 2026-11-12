@@ -6,7 +6,7 @@ import searchIndex from '../data/searchIndex.json';
 import styles from './categories.module.css';
 
 export default function CategoriesPage() {
-  const { lang, t, translateNumbers } = useTranslation();
+  const { translateNumbers } = useTranslation();
 
   // Count articles per category slug dynamically (including subfolders)
   const categoryCounts = React.useMemo(() => {
@@ -26,29 +26,29 @@ export default function CategoriesPage() {
 
   const categories = React.useMemo(() => {
     const folders = [
-      { key: 'aarati', mrLabel: 'आरती संग्रह', hiLabel: 'आरती संग्रह', enLabel: 'Aarati', slug: 'आरती-संग्रह', icon: '🪔' },
-      { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', hiLabel: 'स्तोत्र / श्लोक संग्रह', enLabel: 'Stotra / Shlok', slug: 'स्तोत्र--श्लोक-संग्रह', icon: '📿' },
-      { key: 'katha', mrLabel: 'कथा/कहाणी संग्रह', hiLabel: 'कथा/कहाणी संग्रह', enLabel: 'Katha', slug: 'कथा-संग्रह', icon: '📖' },
-      { key: 'pothi', mrLabel: 'पोथी', hiLabel: 'पोथी', enLabel: 'Pothi', slug: 'पोथी', icon: '🙏' },
-      { key: 'Sukt', mrLabel: 'सूक्त संग्रह', hiLabel: 'सूक्त संग्रह', enLabel: 'Sukta', slug: 'सूक्त-संग्रह', icon: '📜' },
-      { key: 'chalisa', mrLabel: 'चालीसा संग्रह', hiLabel: 'चालीसा संग्रह', enLabel: 'Chalisa', slug: 'चालीसा-संग्रह', icon: '📚' },
-      { key: 'Ashtak', mrLabel: 'अष्टक संग्रह', hiLabel: 'अष्टक संग्रह', enLabel: 'Ashtak', slug: 'अष्टक-संग्रह', icon: '🕉️' },
-      { key: 'abhang', mrLabel: 'अभंग संग्रह', hiLabel: 'अभंग संग्रह', enLabel: 'Abhang', slug: 'अभंग-संग्रह', icon: '🎼' },
-      { key: 'managalastak', mrLabel: 'मंगलाष्टका', hiLabel: 'मंगलाष्टका', enLabel: 'Mangalashtaka', slug: 'मंगलाष्टका', icon: '🌸' },
-      { key: 'namavali', mrLabel: 'नामावली', hiLabel: 'नामावली', enLabel: 'Namavali', slug: 'नामावली', icon: '📝' },
-      { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', enLabel: 'Palana', slug: 'पाळणा-संग्रह', icon: '👶' },
-      { key: 'pooja', mrLabel: 'पूजा-व्रत', hiLabel: 'पूजा-व्रत', enLabel: 'Pooja-Vrat', slug: 'पूजा-व्रत', icon: '🏺' },
-      { key: 'kavacham', mrLabel: 'कवच संग्रह', hiLabel: 'कवच संग्रह', enLabel: 'Kavacham', slug: 'कवचम्', icon: '🛡️' },
-      { key: 'mantras', mrLabel: 'मंत्र संग्रह', hiLabel: 'मंत्र संग्रह', enLabel: 'Mantras', slug: 'मंत्र', icon: '🔔' },
-      { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', enLabel: 'Audio Bhajan', slug: 'ऑडियो-भजन', icon: '🎵' },
-      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', enLabel: 'Pravachane', slug: 'प्रवचने', icon: '🧘', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
-      { key: 'muhurt', mrLabel: 'मुहूर्त', hiLabel: 'मुहूर्त', enLabel: 'Muhurt', slug: null, icon: '⏳', specialTo: '/muhurt' },
-      { key: 'project-information', mrLabel: 'प्रकल्प माहिती', hiLabel: 'प्रकल्प माहिती', enLabel: 'Project Information', slug: null, icon: 'ℹ️', specialTo: '/project-information' },
+      { key: 'aarati', mrLabel: 'आरती संग्रह', slug: 'आरती-संग्रह', icon: '🪔' },
+      { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', slug: 'स्तोत्र--श्लोक-संग्रह', icon: '📿' },
+      { key: 'katha', mrLabel: 'कथा/कहाणी संग्रह', slug: 'कथा-संग्रह', icon: '📖' },
+      { key: 'pothi', mrLabel: 'पोथी', slug: 'पोथी', icon: '🙏' },
+      { key: 'Sukt', mrLabel: 'सूक्त संग्रह', slug: 'सूक्त-संग्रह', icon: '📜' },
+      { key: 'chalisa', mrLabel: 'चालीसा संग्रह', slug: 'चालीसा-संग्रह', icon: '📚' },
+      { key: 'Ashtak', mrLabel: 'अष्टक संग्रह', slug: 'अष्टक-संग्रह', icon: '🕉️' },
+      { key: 'abhang', mrLabel: 'अभंग संग्रह', slug: 'अभंग-संग्रह', icon: '🎼' },
+      { key: 'managalastak', mrLabel: 'मंगलाष्टका', slug: 'मंगलाष्टका', icon: '🌸' },
+      { key: 'namavali', mrLabel: 'नामावली', slug: 'नामावली', icon: '📝' },
+      { key: 'palana', mrLabel: 'पाळणा संग्रह', slug: 'पाळणा-संग्रह', icon: '👶' },
+      { key: 'pooja', mrLabel: 'पूजा-व्रत', slug: 'पूजा-व्रत', icon: '🏺' },
+      { key: 'kavacham', mrLabel: 'कवच संग्रह', slug: 'कवचम्', icon: '🛡️' },
+      { key: 'mantras', mrLabel: 'मंत्र संग्रह', slug: 'मंत्र', icon: '🔔' },
+      { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', slug: 'ऑडियो-भजन', icon: '🎵' },
+      { key: 'pravachane', mrLabel: 'प्रवचने', slug: 'प्रवचने', icon: '🧘', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
+      { key: 'muhurt', mrLabel: 'मुहूर्त', slug: null, icon: '⏳', specialTo: '/muhurt' },
+      { key: 'project-information', mrLabel: 'प्रकल्प माहिती', slug: null, icon: 'ℹ️', specialTo: '/project-information' },
     ];
     
     return folders.map(f => {
       const count = categoryCounts[f.key] || 0;
-      const label = lang === 'hi' ? f.hiLabel : lang === 'en' ? f.enLabel : f.mrLabel;
+      const label = f.mrLabel;
       return {
         label,
         count,
@@ -57,13 +57,13 @@ export default function CategoriesPage() {
         specialTo: f.specialTo
       };
     }).filter(f => f.specialTo || f.count > 0);
-  }, [categoryCounts, lang]);
+  }, [categoryCounts]);
 
   return (
-    <Layout title={lang === 'hi' ? 'सभी श्रेणियां' : 'सर्व श्रेणी'} description="सर्व ग्रंथ श्रेणी">
+    <Layout title="सर्व श्रेणी" description="सर्व ग्रंथ श्रेणी">
       <main className={styles.container}>
         <h1 className={styles.title}>
-          {lang === 'hi' ? 'सभी श्रेणियां' : 'सर्व श्रेणी'} ({translateNumbers(categories.length)})
+          सर्व श्रेणी ({translateNumbers(categories.length)})
         </h1>
         <div className={styles.grid}>
           {categories.map((cat, idx) => (
@@ -72,7 +72,7 @@ export default function CategoriesPage() {
               <div className={styles.details}>
                 <span className={styles.name}>{cat.label}</span>
                 {cat.specialTo ? null : <span className={styles.count}>
-                  {translateNumbers(cat.count)} {lang === 'en' ? 'Items' : (lang === 'hi' ? 'ग्रंथ' : 'ग्रंथ')}
+                  {translateNumbers(cat.count)} ग्रंथ
                 </span>}
               </div>
             </Link>

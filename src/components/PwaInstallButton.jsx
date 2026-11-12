@@ -1,30 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import '../css/pwa-install.css';
-import { useTranslation } from '../utils/translations';
 
 const installHelpCopy = {
-  mr: {
-    title: 'ॲप इन्स्टॉल करा',
-    ios: 'शेअर बटण दाबा आणि “होम स्क्रीनवर जोडा” निवडा.',
-    other: 'ब्राउझर मेनूमधून “Install app” किंवा “Add to Home Screen” निवडा.',
-    close: 'बंद करा',
-  },
-  hi: {
-    title: 'ऐप इंस्टॉल करें',
-    ios: 'शेयर बटन दबाएँ और “होम स्क्रीन पर जोड़ें” चुनें।',
-    other: 'ब्राउज़र मेन्यू में “Install app” या “Add to Home Screen” चुनें।',
-    close: 'बंद करें',
-  },
-  en: {
-    title: 'Install the app',
-    ios: 'Tap the Share button, then choose “Add to Home Screen”.',
-    other: 'Open your browser menu and choose “Install app” or “Add to Home Screen”.',
-    close: 'Close',
-  },
+  title: 'ॲप स्थापित करा',
+  ios: 'वाटप बटण दाबा आणि “मुख्यपृष्ठावर जोडा” निवडा.',
+  other: 'ब्राउझर मेनूमधून “ॲप स्थापित करा” किंवा “मुख्यपृष्ठावर जोडा” निवडा.',
+  close: 'बंद करा',
 };
 
 export default function PwaInstallButton() {
-  const { lang } = useTranslation();
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [visible, setVisible] = useState(false);
   const [showIosHelp, setShowIosHelp] = useState(false);
@@ -87,7 +71,7 @@ export default function PwaInstallButton() {
   };
 
   if (isInstalled || !visible) return null;
-  const help = installHelpCopy[lang] || installHelpCopy.mr;
+  const help = installHelpCopy;
 
   return (
     <>
@@ -101,7 +85,7 @@ export default function PwaInstallButton() {
           <button className="install-banner__cta" onClick={onInstallClick} aria-label="इन्स्टॉल करा">
             इन्स्टॉल करा
           </button>
-          <button className="install-banner__dismiss" onClick={() => setVisible(false)} aria-label="Dismiss install banner">
+          <button className="install-banner__dismiss" onClick={() => setVisible(false)} aria-label="ॲप स्थापनेची सूचना बंद करा">
             ✕
           </button>
         </div>

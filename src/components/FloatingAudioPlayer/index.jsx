@@ -59,13 +59,13 @@ export default function FloatingAudioPlayer() {
           className={styles.playBtn}
           onClick={togglePlayback}
           disabled={isLoading}
-          aria-label={isPlaying ? 'Pause' : 'Play'}
+          aria-label={isPlaying ? 'थांबवा' : 'सुरू करा'}
         >
           {isLoading ? '⟳' : isPlaying ? '⏸' : '▶'}
         </button>
 
         <div className={styles.songInfo}>
-          <span className={styles.songTitle} title={audioTitle}>{audioTitle || 'Audio'}</span>
+          <span className={styles.songTitle} title={audioTitle}>{audioTitle || 'ध्वनी'}</span>
           <span className={styles.time}>{formatTime(currentTime)} / {formatTime(duration)}</span>
         </div>
 
@@ -76,7 +76,7 @@ export default function FloatingAudioPlayer() {
             className={styles.speedSelect}
             value={playbackSpeed}
             onChange={(e) => setPlaybackSpeed(parseFloat(e.target.value))}
-            aria-label="Audio speed"
+            aria-label="ध्वनीचा वेग"
           >
             <option value="0.5">0.5x</option>
             <option value="0.75">0.75x</option>
@@ -90,8 +90,8 @@ export default function FloatingAudioPlayer() {
         <button
           className={styles.closeBtn}
           onClick={stop}
-          aria-label="Close player"
-          title="Close"
+          aria-label="ध्वनी फलक बंद करा"
+          title="बंद करा"
         >
           ✕
         </button>

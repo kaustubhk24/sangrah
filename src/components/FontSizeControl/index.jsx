@@ -42,10 +42,10 @@ export default function FontSizeControl() {
   };
 
   return (
-    <div className={styles.container} aria-label="Font size control">
-      <button className={styles.btn} onClick={decrease} aria-label="Decrease font size">A−</button>
+    <div className={styles.container} aria-label="अक्षरांचा आकार">
+      <button className={styles.btn} onClick={decrease} aria-label="अक्षरांचा आकार लहान करा">A−</button>
       <div className={styles.label}>{fontSize}px</div>
-      <button className={styles.btn} onClick={increase} aria-label="Increase font size">A+</button>
+      <button className={styles.btn} onClick={increase} aria-label="अक्षरांचा आकार मोठा करा">A+</button>
     </div>
   );
 }

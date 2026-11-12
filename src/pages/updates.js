@@ -28,7 +28,7 @@ export default function UpdatesPage() {
       setContent(text);
     } catch (err) {
       console.error(err);
-      setError(t('retryUpdates') === 'Retry' ? 'Something went wrong. Please try again.' : 'काहीतरी त्रुटी आली. कृपया पुन्हा प्रयत्न करा.');
+      setError('काहीतरी त्रुटी आली. कृपया पुन्हा प्रयत्न करा.');
     } finally {
       setLoading(false);
     }

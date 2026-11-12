@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 
 export default function Offline() {
   return (
-    <Layout title="Offline">
+    <Layout title="आपण ऑफलाइन आहात">
       <main className="container margin-vert--xl">
         <div className="row">
           <div className="col col--6 col--offset-3">

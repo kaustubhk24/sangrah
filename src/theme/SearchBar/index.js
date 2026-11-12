@@ -19,10 +19,10 @@ export default function SearchBar() {
   return (
     <div className={styles.searchWrapper}>
       <ThemeToggle />
-      <Link to="/panchang" className={styles.panchangBtn} aria-label="Panchang" title="Panchang">
+      <Link to="/panchang" className={styles.panchangBtn} aria-label="पंचांग" title="पंचांग">
         📅
       </Link>
-      <Link to="/settings" className={styles.settingsBtn} aria-label="Settings" title="Settings">
+      <Link to="/settings" className={styles.settingsBtn} aria-label="सेटिंग्ज" title="सेटिंग्ज">
         ⚙
       </Link>
       <Link to="/updates" className={styles.updatesBtn} aria-label={t('updatesTab')} title={t('updatesTab')}>

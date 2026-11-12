@@ -8,7 +8,7 @@ import styles from './settings.module.css';
 const fontOptions = ['small', 'medium', 'large', 'xlarge'];
 
 export default function Settings() {
-  const { lang, changeLanguage, t, translateNumbers } = useTranslation();
+  const { t, translateNumbers } = useTranslation();
   const [fontSize, setFontSize] = useState('medium');
   const [elderMode, setElderMode] = useState(false);
   const [theme, setTheme] = useState('light');
@@ -154,9 +154,7 @@ export default function Settings() {
             throw new Error('Invalid backup format');
           }
           
-          const confirmMsg = lang === 'en'
-            ? 'Importing backup will overwrite all current settings. Proceed?'
-            : (lang === 'hi' ? 'बैकअप आयात करने से सभी वर्तमान सेटिंग्स बदल जाएंगी। जारी रखें?' : 'बैकअप आयात केल्याने सध्याच्या सर्व सेटिंग्ज बदलल्या जातील. पुढे जावे?');
+          const confirmMsg = 'बॅकअप आयात केल्याने सध्याच्या सेटिंग्ज बदलतील. पुढे जायचे आहे का?';
             
           if (window.confirm(confirmMsg)) {
             window.localStorage.clear();
@@ -166,9 +164,7 @@ export default function Settings() {
             window.location.reload();
           }
         } catch (err) {
-          const errMsg = lang === 'en'
-            ? 'Failed to parse backup file. Please make sure it is a valid JSON file.'
-            : (lang === 'hi' ? 'बैकअप फ़ाइल लोड करने में विफल। कृपया सुनिश्चित करें कि यह एक मान्य JSON फ़ाइल है।' : 'बैकअप फाईल लोड करण्यात अयशस्वी. कृपया ती वैध JSON फाईल असल्याची खात्री करा.');
+          const errMsg = 'बॅकअप फाइल वाचता आली नाही. कृपया वैध JSON फाइल निवडा.';
           window.alert(errMsg);
         }
       };
@@ -178,9 +174,7 @@ export default function Settings() {
   };
 
   const handleResetData = () => {
-    const msg = lang === 'en' 
-      ? 'Are you sure you want to reset all data?' 
-      : (lang === 'hi' ? 'क्या आप सारा डेटा रीसेट करना चाहते हैं?' : 'तुम्हाला सर्व डेटा रीसेट करायचा आहे का?');
+    const msg = 'तुम्हाला सर्व डेटा रीसेट करायचा आहे का?';
     if (window.confirm(msg)) {
       window.localStorage.clear();
       window.location.reload();
@@ -224,34 +218,19 @@ export default function Settings() {
 
   const getFontSizeLabel = (key) => {
     const labels = {
-      small: '15px',
-      medium: '16px',
-      large: '18px',
-      xlarge: '20px'
+      small: '१५ पिक्सेल',
+      medium: '१६ पिक्सेल',
+      large: '१८ पिक्सेल',
+      xlarge: '२० पिक्सेल'
     };
     return labels[key] || key;
   };
 
   return (
-    <Layout title={t('settingsHeader')} description="Settings Page">
+    <Layout title={t('settingsHeader')} description={t('settingsHeader')}>
       <main className={styles.pageWrapper}>
         <div className={styles.sectionCard}>
           <h1>{t('settingsHeader')}</h1>
-
-          {/* Language Preference */}
-          <div className={styles.settingGroup}>
-            <p className={styles.settingLabel}>{t('langLabel')}</p>
-            <select
-              className={styles.settingSelect}
-              value={lang}
-              onChange={(e) => changeLanguage(e.target.value)}
-              aria-label="Language selection"
-            >
-              <option value="mr">मराठी (Marathi)</option>
-              <option value="hi">हिन्दी (Hindi)</option>
-              <option value="en">English</option>
-            </select>
-          </div>
 
           {/* Theme preference */}
           <div className={styles.settingGroup}>
@@ -291,7 +270,7 @@ export default function Settings() {
                 className={styles.fontStepperBtn}
                 onClick={decreaseFont}
                 disabled={fontSize === 'small'}
-                aria-label="Decrease font size"
+                aria-label="अक्षरांचा आकार लहान करा"
               >
                 −
               </button>
@@ -303,7 +282,7 @@ export default function Settings() {
                 className={styles.fontStepperBtn}
                 onClick={increaseFont}
                 disabled={fontSize === 'xlarge'}
-                aria-label="Increase font size"
+                aria-label="अक्षरांचा आकार मोठा करा"
               >
                 +
               </button>

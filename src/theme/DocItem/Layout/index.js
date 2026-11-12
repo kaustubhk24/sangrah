@@ -13,7 +13,7 @@ import searchIndex from '@site/src/data/searchIndex.json';
 import styles from './styles.module.css';
 
 export default function DocItemLayoutWrapper(props) {
-  const { t, lang, translateNumbers } = useTranslation();
+  const { t, translateNumbers } = useTranslation();
   const readingActions = useReadingActions();
   const location = useLocation();
   const history = useHistory();
@@ -54,13 +54,8 @@ export default function DocItemLayoutWrapper(props) {
   const fontSizes = ['small', 'medium', 'large', 'xlarge'];
 
   const getFontSizeLabel = (key) => {
-    const labels = {
-      mr: { small: 'लहान', medium: 'मध्यम', large: 'मोठा', xlarge: 'अतिमोठा' },
-      en: { small: 'Small', medium: 'Medium', large: 'Large', xlarge: 'Extra Large' },
-      hi: { small: 'छोटा', medium: 'मध्यम', large: 'बड़ा', xlarge: 'बहुत बड़ा' }
-    };
-    const active = labels[lang] || labels['mr'];
-    return active[key] || key;
+    const labels = { small: 'लहान', medium: 'मध्यम', large: 'मोठा', xlarge: 'अतिमोठा' };
+    return labels[key] || key;
   };
 
   const cleanPath = location.pathname.split('?')[0].split('#')[0];
@@ -122,21 +117,13 @@ export default function DocItemLayoutWrapper(props) {
   }, [currentParsedDate]);
 
   const monthLabels = {
-    hi: {
-      january: 'जनवरी', february: 'फरवरी', march: 'मार्च', april: 'अप्रैल',
-      may: 'मई', june: 'जून', july: 'जुलाई', august: 'अगस्त',
-      september: 'सितंबर', october: 'अक्टूबर', november: 'नवंबर', december: 'दिसंबर'
-    },
+    
     mr: {
       january: 'जानेवारी', february: 'फेब्रुवारी', march: 'मार्च', april: 'एप्रिल',
       may: 'मे', june: 'जून', july: 'जुलै', august: 'ऑगस्ट',
       september: 'सप्टेंबर', october: 'ऑक्टोबर', november: 'नोव्हेंबर', december: 'डिसेंबर'
     },
-    en: {
-      january: 'January', february: 'February', march: 'March', april: 'April',
-      may: 'May', june: 'June', july: 'July', august: 'August',
-      september: 'September', october: 'October', november: 'November', december: 'December'
-    }
+    
   };
 
   const monthsList = [
@@ -413,10 +400,10 @@ export default function DocItemLayoutWrapper(props) {
               >
                 {monthsList.map((monthKey) => {
                   const hasPravachans = parsedPravachans.some((p) => p.monthName === monthKey);
-                  const label = (monthLabels[lang] || monthLabels['mr'])[monthKey] || monthKey;
+                  const label = monthLabels.mr[monthKey] || monthKey;
                   return (
                     <option key={monthKey} value={monthKey} disabled={!hasPravachans}>
-                      {label} {!hasPravachans ? `(${lang === 'hi' ? 'अनुपलब्ध' : (lang === 'en' ? 'Unavailable' : 'उपलब्ध नाही')})` : ''}
+                      {label} {!hasPravachans ? '(उपलब्ध नाही)' : ''}
                     </option>
                   );
                 })}
@@ -429,7 +416,7 @@ export default function DocItemLayoutWrapper(props) {
                 disabled={availableDaysForMonth.length === 0}
               >
                 {availableDaysForMonth.length === 0 ? (
-                  <option value="">{lang === 'hi' ? 'कोई प्रवचन नहीं' : (lang === 'en' ? 'No items' : 'प्रवचन नाही')}</option>
+                  <option value="">प्रवचन उपलब्ध नाही</option>
                 ) : (
                   availableDaysForMonth.map((dayNum) => (
                     <option key={dayNum} value={dayNum.toString()}>

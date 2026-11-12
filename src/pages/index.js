@@ -33,28 +33,8 @@ const panchangValueMappings = {
       Magha: 'माघ',
       Phalguna: 'फाल्गुन',
     },
-    hi: {
-      Chaitra: 'चैत्र',
-      Vaishakha: 'वैशाख',
-      Jyeshtha: 'ज्येष्ठ',
-      Jyestha: 'ज्येष्ठ',
-      Jestha: 'ज्येष्ठ',
-      Jeshtha: 'ज्येष्ठ',
-      Ashadha: 'आषाढ',
-      Aashadha: 'आषाढ',
-      Ashad: 'आषाढ',
-      Aashad: 'आषाढ',
-      Shravana: 'श्रावण',
-      Bhadrapada: 'भाद्रपद',
-      Ashwin: 'आश्विन',
-      Ashwina: 'आश्विन',
-      Kartika: 'कार्तिक',
-      Margashirsha: 'मार्गशीर्ष',
-      Pausha: 'पौष',
-      Magha: 'माघ',
-      Phalguna: 'फाल्गुन',
-    },
-    en: {},
+    
+    
   },
   day: {
     mr: {
@@ -66,24 +46,8 @@ const panchangValueMappings = {
       Friday: 'शुक्रवार',
       Saturday: 'शनिवार',
     },
-    hi: {
-      Sunday: 'रविवार',
-      Monday: 'सोमवार',
-      Tuesday: 'मंगलवार',
-      Wednesday: 'बुधवार',
-      Thursday: 'गुरुवार',
-      Friday: 'शुक्रवार',
-      Saturday: 'शनिवार',
-    },
-    en: {
-      Sunday: 'Sunday',
-      Monday: 'Monday',
-      Tuesday: 'Tuesday',
-      Wednesday: 'Wednesday',
-      Thursday: 'Thursday',
-      Friday: 'Friday',
-      Saturday: 'Saturday',
-    },
+    
+    
   },
   tithi: {
     mr: {
@@ -104,25 +68,8 @@ const panchangValueMappings = {
       Purnima: 'पौर्णिमा',
       Amavasya: 'अमावस्या',
     },
-    hi: {
-      Prathama: 'प्रतिपदा',
-      Dwitiya: 'द्वितीया',
-      Tritiya: 'तृतीया',
-      Chaturthi: 'चतुर्थी',
-      Panchami: 'पंचमी',
-      Shashthi: 'षष्ठी',
-      Saptami: 'सप्तमी',
-      Ashtami: 'अष्टमी',
-      Navami: 'नवमी',
-      Dashami: 'दशमी',
-      Ekadashi: 'एकादशी',
-      Dwadashi: 'द्वादशी',
-      Trayodashi: 'त्रयोदशी',
-      Chaturdashi: 'चतुर्दशी',
-      Purnima: 'पूर्णिमा',
-      Amavasya: 'अमावस्या',
-    },
-    en: {},
+    
+    
   },
   nakshatra: {
     mr: {
@@ -154,49 +101,20 @@ const panchangValueMappings = {
       UttaraBhadrapada: 'उत्तरा भाद्रपदा',
       Revati: 'रेवती',
     },
-    hi: {
-      Ashwini: 'अश्विनी',
-      Bharani: 'भरणी',
-      Krittika: 'कृत्तिका',
-      Rohini: 'रोहिणी',
-      Mrigashira: 'मृगशिरा',
-      Ardra: 'आर्द्रा',
-      Punarvasu: 'पुनर्वसु',
-      Pushya: 'पुष्य',
-      Ashlesha: 'आश्लेषा',
-      Magha: 'माघ',
-      PurvaPhalguni: 'पूर्व फाल्गुनी',
-      UttaraPhalguni: 'उत्तर फाल्गुनी',
-      Hasta: 'हस्त',
-      Chitra: 'चित्रा',
-      Swati: 'स्वाति',
-      Vishakha: 'विशाखा',
-      Anuradha: 'अनुराधा',
-      Jyeshtha: 'ज्येष्ठा',
-      Mula: 'मूल',
-      PurvaAshadha: 'पूर्वाषाढा',
-      UttaraAshadha: 'उत्तराषाढा',
-      Shravana: 'श्रवण',
-      Dhanishta: 'धनिष्ठा',
-      Shatabhisha: 'शतभिषा',
-      PurvaBhadrapada: 'पूर्वभाद्रपदा',
-      UttaraBhadrapada: 'उत्तरभाद्रपदा',
-      Revati: 'रेवती',
-    },
-    en: {},
+    
+    
   },
   paksha: {
     mr: { Shukla: 'शुक्ल', Krishna: 'कृष्ण' },
-    hi: { Shukla: 'शुक्ल', Krishna: 'कृष्ण' },
-    en: { Shukla: 'Shukla', Krishna: 'Krishna' },
+    
+    
   },
 };
 
-const getTranslatedValue = (lang, value, map, fallback = '') => {
+const getTranslatedValue = (value, map, fallback = '') => {
   if (value === undefined || value === null || value === '') return fallback;
 
-  const langMap = map?.[lang] || {};
-  const enMap = map?.en || {};
+  const langMap = map?.mr || {};
   const variants = [];
 
   if (typeof value === 'string') {
@@ -211,15 +129,11 @@ const getTranslatedValue = (lang, value, map, fallback = '') => {
 
   for (const variant of variants) {
     if (langMap[variant] !== undefined) return langMap[variant];
-    if (enMap[variant] !== undefined) return enMap[variant];
   }
 
   const normalized = (entry) => String(entry).toLowerCase().replace(/\s+/g, '');
   const matches = Object.entries(langMap).find(([key]) => normalized(key) === normalized(value));
   if (matches) return matches[1];
-
-  const englishMatch = Object.entries(enMap).find(([key]) => normalized(key) === normalized(value));
-  if (englishMatch) return englishMatch[1];
 
   return typeof value === 'number' ? value : value;
 };
@@ -236,13 +150,13 @@ const resolveTithiName = (value) => {
 };
 
 export default function HomePage() {
-  const { lang, t, translateNumbers } = useTranslation();
+  const { t, translateNumbers } = useTranslation();
   const [recentReads, setRecentReads] = useState([]);
   const [dailyPath, setDailyPath] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [panchangWidget, setPanchangWidget] = useState(null);
   const [panchangLocation, setPanchangLocation] = useState(() => ({ ...DEFAULT_PANCHANG_LOCATION }));
-  const [panchangLocationLabel, setPanchangLocationLabel] = useState(() => getPanchangCityName('pune', lang));
+  const [panchangLocationLabel, setPanchangLocationLabel] = useState(() => getPanchangCityName('pune'));
   const [dismissedFestivalBanners, setDismissedFestivalBanners] = useState(null);
   const [currentTime, setCurrentTime] = useState(() => new Date());
 
@@ -264,31 +178,31 @@ export default function HomePage() {
 
   const categories = React.useMemo(() => {
     const folders = [
-      { key: 'aarati', mrLabel: 'आरती संग्रह', hiLabel: 'आरती संग्रह', enLabel: 'Aarati', slug: 'आरती-संग्रह', icon: '🪔' },
-      { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', hiLabel: 'स्तोत्र / श्लोक संग्रह', enLabel: 'Stotra / Shlok', slug: 'स्तोत्र--श्लोक-संग्रह', icon: '📿' },
-      { key: 'katha', mrLabel: 'कथा/कहाणी संग्रह', hiLabel: 'कथा/कहाणी संग्रह', enLabel: 'Katha', slug: 'कथा-संग्रह', icon: '📖' },
-      { key: 'pothi', mrLabel: 'पोथी', hiLabel: 'पोथी', enLabel: 'Pothi', slug: 'पोथी', icon: '🙏' },
-      { key: 'Sukt', mrLabel: 'सूक्त संग्रह', hiLabel: 'सूक्त संग्रह', enLabel: 'Sukta', slug: 'सूक्त-संग्रह', icon: '📜' },
-      { key: 'chalisa', mrLabel: 'चालीसा संग्रह', hiLabel: 'चालीसा संग्रह', enLabel: 'Chalisa', slug: 'चालीसा-संग्रह', icon: '📚' },
-      { key: 'Ashtak', mrLabel: 'अष्टक संग्रह', hiLabel: 'अष्टक संग्रह', enLabel: 'Ashtak', slug: 'अष्टक-संग्रह', icon: '🕉️' },
-      { key: 'abhang', mrLabel: 'अभंग संग्रह', hiLabel: 'अभंग संग्रह', enLabel: 'Abhang', slug: 'अभंग-संग्रह', icon: '🎼' },
-      { key: 'managalastak', mrLabel: 'मंगलाष्टका', hiLabel: 'मंगलाष्टका', enLabel: 'Mangalashtaka', slug: 'मंगलाष्टका', icon: '🌸' },
-      { key: 'namavali', mrLabel: 'नामावली', hiLabel: 'नामावली', enLabel: 'Namavali', slug: 'नामावली', icon: '📝' },
-      { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', enLabel: 'Palana', slug: 'पाळणा-संग्रह', icon: '👶' },
-      { key: 'pooja', mrLabel: 'पूजा-व्रत', hiLabel: 'पूजा-व्रत', enLabel: 'Pooja-Vrat', slug: 'पूजा-व्रत', icon: '🏺' },
-      { key: 'shastrarth', mrLabel: 'शास्त्रार्थ', hiLabel: 'शास्त्रार्थ', enLabel: 'Shastrarth', slug: 'शास्त्रार्थ', icon: '📚' },
-      { key: 'kavacham', mrLabel: 'कवच संग्रह', hiLabel: 'कवच संग्रह', enLabel: 'Kavacham', slug: 'कवचम्', icon: '🛡️' },
-      { key: 'mantras', mrLabel: 'मंत्र संग्रह', hiLabel: 'मंत्र संग्रह', enLabel: 'Mantras', slug: 'मंत्र', icon: '🔔' },
-      { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', enLabel: 'Audio Bhajan', slug: 'ऑडियो-भजन', icon: '🎵' },
-      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', enLabel: 'Pravachane', slug: 'प्रवचने', icon: '🧘', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
-      { key: 'muhurt', mrLabel: 'मुहूर्त', hiLabel: 'मुहूर्त', enLabel: 'Muhurt', slug: null, icon: '⏳', specialTo: '/muhurt' },
+      { key: 'aarati', mrLabel: 'आरती संग्रह', slug: 'आरती-संग्रह', icon: '🪔' },
+      { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', slug: 'स्तोत्र--श्लोक-संग्रह', icon: '📿' },
+      { key: 'katha', mrLabel: 'कथा/कहाणी संग्रह', slug: 'कथा-संग्रह', icon: '📖' },
+      { key: 'pothi', mrLabel: 'पोथी', slug: 'पोथी', icon: '🙏' },
+      { key: 'Sukt', mrLabel: 'सूक्त संग्रह', slug: 'सूक्त-संग्रह', icon: '📜' },
+      { key: 'chalisa', mrLabel: 'चालीसा संग्रह', slug: 'चालीसा-संग्रह', icon: '📚' },
+      { key: 'Ashtak', mrLabel: 'अष्टक संग्रह', slug: 'अष्टक-संग्रह', icon: '🕉️' },
+      { key: 'abhang', mrLabel: 'अभंग संग्रह', slug: 'अभंग-संग्रह', icon: '🎼' },
+      { key: 'managalastak', mrLabel: 'मंगलाष्टका', slug: 'मंगलाष्टका', icon: '🌸' },
+      { key: 'namavali', mrLabel: 'नामावली', slug: 'नामावली', icon: '📝' },
+      { key: 'palana', mrLabel: 'पाळणा संग्रह', slug: 'पाळणा-संग्रह', icon: '👶' },
+      { key: 'pooja', mrLabel: 'पूजा-व्रत', slug: 'पूजा-व्रत', icon: '🏺' },
+      { key: 'shastrarth', mrLabel: 'शास्त्रार्थ', slug: 'शास्त्रार्थ', icon: '📚' },
+      { key: 'kavacham', mrLabel: 'कवच संग्रह', slug: 'कवचम्', icon: '🛡️' },
+      { key: 'mantras', mrLabel: 'मंत्र संग्रह', slug: 'मंत्र', icon: '🔔' },
+      { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', slug: 'ऑडियो-भजन', icon: '🎵' },
+      { key: 'pravachane', mrLabel: 'प्रवचने', slug: 'प्रवचने', icon: '🧘', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
+      { key: 'muhurt', mrLabel: 'मुहूर्त', slug: null, icon: '⏳', specialTo: '/muhurt' },
       { key: 'compass', labelKey: 'compassLabel', icon: '🧭', specialTo: '/compass' },
-      { key: 'project-information', mrLabel: 'प्रकल्प माहिती', hiLabel: 'प्रकल्प माहिती', enLabel: 'Project Information', slug: null, icon: 'ℹ️', specialTo: '/project-information' },
+      { key: 'project-information', mrLabel: 'प्रकल्प माहिती', slug: null, icon: 'ℹ️', specialTo: '/project-information' },
     ];
     
     return folders.map(f => {
       const count = categoryCounts[f.key.toLocaleLowerCase()] || 0;
-      const label = f.labelKey ? t(f.labelKey) : lang === 'hi' ? f.hiLabel : lang === 'en' ? f.enLabel : f.mrLabel;
+      const label = f.labelKey ? t(f.labelKey) : f.mrLabel;
       return {
         label,
         count,
@@ -297,7 +211,7 @@ export default function HomePage() {
         specialTo: f.specialTo
       };
     }).filter(f => f.specialTo || f.count > 0);
-  }, [categoryCounts, lang, t]);
+  }, [categoryCounts, t]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -326,8 +240,8 @@ export default function HomePage() {
   useEffect(() => {
     const preferences = readPanchangLocationPreferences();
     setPanchangLocation(preferences.location);
-    setPanchangLocationLabel(getPanchangLocationLabel(preferences, lang));
-  }, [lang]);
+    setPanchangLocationLabel(getPanchangLocationLabel(preferences));
+  }, []);
 
   useEffect(() => {
     try {
@@ -399,8 +313,7 @@ export default function HomePage() {
 
   const formatWidgetDate = () => {
     if (!panchangWidget) return '—';
-    const locale = lang === 'en' ? 'en-IN' : lang === 'hi' ? 'hi-IN' : 'mr-IN';
-    return translateNumbers(new Intl.DateTimeFormat(locale, {
+    return translateNumbers(new Intl.DateTimeFormat('mr-IN', {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
@@ -408,17 +321,17 @@ export default function HomePage() {
     }).format(new Date()));
   };
 
-  const dayDisplay = panchangWidget ? getTranslatedValue(lang, dayNames?.[panchangWidget.vara] || panchangWidget.vara, panchangValueMappings.day, '—') : '—';
-  const monthDisplay = panchangWidget ? getTranslatedValue(lang, panchangWidget.masa?.name || '', panchangValueMappings.month, '—') : '—';
-  const pakshaDisplay = panchangWidget ? getTranslatedValue(lang, panchangWidget.paksha, panchangValueMappings.paksha, '—') : '—';
+  const dayDisplay = panchangWidget ? getTranslatedValue(dayNames?.[panchangWidget.vara] || panchangWidget.vara, panchangValueMappings.day, '—') : '—';
+  const monthDisplay = panchangWidget ? getTranslatedValue(panchangWidget.masa?.name || '', panchangValueMappings.month, '—') : '—';
+  const pakshaDisplay = panchangWidget ? getTranslatedValue(panchangWidget.paksha, panchangValueMappings.paksha, '—') : '—';
   const currentTithi = panchangWidget?.tithis?.find((entry) => {
     const time = currentTime.getTime();
     return entry.startTime.getTime() <= time && time < entry.endTime.getTime();
   });
   const tithiDisplay = panchangWidget
-    ? getTranslatedValue(lang, resolveTithiName(tithiNames?.[currentTithi?.index] || currentTithi?.name || panchangWidget.tithi), panchangValueMappings.tithi, '—')
+    ? getTranslatedValue(resolveTithiName(tithiNames?.[currentTithi?.index] || currentTithi?.name || panchangWidget.tithi), panchangValueMappings.tithi, '—')
     : '—';
-  const nakshatraDisplay = panchangWidget ? getTranslatedValue(lang, nakshatraNames?.[panchangWidget.nakshatra] || panchangWidget.nakshatra, panchangValueMappings.nakshatra, '—') : '—';
+  const nakshatraDisplay = panchangWidget ? getTranslatedValue(nakshatraNames?.[panchangWidget.nakshatra] || panchangWidget.nakshatra, panchangValueMappings.nakshatra, '—') : '—';
 
   return (
     <Layout title={t('appTitle')} description={t('appSubtitle')}>
@@ -426,8 +339,7 @@ export default function HomePage() {
         <PwaInstallButton />
         <section className={styles.sectionBlock}>
           {activeFestivalBanners.map((banner) => {
-            const locale = lang === 'en' ? 'en-IN' : lang === 'hi' ? 'hi-IN' : 'mr-IN';
-            const startDate = new Intl.DateTimeFormat(locale, {
+            const startDate = new Intl.DateTimeFormat('mr-IN', {
               day: 'numeric',
               month: 'short',
               year: 'numeric',
@@ -437,12 +349,12 @@ export default function HomePage() {
             return (
               <aside key={banner.key} className={styles.festivalBanner} aria-labelledby={`festival-banner-title-${banner.key}`}>
                 <div className={styles.pitrupakshaBannerCopy}>
-                  <strong id={`festival-banner-title-${banner.key}`}>{banner.title[lang] || banner.title.en}</strong>
-                  <span>{banner.message[lang] || banner.message.en} {translateNumbers(startDate)}</span>
+                  <strong id={`festival-banner-title-${banner.key}`}>{banner.title.mr}</strong>
+                  <span>{banner.message.mr} {translateNumbers(startDate)}</span>
                 </div>
                 <div className={styles.pitrupakshaBannerActions}>
                   <Link className={styles.festivalBannerLink} to={banner.href}>
-                    {banner.linkLabel[lang] || banner.linkLabel.en} <span aria-hidden="true">→</span>
+                    {banner.linkLabel.mr} <span aria-hidden="true">→</span>
                   </Link>
                   <button type="button" className={styles.pitrupakshaBannerDismiss} onClick={() => dismissFestivalBanner(banner.key)} aria-label={t('dismissBanner')}>
                     ×

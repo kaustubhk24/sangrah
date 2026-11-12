@@ -17,7 +17,7 @@ const defaultMantras = [
 ];
 
 export default function CounterPage() {
-  const { t, lang, translateNumbers } = useTranslation();
+  const { t, translateNumbers } = useTranslation();
   const [activeMantra, setActiveMantra] = useState(defaultMantras[0]);
   const [customMantras, setCustomMantras] = useState([]);
   const [newMantra, setNewMantra] = useState('');
@@ -182,47 +182,18 @@ export default function CounterPage() {
   };
 
   const handleReset = () => {
-    if (window.confirm(lang === 'en' ? 'Are you sure you want to reset current counter?' : 'तुम्हाला वर्तमान मोजणी रीसेट करायची आहे का?')) {
+    if (window.confirm('तुम्हाला सध्याची मोजणी रीसेट करायची आहे का?')) {
       setCurrentCount(0);
     }
   };
 
-  const getTranslatedMantra = (mantra) => {
-    if (lang !== 'en') return mantra;
-    const mappings = {
-      "ॐ गं गणपतये नमः": "Om Gam Ganapataye Namah",
-      "ॐ नमः शिवाय": "Om Namah Shivaya",
-      "ॐ नमो भगवते वासुदेवाय": "Om Namo Bhagavate Vasudevaya",
-      "श्री राम जय राम जय जय राम": "Shri Ram Jay Ram Jay Jay Ram",
-      "हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे | हरे राम हरे राम राम राम हरे हरे": "Hare Krishna Hare Krishna Krishna Krishna Hare Hare | Hare Ram Hare Ram Ram Ram Hare Hare",
-      "ॐ नमो नारायणाय": "Om Namo Narayanaya",
-      "ॐ भूर्भुवः स्वः": "Gayatri Mantra (Om Bhur Bhuvah Svah)"
-    };
-    return mappings[mantra] || mantra;
-  };
-
   const getMotivationalQuote = (streakCount) => {
-    const quotes = {
-      mr: [
-        "श्री कृष्ण सांगतात: तुमचे मन पवित्र ठेवा, भगवंत सदैव तुमच्या सोबत आहेत.",
-        "हरिपाठ आणि विठ्ठल नामस्मरणाने मन शांत व तृप्त होते.",
-        "नामस्मरणात मोठी ताकद आहे, सातत्याने जप करत राहा.",
-        "ज्या घरात नामस्मरण होते, तिथे सुख-शांती नांदते."
-      ],
-      en: [
-        "Lord Krishna says: Keep your mind pure, God is always with you.",
-        "Chanting relaxes the mind and fills life with positive vibrations.",
-        "Consistency in prayer leads to inner peace and strength.",
-        "A home that echoes with holy names is filled with peace and joy."
-      ],
-      hi: [
-        "श्री कृष्ण कहते हैं: अपने मन को पवित्र रखें, भगवान सदैव आपके साथ हैं।",
-        "नामस्मरण में अपार शक्ति है, निरंतर जप करते रहें।",
-        "प्रार्थना में निरंतरता आंतरिक शांति और शक्ति की ओर ले जाती है।",
-        "जिस घर में नियमित रूप से नामस्मरण होता है, वहां सुख-शांति बनी रहती है।"
-      ]
-    };
-    const list = quotes[lang] || quotes['mr'];
+    const list = [
+      "श्री कृष्ण सांगतात: तुमचे मन पवित्र ठेवा, भगवंत सदैव तुमच्या सोबत आहेत.",
+      "हरिपाठ आणि विठ्ठल नामस्मरणाने मन शांत व तृप्त होते.",
+      "नामस्मरणात मोठी ताकद आहे, सातत्याने जप करत राहा.",
+      "ज्या घरात नामस्मरण होते, तिथे सुख-शांती नांदते."
+    ];
     return list[streakCount % list.length];
   };
 
@@ -261,7 +232,7 @@ export default function CounterPage() {
         >
           {allMantras.map((m) => (
             <option key={m} value={m}>
-              {getTranslatedMantra(m)}
+              {m}
             </option>
           ))}
         </select>
@@ -298,7 +269,7 @@ export default function CounterPage() {
           </div>
         )}
         <div className={styles.activeMantraDisplay}>
-          {getTranslatedMantra(activeMantra)}
+          {activeMantra}
         </div>
       </div>
 
@@ -341,13 +312,13 @@ export default function CounterPage() {
         {/* Action Controls */}
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={styles.controlsRow}>
-            <button className={styles.supportBtn} onClick={handleDecrement} aria-label="Decrement -1">
+            <button className={styles.supportBtn} onClick={handleDecrement} aria-label="एकाने कमी करा">
               {translateNumbers("-1")}
             </button>
-            <button className={styles.mainIncrementBtn} onClick={handleIncrement} aria-label="Increment +1">
+            <button className={styles.mainIncrementBtn} onClick={handleIncrement} aria-label="एकाने वाढवा">
               {translateNumbers("+1")}
             </button>
-            <button className={styles.supportBtn} onClick={handleReset} aria-label="Reset">
+            <button className={styles.supportBtn} onClick={handleReset} aria-label="मोजणी रीसेट करा">
               ⟲
             </button>
           </div>
@@ -403,7 +374,7 @@ export default function CounterPage() {
                 {history.slice(0, 10).map((item, idx) => (
                   <tr key={idx}>
                     <td>{translateNumbers(item.date)}</td>
-                    <td>{getTranslatedMantra(item.mantra)}</td>
+                    <td>{item.mantra}</td>
                     <td>{translateNumbers(item.count)}</td>
                     <td>{translateNumbers(item.malas)}</td>
                   </tr>

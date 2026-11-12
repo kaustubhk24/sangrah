@@ -15,7 +15,7 @@ function useNavbarItems() {
 export default function NavbarMobilePrimaryMenu() {
   const mobileSidebar = useNavbarMobileSidebar();
   const items = useNavbarItems();
-  const { lang, translateNumbers } = useTranslation();
+  const { translateNumbers } = useTranslation();
 
   // Count articles per category slug dynamically (including subfolders)
   const categoryCounts = React.useMemo(() => {
@@ -36,27 +36,27 @@ export default function NavbarMobilePrimaryMenu() {
   // Map category slug to labels & build category list
   const categoriesList = React.useMemo(() => {
     const folders = [
-      { key: 'aarati', mrLabel: 'आरती संग्रह', hiLabel: 'आरती संग्रह', slug: 'आरती-संग्रह' },
-      { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', hiLabel: 'स्तोत्र / श्लोक संग्रह', slug: 'स्तोत्र--श्लोक-संग्रह' },
-      { key: 'katha', mrLabel: 'कथा/कहाणी संग्रह', hiLabel: 'कथा/कहाणी संग्रह', slug: 'कथा-संग्रह' },
-      { key: 'pothi', mrLabel: 'पोथी', hiLabel: 'पोथी', slug: 'पोथी' },
-      { key: 'Sukt', mrLabel: 'सूक्त संग्रह', hiLabel: 'सूक्त संग्रह', slug: 'सूक्त-संग्रह' },
-      { key: 'chalisa', mrLabel: 'चालीसा संग्रह', hiLabel: 'चालीसा संग्रह', slug: 'चालीसा-संग्रह' },
-      { key: 'Ashtak', mrLabel: 'अष्टक संग्रह', hiLabel: 'अष्टक संग्रह', slug: 'अष्टक-संग्रह' },
-      { key: 'abhang', mrLabel: 'अभंग संग्रह', hiLabel: 'अभंग संग्रह', slug: 'अभंग-संग्रह' },
-      { key: 'managalastak', mrLabel: 'मंगलाष्टका', hiLabel: 'मंगलाष्टका', slug: 'मंगलाष्टका' },
-      { key: 'namavali', mrLabel: 'नामावली', hiLabel: 'नामावली', slug: 'नामावली' },
-      { key: 'palana', mrLabel: 'पाळणा संग्रह', hiLabel: 'पाळणा संग्रह', slug: 'पाळणा-संग्रह' },
-      { key: 'pooja', mrLabel: 'पूजा व्रत', hiLabel: 'पूजा व्रत', slug: 'पूजा-व्रत' },
-      { key: 'kavacham', mrLabel: 'कवच संग्रह', hiLabel: 'कवच संग्रह', slug: 'कवचम्' },
-      { key: 'mantras', mrLabel: 'मंत्र संग्रह', hiLabel: 'मंत्र संग्रह', slug: 'मंत्र' },
-      { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', hiLabel: 'ऑडियो भजन', slug: 'ऑडियो-भजन' },
-      { key: 'pravachane', mrLabel: 'प्रवचने', hiLabel: 'प्रवचने', slug: 'प्रवचने', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
+      { key: 'aarati', mrLabel: 'आरती संग्रह', slug: 'आरती-संग्रह' },
+      { key: 'stotras-shlok', mrLabel: 'स्तोत्र / श्लोक संग्रह', slug: 'स्तोत्र--श्लोक-संग्रह' },
+      { key: 'katha', mrLabel: 'कथा/कहाणी संग्रह', slug: 'कथा-संग्रह' },
+      { key: 'pothi', mrLabel: 'पोथी', slug: 'पोथी' },
+      { key: 'Sukt', mrLabel: 'सूक्त संग्रह', slug: 'सूक्त-संग्रह' },
+      { key: 'chalisa', mrLabel: 'चालीसा संग्रह', slug: 'चालीसा-संग्रह' },
+      { key: 'Ashtak', mrLabel: 'अष्टक संग्रह', slug: 'अष्टक-संग्रह' },
+      { key: 'abhang', mrLabel: 'अभंग संग्रह', slug: 'अभंग-संग्रह' },
+      { key: 'managalastak', mrLabel: 'मंगलाष्टका', slug: 'मंगलाष्टका' },
+      { key: 'namavali', mrLabel: 'नामावली', slug: 'नामावली' },
+      { key: 'palana', mrLabel: 'पाळणा संग्रह', slug: 'पाळणा-संग्रह' },
+      { key: 'pooja', mrLabel: 'पूजा व्रत', slug: 'पूजा-व्रत' },
+      { key: 'kavacham', mrLabel: 'कवच संग्रह', slug: 'कवचम्' },
+      { key: 'mantras', mrLabel: 'मंत्र संग्रह', slug: 'मंत्र' },
+      { key: 'audio bhajan', mrLabel: 'ऑडिओ भजन', slug: 'ऑडियो-भजन' },
+      { key: 'pravachane', mrLabel: 'प्रवचने', slug: 'प्रवचने', specialTo: 'https://pravachane.sangrah.justinclicks.com/' },
     ];
     
     return folders.map(f => {
       const count = categoryCounts[f.key] || 0;
-      const label = lang === 'hi' ? f.hiLabel : f.mrLabel;
+      const label = f.mrLabel;
       return {
         label,
         count,
@@ -64,7 +64,7 @@ export default function NavbarMobilePrimaryMenu() {
         specialTo: f.specialTo,
       };
     }).filter(f => f.specialTo || f.count > 0);
-  }, [categoryCounts, lang]);
+  }, [categoryCounts]);
 
   return (
     <ul className="menu__list">

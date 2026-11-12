@@ -22,7 +22,7 @@ export default function Bookmarks() {
   }, []);
 
   return (
-    <Layout title="My Bookmarks">
+    <Layout title="चिन्हांकित पाने">
       <div className="container margin-vert--lg">
         <h1>चिन्हांकित पाने</h1>
         <div className="row">

@@ -77,12 +77,13 @@ export default function HistoryButton() {
       const diffHours = Math.floor(diffMs / 3600000);
       const diffDays = Math.floor(diffMs / 86400000);
 
-      if (diffMins < 1) return 'Just now';
-      if (diffMins < 60) return `${diffMins}m ago`;
-      if (diffHours < 24) return `${diffHours}h ago`;
-      if (diffDays < 7) return `${diffDays}d ago`;
+      if (diffMins < 1) return 'आत्ताच';
+      const relativeTime = new Intl.RelativeTimeFormat('mr-IN', { numeric: 'auto' });
+      if (diffMins < 60) return relativeTime.format(-diffMins, 'minute');
+      if (diffHours < 24) return relativeTime.format(-diffHours, 'hour');
+      if (diffDays < 7) return relativeTime.format(-diffDays, 'day');
       
-      return date.toLocaleDateString();
+      return new Intl.DateTimeFormat('mr-IN').format(date);
     } catch {
       return '';
     }
@@ -94,8 +95,8 @@ export default function HistoryButton() {
         <button
           className={styles.button}
           onClick={() => setShowDropdown(!showDropdown)}
-          aria-label="View history"
-          title="Page history"
+          aria-label="वाचनाचा इतिहास पहा"
+          title="वाचनाचा इतिहास"
           type="button"
         >
           <span className={styles.buttonIcon}>🕒</span>
@@ -107,11 +108,11 @@ export default function HistoryButton() {
           <div className={styles.overlay} onClick={() => setShowDropdown(false)} />
           <div className={styles.dropdown}>
             <div className={styles.header}>
-              <h3>History</h3>
+              <h3>इतिहास</h3>
               <button 
                 className={styles.closeBtn}
                 onClick={() => setShowDropdown(false)}
-                aria-label="Close dropdown"
+                aria-label="यादी बंद करा"
               >
                 ✕
               </button>
@@ -119,7 +120,7 @@ export default function HistoryButton() {
             
             <div className={styles.content}>
               {pageHistory.length === 0 ? (
-                <div className={styles.empty}>No history yet</div>
+                <div className={styles.empty}>अजून वाचनाचा इतिहास नाही.</div>
               ) : (
                 <ul className={styles.list}>
                   {pageHistory.map((item) => (

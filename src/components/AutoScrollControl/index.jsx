@@ -68,12 +68,12 @@ export default function AutoScrollControl() {
   };
 
   return (
-    <div className={styles.container} aria-label="Auto-scroll control">
+    <div className={styles.container} aria-label="स्वयंचलित पान स्क्रोल">
       <button
         className={`${styles.mainBtn} ${isScrolling ? styles.active : ''}`}
         onClick={toggleScroll}
-        aria-label="Toggle auto-scroll"
-        title="Click to auto-scroll"
+        aria-label="स्वयंचलित स्क्रोल सुरू किंवा बंद करा"
+        title="स्वयंचलित स्क्रोल सुरू करा"
       >
         <svg
           width="20"
@@ -91,7 +91,7 @@ export default function AutoScrollControl() {
       {showControls && (
         <div className={styles.controlPanel}>
           <div className={styles.speedControl}>
-            <label htmlFor="scrollSpeed">Speed:</label>
+            <label htmlFor="scrollSpeed">वेग:</label>
             <input
               id="scrollSpeed"
               type="range"
@@ -101,7 +101,7 @@ export default function AutoScrollControl() {
               value={speed}
               onChange={handleSpeedChange}
               className={styles.slider}
-              aria-label="Scroll speed"
+              aria-label="स्क्रोलचा वेग"
             />
             <span className={styles.speedValue}>{speed.toFixed(1)}</span>
           </div>
@@ -109,16 +109,16 @@ export default function AutoScrollControl() {
             <button
               className={styles.controlBtn}
               onClick={() => setIsScrolling(!isScrolling)}
-              aria-label={isScrolling ? 'Pause scroll' : 'Resume scroll'}
+              aria-label={isScrolling ? 'स्क्रोल थांबवा' : 'स्क्रोल पुन्हा सुरू करा'}
             >
-              {isScrolling ? '⏸ Pause' : '▶ Resume'}
+              {isScrolling ? '⏸ थांबवा' : '▶ पुन्हा सुरू करा'}
             </button>
             <button
               className={styles.controlBtn}
               onClick={handleStop}
-              aria-label="Stop auto-scroll"
+              aria-label="स्वयंचलित स्क्रोल बंद करा"
             >
-              ✕ Close
+              ✕ बंद करा
             </button>
           </div>
         </div>
