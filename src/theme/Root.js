@@ -4,6 +4,7 @@ import LanguagePopup from '../components/LanguagePopup';
 import { LanguageProvider } from '../utils/translations';
 import { AudioProvider } from '../context/AudioContext';
 import FloatingAudioPlayer from '../components/FloatingAudioPlayer';
+import MigrationReceiver from '../components/MigrationReceiver';
 
 export default function Root({children}) {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function Root({children}) {
     <LanguageProvider>
       <AudioProvider>
         {children}
+        <MigrationReceiver />
         <FloatingAudioPlayer />
         <HistoryTracker />
         <LanguagePopup />
@@ -29,4 +31,3 @@ export default function Root({children}) {
     </LanguageProvider>
   );
 }
-
