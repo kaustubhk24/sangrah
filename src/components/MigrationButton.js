@@ -7,7 +7,7 @@ const MIGRATION_URL = 'https://shrisangrah.com/';
 export default function MigrationButton() {
   const [error, setError] = useState('');
 
-  const transferData = () => {
+  const transferData = (event) => {
     try {
       const data = Object.create(null);
 
@@ -27,21 +27,18 @@ export default function MigrationButton() {
         `${migrationUrl.replace(/^https:/, 'intent:')}#Intent;` +
         `scheme=https;action=android.intent.action.VIEW;` +
         `category=android.intent.category.BROWSABLE;` +
-        `category=android.intent.category.APP_BROWSER;` +
         `S.browser_fallback_url=${encodeURIComponent(migrationUrl)};end`;
+      const link = event.currentTarget;
       if (/Android/i.test(window.navigator.userAgent)) {
-        window.location.assign(androidIntentUrl);
-        return;
+        link.href = androidIntentUrl;
+        link.removeAttribute('target');
+      } else {
+        link.href = migrationUrl;
+        link.target = '_blank';
       }
-
-      const link = document.createElement('a');
-      link.href = migrationUrl;
-      link.target = '_blank';
       link.rel = 'noopener noreferrer';
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
     } catch (transferError) {
+      event.preventDefault();
       console.error('Unable to prepare local data for migration.', transferError);
       setError('डेटा वाचता आला नाही. कृपया सेटिंग्जमधील डेटा निर्यात पर्याय वापरा.');
     }
@@ -61,12 +58,21 @@ export default function MigrationButton() {
 
 तुमची जपमाळेची संख्या, आवडते स्तोत्र (Bookmarks) आणि इतर जतन केलेला डेटा अत्यंत सुरक्षितपणे नव्या पत्त्यावर नेण्यासाठी आम्ही प्रक्रिया अधिक सोपी केली आहे. तांत्रिक अडचणी टाळण्यासाठी आधीचा मोठा डेटा-हस्तांतरण दुवा (Link) आता संक्षिप्त केला आहे.
         </p>
-       
+        <div className={styles.helpVideo}>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/iOXUbRH7KOE"
+            title="Sangrah data migration help"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
         {error && <p className={styles.error} role="alert">{error}</p>}
       </div>
-      <button className={styles.migrationButton} onClick={transferData} type="button">
+      <a className={styles.migrationButton} href={MIGRATION_URL} onClick={transferData}>
         माझा डेटा ट्रान्सफर करा
-      </button>
+      </a>
     </aside>
   );
 }
