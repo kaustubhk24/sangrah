@@ -22,7 +22,8 @@ export default function MigrationButton() {
       data.__timestamp = Date.now();
 
       const compressedData = LZString.compressToEncodedURIComponent(JSON.stringify(data));
-      window.location.assign(`${MIGRATION_URL}#migration_data=${compressedData}`);
+      const migrationUrl = `${MIGRATION_URL}#migration_data=${compressedData}`;
+      window.open(migrationUrl, '_blank', 'noopener,noreferrer');
     } catch (transferError) {
       console.error('Unable to prepare local data for migration.', transferError);
       setError('डेटा वाचता आला नाही. कृपया सेटिंग्जमधील डेटा निर्यात पर्याय वापरा.');
@@ -32,19 +33,17 @@ export default function MigrationButton() {
   return (
     <aside className={styles.migrationCard} aria-labelledby="migration-title">
       <div>
-        <h2 id="migration-title">आम्ही shrisangrah.com वर स्थलांतरित झालो आहोत!</h2>
+        <h2 id="migration-title">🔔 महत्त्वाची सूचना: 'संग्रह' नव्या पत्त्यावर!</h2>
         <p>
-          १-१२-२०२६ पासून sangrah.justinclicks.com उपलब्ध राहणार नाही. आम्ही
-          shrisangrah.com येथे स्थलांतरित होत आहोत.
+         नमस्कार,
+
+आपल्या दैनंदिन साधनेचे हक्काचे व्यासपीठ असणारे 'संपूर्ण संग्रह' आता अधिक सक्षम आणि स्वतंत्र होत आहे.
+
+१ डिसेंबर २०२६ पासून, sangrah.justinclicks.com ऐवजी shrisangrah.com हा आपला नवीन अधिकृत पत्ता असेल. जुने संकेतस्थळ १ डिसेंबरपासून उपलब्ध राहणार नाही.
+
+तुमची जपमाळेची संख्या, आवडते स्तोत्र (Bookmarks) आणि इतर जतन केलेला डेटा अत्यंत सुरक्षितपणे नव्या पत्त्यावर नेण्यासाठी आम्ही प्रक्रिया अधिक सोपी केली आहे. तांत्रिक अडचणी टाळण्यासाठी आधीचा मोठा डेटा-हस्तांतरण दुवा (Link) आता संक्षिप्त केला आहे.
         </p>
-        <p>
-          आधीचा डेटा-हस्तांतरण दुवा खूप मोठा होत असल्याने, आता तो संक्षिप्त केला आहे.
-          तुमचा जतन केलेला डेटा नव्या संकेतस्थळावर नेण्यासाठी खालील बटण दाबा.
-        </p>
-        <p>
-          नवीन संकेतस्थळावर गेल्यावर, कृपया जुन्या अॅपची स्थापना काढून टाका आणि
-          shrisangrah.com वरील नवीन अॅप स्थापित करा.
-        </p>
+       
         {error && <p className={styles.error} role="alert">{error}</p>}
       </div>
       <button className={styles.migrationButton} onClick={transferData} type="button">
