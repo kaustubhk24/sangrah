@@ -1,0 +1,75 @@
+.migrationCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 0 24px;
+  padding: 20px;
+  border: 1px solid #f0c48e;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff8ec, #fffdf8);
+  box-shadow: 0 6px 18px rgba(104, 60, 16, 0.08);
+}
+
+.migrationCard h2 {
+  margin: 0 0 6px;
+  color: #9c4b00;
+  font-size: 1.3rem;
+}
+
+.migrationCard p {
+  margin: 0;
+  color: #51483f;
+}
+
+.migrationButton {
+  flex: 0 0 auto;
+  min-height: 48px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 12px;
+  background: #c75d00;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.migrationButton:hover {
+  background: #a84e00;
+  transform: translateY(-1px);
+}
+
+.migrationButton:focus-visible {
+  outline: 3px solid #30251c;
+  outline-offset: 3px;
+}
+
+.error {
+  margin-top: 8px !important;
+  color: #a61b1b !important;
+}
+
+[data-theme='dark'] .migrationCard {
+  border-color: #68471f;
+  background: linear-gradient(135deg, #30251c, #241f1a);
+}
+
+[data-theme='dark'] .migrationCard h2 {
+  color: #ffb266;
+}
+
+[data-theme='dark'] .migrationCard p {
+  color: #e6ddd3;
+}
+
+[data-theme='dark'] .migrationButton:focus-visible {
+  outline-color: #fff;
+}
+
+@media (max-width: 640px) {
+  .migrationCard {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
