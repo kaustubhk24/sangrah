@@ -23,7 +23,20 @@ export default function MigrationButton() {
 
       const compressedData = LZString.compressToEncodedURIComponent(JSON.stringify(data));
       const migrationUrl = `${MIGRATION_URL}#migration_data=${compressedData}`;
-      window.open(migrationUrl, '_blank', 'noopener,noreferrer');
+      const androidIntentUrl =
+        `${migrationUrl.replace(/^https:/, 'intent:')}#Intent;` +
+        `scheme=https;package=com.android.chrome;` +
+        `S.browser_fallback_url=${encodeURIComponent(migrationUrl)};end`;
+      const destinationUrl = /Android/i.test(window.navigator.userAgent)
+        ? androidIntentUrl
+        : migrationUrl;
+      const link = document.createElement('a');
+      link.href = destinationUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
     } catch (transferError) {
       console.error('Unable to prepare local data for migration.', transferError);
       setError('डेटा वाचता आला नाही. कृपया सेटिंग्जमधील डेटा निर्यात पर्याय वापरा.');
@@ -38,8 +51,9 @@ export default function MigrationButton() {
          नमस्कार,
 
 आपल्या दैनंदिन साधनेचे हक्काचे व्यासपीठ असणारे 'संपूर्ण संग्रह' आता अधिक सक्षम आणि स्वतंत्र होत आहे.
+एक महत्त्वाची आणि आनंदाची बाब म्हणजे, हे ॲप आपल्या सर्वांसाठी नेहमीप्रमाणेच कायमस्वरूपी पूर्णपणे मोफत राहील आणि यात कोणत्याही प्रकारच्या जाहिराती (Ads) नसतील. हे ॲप केवळ आणि केवळ आपल्या साधनेसाठीच समर्पित आहे.
 
-१ डिसेंबर २०२६ पासून, sangrah.justinclicks.com ऐवजी shrisangrah.com हा आपला नवीन अधिकृत पत्ता असेल. जुने संकेतस्थळ १ डिसेंबरपासून उपलब्ध राहणार नाही.
+१ डिसेंबर २०२६ पासून, sangrah.justinclicks.com ऐवजी <a href="https://shrisangrah.com" target="_blank" rel="noopener noreferrer">shrisangrah.com</a> हा आपला नवीन अधिकृत पत्ता असेल. जुने संकेतस्थळ १ डिसेंबरपासून उपलब्ध राहणार नाही.
 
 तुमची जपमाळेची संख्या, आवडते स्तोत्र (Bookmarks) आणि इतर जतन केलेला डेटा अत्यंत सुरक्षितपणे नव्या पत्त्यावर नेण्यासाठी आम्ही प्रक्रिया अधिक सोपी केली आहे. तांत्रिक अडचणी टाळण्यासाठी आधीचा मोठा डेटा-हस्तांतरण दुवा (Link) आता संक्षिप्त केला आहे.
         </p>
