@@ -6,4 +6,4 @@ Disallow: /search-index.json
 Disallow: /offline.html
 Disallow: /sw.js
 
-Sitemap: https://sangrah.justinclicks.com/sitemap.xml
+Sitemap: https://shrisangrah.com/sitemap.xml
